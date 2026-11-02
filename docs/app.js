@@ -1,5 +1,5 @@
 /**
- * Atlas Historique de l'ALN (1954-1962)
+ * FLN/ALN Operations Dataset (1954–1962)
  * Application web interactive - Leaflet & moteur de recherche
  */
 
