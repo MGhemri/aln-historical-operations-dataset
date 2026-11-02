@@ -655,6 +655,20 @@ button, input, select {
   background-color: #0b0f15;
 }
 
+/* Base Tile Styling - 100% Free & Open (No API Key Required) */
+[data-theme="dark"] .osm-tiles .leaflet-tile {
+  filter: brightness(0.65) invert(1) contrast(2.2) hue-rotate(200deg) saturate(0.3);
+}
+
+[data-theme="light"] .osm-tiles .leaflet-tile {
+  filter: none;
+}
+
+.topo-tiles .leaflet-tile,
+.satellite-tiles .leaflet-tile {
+  filter: none !important;
+}
+
 /* Map Floating Controls */
 .map-floating-controls {
   position: absolute;
@@ -662,7 +676,35 @@ button, input, select {
   right: 1rem;
   z-index: 750;
   display: flex;
+  align-items: center;
   gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.map-ctrl-select {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.42rem 0.65rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.map-ctrl-select:hover,
+.map-ctrl-select:focus {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-light);
+}
+
+.map-ctrl-select option {
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
 }
 
 .map-ctrl-btn {

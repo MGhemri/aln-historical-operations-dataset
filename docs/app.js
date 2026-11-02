@@ -76,12 +76,58 @@ function getOperationCategory(op) {
 }
 
 // --------------------------------------------------------------------------
-// Leaflet Map Initialization
+// Leaflet Map Initialization & 100% Free Basemaps (No API Key Required)
 // --------------------------------------------------------------------------
 let map;
 let markerClusterGroup;
 const markerMap = new Map(); // opId -> L.Marker
-let tileLayer;
+
+const BASEMAP_CONFIGS = {
+  osm: {
+    url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+    options: {
+      className: 'osm-tiles',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
+      maxZoom: 19
+    }
+  },
+  topo: {
+    url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+    options: {
+      className: 'topo-tiles',
+      subdomains: 'abc',
+      attribution: 'Relief: &copy; <a href="https://opentopomap.org" target="_blank">OpenTopoMap</a> (&copy; OSM, SRTM)',
+      maxZoom: 17
+    }
+  },
+  satellite: {
+    url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    options: {
+      className: 'satellite-tiles',
+      attribution: 'Imagerie &copy; <a href="https://www.esri.com" target="_blank">Esri</a>, USGS, Maxar',
+      maxZoom: 18
+    }
+  }
+};
+
+let currentBasemap = 'osm';
+let currentTileLayer = null;
+
+function setBasemap(type) {
+  if (!BASEMAP_CONFIGS[type]) type = 'osm';
+  currentBasemap = type;
+
+  if (currentTileLayer && map) {
+    map.removeLayer(currentTileLayer);
+  }
+
+  const config = BASEMAP_CONFIGS[type];
+  currentTileLayer = L.tileLayer(config.url, config.options);
+  if (map) {
+    currentTileLayer.addTo(map);
+    currentTileLayer.bringToBack();
+  }
+}
 
 function initMap() {
   // Center roughly on Algeria
@@ -96,22 +142,8 @@ function initMap() {
   // Zoom control at bottom right to avoid clutter
   L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-  // CartoDB Tile Layer (Dark Matter default)
-  const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-  const tileUrl = isDark
-    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-    : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
-
-  tileLayer = L.tileLayer(tileUrl, {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 19
-  }).addTo(map);
-
-  // Fallback to OSM if CartoDB fails to load
-  tileLayer.on('tileerror', function(error, tile) {
-    console.warn('Tile load warning, falling back to OSM');
-  });
+  // Load default free basemap (OpenStreetMap)
+  setBasemap(currentBasemap);
 
   // Marker Cluster Group
   markerClusterGroup = L.markerClusterGroup({
@@ -128,14 +160,11 @@ function initMap() {
   setTimeout(() => map.invalidateSize(), 1000);
 }
 
-// Update Map Tiles on Theme Switch
+// Update Map on Theme Switch (CSS filters handle tiles instantly)
 function updateMapTheme() {
-  if (!tileLayer) return;
-  const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-  const newUrl = isDark
-    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
-    : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
-  tileLayer.setUrl(newUrl);
+  if (map) {
+    map.invalidateSize();
+  }
 }
 
 // --------------------------------------------------------------------------
@@ -775,6 +804,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('aln-dataset-theme');
   if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
+  }
+
+  // Basemap Selector (100% Free - No API Key Needed)
+  const basemapSelect = document.getElementById('basemap-select');
+  if (basemapSelect) {
+    basemapSelect.addEventListener('change', (e) => {
+      setBasemap(e.target.value);
+    });
   }
 
   // Recenter Buttons
