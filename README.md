@@ -2,9 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Format: JSON / GeoJSON](https://img.shields.io/badge/Format-JSON%20%7C%20GeoJSON-2ea44f.svg)](#2-structure-du-schéma-de-données)
-[![Records: 184 Operations](https://img.shields.io/badge/Opérations_documentées-184-c0392b.svg)](#️-carte-interactive-des-184-opérations-19541962)
-[![Historiography: Multi-Source](https://img.shields.io/badge/Historiographie-Sources_Croisées-8e44ad.svg)](#1-démarche-académique-et-méthodologie)
-[![Status: Living Dataset](https://img.shields.io/badge/Statut-Projet_Évolutif_( En_cours )-d35400.svg)](#5-projet-évolutif-et-guide-de-contribution)
+[![Records: 184 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-184-c0392b.svg)](#️-carte-interactive-des-184-opérations-19541962)
+[![Historiography: Multi-Source](https://img.shields.io/badge/Historiographie-Sources_Crois%C3%A9es-8e44ad.svg)](#1-démarche-académique-et-méthodologie)
+[![Status: Living Dataset](https://img.shields.io/badge/Statut-Projet_%C3%89volutif_(En_cours)-d35400.svg)](#5-projet-évolutif-et-guide-de-contribution)
 
 Ce dépôt héberge un corpus de données structuré en accès libre documentant, qualifiant et géolocalisant **184 actions militaires, embuscades, batailles, sabotages et opérations de guérilla** menés par le Front de libération nationale (FLN) et l'Armée de libération nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).
 
