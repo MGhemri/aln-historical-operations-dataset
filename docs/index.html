@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>FLN/ALN Operations Dataset (1954–1962)</title>
-  <meta name="description" content="Plateforme cartographique et moteur de recherche historique des 245 opérations militaires de l'Armée de Libération Nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).">
+  <meta name="description" content="Plateforme cartographique et moteur de recherche historique des 263 opérations militaires de l'Armée de Libération Nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).">
   
   <!-- OpenGraph Metadata -->
   <meta property="og:title" content="FLN/ALN Operations Dataset (1954–1962)">
-  <meta property="og:description" content="Base de données géospatiale et moteur de recherche historique des 245 opérations militaires de l'ALN (1954–1962).">
+  <meta property="og:description" content="Base de données géospatiale et moteur de recherche historique des 263 opérations militaires de l'ALN (1954–1962).">
   <meta property="og:type" content="website">
 
   <!-- Favicon -->
@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="style.css?v=2.3">
+  <link rel="stylesheet" href="style.css?v=2.4">
 </head>
 <body>
 
@@ -48,7 +48,7 @@
     <!-- Mobile Screen View Switcher -->
     <div class="mobile-view-tabs" id="mobile-view-tabs">
       <button id="tab-map-btn" class="tab-btn active">🗺️ Carte</button>
-      <button id="tab-list-btn" class="tab-btn">📋 Liste & Filtres (<span id="mobile-count">245</span>)</button>
+      <button id="tab-list-btn" class="tab-btn">📋 Liste & Filtres (<span id="mobile-count">263</span>)</button>
     </div>
 
     <div class="header-right">
@@ -181,6 +181,7 @@
           <div class="legend-item"><span class="color-dot" style="background:#16a085;"></span> Wilaya IV (Algérois / Ouarsenis)</div>
           <div class="legend-item"><span class="color-dot" style="background:#e74c3c;"></span> Zone Autonome d'Alger (ZAA)</div>
           <div class="legend-item"><span class="color-dot" style="background:#2980b9;"></span> Wilaya V (Oranie / Sud-Oranais)</div>
+          <div class="legend-item"><span class="color-dot" style="background:#0ea5e9;"></span> Zone Autonome d'Oran (ZAO)</div>
           <div class="legend-item"><span class="color-dot" style="background:#f39c12;"></span> Wilaya VI (Sahara / Atlas saharien)</div>
           <div class="legend-item"><span class="color-dot" style="background:#d35400;"></span> Base de l'Est & Frontières (EMG)</div>
           <div class="legend-item"><span class="color-dot" style="background:#8e44ad;"></span> 7e Wilaya (Fédération de France)</div>
@@ -221,7 +222,7 @@
       <div class="modal-body">
         <div class="stats-kpis">
           <div class="kpi-card">
-            <span class="kpi-value" id="kpi-total-ops">245</span>
+            <span class="kpi-value" id="kpi-total-ops">263</span>
             <span class="kpi-label">Opérations documentées</span>
           </div>
           <div class="kpi-card">
@@ -229,8 +230,8 @@
             <span class="kpi-label">Années de guerre (1954–1962)</span>
           </div>
           <div class="kpi-card">
-            <span class="kpi-value">6 + 1</span>
-            <span class="kpi-label">Wilayas historiques & Fédé. France</span>
+            <span class="kpi-value">6 + 2</span>
+            <span class="kpi-label">Wilayas & Zones Autonomes (ZAA, ZAO)</span>
           </div>
           <div class="kpi-card">
             <span class="kpi-value">100%</span>
@@ -263,7 +264,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Application Logic -->
-  <script src="app.js?v=2.3"></script>
+  <script src="app.js?v=2.4"></script>
 
 </body>
 </html>

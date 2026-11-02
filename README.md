@@ -3,15 +3,15 @@
 [![GitHub Pages: Live App](https://img.shields.io/badge/D%C3%A9mo_En_Ligne-GitHub_Pages-2ea44f.svg?logo=github&logoColor=white)](https://mghemri.github.io/aln-historical-operations-dataset/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Format: JSON / GeoJSON](https://img.shields.io/badge/Format-JSON%20%7C%20GeoJSON-2ea44f.svg)](#2-structure-du-schéma-de-données)
-[![Records: 245 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-245-c0392b.svg)](#️-carte-interactive-des-245-opérations-19541962)
+[![Records: 245 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-245-c0392b.svg)](#️-carte-interactive-des-263-opérations-19541962)
 [![Historiography: Multi-Source](https://img.shields.io/badge/Historiographie-Sources_Crois%C3%A9es-8e44ad.svg)](#1-démarche-académique-et-méthodologie)
 [![Status: Living Dataset](https://img.shields.io/badge/Statut-Projet_%C3%89volutif_(En_cours)-d35400.svg)](#5-projet-évolutif-et-guide-de-contribution)
 
-Ce dépôt héberge un corpus de données structuré en accès libre documentant, qualifiant et géolocalisant **245 actions militaires, embuscades, batailles, sabotages et opérations de guérilla** menés par le Front de libération nationale (FLN) et l'Armée de libération nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).
+Ce dépôt héberge un corpus de données structuré en accès libre documentant, qualifiant et géolocalisant **263 actions militaires, embuscades, batailles, sabotages et opérations de guérilla** menés par le Front de libération nationale (FLN) et l'Armée de libération nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).
 
 > [!TIP]
 > ### 🌐 Application Web Interactive en Ligne
-> **Explorez l'ensemble des 245 opérations dans l'application web officielle :**  
+> **Explorez l'ensemble des 263 opérations dans l'application web officielle :**  
 > 👉 **[Consulter l'Atlas interactif et le moteur de recherche en direct](https://mghemri.github.io/aln-historical-operations-dataset/)**  
 > *(Cartographie dynamique Leaflet avec regroupement par clusters, recherche plein texte instantanée, filtres multicritères par Wilaya et millésime, fiches d'archives complètes et tableau de bord statistique Chart.js).*
 
@@ -22,7 +22,7 @@ Ce dépôt héberge un corpus de données structuré en accès libre documentant
 
 ---
 
-## 🗺️ Carte interactive des 245 opérations (1954–1962)
+## 🗺️ Carte interactive des 263 opérations (1954–1962)
 
 > **Navigation interactive :** Vous pouvez zoomer, déplacer la carte et cliquer sur chaque marqueur ci-dessous pour afficher les métadonnées de l'opération (`id`, `nom_operation`, `date_debut`, `wilaya_concernee`, `lieu`, `type_action`). Pour consulter les descriptions complètes, les bilans détaillés et les sources cliquables en plein écran, ouvrez directement le fichier [**`operations_fln_1954_1962.geojson`**](./operations_fln_1954_1962.geojson).
 
@@ -31,7 +31,8 @@ Ce dépôt héberge un corpus de données structuré en accès libre documentant
 - 🔵 `#2c3e50` **Wilaya II** (Nord-Constantinois)
 - 🟢 `#27ae60` **Wilaya III** (Kabylie)
 - 🩵 `#16a085` **Wilaya IV** (Algérois / Ouarsenis) & 🔴 `#e74c3c` **Zone Autonome d'Alger (ZAA)**
-- 🔷 `#2980b9` **Wilaya V** (Oranie / Front Sud-Oranais / ZAO)
+- 🔷 `#2980b9` **Wilaya V** (Oranie / Front Sud-Oranais)
+- 🔹 `#0ea5e9` **Zone Autonome d'Oran (ZAO)**
 - 🟡 `#f39c12` **Wilaya VI** (Sahara / Atlas saharien)
 - 🟠 `#d35400` **Base de l'Est & Armée des Frontières (EMG)**
 - 🟣 `#8e44ad` **7e Wilaya** (Fédération de France du FLN — Métropole)
@@ -322,7 +323,7 @@ Le schéma répond à la structure suivante :
     "title": "Opérations et actions militaires offensives du FLN/ALN (1954-1962)",
     "description": "Recueil documenté des principales actions militaires offensives, embuscades, batailles et campagnes de guérilla de la guerre d'indépendance algérienne...",
     "generated_at": "AAAA-MM-JJ",
-    "total_records": 245
+    "total_records": 263
   },
   "operations": [
     {

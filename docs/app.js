@@ -28,7 +28,8 @@ const WILAYAS = [
   { id: 'W3', label: 'Wilaya III (Kabylie)', color: '#27ae60', pattern: /Wilaya III|Zone III|Kabylie/i },
   { id: 'W4', label: 'Wilaya IV (Algérois)', color: '#16a085', pattern: /Wilaya IV|Zone IV|Algérois|Ouarsenis/i },
   { id: 'ZAA', label: 'Zone Autonome d\'Alger', color: '#e74c3c', pattern: /Zone autonome d'Alger|ZAA/i },
-  { id: 'W5', label: 'Wilaya V (Oranie)', color: '#2980b9', pattern: /Wilaya V|Zone V|Oranie|ZAO/i },
+  { id: 'ZAO', label: 'Zone Autonome d\'Oran (ZAO)', color: '#0ea5e9', pattern: /Zone Autonome d'Oran|ZAO/i },
+  { id: 'W5', label: 'Wilaya V (Oranie)', color: '#2980b9', pattern: /Wilaya V|Zone V|Oranie/i },
   { id: 'W6', label: 'Wilaya VI (Sahara)', color: '#f39c12', pattern: /Wilaya VI|Zone VI|Sahara/i },
   { id: 'EMG', label: 'Base de l\'Est & EMG', color: '#d35400', pattern: /Base de l'Est|Armée des Frontières|EMG/i },
   { id: 'W7', label: '7e Wilaya (France)', color: '#8e44ad', pattern: /VII|7e|France|Fédération de France/i }
@@ -51,6 +52,9 @@ function getOperationCategory(op) {
   if (/Zone autonome d'Alger|ZAA/i.test(w)) {
     return WILAYAS.find(item => item.id === 'ZAA');
   }
+  if (/Zone Autonome d'Oran|ZAO/i.test(w) || /ZAO/i.test(r)) {
+    return WILAYAS.find(item => item.id === 'ZAO');
+  }
   if (/Base de l'Est|Armée des Frontières|EMG/i.test(w)) {
     return WILAYAS.find(item => item.id === 'EMG');
   }
@@ -66,7 +70,7 @@ function getOperationCategory(op) {
   if (/Wilaya IV\b|Zone IV\b|Algérois|Ouarsenis/i.test(w)) {
     return WILAYAS.find(item => item.id === 'W4');
   }
-  if (/Wilaya V\b|Zone V\b|Oranie|ZAO/i.test(w)) {
+  if (/Wilaya V\b|Zone V\b|Oranie/i.test(w)) {
     return WILAYAS.find(item => item.id === 'W5');
   }
   if (/Wilaya VI\b|Zone VI\b|Sahara/i.test(w)) {
