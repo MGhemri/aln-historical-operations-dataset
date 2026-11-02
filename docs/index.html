@@ -2,14 +2,19 @@
 <html lang="fr" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atlas Historique de l'ALN (1954–1962) | FLN/ALN Operations Dataset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Atlas Historique de l'ALN (1954–1962)</title>
   <meta name="description" content="Plateforme cartographique et moteur de recherche historique des 245 opérations militaires de l'Armée de Libération Nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).">
   
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Atlas Historique de l'ALN (1954–1962)">
+  <meta property="og:description" content="Base de données géospatiale et moteur de recherche historique des 245 opérations militaires de l'ALN (1954–1962).">
+  <meta property="og:type" content="website">
+
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇩🇿</text></svg>">
 
-  <!-- Google Fonts: Inter & Outfit -->
+  <!-- Google Fonts: Inter, Outfit, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -28,16 +33,22 @@
   <!-- Header -->
   <header class="app-header">
     <div class="header-left">
-      <button id="toggle-sidebar-btn" class="icon-btn" title="Basculer le panneau de recherche" aria-label="Menu latéral">
+      <button id="toggle-sidebar-btn" class="icon-btn" title="Afficher/masquer le panneau latéral" aria-label="Menu latéral">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
       <div class="brand">
         <span class="flag-icon">🇩🇿</span>
         <div>
           <h1 class="brand-title">Atlas Historique de l'ALN <span class="badge-version">1954–1962</span></h1>
-          <p class="brand-subtitle">Corpus cartographique & moteur d'exploration des opérations militaires</p>
+          <p class="brand-subtitle">Cartographie interactive & moteur de recherche des opérations militaires</p>
         </div>
       </div>
+    </div>
+
+    <!-- Mobile Screen View Switcher -->
+    <div class="mobile-view-tabs" id="mobile-view-tabs">
+      <button id="tab-map-btn" class="tab-btn active">🗺️ Carte</button>
+      <button id="tab-list-btn" class="tab-btn">📋 Liste & Filtres (<span id="mobile-count">245</span>)</button>
     </div>
 
     <div class="header-right">
@@ -135,7 +146,7 @@
     </aside>
 
     <!-- Center Area: Map Container -->
-    <main class="map-wrapper">
+    <main class="map-wrapper" id="map-wrapper">
       <div id="map"></div>
 
       <!-- Map Floating Controls -->

@@ -93,8 +93,8 @@ function initMap() {
     zoomControl: false
   });
 
-  // Custom Zoom Control position
-  L.control.zoom({ position: 'bottomleft' }).addTo(map);
+  // Zoom control at bottom right to avoid clutter
+  L.control.zoom({ position: 'bottomright' }).addTo(map);
 
   // CartoDB Tile Layer (Dark Matter default)
   const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
@@ -103,19 +103,29 @@ function initMap() {
     : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
 
   tileLayer = L.tileLayer(tileUrl, {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
     subdomains: 'abcd',
     maxZoom: 19
   }).addTo(map);
 
+  // Fallback to OSM if CartoDB fails to load
+  tileLayer.on('tileerror', function(error, tile) {
+    console.warn('Tile load warning, falling back to OSM');
+  });
+
   // Marker Cluster Group
   markerClusterGroup = L.markerClusterGroup({
     showCoverageOnHover: false,
-    maxClusterRadius: 40,
+    maxClusterRadius: 38,
     spiderfyOnMaxZoom: true,
     disableClusteringAtZoom: 14
   });
   map.addLayer(markerClusterGroup);
+
+  // Force map invalidation to ensure tiles render immediately
+  setTimeout(() => map.invalidateSize(), 50);
+  setTimeout(() => map.invalidateSize(), 300);
+  setTimeout(() => map.invalidateSize(), 1000);
 }
 
 // Update Map Tiles on Theme Switch
@@ -170,6 +180,11 @@ function updateMapMarkers() {
     markerMap.set(op.id, marker);
     markerClusterGroup.addLayer(marker);
   });
+
+  // Invalidate map size after markers are updated
+  if (map) {
+    map.invalidateSize();
+  }
 }
 
 // --------------------------------------------------------------------------
@@ -189,6 +204,11 @@ async function loadData() {
     updateMapMarkers();
     updateResultsCount();
     setupCharts();
+
+    // Invalidate map again once data is fully ready
+    setTimeout(() => {
+      if (map) map.invalidateSize();
+    }, 200);
   } catch (error) {
     console.error('Erreur lors du chargement des données:', error);
     document.getElementById('results-count').innerHTML = `<span style="color:#ef4444;">Erreur de chargement des données.</span>`;
@@ -239,7 +259,6 @@ function setupFiltersUI() {
   const actionTypesSet = new Set();
   state.operations.forEach(op => {
     if (op.type_action) {
-      // Split if comma or slash or clean up
       actionTypesSet.add(op.type_action.trim());
     }
   });
@@ -357,6 +376,7 @@ function applyFilters() {
 // Update Result Count text
 function updateResultsCount() {
   const countEl = document.getElementById('results-count');
+  const mobileCountEl = document.getElementById('mobile-count');
   const total = state.operations.length;
   const filtered = state.filteredOperations.length;
 
@@ -364,6 +384,10 @@ function updateResultsCount() {
     countEl.textContent = `${total} opérations documentées`;
   } else {
     countEl.textContent = `${filtered} affichée${filtered > 1 ? 's' : ''} sur ${total}`;
+  }
+
+  if (mobileCountEl) {
+    mobileCountEl.textContent = filtered;
   }
 }
 
@@ -385,7 +409,6 @@ function renderOperationsList() {
     return;
   }
 
-  // Fragment for fast rendering
   const fragment = document.createDocumentFragment();
 
   state.filteredOperations.forEach(op => {
@@ -419,6 +442,13 @@ function renderOperationsList() {
     `;
 
     card.addEventListener('click', () => {
+      // If on mobile, switch to map view when card is clicked
+      if (window.innerWidth <= 900) {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.remove('mobile-open');
+        document.getElementById('tab-map-btn').classList.add('active');
+        document.getElementById('tab-list-btn').classList.remove('active');
+      }
       selectOperation(op.id, true);
     });
 
@@ -434,7 +464,6 @@ function renderOperationsList() {
 function selectOperation(opId, zoomToMap = true) {
   state.selectedOpId = opId;
 
-  // Highlight card in sidebar list
   document.querySelectorAll('.op-card').forEach(c => {
     c.classList.toggle('selected', c.dataset.id === opId);
   });
@@ -654,7 +683,6 @@ function setupCharts() {
 
 function updateCharts() {
   if (!state.charts.years || !state.charts.wilayas || !state.charts.actions) return;
-  // Update year chart
   const yearCounts = { '1954': 0, '1955': 0, '1956': 0, '1957': 0, '1958': 0, '1959': 0, '1960': 0, '1961': 0, '1962': 0 };
   state.filteredOperations.forEach(op => {
     const y = (op.date_debut || '').substring(0, 4);
@@ -663,7 +691,6 @@ function updateCharts() {
   state.charts.years.data.datasets[0].data = Object.values(yearCounts);
   state.charts.years.update();
 
-  // Update wilaya chart
   const wilayaCounts = {};
   WILAYAS.forEach(w => { wilayaCounts[w.id] = 0; });
   state.filteredOperations.forEach(op => {
@@ -694,13 +721,39 @@ document.addEventListener('DOMContentLoaded', () => {
   initMap();
   loadData();
 
-  // Sidebar Toggle
+  // Desktop Sidebar Toggle
   const sidebar = document.getElementById('sidebar');
   const toggleBtn = document.getElementById('toggle-sidebar-btn');
   toggleBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('collapsed');
+    if (window.innerWidth <= 900) {
+      sidebar.classList.toggle('mobile-open');
+      const isMobileOpen = sidebar.classList.contains('mobile-open');
+      document.getElementById('tab-list-btn').classList.toggle('active', isMobileOpen);
+      document.getElementById('tab-map-btn').classList.toggle('active', !isMobileOpen);
+    } else {
+      sidebar.classList.toggle('collapsed');
+    }
     setTimeout(() => map.invalidateSize(), 310);
   });
+
+  // Mobile Tabs
+  const tabMapBtn = document.getElementById('tab-map-btn');
+  const tabListBtn = document.getElementById('tab-list-btn');
+
+  if (tabMapBtn && tabListBtn) {
+    tabMapBtn.addEventListener('click', () => {
+      sidebar.classList.remove('mobile-open');
+      tabMapBtn.classList.add('active');
+      tabListBtn.classList.remove('active');
+      setTimeout(() => map.invalidateSize(), 200);
+    });
+
+    tabListBtn.addEventListener('click', () => {
+      sidebar.classList.add('mobile-open');
+      tabListBtn.classList.add('active');
+      tabMapBtn.classList.remove('active');
+    });
+  }
 
   // Drawer Close
   document.getElementById('close-drawer-btn').addEventListener('click', () => {
@@ -719,7 +772,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateMapTheme();
   });
 
-  // Restore saved theme
   const savedTheme = localStorage.getItem('aln-dataset-theme');
   if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
@@ -763,5 +815,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.addEventListener('click', () => {
     exportMenu.classList.remove('show');
+  });
+
+  // Global window resize listener to keep map sharp
+  window.addEventListener('resize', () => {
+    if (map) map.invalidateSize();
+  });
+  window.addEventListener('load', () => {
+    if (map) map.invalidateSize();
   });
 });
