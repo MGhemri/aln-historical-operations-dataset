@@ -1,10 +1,10 @@
 # FLN/ALN Historical Military Operations Dataset (1954–1962)
 
 [![GitHub Pages: Live App](https://img.shields.io/badge/D%C3%A9mo_En_Ligne-GitHub_Pages-2ea44f.svg?logo=github&logoColor=white)](https://mghemri.github.io/aln-historical-operations-dataset/)
-[![Vercel: Live App](https://img.shields.io/badge/Vercel-aln--historical--operations--dataset.vercel.app-black.svg?logo=vercel&logoColor=white)](https://aln-historical-operations-dataset.vercel.app/)
+[![Vercel: Live App](https://img.shields.io/badge/Vercel-alnop.vercel.app-black.svg?logo=vercel&logoColor=white)](https://alnop.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Format: JSON / GeoJSON](https://img.shields.io/badge/Format-JSON%20%7C%20GeoJSON-2ea44f.svg)](#2-structure-du-schéma-de-données)
-[![Records: 245 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-245-c0392b.svg)](#️-carte-interactive-des-263-opérations-19541962)
+[![Records: 263 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-263-c0392b.svg)](#️-carte-interactive-des-263-opérations-19541962)
 [![Historiography: Multi-Source](https://img.shields.io/badge/Historiographie-Sources_Crois%C3%A9es-8e44ad.svg)](#1-démarche-académique-et-méthodologie)
 [![Status: Living Dataset](https://img.shields.io/badge/Statut-Projet_%C3%89volutif_(En_cours)-d35400.svg)](#5-projet-évolutif-et-guide-de-contribution)
 
@@ -17,7 +17,7 @@ Ce dépôt héberge un corpus de données structuré en accès libre documentant
 > *(Cartographie dynamique Leaflet avec regroupement par clusters, recherche plein texte instantanée, filtres multicritères par Wilaya et millésime, fiches d'archives complètes et tableau de bord statistique Chart.js).*  
 >
 > 🚀 **Application Vercel en direct :** L'application est déployée en production sur Vercel avec le même UI/UX, performances Edge et API ouverte :  
-> 👉 **[Ouvrir l'application sur Vercel (https://aln-historical-operations-dataset.vercel.app)](https://aln-historical-operations-dataset.vercel.app/)**
+> 👉 **[Ouvrir l'application sur Vercel (https://alnop.vercel.app)](https://alnop.vercel.app/)**
 
 
 > [!IMPORTANT]
