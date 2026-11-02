@@ -3,7 +3,7 @@
     "title": "Opérations et actions militaires offensives du FLN/ALN (1954-1962)",
     "description": "Recueil documenté des principales actions militaires offensives, embuscades, batailles et campagnes de guérilla de la guerre d'indépendance algérienne, croisé à partir du portail Wikipédia (Guerre d'Algérie, Chronologie et Catégorie:Bataille de la guerre d'Algérie) et vérifié auprès de sources institutionnelles et académiques.",
     "generated_at": "2026-11-02",
-    "total_records": 146
+    "total_records": 184
   },
   "operations": [
     {
@@ -5723,6 +5723,1456 @@
           "titre": "Le Sahara dans la guerre d'Algérie — Dictionnaire de la guerre d'Algérie (Cairn.info)",
           "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-902?lang=fr",
           "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_032",
+      "nom_operation": "Embuscade de Bab El Assa et accrochages contre la DBFM sur la frontière marocaine",
+      "date_debut": "1956-06-14",
+      "date_fin": "1956-06-15",
+      "wilaya_concernee": "Wilaya V (Zone 1 - Bab El Assa / Marsa Ben M'Hidi / Nemours)",
+      "localisation": {
+        "region_ou_ville": "Bab El Assa et col du Guerbouz, entre Marsa Ben M'Hidi (Port-Say), Maghnia et Ghazaouet (Nemours) (Wilaya de Tlemcen)",
+        "coordonnees_approximatives": {
+          "latitude": 34.9667,
+          "longitude": -2.0333
+        }
+      },
+      "commandement_aln": [
+        "Abdelhafid Boussouf",
+        "Si Rachid (Mustapha Ali)",
+        "Commandants de katibas du secteur frontalier de Bab El Assa"
+      ],
+      "type_action": "Embuscade",
+      "description": "Dans le secteur frontalier accidenté de Bab El Assa et du col du Guerbouz (face à la plaine marocaine des Triffa), une katiba de la Zone 1 de la Wilaya V tend une embuscade meurtrière contre une patrouille motorisée de la Demi-Brigade de Fusiliers Marins (DBFM) du commandant Ponchardier, suivie d'un engagement de plusieurs heures avant le repli nocturne vers le massif des Trara.",
+      "bilan_et_pertes": {
+        "aln": "6 moudjahidine tués au combat ; récupération de fusils MAS-36, d'un fusil-mitrailleur et de munitions",
+        "forces_francaises": "Une douzaine de fusiliers marins tués ou blessés et deux half-tracks/camions endommagés",
+        "civils": "Évacuation forcée des douars frontaliers entre Bab El Assa et Port-Say"
+      },
+      "impact_strategique": "Inaugure la guerre d'usure acharnée qui oppose de 1956 à 1962 les katibas des Trara à la Demi-Brigade de Fusiliers Marins (DBFM) le long de la frontière nord-ouest.",
+      "sources": [
+        {
+          "titre": "Demi-brigade de fusiliers marins (DBFM) en Oranie (Nemours, Bab El Assa, Trara) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Demi-brigade_de_fusiliers_marins",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Le barrage frontière ouest pendant la guerre d'Algérie (Guerres mondiales et conflits contemporains) — Cairn.info",
+          "url": "https://shs.cairn.info/revue-guerres-mondiales-et-conflits-contemporains-2018-1-page-91?lang=fr",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_033",
+      "nom_operation": "Combats du Djebel Tadjera et embuscades de Honaine dans les Monts des Trara (Secteur de Beni Saf - Ghazaouet)",
+      "date_debut": "1956-10-19",
+      "date_fin": "1956-10-21",
+      "wilaya_concernee": "Wilaya V (Zone 1 - Massif des Trara / Honaine / Beni Saf / Ghazaouet)",
+      "localisation": {
+        "region_ou_ville": "Massif côtier du Djebel Tadjera et port de Honaine, entre Ghazaouet (Nemours), Nedroma et Beni Saf (Wilaya de Tlemcen)",
+        "coordonnees_approximatives": {
+          "latitude": 35.1764,
+          "longitude": -1.6553
+        }
+      },
+      "commandement_aln": [
+        "Abdelhafid Boussouf",
+        "Chefs des katibas du massif des Trara (Zone 1 - Wilaya V)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Retranchées sur les pentes abruptes du Djebel Tadjera surplombant la rade de Honaine et le littoral entre Ghazaouet et Beni Saf, deux katibas de la Wilaya V affrontent pendant trois jours les compagnies de la DBFM appuyées par les tirs d'artillerie des escorteurs de la Marine nationale croisant au large et par l'aviation aéronavale.",
+      "bilan_et_pertes": {
+        "aln": "Une vingtaine de moudjahidine tombés au champ d'honneur ; maintien des refuges souterrains des Trara",
+        "forces_francaises": "Pertes sensibles dans les rangs des fusiliers marins et du commando Yatagan lors de l'escalade des ravins de Honaine",
+        "civils": "Destruction de mechtas côtières et blocus maritime des criques des Trara"
+      },
+      "impact_strategique": "Démontre la résistance du bastion maritime et montagneux des Trara malgré l'action combinée des forces terrestres et navales françaises.",
+      "sources": [
+        {
+          "titre": "Demi-brigade de fusiliers marins (DBFM) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Demi-brigade_de_fusiliers_marins",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Les opérations militaires en Wilaya V historique — Revue académique CERIST (ASJP)",
+          "url": "https://asjp.cerist.dz/en/downArticle/686/10/1/290720",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_038",
+      "nom_operation": "Sabotage et franchissement en force de la Ligne Pedron (Barrage Ouest) dans le secteur de Maghnia - El Abed",
+      "date_debut": "1957-07-22",
+      "date_fin": "1957-07-24",
+      "wilaya_concernee": "Wilaya V (Zone 1 - Frontière algéro-marocaine / Maghnia / El Abed)",
+      "localisation": {
+        "region_ou_ville": "Secteur frontalier de Maghnia, Boukanoun et cité minière d'El Abed (face à Oujda, Wilaya de Tlemcen)",
+        "coordonnees_approximatives": {
+          "latitude": 34.6333,
+          "longitude": -1.7333
+        }
+      },
+      "commandement_aln": [
+        "Houari Boumédiène (Commandant de la Wilaya V)",
+        "Benali Boudghène dit Colonel Lotfi",
+        "Commandant Ferradj (Mohamed Laoudj)"
+      ],
+      "type_action": "Sabotage",
+      "description": "Face à l'érection par le général Pedron du barrage frontalier ouest (réseaux de barbelés, champs de mines, postes radars et projecteurs longeant la frontière marocaine depuis Marsa Ben M'Hidi jusqu'au Sud-Oranais), les commandos du génie de la Wilaya V ouvrent à la bangalore et à l'explosif plusieurs brèches nocturnes entre Maghnia et le secteur minier d'El Abed, tout en neutralisant au mortier et au bazooka les blockhaus français pour faire passer une importante caravane d'armes vers les monts de Tlemcen.",
+      "bilan_et_pertes": {
+        "aln": "Une quinzaine de moudjahidine tués dans les champs de mines et sous les tirs d'artillerie ; passage réussi de la majeure partie du convoi d'armes",
+        "forces_francaises": "Destruction de deux postes de surveillance du barrage Pedron et pertes parmi les pelotons blindés de herse",
+        "civils": "Élargissement du « no man's land » interdit le long de la frontière d'Oujda à El Abed"
+      },
+      "impact_strategique": "Contrainte par la pression continue des commandos de la Wilaya V sur la Ligne Pedron, l'armée française doit électrifier à haute tension et dédoubler le barrage ouest en 1958-1959.",
+      "sources": [
+        {
+          "titre": "La garde de la frontière algéro-marocaine et la Ligne Pedron (Guerres mondiales et conflits contemporains) — Cairn.info",
+          "url": "https://shs.cairn.info/revue-guerres-mondiales-et-conflits-contemporains-2018-1-page-91?lang=fr",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Colonel Lotfi — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Colonel_Lotfi",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_039",
+      "nom_operation": "Combats d'Ain Kebira et de Dar Yaghmoracen contre la DBFM (Secteur de Nedroma - Ghazaouet)",
+      "date_debut": "1957-10-08",
+      "date_fin": "1957-10-09",
+      "wilaya_concernee": "Wilaya V (Zone 1 - Nedroma / Dar Yaghmoracen / Ghazaouet)",
+      "localisation": {
+        "region_ou_ville": "Ain Kebira et Dar Yaghmoracen, entre Nedroma et Ghazaouet (Nemours), Monts des Trara (Wilaya de Tlemcen)",
+        "coordonnees_approximatives": {
+          "latitude": 35.05,
+          "longitude": -1.8
+        }
+      },
+      "commandement_aln": [
+        "Commandants de la Zone 1 de la Wilaya V (Secteur de Nedroma - Trara)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Dans les ravins boisés d'Ain Kebira et sur les crêtes de Dar Yaghmoracen (entre Nedroma et le port de Ghazaouet), une katiba de la Wilaya V attire les compagnies d'intervention de la DBFM dans un combat rapproché de deux jours, utilisant des casemates enterrées pour résister aux bombardements de l'aviation et de l'artillerie de marine.",
+      "bilan_et_pertes": {
+        "aln": "18 moudjahidine tombés au champ d'honneur",
+        "forces_francaises": "Plus d'une vingtaine de fusiliers marins et supplétifs mis hors de combat",
+        "civils": "Regroupements forcés des habitants des douars de Nedroma et Dar Yaghmoracen"
+      },
+      "impact_strategique": "Maintient la pression sur le quartier général de la DBFM à Nemours (Ghazaouet) et sécurise les caches logistiques du Djebel Fellaoucène.",
+      "sources": [
+        {
+          "titre": "Demi-brigade de fusiliers marins — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Demi-brigade_de_fusiliers_marins",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Répertoire numérique de la série 1H (Corps d'armée d'Oran / Secteur de Nemours) — Service Historique de la Défense (SHD)",
+          "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
+          "type_source": "Archive"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_034",
+      "nom_operation": "Embuscades de Moghrar et de Djenien Bou Rezg dans les Monts des Ksour (Zone 8 - Sud-Oranais)",
+      "date_debut": "1958-02-11",
+      "date_fin": "1958-02-13",
+      "wilaya_concernee": "Wilaya V (Zone 8 - Aïn Sefra / Moghrar / Djenien Bou Rezg)",
+      "localisation": {
+        "region_ou_ville": "Oasis de Moghrar, Tiout et défilé de Djenien Bou Rezg, au sud d'Aïn Sefra vers Figuig (Wilaya de Naâma)",
+        "coordonnees_approximatives": {
+          "latitude": 32.5167,
+          "longitude": -0.6
+        }
+      },
+      "commandement_aln": [
+        "Benali Boudghène dit Colonel Lotfi",
+        "Commandant Ferradj (Mohamed Laoudj)",
+        "Chefs des katibas de la Zone 8 (Monts des Ksour)"
+      ],
+      "type_action": "Embuscade",
+      "description": "Les katibas de la Zone 8 de la Wilaya V dirigées par le commandant Ferradj sous l'autorité de Lotfi tendent une embuscade coordonnée contre un convoi de la Légion étrangère (2e REI) et sabotent la voie ferrée et la route reliant Aïn Sefra à Beni Ounif et Colomb-Béchar à hauteur des gorges de Moghrar et de Djenien Bou Rezg.",
+      "bilan_et_pertes": {
+        "aln": "9 moudjahidine tués ; récupération d'armement collectif et de caisses de munitions",
+        "forces_francaises": "Destruction de plusieurs camions d'escorte, coupure de la voie ferrée du Sud-Oranais et une vingtaine de légionnaires tués ou blessés",
+        "civils": "Blocus militaire des ksour de Moghrar et de Tiout"
+      },
+      "impact_strategique": "Menace directement la liaison stratégique entre l'Oranie et les bases sahariennes de Colomb-Béchar et de Hammaguir.",
+      "sources": [
+        {
+          "titre": "Béchar : le colonel Lotfi, un riche parcours de lutte durant la Guerre de libération — Algérie Presse Service (APS)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mn8zsy8t-bechar-le-colonel-lotfi-un-riche-parcours-de-lutte-et-de-militantisme-durant-la-glorieuse-guerre-de-liberation-nationale",
+          "type_source": "Article"
+        },
+        {
+          "titre": "La lutte armée dans le Sud-Oranais et les monts des Ksour — Revue académique CERIST (ASJP)",
+          "url": "https://asjp.cerist.dz/en/downArticle/20/16/5/254394",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_035",
+      "nom_operation": "Bataille du Djebel Tenouchfi et des gorges de Sidi Djilali (Secteur de Sebdou - El Gor)",
+      "date_debut": "1958-05-15",
+      "date_fin": "1958-05-17",
+      "wilaya_concernee": "Wilaya V (Zone 1 / Zone 2 - Monts de Tlemcen / Sebdou / Sidi Djilali)",
+      "localisation": {
+        "region_ou_ville": "Massif du Djebel Tenouchfi (1 843 m) et Sidi Djilali, au sud-ouest de Sebdou (Wilaya de Tlemcen)",
+        "coordonnees_approximatives": {
+          "latitude": 34.55,
+          "longitude": -1.5667
+        }
+      },
+      "commandement_aln": [
+        "Colonel Lotfi",
+        "Commandant Ferradj",
+        "Officiers des monts de Tlemcen (Wilaya V)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Dans le massif forestier culminant du Djebel Tenouchfi (entre Sebdou, Sidi Djilali et la frontière marocaine), deux katibas de la Wilaya V qui viennent de réceptionner un convoi d'armes franchissant le barrage ouest livrent une bataille de trois jours contre plusieurs bataillons de tirailleurs, d'infanterie alpine et de parachutistes français.",
+      "bilan_et_pertes": {
+        "aln": "Une trentaine de moudjahidine tombés au champ d'honneur ; sauvegarde de la majeure partie de l'armement acheminé vers l'intérieur",
+        "forces_francaises": "Lourdes pertes parmi les compagnies d'assaut françaises dans les escarpements boisés du Tenouchfi",
+        "civils": "Zone classée interdite et évacuation des populations montagnardes de Sidi Djilali"
+      },
+      "impact_strategique": "Confirme le rôle pivot du massif de Sebdou et du Djebel Tenouchfi comme plaque tournante de redistribution logistique de la Wilaya V.",
+      "sources": [
+        {
+          "titre": "Journaux des Marches et Opérations (JMO) du secteur de Tlemcen-Sebdou — Archives Les Tirailleurs / SHD",
+          "url": "https://www.les-tirailleurs.fr/documents/5357e955-c86d-4555-87d5-cc16d3a86c1e/afficher",
+          "type_source": "Archive"
+        },
+        {
+          "titre": "Le barrage frontière ouest pendant la guerre d'Algérie — Cairn.info",
+          "url": "https://shs.cairn.info/revue-guerres-mondiales-et-conflits-contemporains-2018-1-page-91?lang=fr",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_036",
+      "nom_operation": "Bataille du Djebel M'zi et d'Asla dans les Monts des Ksour (Katibas du Commandant Ferradj)",
+      "date_debut": "1958-11-18",
+      "date_fin": "1958-11-20",
+      "wilaya_concernee": "Wilaya V (Zone 8 - Aïn Sefra / Asla / Monts des Ksour)",
+      "localisation": {
+        "region_ou_ville": "Massif du Djebel M'zi et oasis d'Asla / Chellala, à l'est et au sud d'Aïn Sefra (Wilaya de Naâma / El Bayadh)",
+        "coordonnees_approximatives": {
+          "latitude": 32.9833,
+          "longitude": -0.0833
+        }
+      },
+      "commandement_aln": [
+        "Commandant Ferradj (Mohamed Laoudj)",
+        "Colonel Lotfi",
+        "Commandants de katibas de la Zone 8"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "En novembre 1958, les katibas de la Zone 8 commandées sur le terrain par le commandant Ferradj harcèlent les postes militaires français d'Asla et de Chellala puis attirent les colonnes du 2e REI et les troupes aéroportées sur les falaises rocheuses du Djebel M'zi, où se déroule un affrontement violent de quarante-huit heures.",
+      "bilan_et_pertes": {
+        "aln": "Une vingtaine de moudjahidine tués au combat ; 1 avion d'observation français touché",
+        "forces_francaises": "Plusieurs dizaines de légionnaires et soldats français mis hors de combat",
+        "civils": "Aucune victime civile directe"
+      },
+      "impact_strategique": "Illustre l'efficacité tactique du tandem Colonel Lotfi – Commandant Ferradj dans la guerre de mouvement à travers l'Atlas saharien occidental.",
+      "sources": [
+        {
+          "titre": "Les combats de la Légion étrangère dans le secteur d'Aïn Sefra — FSALE",
+          "url": "https://www.legionetrangere.fr/la-fsale/actualites-de-la-fsale/808-histoire-decembre-1959-bataille-du-djebel-beni-smir.html",
+          "type_source": "Archive"
+        },
+        {
+          "titre": "Béchar : le colonel Lotfi et ses compagnons dans le Sud-Oranais — Algérie Presse Service (APS)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mn8zsy8t-bechar-le-colonel-lotfi-un-riche-parcours-de-lutte-et-de-militantisme-durant-la-glorieuse-guerre-de-liberation-nationale",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1959_012",
+      "nom_operation": "Combats de franchissement du barrage Ouest à El Aricha - Bougarne (Frontière marocaine)",
+      "date_debut": "1959-04-08",
+      "date_fin": "1959-04-10",
+      "wilaya_concernee": "Wilaya V (Secteur frontalier steppique - El Aricha / Bougarne / Berguent)",
+      "localisation": {
+        "region_ou_ville": "Secteur frontalier d'El Aricha et Djebel Bougarne (face à Aïn Beni Mathar / Berguent au Maroc, Sud de la Wilaya de Tlemcen)",
+        "coordonnees_approximatives": {
+          "latitude": 34.2167,
+          "longitude": -1.3
+        }
+      },
+      "commandement_aln": [
+        "Colonel Lotfi",
+        "Commandants des bataillons frontaliers de l'Ouest (Oujda - Berguent)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Sur les Hauts Plateaux steppiques d'El Aricha (face à la base arrière de l'ALN à Berguent / Aïn Beni Mathar au Maroc), un détachement de choc de la Wilaya V fait sauter le réseau électrifié à haute tension et engage un combat nocturne et diurne de quarante-huit heures contre les escadrons blindés et héliportés français surveillant la ligne.",
+      "bilan_et_pertes": {
+        "aln": "Une vingtaine de moudjahidine tombés au champ d'honneur ; infiltration réussie d'un groupe de liaison et de cadres vers la Zone de Saïda",
+        "forces_francaises": "Destruction d'un tronçon du barrage électrifié et pertes sensibles au sein des escadrons blindés de reconnaissance",
+        "civils": "Aucune victime civile (steppe frontalière interdite)"
+      },
+      "impact_strategique": "Oblige le commandement français à maintenir en alerte permanente des régiments blindés et d'artillerie sur des centaines de kilomètres de steppe aride entre Sebdou et Forthassa.",
+      "sources": [
+        {
+          "titre": "Le barrage frontière ouest pendant la guerre d'Algérie (Guerres mondiales et conflits contemporains) — Cairn.info",
+          "url": "https://shs.cairn.info/revue-guerres-mondiales-et-conflits-contemporains-2018-1-page-91?lang=fr",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Répertoire numérique de la série 1H (Barrage Ouest et Corps d'armée d'Oran) — SHD",
+          "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T1.pdf",
+          "type_source": "Archive"
+        }
+      ]
+    },
+    {
+      "id": "OP_1959_013",
+      "nom_operation": "Embuscades côtières d'Oulhaça et de Souahlia contre les patrouilles de la DBFM (Beni Saf - Ghazaouet)",
+      "date_debut": "1959-08-19",
+      "date_fin": "1959-08-20",
+      "wilaya_concernee": "Wilaya V (Zone 1 - Oulhaça / Beni Saf / Souahlia / Ghazaouet)",
+      "localisation": {
+        "region_ou_ville": "Massif d'Oulhaça (Sidi Brahim / Souk El Khemis) et Souahlia, entre Beni Saf et Ghazaouet (Wilayas d'Aïn Témouchent et Tlemcen)",
+        "coordonnees_approximatives": {
+          "latitude": 35.2333,
+          "longitude": -1.5167
+        }
+      },
+      "commandement_aln": [
+        "Chefs des sections de choc de la Zone 1 (Monts des Trara et d'Oulhaça)"
+      ],
+      "type_action": "Embuscade",
+      "description": "En août 1959, les groupes mobiles de la Wilaya V opérant dans le massif côtier d'Oulhaça et de Souahlia minent les pistes militaires et tendent une embuscade à courte distance contre une patrouille de la Demi-Brigade de Fusiliers Marins (DBFM) entre Beni Saf et Ghazaouet.",
+      "bilan_et_pertes": {
+        "aln": "4 moudjahidine tués lors de la contre-attaque héliportée ; repli réussi dans les grottes côtières d'Oulhaça",
+        "forces_francaises": "Une dizaine de fusiliers marins tués ou blessés et un camion militaire détruit par mine",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Prouve qu'après plus de trois ans de quadrillage intensif par la DBFM, les maquis des Trara et d'Oulhaça conservent leur capacité d'action offensive.",
+      "sources": [
+        {
+          "titre": "Demi-brigade de fusiliers marins (DBFM) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Demi-brigade_de_fusiliers_marins",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Les opérations militaires en Wilaya V historique — Revue académique CERIST (ASJP)",
+          "url": "https://asjp.cerist.dz/en/downArticle/686/10/1/290720",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1960_008",
+      "nom_operation": "Harcèlements au mortier et sabotages du barrage électrifié Ouest dans le secteur de Marsa Ben M'Hidi - Bab El Assa",
+      "date_debut": "1960-07-12",
+      "date_fin": "1960-07-14",
+      "wilaya_concernee": "Armée des Frontières (Front Ouest / EMG) et Wilaya V",
+      "localisation": {
+        "region_ou_ville": "Tronçon nord du barrage électrifié Ouest, entre Marsa Ben M'Hidi (Port-Say), Bab El Assa et Maghnia (Wilaya de Tlemcen)",
+        "coordonnees_approximatives": {
+          "latitude": 35.0333,
+          "longitude": -2.1167
+        }
+      },
+      "commandement_aln": [
+        "Officiers des bataillons frontaliers de l'ALN du Front Ouest (Oujda / Ahfir)"
+      ],
+      "type_action": "Sabotage",
+      "description": "En juillet 1960, les unités frontalières de l'ALN stationnées sur le front marocain (secteur d'Ahfir - Oujda) soumettent les postes de la DBFM et de l'infanterie française gardant le barrage électrifié entre Port-Say et Bab El Assa à des tirs nourris de mortiers et de canons sans recul, tout en détruisant à l'explosif plusieurs centaines de mètres de clôture électrifiée à haute tension.",
+      "bilan_et_pertes": {
+        "aln": "Quelques blessés lors des duels d'artillerie nocturnes",
+        "forces_francaises": "Dégâts importants aux installations électriques et radars du barrage et plusieurs marins et soldats blessés",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Maintient une guerre de position coûteuse sur la frontière marocaine, immobilisant la DBFM et plusieurs divisions françaises loin des maquis de l'intérieur.",
+      "sources": [
+        {
+          "titre": "Demi-brigade de fusiliers marins (Opérations sur le barrage frontalier marocain) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Demi-brigade_de_fusiliers_marins",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Le barrage frontière ouest pendant la guerre d'Algérie — Cairn.info",
+          "url": "https://shs.cairn.info/revue-guerres-mondiales-et-conflits-contemporains-2018-1-page-91?lang=fr",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1960_009",
+      "nom_operation": "Combats et embuscades du Djebel Grouz et de Beni Ounif (Front Sud-Oranais / Figuig - Béchar)",
+      "date_debut": "1960-11-04",
+      "date_fin": "1960-11-06",
+      "wilaya_concernee": "Wilaya V (Zone 8 - Béchar / Beni Ounif / Djebel Grouz)",
+      "localisation": {
+        "region_ou_ville": "Massif du Djebel Grouz et secteur frontalier de Beni Ounif (face à l'oasis de Figuig, Wilaya de Béchar)",
+        "coordonnees_approximatives": {
+          "latitude": 32.05,
+          "longitude": -1.25
+        }
+      },
+      "commandement_aln": [
+        "Commandants de la Zone 8 de la Wilaya V et du secteur opérationnel Sud-Ouest"
+      ],
+      "type_action": "Embuscade",
+      "description": "Sept mois après le martyre du colonel Lotfi et du commandant Ferradj à Béchar, les sections de la Zone 8 de la Wilaya V et les commandos frontaliers du Sud-Ouest mènent une série d'embuscades et de minages de pistes au pied des falaises du Djebel Grouz et autour de Beni Ounif contre les patrouilles de la Légion étrangère et du 35e RI.",
+      "bilan_et_pertes": {
+        "aln": "7 moudjahidine tués au cours des accrochages dans le Djebel Grouz",
+        "forces_francaises": "Destruction de véhicules blindés légers sur mines et une quinzaine de militaires français tués ou blessés",
+        "civils": "Maintien de l'état de siège militaire autour de Beni Ounif et de Colomb-Béchar"
+      },
+      "impact_strategique": "Prouve la continuité de la lutte armée dans l'extrême Sud-Oranais après la disparition du colonel Lotfi et menace directement le centre d'expérimentation militaire français de Colomb-Béchar.",
+      "sources": [
+        {
+          "titre": "Béchar : le colonel Lotfi et la lutte dans la Zone 8 de la Wilaya V — Algérie Presse Service (APS)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mn8zsy8t-bechar-le-colonel-lotfi-un-riche-parcours-de-lutte-et-de-militantisme-durant-la-glorieuse-guerre-de-liberation-nationale",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Colonel Lotfi — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Colonel_Lotfi",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_007",
+      "nom_operation": "Attaques coordonnées d'artillerie et de commandos contre le barrage Ouest (Secteur de Forthassa - Aïn Sefra)",
+      "date_debut": "1961-05-14",
+      "date_fin": "1961-05-16",
+      "wilaya_concernee": "Armée des Frontières (EMG - Front Ouest) et Wilaya V (Zone 8)",
+      "localisation": {
+        "region_ou_ville": "Forthassa Gharbia (Sfisifa), Ich et secteur d'Aïn Sefra sur le barrage frontalier Ouest (Wilaya de Naâma)",
+        "coordonnees_approximatives": {
+          "latitude": 32.7333,
+          "longitude": -0.8833
+        }
+      },
+      "commandement_aln": [
+        "Officiers de l'État-Major Général (Front Ouest) et de la Wilaya V"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Au printemps 1961, pendant l'ouverture des pourparlers d'Évian, les bataillons de l'ALN déployés sur la frontière sud-marocaine lancent des attaques nocturnes coordonnées au mortier de 81 et 120 mm et au canon sans recul contre les postes fortifiés français de Forthassa et du secteur d'Aïn Sefra, ouvrant des brèches à l'explosif dans le barrage électrifié.",
+      "bilan_et_pertes": {
+        "aln": "Quelques blessés lors des échanges de tirs de contre-batterie",
+        "forces_francaises": "Postes d'observation et radars endommagés, une douzaine de légionnaires et artilleurs blessés ou tués",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Appuie militairement la délégation du GPRA à Évian en démontrant la puissance de feu croissante de l'Armée des frontières à l'Ouest comme à l'Est.",
+      "sources": [
+        {
+          "titre": "Le barrage frontière ouest pendant la guerre d'Algérie — Cairn.info",
+          "url": "https://shs.cairn.info/revue-guerres-mondiales-et-conflits-contemporains-2018-1-page-91?lang=fr",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Les combats du secteur d'Aïn Sefra — FSALE",
+          "url": "https://www.legionetrangere.fr/la-fsale/actualites-de-la-fsale/808-histoire-decembre-1959-bataille-du-djebel-beni-smir.html",
+          "type_source": "Archive"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_008",
+      "nom_operation": "Embuscades et coups de main des maquis des Trara et de Nedroma contre les postes côtiers (Hiver 1961)",
+      "date_debut": "1961-11-01",
+      "date_fin": "1961-11-03",
+      "wilaya_concernee": "Wilaya V (Zone 1 - Monts des Trara / Nedroma / Ghazaouet)",
+      "localisation": {
+        "region_ou_ville": "Nedroma, Djebel Fellaoucène et abords de Ghazaouet (Nemours) (Wilaya de Tlemcen)",
+        "coordonnees_approximatives": {
+          "latitude": 35.0136,
+          "longitude": -1.7478
+        }
+      },
+      "commandement_aln": [
+        "Commandants de la Zone 1 de la Wilaya V"
+      ],
+      "type_action": "Embuscade",
+      "description": "À l'occasion du septième anniversaire du 1er novembre 1954, les groupes armés de la Zone 1 de la Wilaya V dans les monts des Trara mènent une série de coups de main et d'embuscades contre les postes de la DBFM autour de Nedroma et de Ghazaouet, accompagnés de manifestations patriotiques de la population arborant le drapeau algérien.",
+      "bilan_et_pertes": {
+        "aln": "Pertes légères ; maintien intégral du contrôle politique du FLN sur le massif des Trara",
+        "forces_francaises": "Plusieurs fusiliers marins et gendarmes blessés lors des accrochages et du service d'ordre",
+        "civils": "Plusieurs manifestants blessés lors des rassemblements du 1er novembre 1961 à Nedroma et Ghazaouet"
+      },
+      "impact_strategique": "Scelle l'échec définitif de la pacification dans le secteur côtier de la DBFM à quelques mois de la fin de la guerre.",
+      "sources": [
+        {
+          "titre": "Demi-brigade de fusiliers marins (Fin de campagne en mars 1962) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Demi-brigade_de_fusiliers_marins",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Wilaya (guerre d'Algérie) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Wilaya_(guerre_d%27Alg%C3%A9rie)",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1959_014",
+      "nom_operation": "Pilonnage au mortier et assaut de commando contre le poste fortifié d'El Meridj (Ligne Morice - Tébessa)",
+      "date_debut": "1959-02-18",
+      "date_fin": "1959-02-19",
+      "wilaya_concernee": "Base de l'Est / Wilaya I (Secteur frontalier d'El Meridj - Ouenza - Tébessa)",
+      "localisation": {
+        "region_ou_ville": "El Meridj, entre Ouenza, Morsott et la frontière tunisienne de Haïdra / Kalâat Senan (Wilaya de Tébessa)",
+        "coordonnees_approximatives": {
+          "latitude": 35.8,
+          "longitude": 8.2667
+        }
+      },
+      "commandement_aln": [
+        "Commandants des bataillons frontaliers de l'Est (Secteur Tébessa - Le Kef)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Dans le secteur minier et frontalier d'El Meridj (au nord de Tébessa), un bataillon de l'ALN basé en Tunisie pilonne de nuit au mortier de 81 mm et au canon sans recul le poste militaire français et la station radar surveillant la Ligne Morice, pendant que des équipes de sapeurs-démineurs de l'ALN ouvrent une brèche à la bangalore dans le réseau électrifié à 5 000 volts.",
+      "bilan_et_pertes": {
+        "aln": "8 moudjahidine tués par les mines bondissantes et l'artillerie de barrage ; passage réussi d'un détachement de ravitaillement vers les Nemencha",
+        "forces_francaises": "Destruction partielle des défenses extérieures du poste d'El Meridj et une quinzaine de soldats français tués ou blessés",
+        "civils": "Aucune victime civile (zone interdite du barrage Est)"
+      },
+      "impact_strategique": "Conduit le général Maurice Challe à décider au printemps 1959 la construction d'un second barrage en avant de la Ligne Morice, au plus près du tracé frontalier (la « Ligne Challe »).",
+      "sources": [
+        {
+          "titre": "El Meridj (Poste frontalier de la région de Tébessa) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/El_Meridj",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Ligne Morice et Ligne Challe — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1959_015",
+      "nom_operation": "Combats et sabotages du barrage dans le secteur minier de l'Ouenza et de Boukhadra",
+      "date_debut": "1959-06-11",
+      "date_fin": "1959-06-13",
+      "wilaya_concernee": "Base de l'Est / Wilaya I (Secteur d'Ouenza - Boukhadra - Souk Ahras)",
+      "localisation": {
+        "region_ou_ville": "Complexe minier de fer de l'Ouenza et du Djebel Boukhadra, entre Souk Ahras et Tébessa (Wilaya de Tébessa)",
+        "coordonnees_approximatives": {
+          "latitude": 35.95,
+          "longitude": 8.1333
+        }
+      },
+      "commandement_aln": [
+        "Tahar Zbiri",
+        "Chadli Bendjedid",
+        "Officiers des bataillons de la frontière Est"
+      ],
+      "type_action": "Sabotage",
+      "description": "Un commando lourd de l'ALN franchit le premier rideau frontalier et attaque les installations électriques et la voie ferrée minière desservant les gisements stratégiques de fer de l'Ouenza et de Boukhadra, tout en engageant un combat acharné de quarante-huit heures contre les régiments blindés et parachutistes de la « herse » française.",
+      "bilan_et_pertes": {
+        "aln": "Une vingtaine de moudjahidine tués au combat ; repli du reste de l'unité sous la couverture des mortiers de l'ALN",
+        "forces_francaises": "Dégâts majeurs aux pylônes électriques et au chemin de fer minier de l'Ouenza, une vingtaine de militaires français mis hors de combat",
+        "civils": "Arrêt temporaire de l'extraction du minerai de fer à l'Ouenza"
+      },
+      "impact_strategique": "Cible l'un des fleurons miniers de l'Algérie coloniale situé immédiatement sur le tracé de la Ligne Morice.",
+      "sources": [
+        {
+          "titre": "La guerre de libération sur la frontière de l'Est — Cairn.info",
+          "url": "https://shs.cairn.info/guerre-de-liberation--9789961634547-page-127?lang=fr",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Ligne Morice — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1959_016",
+      "nom_operation": "Offensives de diversion et duels d'artillerie sur la Ligne Challe (Secteur de La Calle / El Kala - Aïn Zana)",
+      "date_debut": "1959-09-24",
+      "date_fin": "1959-09-27",
+      "wilaya_concernee": "Armée des Frontières (Zone opérationnelle Nord-Est) et Wilaya II",
+      "localisation": {
+        "region_ou_ville": "Secteur forestier d'El Kala (ex-La Calle), Oum Teboul et col d'Aïn Zana, à l'extrémité nord des Lignes Challe et Morice (Wilaya d'El Tarf / Souk Ahras)",
+        "coordonnees_approximatives": {
+          "latitude": 36.7833,
+          "longitude": 8.3833
+        }
+      },
+      "commandement_aln": [
+        "Amara Laskri dit Bouglez",
+        "Chadli Bendjedid",
+        "Commandants des bataillons du secteur de Ghardimaou - Aïn Draham"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Pour soulager les Wilayas II et III soumises au Plan Challe à l'intérieur de l'Algérie, les bataillons de l'ALN positionnés dans les forêts de Kroumirie (Aïn Draham / Ghardimaou) lancent fin septembre 1959 une série d'attaques nocturnes au canon sans recul de 75 mm, au mortier lourd et à la mitrailleuse contre les ouvrages avancés de la nouvelle Ligne Challe entre La Calle (El Kala), Oum Teboul et Aïn Zana.",
+      "bilan_et_pertes": {
+        "aln": "Une douzaine de moudjahidine tués ou blessés par les tirs de contre-batterie d'artillerie de 105 et 155 mm français",
+        "forces_francaises": "Destruction de plusieurs miradors blindés et radars de surveillance terrestre, une vingtaine de soldats français tués ou blessés",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Contraint le général Challe à rappeler en urgence des régiments parachutistes de réserve générale vers la frontière tunisienne, allégeant d'autant l'étau sur les maquis de Kabylie et du Nord-Constantinois.",
+      "sources": [
+        {
+          "titre": "Bataille des frontières et renforcement du barrage Est (Ligne Challe) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Bataille_des_fronti%C3%A8res_(guerre_d%27Alg%C3%A9rie)",
+          "type_source": "Article"
+        },
+        {
+          "titre": "La guerre de libération et la Base de l'Est — Cairn.info",
+          "url": "https://shs.cairn.info/guerre-de-liberation--9789961634547-page-127?lang=fr",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1959_017",
+      "nom_operation": "Bataille de franchissement de Bekkaria et du Djebel Anoual (Sud de Tébessa - Ligne Morice)",
+      "date_debut": "1959-12-14",
+      "date_fin": "1959-12-16",
+      "wilaya_concernee": "Wilaya I (Aurès-Nemencha) et Armée des Frontières (Secteur de Tébessa - Bekkaria)",
+      "localisation": {
+        "region_ou_ville": "Bekkaria, El Kouif et massif du Djebel Anoual, à l'est et au sud-ouest de Tébessa (Wilaya de Tébessa)",
+        "coordonnees_approximatives": {
+          "latitude": 35.3667,
+          "longitude": 8.2333
+        }
+      },
+      "commandement_aln": [
+        "Tahar Zbiri",
+        "Mostefa Benloucif",
+        "Officiers de liaison de la Wilaya I"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "En décembre 1959, une colonne de renfort et de ravitaillement en armes et munitions destinée à la Wilaya I perce de nuit les réseaux de barbelés électrifiés et les champs de mines du secteur de Bekkaria (près de Tébessa), puis livre deux jours de combats intenses au Djebel Anoual contre les régiments de la Légion étrangère et les parachutistes français.",
+      "bilan_et_pertes": {
+        "aln": "Une trentaine de moudjahidine tombés au champ d'honneur ; jonction réussie du reste de la colonne avec les katibas des Nemencha",
+        "forces_francaises": "Pertes sévères parmi les unités d'interception françaises et 1 hélicoptère abattu au Djebel Anoual",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Assure le ravitaillement vital en munitions des maquis de l'Aurès-Nemencha (Wilaya I) dirigés par Tahar Zbiri à l'hiver 1959-1960.",
+      "sources": [
+        {
+          "titre": "Wilaya I historique — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Wilaya_I_historique",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Mourir à Sakiet : les combats sur la frontière de Tébessa — Cairn.info",
+          "url": "https://shs.cairn.info/mourir-a-sakiet--9782130835714-page-229?lang=fr",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1960_010",
+      "nom_operation": "Attaques au canon sans recul et destructions de radars sur la Ligne Challe (Secteur de Bouhadjar - Lamy)",
+      "date_debut": "1960-02-20",
+      "date_fin": "1960-02-22",
+      "wilaya_concernee": "Armée des Frontières (EMG - Front Est / Secteur de Bouhadjar)",
+      "localisation": {
+        "region_ou_ville": "Bouhadjar (ex-Lamy), Aïn Kerma et Ouled Driss, sur le double barrage Challe-Morice (Wilayas d'El Tarf et Souk Ahras)",
+        "coordonnees_approximatives": {
+          "latitude": 36.5028,
+          "longitude": 8.1056
+        }
+      },
+      "commandement_aln": [
+        "Houari Boumédiène (Chef de l'EMG)",
+        "Ali Mendjeli",
+        "Chadli Bendjedid"
+      ],
+      "type_action": "Sabotage",
+      "description": "En février 1960, dès la mise en place de l'État-Major Général (EMG) unifié de l'ALN, des commandos d'artillerie légère et de sapeurs mènent une série de raids nocturnes coordonnés contre les postes radars d'artillerie et les transformateurs haute tension de la Ligne Challe dans le secteur de Bouhadjar (ex-Lamy) et d'Aïn Kerma, détruisant plusieurs équipements électroniques de détection français au canon sans recul de 75 mm.",
+      "bilan_et_pertes": {
+        "aln": "5 moudjahidine tués lors des tirs de barrage d'artillerie",
+        "forces_francaises": "Destruction de deux postes radars de détection au sol et de postes de transformation électrique, une quinzaine de soldats français tués ou blessés",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Démontre la modernisation technique des bataillons frontaliers de l'EMG, capables de neutraliser à distance les dispositifs électroniques de détection de la Ligne Challe.",
+      "sources": [
+        {
+          "titre": "Ligne Morice et dispositif de détection radar du barrage Est — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Dictionnaire de la guerre d'Algérie (L'Armée des frontières et l'EMG) — Cairn.info",
+          "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-380?lang=fr",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1960_011",
+      "nom_operation": "Combats frontaliers de Heddada et de Sakiet Sidi Youssef (Secteur de Souk Ahras - Ghardimaou)",
+      "date_debut": "1960-05-06",
+      "date_fin": "1960-05-08",
+      "wilaya_concernee": "Armée des Frontières (EMG - Front Est / Secteur de Souk Ahras)",
+      "localisation": {
+        "region_ou_ville": "Heddada, Sidi Fredj et face à Sakiet Sidi Youssef / Ghardimaou, à l'est de Souk Ahras (Wilaya de Souk Ahras)",
+        "coordonnees_approximatives": {
+          "latitude": 36.245,
+          "longitude": 8.33
+        }
+      },
+      "commandement_aln": [
+        "Commandants des bataillons d'assaut de l'EMG (Secteur de Ghardimaou - Souk Ahras)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Trois compagnies de l'Armée des frontières franchissent le premier réseau barbelé de la Ligne Challe à hauteur de Heddada et de Sidi Fredj (secteur de Souk Ahras) sous la couverture d'un barrage massif de mortiers lourds de 120 mm, engageant un combat violent de quarante-huit heures contre les régiments d'infanterie et de parachutistes français.",
+      "bilan_et_pertes": {
+        "aln": "Une vingtaine de combattants de l'ALN tués ou blessés ; repli tactique ordonné avec les armes capturées",
+        "forces_francaises": "Plus d'une vingtaine de militaires français tués ou blessés et destruction d'un fortin frontalier à Heddada",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Provoque une vive tension diplomatique et militaire sur la frontière algéro-tunisienne au printemps 1960, l'armée française redoutant une offensive générale des 20 000 hommes de l'EMG.",
+      "sources": [
+        {
+          "titre": "Mourir à Sakiet : la guerre sur la frontière algéro-tunisienne — Cairn.info",
+          "url": "https://shs.cairn.info/mourir-a-sakiet--9782130835714-page-229?lang=fr",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Bataille des frontières (guerre d'Algérie) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Bataille_des_fronti%C3%A8res_(guerre_d%27Alg%C3%A9rie)",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1960_012",
+      "nom_operation": "Opération de commando et sabotage de la voie ferrée minière à Morsott - El Kouif (Nord de Tébessa)",
+      "date_debut": "1960-08-15",
+      "date_fin": "1960-08-16",
+      "wilaya_concernee": "Armée des Frontières (EMG) et Wilaya I (Secteur de Morsott - El Kouif - Tébessa)",
+      "localisation": {
+        "region_ou_ville": "Morsott, Bir Dheb et cité minière de phosphates d'El Kouif, au nord-est de Tébessa (Wilaya de Tébessa)",
+        "coordonnees_approximatives": {
+          "latitude": 35.5,
+          "longitude": 8.3167
+        }
+      },
+      "commandement_aln": [
+        "Officiers des commandos frontaliers de Tébessa (EMG / Wilaya I)"
+      ],
+      "type_action": "Sabotage",
+      "description": "Un commando de démolition de l'ALN traverse de nuit le réseau électrifié entre El Kouif et Morsott, place de fortes charges d'explosifs sous la voie ferrée et fait dérailler un train minier escorté par un wagon blindé, avant d'attaquer à la roquette antichar les blindés venus de Tébessa.",
+      "bilan_et_pertes": {
+        "aln": "3 moudjahidine blessés ; exfiltration réussie du commando",
+        "forces_francaises": "Déraillement du convoi ferroviaire d'El Kouif, destruction d'une automitrailleuse d'escorte et une douzaine de soldats blessés ou tués",
+        "civils": "Interruption de l'évacuation des phosphates d'El Kouif vers Bône"
+      },
+      "impact_strategique": "Prouve la perméabilité persistante du double barrage face à de petits commandos d'élite dotés d'explosifs modernes et d'armes antichars.",
+      "sources": [
+        {
+          "titre": "El Meridj et le secteur frontalier de Morsott / El Kouif — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/El_Meridj",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Répertoire numérique de la série 1H (Zone Est Constantinois / Tébessa) — Service Historique de la Défense (SHD)",
+          "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
+          "type_source": "Archive"
+        }
+      ]
+    },
+    {
+      "id": "OP_1960_013",
+      "nom_operation": "Duels d'artillerie lourde et attaques de postes à Bir El Ater et Négrine (Tronçon Sud de la Ligne Morice)",
+      "date_debut": "1960-11-18",
+      "date_fin": "1960-11-20",
+      "wilaya_concernee": "Armée des Frontières (Zone Sud-Est) et Wilaya I (Sud des Nemencha - Bir El Ater / Négrine)",
+      "localisation": {
+        "region_ou_ville": "Bir El Ater, Oum Ali et oasis de Négrine, au sud de Tébessa face à la région de Gafsa / Tozeur (Sud de la Wilaya de Tébessa)",
+        "coordonnees_approximatives": {
+          "latitude": 34.7486,
+          "longitude": 8.0603
+        }
+      },
+      "commandement_aln": [
+        "Tahar Zbiri (Colonel de la Wilaya I)",
+        "Commandants des bataillons du secteur Sud-Est (Redeyef / Moularès)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "À l'extrémité méridionale de la Ligne Morice et de la Ligne Challe (entre Bir El Ater, Oum Ali et Négrine, aux portes du Chott El Djérid), les bataillons de l'ALN pilonnent au mortier lourd et au canon sans recul les fortins français d'Oum Ali et de Bir El Ater pour couvrir le passage de caravanes motorisées et chamelières d'armes vers le sud des monts des Nemencha et la Wilaya VI.",
+      "bilan_et_pertes": {
+        "aln": "Une dizaine de moudjahidine tués lors des frappes aériennes françaises dans le désert de Négrine ; passage réussi d'un convoi logistique vers les Nemencha",
+        "forces_francaises": "Fortin d'Oum Ali lourdement endommagé et une quinzaine de soldats français tués ou blessés",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Exploite l'étirement extrême du barrage français vers le Sahara oriental (Bir El Ater - Négrine) pour maintenir l'approvisionnement de la Wilaya I et de la Wilaya VI.",
+      "sources": [
+        {
+          "titre": "Ligne Morice (Extension sud vers Bir El Ater et Négrine) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Nemencha — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Nemencha",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_009",
+      "nom_operation": "Tirs antiaériens et embuscades frontalières de l'ALN dans le secteur de Lacroix - Aïn El Assel (El Tarf)",
+      "date_debut": "1961-02-08",
+      "date_fin": "1961-02-10",
+      "wilaya_concernee": "Armée des Frontières (EMG - Front Est / Secteur d'El Tarf)",
+      "localisation": {
+        "region_ou_ville": "Aïn El Assel (ex-Lacroix), El Aioun et Roum El Souk, dans le secteur frontalier d'El Tarf (Wilaya d'El Tarf)",
+        "coordonnees_approximatives": {
+          "latitude": 36.7833,
+          "longitude": 8.3667
+        }
+      },
+      "commandement_aln": [
+        "Chadli Bendjedid",
+        "Commandants des batteries antiaériennes et des bataillons de la Zone Nord-Est (EMG)"
+      ],
+      "type_action": "Embuscade",
+      "description": "En février 1961, les unités de l'EMG dans le secteur boisé de Roum El Souk et d'Aïn El Assel (ex-Lacroix, près d'El Tarf) attirent une patrouille blindée et héliportée française dans une embuscade d'artillerie le long de la Ligne Challe et mettent en œuvre leurs batteries de mitrailleuses lourdes antiaériennes de 12,7 mm et 14,5 mm contre les avions d'observation et hélicoptères français.",
+      "bilan_et_pertes": {
+        "aln": "6 moudjahidine tués par les bombardements d'artillerie",
+        "forces_francaises": "1 avion d'observation / hélicoptère abattu, deux blindés légers touchés au canon sans recul et une douzaine de soldats français tués ou blessés",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "La densité de la défense antiaérienne (DCA) de l'Armée des frontières interdit désormais aux aéronefs français le survol à basse altitude de la bande frontalière.",
+      "sources": [
+        {
+          "titre": "La guerre de libération et la Base de l'Est — Cairn.info",
+          "url": "https://shs.cairn.info/guerre-de-liberation--9789961634547-page-127?lang=fr",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Ligne Morice — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_010",
+      "nom_operation": "Offensive nocturne de brèche et combats de Mechroha - Laverdure sur la Ligne Morice (Souk Ahras)",
+      "date_debut": "1961-06-18",
+      "date_fin": "1961-06-20",
+      "wilaya_concernee": "Armée des Frontières (EMG) et Wilaya II (Secteur de Mechroha / Souk Ahras)",
+      "localisation": {
+        "region_ou_ville": "Massif forestier de Mechroha (ex-Laverdure) et Ouillen, entre Souk Ahras et Guelma (Wilaya de Souk Ahras)",
+        "coordonnees_approximatives": {
+          "latitude": 36.3578,
+          "longitude": 7.8369
+        }
+      },
+      "commandement_aln": [
+        "Salah Boubnider dit Sawt El Arab (Wilaya II)",
+        "Commandants des bataillons frontaliers de Souk Ahras (EMG)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Après la suspension par la France des premiers pourparlers d'Évian en juin 1961, l'EMG et la Wilaya II coordonnent une opération de franchissement dans le massif forestier de Mechroha (ex-Laverdure, au nord-ouest de Souk Ahras) : tandis que les batteries de l'EMG pilonnent la Ligne Challe, un commando de liaison franchit la Ligne Morice et livre un combat acharné dans les forêts de chênes-lièges de Mechroha.",
+      "bilan_et_pertes": {
+        "aln": "Une quinzaine de moudjahidine tués au combat ; jonction réussie du détachement de liaison avec les katibas de la Wilaya II",
+        "forces_francaises": "Pertes sensibles au sein des unités parachutistes et d'infanterie françaises gardant le secteur de Laverdure",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Démontre la coordination entre les maquis de l'intérieur (Wilaya II) et l'Armée des frontières en plein été 1961.",
+      "sources": [
+        {
+          "titre": "Bataille des frontières (Secteur de Souk Ahras et Laverdure / Mechroha) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Bataille_des_fronti%C3%A8res_(guerre_d%27Alg%C3%A9rie)",
+          "type_source": "Article"
+        },
+        {
+          "titre": "La Wilaya II historique — Cairn.info",
+          "url": "https://shs.cairn.info/la-wilaya-ii-historique--9789947394052-page-103?lang=fr",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_011",
+      "nom_operation": "Pilonnage massif au mortier de 120 mm contre les postes de la Ligne Morice à El Meridj et Ouenza",
+      "date_debut": "1961-09-02",
+      "date_fin": "1961-09-04",
+      "wilaya_concernee": "Armée des Frontières (EMG - Front Est / Secteur d'El Meridj - Ouenza)",
+      "localisation": {
+        "region_ou_ville": "Postes frontaliers d'El Meridj, Aïn Zerga et Ouenza (Wilaya de Tébessa)",
+        "coordonnees_approximatives": {
+          "latitude": 35.7833,
+          "longitude": 8.25
+        }
+      },
+      "commandement_aln": [
+        "Houari Boumédiène",
+        "Ali Mendjeli",
+        "Commandants d'artillerie de l'EMG (Front Est)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Au début de septembre 1961, les unités d'artillerie lourde de l'EMG déclenchent un bombardement coordonné de plusieurs centaines d'obus de mortiers de 82 mm et 120 mm et de canons sans recul contre la chaîne de postes fortifiés français d'El Meridj, d'Aïn Zerga et d'Ouenza, accompagné d'assauts d'infanterie pour détruire les réseaux barbelés électrifiés.",
+      "bilan_et_pertes": {
+        "aln": "Quelques blessés dans les positions de batterie lors des tirs de riposte de l'artillerie française",
+        "forces_francaises": "Ouvrages bétonnés et radars endommagés, une vingtaine de militaires français tués ou blessés",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Souligne le basculement du rapport de force conventionnel sur les frontières à l'automne 1961, l'ALN disposant désormais d'une artillerie de campagne lourde et structurée.",
+      "sources": [
+        {
+          "titre": "El Meridj — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/El_Meridj",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Ligne Morice — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_012",
+      "nom_operation": "Attaque coordonnée des bataillons de l'EMG contre les postes du secteur de Souk Ahras - Merahna (Hiver 1961-1962)",
+      "date_debut": "1961-12-15",
+      "date_fin": "1961-12-17",
+      "wilaya_concernee": "Armée des Frontières (EMG - Front Est / Secteur de Souk Ahras - Merahna)",
+      "localisation": {
+        "region_ou_ville": "Merahna, Heddada et Ouled Moumen, à l'est de Souk Ahras sur la Ligne Challe (Wilaya de Souk Ahras)",
+        "coordonnees_approximatives": {
+          "latitude": 36.1972,
+          "longitude": 8.1556
+        }
+      },
+      "commandement_aln": [
+        "Commandants des bataillons frontaliers de Souk Ahras (EMG)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "En décembre 1961, au moment où s'engagent les négociations secrètes décisives des Rousses, plusieurs compagnies de l'EMG mènent un coup de main nocturne d'envergure contre les avant-postes de la Ligne Challe dans le secteur de Merahna et d'Ouled Moumen (Souk Ahras), détruisant les casemates au bazooka et au canon sans recul.",
+      "bilan_et_pertes": {
+        "aln": "9 moudjahidine tués au cours de l'assaut nocturne ; capture d'armes et de prisonniers français",
+        "forces_francaises": "Une quinzaine de soldats français tués ou blessés et plusieurs prisonniers capturés par l'ALN (libérés ensuite après les Accords d'Évian)",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "La capture de militaires français sur le barrage Est conforte le statut de belligérant régulier de l'ALN/GPRA dans la dernière ligne droite des négociations.",
+      "sources": [
+        {
+          "titre": "Mourir à Sakiet : les opérations frontalières et les prisonniers sur la frontière tunisienne — Cairn.info",
+          "url": "https://shs.cairn.info/mourir-a-sakiet--9782130835714-page-229?lang=fr",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Ligne Morice — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1962_003",
+      "nom_operation": "Derniers duels d'artillerie et harcèlements sur la Ligne Morice-Challe à la veille du cessez-le-feu (Tébessa - Souk Ahras - El Tarf)",
+      "date_debut": "1962-03-01",
+      "date_fin": "1962-03-18",
+      "wilaya_concernee": "Armée des Frontières (EMG - Front Est)",
+      "localisation": {
+        "region_ou_ville": "Ensemble du front Est sur les Lignes Challe et Morice : d'El Kala / El Tarf à Souk Ahras, El Meridj et Tébessa",
+        "coordonnees_approximatives": {
+          "latitude": 36.2864,
+          "longitude": 7.9511
+        }
+      },
+      "commandement_aln": [
+        "Houari Boumédiène (Chef de l'EMG)",
+        "Ali Mendjeli",
+        "Chadli Bendjedid",
+        "Tahar Zbiri"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Durant les dix-huit premiers jours de mars 1962, pendant la conférence finale d'Évian (7-18 mars 1962), les bataillons de l'Armée des frontières maintiennent un harcèlement quotidien d'artillerie (mortiers, canons sans recul, mitrailleuses lourdes) et d'incursions de patrouilles tout au long des Lignes Challe et Morice entre El Tarf, Souk Ahras et Tébessa jusqu'à l'entrée en vigueur officielle du cessez-le-feu le 19 mars 1962 à midi.",
+      "bilan_et_pertes": {
+        "aln": "Derniers martyrs tombés sur la ligne électrifiée avant le 19 mars 1962 ; préparation immédiate de l'entrée des bataillons de l'ALN en Algérie",
+        "forces_francaises": "Derniers soldats français tués ou blessés sur le barrage frontalier avant le cessez-le-feu du 19 mars",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Permet au GPRA de signer les Accords d'Évian le 18 mars 1962 en s'appuyant sur une armée régulière intacte et puissamment équipée aux portes de l'Algérie.",
+      "sources": [
+        {
+          "titre": "Ligne Morice — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
+          "type_source": "Article"
+        },
+        {
+          "titre": "La guerre de libération et l'Armée des frontières — Cairn.info",
+          "url": "https://shs.cairn.info/guerre-de-liberation--9789961634547-page-127?lang=fr",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_013",
+      "nom_operation": "Contre-offensive des commandos urbains du FLN à Alger lors du putsch des généraux et des premiers attentats de l'OAS",
+      "date_debut": "1961-04-22",
+      "date_fin": "1961-05-31",
+      "wilaya_concernee": "Zone autonome d'Alger (ZAA reconstituée) et Wilaya IV",
+      "localisation": {
+        "region_ou_ville": "Alger : Casbah, Belcourt, Clos-Salembier (El Madania), Climat de France (Oued Koriche) et El Harrach",
+        "coordonnees_approximatives": {
+          "latitude": 36.775,
+          "longitude": 3.0586
+        }
+      },
+      "commandement_aln": [
+        "Commandement clandestin de la Zone autonome d'Alger (ZAA)",
+        "Youcef Khatib dit Si Hassan (Wilaya IV)"
+      ],
+      "type_action": "Guérilla urbaine",
+      "description": "Dès l'échec du putsch des généraux (21-25 avril 1961) et le lancement de la première vague de plasticages de l'OAS à Alger en mai 1961, les groupes armés reconstitués de la Zone autonome d'Alger (ZAA) mettent en place des cordons d'autodéfense armée autour de la Casbah, de Belcourt et de Climat de France, et exécutent des attaques ciblées contre les premiers réseaux logistiques et agents de renseignement de l'OAS.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs fidayin arrêtés ou tués lors d'accrochages avec les patrouilles militaires et les commandos OAS",
+        "forces_francaises": "Neutralisation de plusieurs indicateurs et membres des réseaux activistes ultras à Alger",
+        "civils": "Protection des quartiers populaires algérois contre les premières incursions des commandos de l'OAS"
+      },
+      "impact_strategique": "Sanctuarise dès le printemps 1961 la Casbah, Belcourt, Clos-Salembier et Climat de France sous l'autorité exclusive de l'organisation urbaine du FLN.",
+      "sources": [
+        {
+          "titre": "Il y a 60 ans, l'OAS en Algérie et la guerre urbaine à Alger et Oran — La Revue d'Histoire Militaire",
+          "url": "https://larevuedhistoiremilitaire.fr/2021/03/22/il-y-a-60-ans-loas-en-algerie/",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Guerre d'Algérie — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Guerre_d%27Alg%C3%A9rie",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_014",
+      "nom_operation": "Opérations des fidayin de Constantine et défense de la Souika et de Bellevue face aux réseaux OAS",
+      "date_debut": "1961-06-10",
+      "date_fin": "1961-08-25",
+      "wilaya_concernee": "Wilaya II (Zone autonome / Secteur urbain de Constantine)",
+      "localisation": {
+        "region_ou_ville": "Constantine : quartiers de la Souika (Médina), Sidi Mabrouk, Bellevue, Coudiat et Rue de France (Wilaya de Constantine)",
+        "coordonnees_approximatives": {
+          "latitude": 36.365,
+          "longitude": 6.6147
+        }
+      },
+      "commandement_aln": [
+        "Salah Boubnider dit Sawt El Arab (Colonel de la Wilaya II)",
+        "Chefs des réseaux urbains de fidayin de Constantine"
+      ],
+      "type_action": "Attentat ciblé",
+      "description": "Durant l'été 1961 à Constantine, les groupes de fidayin de la Wilaya II mènent une campagne d'attentats ciblés à la grenade et au pistolet-mitrailleur contre les responsables locaux de l'OAS, les commissariats et les patrouilles mixtes dans les quartiers de Bellevue, de Sidi Mabrouk et de la rue de France, tout en barricadant les accès de la médina (Souika).",
+      "bilan_et_pertes": {
+        "aln": "Une douzaine de fidayin tués ou arrêtés lors des bouclages du rocher de Constantine",
+        "forces_francaises": "Plusieurs cadres activistes de l'OAS et membres des forces de sécurité abattus ou blessés à Constantine",
+        "civils": "Forte tension intercommunautaire et couvre-feu à Constantine"
+      },
+      "impact_strategique": "Empêche l'OAS de prendre le contrôle de Constantine (contrairement à Oran et à Bab El Oued), la capitale de l'Est restant solidement dominée par les réseaux de la Wilaya II.",
+      "sources": [
+        {
+          "titre": "La Wilaya II historique : l'action urbaine à Constantine — Cairn.info",
+          "url": "https://shs.cairn.info/la-wilaya-ii-historique--9789947394052-page-103?lang=fr",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Il y a 60 ans, l'OAS en Algérie — La Revue d'Histoire Militaire",
+          "url": "https://larevuedhistoiremilitaire.fr/2021/03/22/il-y-a-60-ans-loas-en-algerie/",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_015",
+      "nom_operation": "Combats d'autodéfense et contre-attaques des commandos FLN à Oran (Ville Nouvelle, Médioni et Lamur)",
+      "date_debut": "1961-08-29",
+      "date_fin": "1961-09-15",
+      "wilaya_concernee": "Wilaya V (Organisation urbaine du FLN à Oran)",
+      "localisation": {
+        "region_ou_ville": "Oran : quartiers de Ville Nouvelle (Médina Jdida / Tahtaha), Médioni (Haï El Menzeh), Lamur (El Hamri) et Saint-Antoine",
+        "coordonnees_approximatives": {
+          "latitude": 35.6911,
+          "longitude": -0.6417
+        }
+      },
+      "commandement_aln": [
+        "Chefs des cellules armées urbaines du FLN d'Oran (Wilaya V)"
+      ],
+      "type_action": "Guérilla urbaine",
+      "description": "À la fin de l'été 1961, en riposte aux premières « ratonnades » et expéditions armées des commandos de l'OAS d'Oran (dirigés par le général Jouhaud et Charles Micheletti) contre les quartiers algériens de Ville Nouvelle (Médina Jdida), Médioni et Lamur, les groupes de choc du FLN oranais organisent la défense armée des lisières inter-quartiers et lancent des raids de représailles au pistolet-mitrailleur et à la grenade dans les artères limitrophes.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs fidayin tués lors d'échanges de tirs avec les commandos OAS et les CRS",
+        "forces_francaises": "Plusieurs dizaines de membres des groupes armés européens et d'agents de sécurité tués ou blessés à Oran",
+        "civils": "Dizaines de victimes civiles algériennes et européennes ; érection par l'armée française de réseaux de barbelés séparant Ville Nouvelle des quartiers européens d'Oran"
+      },
+      "impact_strategique": "Transforme Ville Nouvelle (Médina Jdida), Médioni et le Petit Lac en bastions retranchés du FLN au cœur d'une agglomération oranaise majoritairement européenne.",
+      "sources": [
+        {
+          "titre": "Quelques jalons préliminaires à propos de la Zone Autonome d'Oran (ZAO) — Revue Insaniyat (CRASC)",
+          "url": "https://www.insaniyat.crasc.dz/en/article/quelques-jalons-preliminaires-a-propos-de-la-zone-autonome-doran-avril-septembre-1962",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "L'organisation urbaine du FLN à Oran (1961-1962) — Revue académique CERIST (ASJP)",
+          "url": "https://asjp.cerist.dz/en/downArticle/396/5/2/32080",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_016",
+      "nom_operation": "Guerre de l'ombre et attaques des commandos spéciaux du FLN contre les chefs de l'OAS et des Commandos Delta à Alger (Belcourt - Hussein Dey)",
+      "date_debut": "1961-11-01",
+      "date_fin": "1961-12-31",
+      "wilaya_concernee": "Zone autonome d'Alger (ZAA) et Wilaya IV",
+      "localisation": {
+        "region_ou_ville": "Alger : Belcourt (Mohamed Belouizdad), Ruisseau, Hussein Dey, Maison-Carrée (El Harrach) et Bab El Oued",
+        "coordonnees_approximatives": {
+          "latitude": 36.7456,
+          "longitude": 3.0731
+        }
+      },
+      "commandement_aln": [
+        "Commandos spéciaux de la Zone autonome d'Alger (ZAA)"
+      ],
+      "type_action": "Attentat ciblé",
+      "description": "En novembre et décembre 1961, au plus fort de l'offensive terroriste des Commandos Delta de Roger Degueldre à Alger, les groupes de choc de la ZAA (notamment à Belcourt, au Ruisseau et à El Harrach) mènent une guerre de renseignement et d'embuscades urbaines, abattant plusieurs chefs de secteurs et tueurs des commandos de l'OAS et coopérant indirectement à la localisation des repaires OAS attaqués par les « barbouzes » gouvernementales (MPC).",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs membres des commandos de la ZAA tombés lors de fusillades urbaines à Belcourt et Hussein Dey",
+        "forces_francaises": "Élimination de plusieurs chefs de groupes Delta et agents de liaison de l'OAS à Alger",
+        "civils": "Centaines de victimes civiles algériennes assassinées quotidiennement par les commandos Delta dans les rues d'Alger"
+      },
+      "impact_strategique": "Empêche l'OAS de provoquer l'effondrement des structures clandestines du FLN à Alger et maintient la cohésion des quartiers algériens de la capitale.",
+      "sources": [
+        {
+          "titre": "Il y a 60 ans, l'OAS en Algérie (Les Commandos Delta et la riposte du FLN à Alger) — La Revue d'Histoire Militaire",
+          "url": "https://larevuedhistoiremilitaire.fr/2021/03/22/il-y-a-60-ans-loas-en-algerie/",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Chronologie de la guerre d'Algérie (Automne-Hiver 1961) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Chronologie_de_la_guerre_d%27Alg%C3%A9rie",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1962_004",
+      "nom_operation": "Contre-offensives armées des commandos FLN d'Oran aux abords du Petit Lac, de Médioni et de Boulanger",
+      "date_debut": "1962-01-10",
+      "date_fin": "1962-02-28",
+      "wilaya_concernee": "Wilaya V (Zone urbaine d'Oran)",
+      "localisation": {
+        "region_ou_ville": "Oran : quartiers du Petit Lac, Médioni, Boulanger (Sidi El Chahmi / El Makkari) et Place des Victoires",
+        "coordonnees_approximatives": {
+          "latitude": 35.675,
+          "longitude": -0.63
+        }
+      },
+      "commandement_aln": [
+        "Commandants des secteurs urbains du FLN d'Oran (Futurs cadres de la ZAO)"
+      ],
+      "type_action": "Guérilla urbaine",
+      "description": "En janvier et février 1962, alors que l'OAS d'Oran multiplie les attentats à la voiture piégée et les tirs de mortiers artisanaux contre Ville Nouvelle (dont le sanglant attentat de la rue de Tlemcen à Médina Jdida le 28 février 1962), les groupes armés du FLN retranchés à Médioni, au Petit Lac et à Ville Nouvelle mènent des raids de contre-offensive à la mitraillette et à la grenade contre les barrages et patrouilles de l'OAS dans les quartiers de Boulanger, Eckmühl et Saint-Eugène.",
+      "bilan_et_pertes": {
+        "aln": "Une vingtaine de fidayin oranais tués lors des fusillades de barricades en janvier-février 1962",
+        "forces_francaises": "Plusieurs dizaines de membres des commandos des « Collines rouges » de l'OAS d'Oran abattus ou blessés",
+        "civils": "Des centaines de civils algériens tués lors des attentats à la voiture piégée de l'OAS à Médina Jdida (notamment le 28 février 1962, jour de Ramadhan)"
+      },
+      "impact_strategique": "Malgré l'ampleur des massacres commis par l'OAS à Oran début 1962, la résistance armée des fidayin de Ville Nouvelle, Médioni et du Petit Lac met en échec le plan de l'OAS visant à vider Oran de sa population algérienne pour créer un « réduit français ».",
+      "sources": [
+        {
+          "titre": "La Zone Autonome d'Oran (ZAO) et la guerre urbaine à Oran en 1962 — Revue Insaniyat (OpenEdition Journals)",
+          "url": "https://journals.openedition.org/insaniyat/29234?lang=en",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "L'action du FLN à Oran face à l'OAS — Revue académique CERIST (ASJP)",
+          "url": "https://asjp.cerist.dz/en/downArticle/396/5/2/32080",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1962_005",
+      "nom_operation": "Opérations de représailles ciblées de la Wilaya II à Constantine après l'assassinat de dirigeants et fonctionnaires par l'OAS",
+      "date_debut": "1962-01-15",
+      "date_fin": "1962-03-10",
+      "wilaya_concernee": "Wilaya II (Secteur urbain de Constantine)",
+      "localisation": {
+        "region_ou_ville": "Constantine : quartiers du Coudiat, Saint-Jean, Bellevue et Sidi Mabrouk (Wilaya de Constantine)",
+        "coordonnees_approximatives": {
+          "latitude": 36.3622,
+          "longitude": 6.6083
+        }
+      },
+      "commandement_aln": [
+        "Salah Boubnider dit Sawt El Arab (Colonel de la Wilaya II)",
+        "Commandos de fidayin du secteur de Constantine"
+      ],
+      "type_action": "Attentat ciblé",
+      "description": "Au début de l'année 1962 à Constantine, les commandos urbains de la Wilaya II exécutent une série d'opérations ponctuelles et ciblées contre les cellules de l'OAS de l'Est algérien, neutralisant plusieurs dépôts d'armes et d'explosifs clandestins de l'OAS dans les quartiers de Saint-Jean et de Bellevue et assurant la sécurité des cadres algériens préparant la transition administrative.",
+      "bilan_et_pertes": {
+        "aln": "Quelques fidayin blessés ou arrêtés avant le cessez-le-feu",
+        "forces_francaises": "Démantèlement quasi complet de la branche armée de l'OAS à Constantine",
+        "civils": "Maintien du calme relatif de la population algérienne de Constantine conformément aux consignes du GPRA"
+      },
+      "impact_strategique": "Réduit l'OAS à l'impuissance dans tout le Nord-Constantinois avant même le cessez-le-feu du 19 mars 1962.",
+      "sources": [
+        {
+          "titre": "La Wilaya II historique — Cairn.info",
+          "url": "https://shs.cairn.info/la-wilaya-ii-historique--9789947394052-page-103?lang=fr",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Il y a 60 ans, l'OAS en Algérie — La Revue d'Histoire Militaire",
+          "url": "https://larevuedhistoiremilitaire.fr/2021/03/22/il-y-a-60-ans-loas-en-algerie/",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1962_006",
+      "nom_operation": "Défense armée de la Casbah et de Climat de France par la ZAA face aux tirs de mortiers de l'OAS (Bab El Oued - Place du Gouvernement)",
+      "date_debut": "1962-03-20",
+      "date_fin": "1962-03-26",
+      "wilaya_concernee": "Zone autonome d'Alger (ZAA)",
+      "localisation": {
+        "region_ou_ville": "Alger : basse Casbah (Place du Gouvernement / Place des Martyrs), Climat de France (Oued Koriche) et lisière de Bab El Oued",
+        "coordonnees_approximatives": {
+          "latitude": 36.7853,
+          "longitude": 3.0606
+        }
+      },
+      "commandement_aln": [
+        "Commandant Azzedine (Chef de la ZAA reconstituée en 1962)",
+        "Omar Oussedik",
+        "Cadres des groupes armés de la Casbah et de Climat de France"
+      ],
+      "type_action": "Guérilla urbaine",
+      "description": "Au lendemain immédiat du cessez-le-feu du 19 mars 1962, les commandos de l'OAS retranchés à Bab El Oued tirent des obus de mortier sur la foule algérienne rassemblée Place du Gouvernement (basse Casbah, faisant 24 morts et 59 blessés le 20 mars) et tentent de provoquer une descente massive des habitants de la Casbah et de Climat de France pour forcer l'armée française à tirer sur les Algériens. Les groupes armés de la ZAA (dirigés par le commandant Azzedine) contiennent la foule avec une discipline de fer tout en engageant le feu contre les tireurs embusqués de l'OAS aux lisières de Bab El Oued, ce qui conduit au blocus et à l'insurrection de Bab El Oued contre l'armée française (23-26 mars 1962).",
+      "bilan_et_pertes": {
+        "aln": "Quelques fidayin blessés aux avant-postes de la Casbah et de Climat de France ; réussite totale de la consigne de sang-froid du GPRA",
+        "forces_francaises": "Affrontement direct entre les commandos de l'OAS et l'armée française à Bab El Oued (15 soldats français tués, 20 membres de l'OAS tués)",
+        "civils": "24 civils algériens tués Place du Gouvernement le 20 mars 1962 par les mortiers de l'OAS, puis fusillade de la rue d'Isly le 26 mars"
+      },
+      "impact_strategique": "Victoire politique et tactique décisive de la ZAA et du GPRA : en refusant de tomber dans le piège de la provocation de l'OAS, le FLN provoque l'affrontement armé direct entre l'OAS et l'armée française à Bab El Oued.",
+      "sources": [
+        {
+          "titre": "Il y a 60 ans, l'OAS en Algérie (Le piège de Bab El Oued et la discipline du FLN en mars 1962) — La Revue d'Histoire Militaire",
+          "url": "https://larevuedhistoiremilitaire.fr/2021/03/22/il-y-a-60-ans-loas-en-algerie/",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Bataille de Bab El Oued (mars 1962) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Bataille_de_Bab_El_Oued",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1962_007",
+      "nom_operation": "Contre-attaque des katibas de la Wilaya IV et de la ZAA contre le maquis OAS de l'Ouarsenis (Molière - Oued Fodda)",
+      "date_debut": "1962-03-28",
+      "date_fin": "1962-04-08",
+      "wilaya_concernee": "Wilaya IV (Zone 3 - Ouarsenis / Vallée du Chélif)",
+      "localisation": {
+        "region_ou_ville": "Massif de l'Ouarsenis : entre Oued Fodda, Lamartine (El Karimia) et Bordj Bounaama (ex-Molière, Wilayas de Chlef et Tissemsilt)",
+        "coordonnees_approximatives": {
+          "latitude": 36.0167,
+          "longitude": 1.5833
+        }
+      },
+      "commandement_aln": [
+        "Youcef Khatib dit Colonel Si Hassan (Commandant de la Wilaya IV)",
+        "Commandants des katibas de l'Ouarsenis (Wilaya IV)"
+      ],
+      "type_action": "Offensive coordonnée",
+      "description": "Fin mars 1962, l'OAS tente de créer une zone insurrectionnelle rurale (« maquis Bonaparte » dirigé par le commandant Gardes et des officiers déserteurs) dans le massif de l'Ouarsenis en s'appuyant sur certains postes de harkis. Les katibas de la Wilaya IV du colonel Si Hassan encerclent immédiatement les colonnes de l'OAS, rallient une partie des supplétifs algériens et attaquent les commandos OAS dans les gorges de l'Ouarsenis, mettant en déroute complète l'expédition avant l'intervention des troupes françaises.",
+      "bilan_et_pertes": {
+        "aln": "Pertes minimes ; capture d'un important stock d'armes lourdes, de mortiers et de munitions abandonnés par le maquis OAS",
+        "forces_francaises": "Effondrement et capture des membres du maquis OAS de l'Ouarsenis",
+        "civils": "Aucune victime civile"
+      },
+      "impact_strategique": "Anéantit en quelques jours l'unique tentative de l'OAS d'implanter un maquis rural dans les montagnes algériennes.",
+      "sources": [
+        {
+          "titre": "Il y a 60 ans, l'OAS en Algérie (L'échec du maquis OAS de l'Ouarsenis) — La Revue d'Histoire Militaire",
+          "url": "https://larevuedhistoiremilitaire.fr/2021/03/22/il-y-a-60-ans-loas-en-algerie/",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Wilaya IV historique — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1962_008",
+      "nom_operation": "Structuration militaire de la Zone Autonome d'Oran (ZAO) et combats des barricades de Ville Nouvelle et Médioni",
+      "date_debut": "1962-04-10",
+      "date_fin": "1962-05-15",
+      "wilaya_concernee": "Zone Autonome d'Oran (ZAO - Wilaya V)",
+      "localisation": {
+        "region_ou_ville": "Oran : Ville Nouvelle (Médina Jdida / Place Tahtaha), Médioni, Lamur et Petit Lac",
+        "coordonnees_approximatives": {
+          "latitude": 35.6889,
+          "longitude": -0.6381
+        }
+      },
+      "commandement_aln": [
+        "Capitaine Djelloul Nemiche dit Bakhti (Chef de la Zone Autonome d'Oran - ZAO)",
+        "Officiers et chefs de groupes de choc de la ZAO"
+      ],
+      "type_action": "Guérilla urbaine",
+      "description": "En avril 1962, l'état-major de l'ALN crée officiellement la Zone Autonome d'Oran (ZAO) sous le commandement du capitaine Djelloul Nemiche (dit Bakhti). La ZAO organise militairement les quartiers algériens d'Oran (Ville Nouvelle, Médioni, Lamur, Petit Lac, Planteurs) en secteurs dotés de groupes de choc armés, de tranchées, d'hôpitaux clandestins et de postes de tir qui repoussent les assauts des commandos de l'OAS et protègent près de 200 000 habitants algériens assiégés.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs dizaines de combattants et moussebiline de la ZAO tués sur les lignes de démarcation urbaines d'Oran",
+        "forces_francaises": "Échec des tentatives d'incursion des commandos de l'OAS contre Ville Nouvelle et Médioni",
+        "civils": "Mise en place d'un ravitaillement et d'un système sanitaire autonomes pour la population algérienne d'Oran soumise au blocus de l'OAS"
+      },
+      "impact_strategique": "La création de la ZAO sauve les quartiers algériens d'Oran de l'asphyxie et de la destruction planifiées par l'OAS au printemps 1962.",
+      "sources": [
+        {
+          "titre": "Quelques jalons préliminaires à propos de la Zone Autonome d'Oran (avril-septembre 1962) — Revue Insaniyat (CRASC)",
+          "url": "https://www.insaniyat.crasc.dz/en/article/quelques-jalons-preliminaires-a-propos-de-la-zone-autonome-doran-avril-septembre-1962",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "La Zone Autonome d'Oran (ZAO) — OpenEdition Journals (Insaniyat)",
+          "url": "https://journals.openedition.org/insaniyat/29234?lang=en",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1962_009",
+      "nom_operation": "Contre-offensive de la ZAA (Belcourt, Clos-Salembier, Maison-Carrée) en riposte aux carnages de l'OAS à Alger (Mai 1962)",
+      "date_debut": "1962-05-02",
+      "date_fin": "1962-05-15",
+      "wilaya_concernee": "Zone autonome d'Alger (ZAA)",
+      "localisation": {
+        "region_ou_ville": "Alger : Port d'Alger, Belcourt, Clos-Salembier, Ruisseau, Kouba et Maison-Carrée (El Harrach)",
+        "coordonnees_approximatives": {
+          "latitude": 36.7525,
+          "longitude": 3.062
+        }
+      },
+      "commandement_aln": [
+        "Commandant Azzedine (Chef de la ZAA)",
+        "Commandos de secteur de la Zone autonome d'Alger"
+      ],
+      "type_action": "Guérilla urbaine",
+      "description": "Après l'attentat à la voiture piégée de l'OAS contre les dockers algériens au port d'Alger le 2 mai 1962 (plus de 60 morts et 150 blessés) et la vague d'assassinats visant à rompre le cessez-le-feu, les commandos de la ZAA lancent le 14 mai 1962 une série de frappes armées coordonnées en une seule journée contre dix-sept bastions, cafés et points de ralliement des commandos de l'OAS à travers l'agglomération algéroise.",
+      "bilan_et_pertes": {
+        "aln": "Quelques pertes parmi les commandos motorisés de la ZAA",
+        "forces_francaises": "Une vingtaine de membres et sympathisants des réseaux OAS tués et plus d'une trentaine de blessés lors des raids du 14 mai 1962",
+        "civils": "Plus de 60 dockers algériens tués au port d'Alger le 2 mai 1962 par l'OAS"
+      },
+      "impact_strategique": "Avertissement foudroyant de la ZAA qui démontre que l'ALN a les moyens de frapper simultanément tous les quartiers européens d'Alger si l'OAS ne cesse pas ses massacres, précipitant l'ouverture de contacts par l'aile de Jacques Susini fin mai 1962.",
+      "sources": [
+        {
+          "titre": "Il y a 60 ans, l'OAS en Algérie (La sanglante escalade de mai 1962 à Alger) — La Revue d'Histoire Militaire",
+          "url": "https://larevuedhistoiremilitaire.fr/2021/03/22/il-y-a-60-ans-loas-en-algerie/",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Chronologie de la guerre d'Algérie (Mai 1962) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Chronologie_de_la_guerre_d%27Alg%C3%A9rie",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1962_010",
+      "nom_operation": "Opérations de neutralisation des équipes de « terre brûlée » de l'OAS par la ZAA à Alger et El Harrach (Juin 1962)",
+      "date_debut": "1962-06-07",
+      "date_fin": "1962-06-17",
+      "wilaya_concernee": "Zone autonome d'Alger (ZAA) et Force locale",
+      "localisation": {
+        "region_ou_ville": "Alger (Faculté d'Alger, Télemly, Hydra, Belcourt) et zone industrielle d'El Harrach / Gué de Constantine",
+        "coordonnees_approximatives": {
+          "latitude": 36.7689,
+          "longitude": 3.055
+        }
+      },
+      "commandement_aln": [
+        "Commandant Azzedine (ZAA)",
+        "Chawki Mostefaï (Exécutif provisoire / FLN)",
+        "Commandos de protection des infrastructures de la ZAA"
+      ],
+      "type_action": "Guérilla urbaine",
+      "description": "Face à la politique de la « terre brûlée » déclenchée par les commandos Delta de l'OAS début juin 1962 (incendie de la bibliothèque universitaire d'Alger le 7 juin, plasticage d'écoles, d'hôpitaux et de mairies), les commandos de la ZAA prennent le contrôle armé des usines, des centrales électriques, des dépôts d'eau et des hôpitaux de la périphérie d'Alger (Belcourt, El Harrach, Hussein Dey), repoussant par le feu les équipes de saboteurs de l'OAS jusqu'à la capitulation de l'OAS d'Alger le 17 juin 1962.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs fidayin tués ou blessés lors de la garde armée des infrastructures d'Alger",
+        "forces_francaises": "Mise en échec de la destruction des infrastructures vitales d'eau, d'électricité et d'industrie d'Alger ; arrêt des combats de l'OAS à Alger le 17 juin 1962",
+        "civils": "Destruction de la bibliothèque universitaire d'Alger par l'OAS le 7 juin 1962"
+      },
+      "impact_strategique": "Préserve l'appareil industriel, portuaire et administratif de la capitale algérienne à deux semaines du référendum d'autodétermination et de la proclamation de l'indépendance.",
+      "sources": [
+        {
+          "titre": "Il y a 60 ans, l'OAS en Algérie (La politique de la terre brûlée et les accords de juin 1962) — La Revue d'Histoire Militaire",
+          "url": "https://larevuedhistoiremilitaire.fr/2021/03/22/il-y-a-60-ans-loas-en-algerie/",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Guerre d'Algérie — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Guerre_d%27Alg%C3%A9rie",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1962_011",
+      "nom_operation": "Opérations de sécurisation du port et des quartiers d'Oran par la ZAO face aux derniers commandos OAS (Fin juin 1962)",
+      "date_debut": "1962-06-20",
+      "date_fin": "1962-06-28",
+      "wilaya_concernee": "Zone Autonome d'Oran (ZAO - Wilaya V)",
+      "localisation": {
+        "region_ou_ville": "Oran : Port d'Oran (dépôts de la British Petroleum), Ville Nouvelle, Médioni, Petit Lac et Saint-Eugène",
+        "coordonnees_approximatives": {
+          "latitude": 35.705,
+          "longitude": -0.645
+        }
+      },
+      "commandement_aln": [
+        "Capitaine Djelloul Nemiche dit Bakhti (Chef de la ZAO)",
+        "Officiers de la Wilaya V et de la Zone Autonome d'Oran"
+      ],
+      "type_action": "Guérilla urbaine",
+      "description": "Alors que les derniers irréductibles de l'OAS d'Oran (sous les ordres du général Gardy) refusent l'arrêt des combats d'Alger et font sauter le 25 juin 1962 les gigantesques réservoirs de mazout de la British Petroleum au port d'Oran (plongeant la ville sous un nuage de fumée noire), les unités de la Zone Autonome d'Oran (ZAO) sortent des périmètres de Ville Nouvelle, Médioni et du Petit Lac pour sécuriser les infrastructures d'Oran, désarmer les derniers îlots OAS et préparer le scrutin d'autodétermination du 1er juillet 1962.",
+      "bilan_et_pertes": {
+        "aln": "Quelques combattants de la ZAO blessés lors des derniers accrochages avec les arrière-gardes de l'OAS fin juin 1962",
+        "forces_francaises": "Fuite des derniers chefs de l'OAS d'Oran le 27-28 juin 1962 et reddition des derniers groupes armés",
+        "civils": "Destruction de millions de litres de carburant au port d'Oran par l'OAS le 25 juin 1962"
+      },
+      "impact_strategique": "Marque l'effondrement final du dernier bastion de l'OAS en Algérie et permet la tenue pacifique du référendum d'indépendance du 1er juillet 1962 à Oran (99,7 % de « Oui » à l'échelle nationale).",
+      "sources": [
+        {
+          "titre": "Quelques jalons préliminaires à propos de la Zone Autonome d'Oran (avril-septembre 1962) — Revue Insaniyat (CRASC)",
+          "url": "https://www.insaniyat.crasc.dz/en/article/quelques-jalons-preliminaires-a-propos-de-la-zone-autonome-doran-avril-septembre-1962",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "L'action du FLN et de la ZAO à Oran en 1962 — Revue académique CERIST (ASJP)",
+          "url": "https://asjp.cerist.dz/en/downArticle/396/5/2/32080",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Chronologie de la guerre d'Algérie (Juin 1962) — Wikipédia",
+          "url": "https://fr.wikipedia.org/wiki/Chronologie_de_la_guerre_d%27Alg%C3%A9rie",
+          "type_source": "Article"
         }
       ]
     }
