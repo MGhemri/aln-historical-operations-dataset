@@ -1,5 +1,6 @@
 # FLN/ALN Historical Military Operations Dataset (1954–1962)
 
+[![GitHub Pages: Live App](https://img.shields.io/badge/D%C3%A9mo_En_Ligne-GitHub_Pages-2ea44f.svg?logo=github&logoColor=white)](https://mghemri.github.io/aln-historical-operations-dataset/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Format: JSON / GeoJSON](https://img.shields.io/badge/Format-JSON%20%7C%20GeoJSON-2ea44f.svg)](#2-structure-du-schéma-de-données)
 [![Records: 245 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-245-c0392b.svg)](#️-carte-interactive-des-245-opérations-19541962)
@@ -7,6 +8,13 @@
 [![Status: Living Dataset](https://img.shields.io/badge/Statut-Projet_%C3%89volutif_(En_cours)-d35400.svg)](#5-projet-évolutif-et-guide-de-contribution)
 
 Ce dépôt héberge un corpus de données structuré en accès libre documentant, qualifiant et géolocalisant **245 actions militaires, embuscades, batailles, sabotages et opérations de guérilla** menés par le Front de libération nationale (FLN) et l'Armée de libération nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).
+
+> [!TIP]
+> ### 🌐 Application Web Interactive en Ligne
+> **Explorez l'ensemble des 245 opérations dans l'application web officielle :**  
+> 👉 **[Consulter l'Atlas interactif et le moteur de recherche en direct](https://mghemri.github.io/aln-historical-operations-dataset/)**  
+> *(Cartographie dynamique Leaflet avec regroupement par clusters, recherche plein texte instantanée, filtres multicritères par Wilaya et millésime, fiches d'archives complètes et tableau de bord statistique Chart.js).*
+
 
 > [!IMPORTANT]
 > **Corpus évolutif en construction continue (*Living Dataset*) & Appel à contributions :**
@@ -394,3 +402,34 @@ Pour qu'une proposition d'ajout ou de correction (via **Pull Request** ou **Issu
 2. **Rigueur et neutralité historiographique :** La rédaction des champs `description` et `impact_strategique` doit rester strictement factuelle, analytique et non partisane. Le champ `bilan_et_pertes` doit systématiquement mentionner les fourchettes ou divergences entre les bilans officiels français, les sources de l'ALN et les estimations d'historiens.
 3. **Précision géospatiale :** Les coordonnées `latitude` et `longitude` doivent correspondre avec précision au lieu de l'engagement (djebel, douar, col, localité ou rue) et respecter l'ordre `[longitude, latitude]` (RFC 7946) lors de la mise à jour du fichier `operations_fln_1954_1962.geojson`.
 4. **Conformité stricte au schéma de données :** Tout ajout doit respecter la nomenclature des identifiants (`OP_YYYY_XXX`), l'encodage UTF-8 sans erreur de syntaxe JSON, la mise à jour du compteur `total_records` et la synchronisation entre `operations_fln_1954_1962.json` et `operations_fln_1954_1962.geojson`.
+
+---
+
+## 6. Application Web Interactive & Déploiement GitHub Pages
+
+L'interface web hébergée dans le dossier [docs/](./docs) propose une consultation ergonomique et fluide du dataset :
+
+* **Cartographie Leaflet & CartoDB :** Affichage interactif avec regroupement de marqueurs (*Leaflet.markercluster*), colorimétrie distinctive par Wilaya historique et zoom dynamique.
+* **Moteur de recherche instantané :** Recherche plein texte insensible aux accents et à la casse sur l'ensemble des champs (toponymes, officiers ALN, descriptions, bilans).
+* **Filtres multicritères :** Sélection combinée par Wilaya historique (Wilayas I à VI, ZAA, Base de l'Est, 7e Wilaya), par année (1954 à 1962) et par typologie d'action offensive.
+* **Tiroir de détails complet :** Fiche d'archive détaillée pour chaque opération incluant bilan humain estimé, portée stratégique et liens sortants vers les sources académiques (ASJP, CRASC, APS, etc.).
+* **Mini-Dashboard statistique :** Visualisation graphique en temps réel (répartition par wilaya, ventilation chronologique, typologie des combats) propulsée par Chart.js.
+
+### Lancer l'application localement
+
+Pour exécuter l'application web sur votre machine sans dépendance complexe :
+
+`ash
+# Se placer dans le répertoire du projet
+cd aln-historical-operations-dataset
+
+# Démarrer un serveur HTTP local pointant sur docs/
+python -m http.server 8000 --directory docs
+`
+
+Puis ouvrez votre navigateur à l'adresse [http://localhost:8000](http://localhost:8000).
+
+### Intégration continue (CI) & Déploiement continu
+
+* **Validation automatique (.github/workflows/validate-dataset.yml) :** Script Python exécuté à chaque push et pull request pour garantir la conformité JSON/GeoJSON, l'intégrité des dates ISO et la validité des coordonnées GPS.
+* **Déploiement GitHub Pages (.github/workflows/deploy-pages.yml) :** Déploiement automatisé du dossier docs/ sur GitHub Pages dès qu'une modification est validée sur la branche main.

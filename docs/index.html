@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Historique de l'ALN (1954–1962) | FLN/ALN Operations Dataset</title>
+  <meta name="description" content="Plateforme cartographique et moteur de recherche historique des 245 opérations militaires de l'Armée de Libération Nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇩🇿</text></svg>">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <!-- Leaflet.markercluster CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <button id="toggle-sidebar-btn" class="icon-btn" title="Basculer le panneau de recherche" aria-label="Menu latéral">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <div class="brand">
+        <span class="flag-icon">🇩🇿</span>
+        <div>
+          <h1 class="brand-title">Atlas Historique de l'ALN <span class="badge-version">1954–1962</span></h1>
+          <p class="brand-subtitle">Corpus cartographique & moteur d'exploration des opérations militaires</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <button id="stats-btn" class="nav-btn" title="Statistiques globales">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="8" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="17" y="4" width="4" height="16" rx="1"/></svg>
+        <span>Statistiques</span>
+      </button>
+      <div class="dropdown">
+        <button id="export-dropdown-btn" class="nav-btn" title="Télécharger les données">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Exporter</span>
+        </button>
+        <div class="dropdown-menu" id="export-menu">
+          <a href="data/operations_fln_1954_1962.geojson" download="operations_fln_1954_1962.geojson" class="dropdown-item">GeoJSON (RFC 7946)</a>
+          <a href="data/operations_fln_1954_1962.json" download="operations_fln_1954_1962.json" class="dropdown-item">JSON consolidé</a>
+        </div>
+      </div>
+      <button id="theme-toggle" class="icon-btn" title="Basculer thème sombre / clair" aria-label="Thème">
+        <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="https://github.com/MGhemri/aln-historical-operations-dataset" target="_blank" rel="noopener" class="icon-btn github-btn" title="Dépôt GitHub">
+        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="main-container">
+    
+    <!-- Left Sidebar: Filters & List -->
+    <aside class="sidebar" id="sidebar">
+      
+      <!-- Search Input -->
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search-input" placeholder="Rechercher une opération, un djebel, un officier..." autocomplete="off">
+        <button id="clear-search-btn" class="clear-btn" title="Effacer la recherche">&times;</button>
+      </div>
+
+      <!-- Live Results Counter & Reset -->
+      <div class="results-bar">
+        <span id="results-count" class="results-count">Chargement des opérations...</span>
+        <button id="reset-filters-btn" class="reset-link-btn" title="Réinitialiser tous les critères">Effacer filtres</button>
+      </div>
+
+      <!-- Filters Accordion / Groups -->
+      <div class="filters-container">
+        
+        <!-- Wilaya Filter -->
+        <div class="filter-group">
+          <label class="filter-label">Wilaya historique / Front</label>
+          <div class="wilaya-chips" id="wilaya-chips">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+        <!-- Year Filter -->
+        <div class="filter-group">
+          <label class="filter-label">Chronologie (Année)</label>
+          <div class="year-selector" id="year-selector">
+            <button class="year-btn active" data-year="all">Toutes</button>
+            <button class="year-btn" data-year="1954">1954</button>
+            <button class="year-btn" data-year="1955">1955</button>
+            <button class="year-btn" data-year="1956">1956</button>
+            <button class="year-btn" data-year="1957">1957</button>
+            <button class="year-btn" data-year="1958">1958</button>
+            <button class="year-btn" data-year="1959">1959</button>
+            <button class="year-btn" data-year="1960">1960</button>
+            <button class="year-btn" data-year="1961">1961</button>
+            <button class="year-btn" data-year="1962">1962</button>
+          </div>
+        </div>
+
+        <!-- Action Type Filter -->
+        <div class="filter-group">
+          <label class="filter-label" for="action-type-select">Type d'action militaire</label>
+          <select id="action-type-select" class="custom-select">
+            <option value="all">Tous les types d'actions</option>
+            <!-- Populated via JS -->
+          </select>
+        </div>
+
+      </div>
+
+      <!-- Operations List Cards -->
+      <div class="operations-list-header">
+        <span class="list-title">Résultats filtrés</span>
+        <span class="sort-indicator" id="sort-indicator">Chronologique</span>
+      </div>
+      <div class="operations-list" id="operations-list">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+    </aside>
+
+    <!-- Center Area: Map Container -->
+    <main class="map-wrapper">
+      <div id="map"></div>
+
+      <!-- Map Floating Controls -->
+      <div class="map-floating-controls">
+        <button id="btn-recenter-algeria" class="map-ctrl-btn" title="Centrer sur l'Algérie">
+          <span>🇩🇿 Algérie</span>
+        </button>
+        <button id="btn-recenter-france" class="map-ctrl-btn" title="Centrer sur la 7e Wilaya (France)">
+          <span>🇫🇷 7e Wilaya</span>
+        </button>
+        <button id="btn-toggle-legend" class="map-ctrl-btn" title="Afficher/masquer la légende">
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>Légende</span>
+        </button>
+      </div>
+
+      <!-- Collapsible Map Legend -->
+      <div class="map-legend" id="map-legend">
+        <div class="legend-header">
+          <strong>Légende des Wilayas</strong>
+          <button id="close-legend-btn" class="close-mini-btn">&times;</button>
+        </div>
+        <div class="legend-items">
+          <div class="legend-item"><span class="color-dot" style="background:#c0392b;"></span> Wilaya I (Aurès-Nemencha)</div>
+          <div class="legend-item"><span class="color-dot" style="background:#2c3e50;"></span> Wilaya II (Nord-Constantinois)</div>
+          <div class="legend-item"><span class="color-dot" style="background:#27ae60;"></span> Wilaya III (Kabylie)</div>
+          <div class="legend-item"><span class="color-dot" style="background:#16a085;"></span> Wilaya IV (Algérois / Ouarsenis)</div>
+          <div class="legend-item"><span class="color-dot" style="background:#e74c3c;"></span> Zone Autonome d'Alger (ZAA)</div>
+          <div class="legend-item"><span class="color-dot" style="background:#2980b9;"></span> Wilaya V (Oranie / Sud-Oranais)</div>
+          <div class="legend-item"><span class="color-dot" style="background:#f39c12;"></span> Wilaya VI (Sahara / Atlas saharien)</div>
+          <div class="legend-item"><span class="color-dot" style="background:#d35400;"></span> Base de l'Est & Frontières (EMG)</div>
+          <div class="legend-item"><span class="color-dot" style="background:#8e44ad;"></span> 7e Wilaya (Fédération de France)</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Right Drawer: Detail Panel -->
+    <div class="detail-drawer" id="detail-drawer">
+      <div class="drawer-header">
+        <div class="drawer-header-meta">
+          <span class="op-id-badge" id="drawer-id">OP_XXXX</span>
+          <span class="op-wilaya-badge" id="drawer-wilaya">Wilaya</span>
+        </div>
+        <button id="close-drawer-btn" class="icon-btn close-drawer-btn" aria-label="Fermer la fiche">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="drawer-body" id="drawer-content">
+        <!-- Filled dynamically by app.js -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal: Statistics Dashboard -->
+  <div class="modal-overlay" id="stats-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="8" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="17" y="4" width="4" height="16" rx="1"/></svg>
+          <h2 class="modal-title">Tableau de bord statistique</h2>
+        </div>
+        <button id="close-stats-btn" class="icon-btn" aria-label="Fermer le modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="stats-kpis">
+          <div class="kpi-card">
+            <span class="kpi-value" id="kpi-total-ops">245</span>
+            <span class="kpi-label">Opérations documentées</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-value">8</span>
+            <span class="kpi-label">Années de guerre (1954–1962)</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-value">6 + 1</span>
+            <span class="kpi-label">Wilayas historiques & Fédé. France</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-value">100%</span>
+            <span class="kpi-label">Sources croisées & géolocalisées</span>
+          </div>
+        </div>
+
+        <div class="charts-grid">
+          <div class="chart-box">
+            <h3 class="chart-title">Ventilation chronologique des opérations (1954–1962)</h3>
+            <canvas id="chart-years" height="180"></canvas>
+          </div>
+          <div class="chart-box">
+            <h3 class="chart-title">Répartition par Wilaya historique</h3>
+            <canvas id="chart-wilayas" height="180"></canvas>
+          </div>
+          <div class="chart-box chart-box-wide">
+            <h3 class="chart-title">Typologie des actions militaires offensives</h3>
+            <canvas id="chart-actions" height="160"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet & MarkerCluster JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+
+</body>
+</html>
