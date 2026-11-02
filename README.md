@@ -29,7 +29,9 @@ S'inscrivant dans le champ des **humanités numériques** (*digital humanities*)
 
 ## 2. Structure du schéma de données
 
-L'ensemble des faits est indexé dans le fichier `operations_fln_1954_1962.json` (encodé en UTF-8 strict). Le schéma répond à la structure suivante :
+L'ensemble des faits est indexé dans le fichier `operations_fln_1954_1962.json` (encodé en UTF-8 strict). Un fichier géospatial `operations_fln_1954_1962.geojson` (standard RFC 7946, `FeatureCollection` de 184 points géolocalisés) est également disponible à la racine du dépôt pour une visualisation cartographique interactive directe sur GitHub ou une intégration immédiate dans des outils SIG (Leaflet, Mapbox, QGIS).
+
+Le schéma répond à la structure suivante :
 
 ```json
 {
@@ -37,7 +39,7 @@ L'ensemble des faits est indexé dans le fichier `operations_fln_1954_1962.json`
     "title": "Opérations et actions militaires offensives du FLN/ALN (1954-1962)",
     "description": "Recueil documenté des principales actions militaires offensives, embuscades, batailles et campagnes de guérilla de la guerre d'indépendance algérienne...",
     "generated_at": "AAAA-MM-JJ",
-    "total_records": 112
+    "total_records": 184
   },
   "operations": [
     {
@@ -79,7 +81,7 @@ L'ensemble des faits est indexé dans le fichier `operations_fln_1954_1962.json`
 ## 3. Cas d'usage et réutilisation scientifique
 
 Ce jeu de données a été modélisé pour permettre :
-* **La cartographie SIG et spatio-temporelle :** Visualisation de l'évolution des fronts, des couloirs logistiques d'acheminement d'armes et de l'intensité des combats (QGIS, Mapbox, Leaflet, GeoJSON).
+* **La cartographie SIG et spatio-temporelle :** Visualisation directe sur GitHub via `operations_fln_1954_1962.geojson` et analyse de l'évolution des fronts, des couloirs logistiques d'acheminement d'armes et de l'intensité des combats dans les environnements SIG (QGIS, Mapbox, Leaflet).
 * **L'analyse statistique et quantitative :** Étude de la périodisation du conflit, de la typologie des actions (guérilla de montagne vs guérilla urbaine vs sabotages industriels) et de l'activité par commandement de wilaya.
 * **L'ingénierie logicielle et IA :** Ingestion dans des bases relationnelles (PostgreSQL/PostGIS, SQLite), graphes de connaissances (Neo4j) ou moteurs de recherche vectoriels pour des applications de recherche historique.
 
