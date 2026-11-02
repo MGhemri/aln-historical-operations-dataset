@@ -41,7 +41,9 @@
             "url": "https://perspective.usherbrooke.ca/bilan/servlet/BMEve/47",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -73,7 +75,9 @@
             "url": "https://fr.wikipedia.org/wiki/Guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -105,7 +109,9 @@
             "url": "https://shs.cairn.info/guerre-de-liberation--9789961634547-page-97?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -137,7 +143,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -169,7 +177,9 @@
             "url": "https://fr.wikipedia.org/wiki/Guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -201,7 +211,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_III_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -238,7 +250,9 @@
             "url": "https://maitron.fr/maillot-henri/",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -270,7 +284,9 @@
             "url": "https://journals.openedition.org/lectures/7599?lang=es",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -302,7 +318,9 @@
             "url": "http://memorial-aen.fr/detail.php?&id=1801",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -334,7 +352,9 @@
             "url": "https://francearchives.gouv.fr/fr/pages_histoire/39692",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -366,7 +386,9 @@
             "url": "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/ressources-historiques/guerre-dalgerie/combattre-algerie-combattre-metropole-3",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -398,7 +420,9 @@
             "url": "https://francearchives.gouv.fr/fr/pages_histoire/39692",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -430,7 +454,9 @@
             "url": "https://books.openedition.org/psorbonne/55638?lang=en",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -462,7 +488,9 @@
             "url": "https://fr.wikipedia.org/wiki/Attentats_pendant_la_guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -494,7 +522,9 @@
             "url": "https://histoirecoloniale.net/une-greve-generale-anticoloniale-algerienne-la-greve-des-8-jours-en-1957/",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -526,7 +556,9 @@
             "url": "https://fr.wikipedia.org/wiki/Bataille_d%27Alger",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -558,7 +590,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -590,7 +624,9 @@
             "url": "https://fr.wikipedia.org/wiki/Cat%C3%A9gorie:Bataille_impliquant_l%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -622,7 +658,9 @@
             "url": "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/ressources-historiques/guerre-dalgerie/combattre-algerie-combattre-metropole-3",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -654,7 +692,9 @@
             "url": "https://journals.openedition.org/genesis/1376",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -691,7 +731,9 @@
             "url": "https://fr.wikipedia.org/wiki/Attentats_pendant_la_guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -718,7 +760,9 @@
             "url": "https://fr.wikipedia.org/wiki/Bataille_de_Bouzegza",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -750,7 +794,9 @@
             "url": "https://recherche-anom.culture.gouv.fr/ark:/61561/zf476wvrwx",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -782,7 +828,9 @@
             "url": "https://fr.wikipedia.org/wiki/Bataille_des_fronti%C3%A8res_(guerre_d%27Alg%C3%A9rie)",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -814,7 +862,9 @@
             "url": "https://www.legionetrangere.fr/la-fsale/actualites-de-la-fsale/1689-jean-balazuc-p-p-p-p-1er-rep-la-bataille-des-frontieres-en-1959.html",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -851,7 +901,9 @@
             "url": "https://books.openedition.org/psorbonne/113316?lang=en",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -888,7 +940,9 @@
             "url": "https://www.senat.fr/table-nominative-archives/defferre_gaston000250/5R/1960.html",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -920,7 +974,9 @@
             "url": "https://shs.cairn.info/paris-la-rouge--9782262050306-page-220?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -952,7 +1008,9 @@
             "url": "https://shs.cairn.info/l-organisation-speciale-de-la-federation-de-france--9789961638798-page-242?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -984,7 +1042,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_III_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -1016,7 +1076,9 @@
             "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -1048,7 +1110,9 @@
             "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -1085,7 +1149,9 @@
             "url": "https://shs.cairn.info/question-kabyle-nationalisme-algerien--9782365122757-page-421?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -1117,7 +1183,9 @@
             "url": "https://fr.wikipedia.org/wiki/Chronologie_de_la_guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1149,7 +1217,9 @@
             "url": "https://fr.wikipedia.org/wiki/Chronologie_de_la_guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -1186,7 +1256,9 @@
             "url": "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/ressources-historiques/guerre-dalgerie/combattre-algerie-combattre-metropole-2",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -1218,7 +1290,9 @@
             "url": "https://fr.wikipedia.org/wiki/Cat%C3%A9gorie:Bataille_de_la_guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -1255,7 +1329,9 @@
             "url": "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/ressources-historiques/guerre-dalgerie/combattre-algerie-combattre-metropole-3",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -1287,7 +1363,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/686/10/1/290720",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1319,7 +1397,9 @@
             "url": "https://recherche-anom.culture.gouv.fr/ark:/61561/zf476wvrwx",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1351,7 +1431,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/686/10/1/290720",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1383,7 +1465,9 @@
             "url": "https://www.les-tirailleurs.fr/documents/5357e955-c86d-4555-87d5-cc16d3a86c1e/afficher",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1415,7 +1499,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1447,7 +1533,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/686/10/1/290720",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1479,7 +1567,9 @@
             "url": "https://recherche-anom.culture.gouv.fr/ark:/61561/zf476wvrwx",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1511,7 +1601,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1543,7 +1635,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/686/10/1/290720",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1575,7 +1669,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/20/16/5/254394",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1607,7 +1703,9 @@
             "url": "https://www.legionetrangere.fr/la-fsale/actualites-de-la-fsale/808-histoire-decembre-1959-bataille-du-djebel-beni-smir.html",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1639,7 +1737,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1671,7 +1771,9 @@
             "url": "https://recherche-anom.culture.gouv.fr/ark:/61561/zf476wvrwx",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1703,7 +1805,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1735,7 +1839,9 @@
             "url": "https://fr.wikipedia.org/wiki/Colonel_Lotfi",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -1767,7 +1873,9 @@
             "url": "https://journals.openedition.org/insaniyat/6187",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -1799,7 +1907,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_I_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -1831,7 +1941,9 @@
             "url": "https://fr.wikipedia.org/wiki/Adjoul-Adjoul",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -1863,7 +1975,9 @@
             "url": "https://fr.wikipedia.org/wiki/Bachir_Chihani",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -1895,7 +2009,9 @@
             "url": "https://journals.openedition.org/insaniyat/6187",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -1927,7 +2043,9 @@
             "url": "https://fr.wikipedia.org/wiki/Abbas_Laghrour",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -1959,7 +2077,9 @@
             "url": "https://fr.wikipedia.org/wiki/Nemencha",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -1991,7 +2111,9 @@
             "url": "https://journals.openedition.org/insaniyat/6187",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -2023,7 +2145,9 @@
             "url": "https://shs.cairn.info/mourir-a-sakiet--9782130835714-page-229?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -2055,7 +2179,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -2087,7 +2213,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_I_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -2119,7 +2247,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_II_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2151,7 +2281,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -2183,7 +2315,9 @@
             "url": "https://fr.wikipedia.org/wiki/Nemencha",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#c0392b",
+        "marker-size": "medium"
       }
     },
     {
@@ -2215,7 +2349,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2247,7 +2383,9 @@
             "url": "https://francearchives.gouv.fr/findingaid/b5007a886e4825bfd4b46f8220b3b3ee7d19d6dd",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2279,7 +2417,9 @@
             "url": "https://fr.wikipedia.org/wiki/F%C3%A9d%C3%A9ration_de_France_du_FLN",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2311,7 +2451,9 @@
             "url": "https://francearchives.gouv.fr/findingaid/b5007a886e4825bfd4b46f8220b3b3ee7d19d6dd",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2343,7 +2485,9 @@
             "url": "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/ressources-historiques/guerre-dalgerie/combattre-algerie-combattre-metropole-2",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2375,7 +2519,9 @@
             "url": "https://francearchives.gouv.fr/fr/facomponent/211f6b2f72cb3624375b780f8627ed54eefae289",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2407,7 +2553,9 @@
             "url": "https://books.openedition.org/irhis/2322?lang=en",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2439,7 +2587,9 @@
             "url": "https://francearchives.gouv.fr/findingaid/b5007a886e4825bfd4b46f8220b3b3ee7d19d6dd",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2471,7 +2621,9 @@
             "url": "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/ressources-historiques/guerre-dalgerie/combattre-algerie-combattre-metropole-2",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2503,7 +2655,9 @@
             "url": "https://francearchives.gouv.fr/fr/facomponent/211f6b2f72cb3624375b780f8627ed54eefae289",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2535,7 +2689,9 @@
             "url": "https://books.openedition.org/irhis/2322?lang=en",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2567,7 +2723,9 @@
             "url": "https://francearchives.gouv.fr/findingaid/b5007a886e4825bfd4b46f8220b3b3ee7d19d6dd",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2599,7 +2757,9 @@
             "url": "https://fr.wikipedia.org/wiki/F%C3%A9d%C3%A9ration_de_France_du_FLN",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#8e44ad",
+        "marker-size": "medium"
       }
     },
     {
@@ -2631,7 +2791,9 @@
             "url": "https://www.elmoudjahid.dz/fr/l-evenement/guelma-la-wilaya-au-5-000-martyrs-195645",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -2663,7 +2825,9 @@
             "url": "https://fr.wikipedia.org/wiki/Youcef_Zighoud",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2695,7 +2859,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_II_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2727,7 +2893,9 @@
             "url": "https://shs.cairn.info/la-wilaya-ii-historique--9789947394052-page-35?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2759,7 +2927,9 @@
             "url": "https://shs.cairn.info/la-wilaya-ii-historique--9789947394052-page-103?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2791,7 +2961,9 @@
             "url": "https://recherche-anom.culture.gouv.fr/ark:/61561/zf476wvrwx",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2823,7 +2995,9 @@
             "url": "https://www.elmoudjahid.dz/fr/actualite/viree-dans-les-refuges-de-la-wilaya-ii-historique-ces-sanctuaires-oublies-242668",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2855,7 +3029,9 @@
             "url": "https://shs.cairn.info/la-wilaya-ii-historique--9789947394052-page-103?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2887,7 +3063,9 @@
             "url": "https://www.elmoudjahid.dz/fr/l-evenement/guelma-la-wilaya-au-5-000-martyrs-195645",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2919,7 +3097,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -2956,7 +3136,9 @@
             "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -2988,7 +3170,9 @@
             "url": "https://www.elmoudjahid.dz/fr/l-evenement/guelma-la-wilaya-au-5-000-martyrs-195645",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -3020,7 +3204,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_II_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -3052,7 +3238,9 @@
             "url": "https://shs.cairn.info/la-wilaya-ii-historique--9789947394052-page-103?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -3084,7 +3272,9 @@
             "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-380?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -3116,7 +3306,9 @@
             "url": "https://shs.cairn.info/guerre-de-liberation--9789961634547-page-127?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -3148,7 +3340,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_III_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3180,7 +3374,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_III_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3212,7 +3408,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/178/5/17/27827",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3244,7 +3442,9 @@
             "url": "https://fr.wikipedia.org/wiki/Op%C3%A9ration_Oiseau_bleu",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3276,7 +3476,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_III_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3308,7 +3510,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3340,7 +3544,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_III_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3372,7 +3578,9 @@
             "url": "https://shs.cairn.info/question-kabyle-nationalisme-algerien--9782365122757-page-421?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3404,7 +3612,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3436,7 +3646,9 @@
             "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-380?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3468,7 +3680,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_III_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3500,7 +3714,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3532,7 +3748,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3564,7 +3782,9 @@
             "url": "https://shs.cairn.info/question-kabyle-nationalisme-algerien--9782365122757-page-421?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3596,7 +3816,9 @@
             "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-380?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3628,7 +3850,9 @@
             "url": "https://shs.cairn.info/question-kabyle-nationalisme-algerien--9782365122757-page-421?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#27ae60",
+        "marker-size": "medium"
       }
     },
     {
@@ -3660,7 +3884,9 @@
             "url": "https://www.elmoudjahid.dz/fr/actualite/wilaya-iv-les-maquis-de-la-dignite-242798",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3692,7 +3918,9 @@
             "url": "https://recherche-anom.culture.gouv.fr/ark:/61561/zf476wvrwx",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3724,7 +3952,9 @@
             "url": "https://www.elmoudjahid.dz/fr/actualite/wilaya-iv-les-maquis-de-la-dignite-242798",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3756,7 +3986,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3788,7 +4020,9 @@
             "url": "https://www.aps.dz/fr/culture/edition/mheuff2l-ahmed-el-noufi-martyr-de-cherchell-une-nouvelle-publication-en-hommage-aux-heros-de-la-revolution",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3820,7 +4054,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3852,7 +4088,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3884,7 +4122,9 @@
             "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-380?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3916,7 +4156,9 @@
             "url": "https://shs.cairn.info/article/GMCC_201_0163/pdf?lang=fr&download=1&ID_ARTICLE=GMCC_201_0163",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3948,7 +4190,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -3985,7 +4229,9 @@
             "url": "https://fr.wikipedia.org/wiki/Lakhdar_Bouregaa",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -4017,7 +4263,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -4049,7 +4297,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -4081,7 +4331,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4113,7 +4365,9 @@
             "url": "https://journals.openedition.org/anneemaghreb/335?lang=ar",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4145,7 +4399,9 @@
             "url": "https://asjp.cerist.dz/en/article/280826",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4177,7 +4433,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_(guerre_d%27Alg%C3%A9rie)",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4209,7 +4467,9 @@
             "url": "https://insaniyat.crasc.dz/en/article/les-wilayas-dans-la-crise-du-fln-de-lete-1962",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4246,7 +4506,9 @@
             "url": "https://journals.openedition.org/anneemaghreb/3647?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4278,7 +4540,9 @@
             "url": "https://asjp.cerist.dz/en/article/280826",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4310,7 +4574,9 @@
             "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4342,7 +4608,9 @@
             "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4374,7 +4642,9 @@
             "url": "https://en.wikipedia.org/wiki/Battle_of_Djebel_Bouk%27hil_(1961)",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4406,7 +4676,9 @@
             "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-902?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4438,7 +4710,9 @@
             "url": "https://www.elmoudjahid.dz/fr/actualite/wilaya-iv-les-maquis-de-la-dignite-242798",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -4470,7 +4744,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -4502,7 +4778,9 @@
             "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-380?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -4534,7 +4812,9 @@
             "url": "https://shs.cairn.info/article/GMCC_201_0163/pdf?lang=fr&download=1&ID_ARTICLE=GMCC_201_0163",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -4566,7 +4846,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -4598,7 +4880,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_(guerre_d%27Alg%C3%A9rie)",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4630,7 +4914,9 @@
             "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4662,7 +4948,9 @@
             "url": "https://journals.openedition.org/anneemaghreb/335?lang=ar",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4694,7 +4982,9 @@
             "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-902?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4731,7 +5021,9 @@
             "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-902?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#f39c12",
+        "marker-size": "medium"
       }
     },
     {
@@ -4763,7 +5055,9 @@
             "url": "https://shs.cairn.info/revue-guerres-mondiales-et-conflits-contemporains-2018-1-page-91?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -4795,7 +5089,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/686/10/1/290720",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -4827,7 +5123,9 @@
             "url": "https://fr.wikipedia.org/wiki/Colonel_Lotfi",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -4859,7 +5157,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -4891,7 +5191,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/20/16/5/254394",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -4923,7 +5225,9 @@
             "url": "https://shs.cairn.info/revue-guerres-mondiales-et-conflits-contemporains-2018-1-page-91?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -4955,7 +5259,9 @@
             "url": "https://www.aps.dz/fr/algerie/societe/mn8zsy8t-bechar-le-colonel-lotfi-un-riche-parcours-de-lutte-et-de-militantisme-durant-la-glorieuse-guerre-de-liberation-nationale",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -4987,7 +5293,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -5019,7 +5327,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/686/10/1/290720",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -5051,7 +5361,9 @@
             "url": "https://shs.cairn.info/revue-guerres-mondiales-et-conflits-contemporains-2018-1-page-91?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5083,7 +5395,9 @@
             "url": "https://fr.wikipedia.org/wiki/Colonel_Lotfi",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -5115,7 +5429,9 @@
             "url": "https://www.legionetrangere.fr/la-fsale/actualites-de-la-fsale/808-histoire-decembre-1959-bataille-du-djebel-beni-smir.html",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5147,7 +5463,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_(guerre_d%27Alg%C3%A9rie)",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -5179,7 +5497,9 @@
             "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5211,7 +5531,9 @@
             "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5243,7 +5565,9 @@
             "url": "https://shs.cairn.info/guerre-de-liberation--9789961634547-page-127?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5275,7 +5599,9 @@
             "url": "https://shs.cairn.info/mourir-a-sakiet--9782130835714-page-229?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5307,7 +5633,9 @@
             "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-380?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5339,7 +5667,9 @@
             "url": "https://fr.wikipedia.org/wiki/Bataille_des_fronti%C3%A8res_(guerre_d%27Alg%C3%A9rie)",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5371,7 +5701,9 @@
             "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
             "type_source": "Archive"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5403,7 +5735,9 @@
             "url": "https://fr.wikipedia.org/wiki/Nemencha",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5435,7 +5769,9 @@
             "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5467,7 +5803,9 @@
             "url": "https://shs.cairn.info/la-wilaya-ii-historique--9789947394052-page-103?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5499,7 +5837,9 @@
             "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5531,7 +5871,9 @@
             "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5563,7 +5905,9 @@
             "url": "https://shs.cairn.info/guerre-de-liberation--9789961634547-page-127?lang=fr",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#d35400",
+        "marker-size": "medium"
       }
     },
     {
@@ -5595,7 +5939,9 @@
             "url": "https://fr.wikipedia.org/wiki/Guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -5627,7 +5973,9 @@
             "url": "https://larevuedhistoiremilitaire.fr/2021/03/22/il-y-a-60-ans-loas-en-algerie/",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -5659,7 +6007,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/396/5/2/32080",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -5691,7 +6041,9 @@
             "url": "https://fr.wikipedia.org/wiki/Chronologie_de_la_guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -5723,7 +6075,9 @@
             "url": "https://asjp.cerist.dz/en/downArticle/396/5/2/32080",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -5755,7 +6109,9 @@
             "url": "https://larevuedhistoiremilitaire.fr/2021/03/22/il-y-a-60-ans-loas-en-algerie/",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2c3e50",
+        "marker-size": "medium"
       }
     },
     {
@@ -5787,7 +6143,9 @@
             "url": "https://fr.wikipedia.org/wiki/Bataille_de_Bab_El_Oued",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -5819,7 +6177,9 @@
             "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#16a085",
+        "marker-size": "medium"
       }
     },
     {
@@ -5851,7 +6211,9 @@
             "url": "https://journals.openedition.org/insaniyat/29234?lang=en",
             "type_source": "Ouvrage académique"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     },
     {
@@ -5883,7 +6245,9 @@
             "url": "https://fr.wikipedia.org/wiki/Chronologie_de_la_guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -5915,7 +6279,9 @@
             "url": "https://fr.wikipedia.org/wiki/Guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#e74c3c",
+        "marker-size": "medium"
       }
     },
     {
@@ -5952,7 +6318,9 @@
             "url": "https://fr.wikipedia.org/wiki/Chronologie_de_la_guerre_d%27Alg%C3%A9rie",
             "type_source": "Article"
           }
-        ]
+        ],
+        "marker-color": "#2980b9",
+        "marker-size": "medium"
       }
     }
   ]
