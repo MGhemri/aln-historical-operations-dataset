@@ -1,6 +1,7 @@
 # FLN/ALN Historical Military Operations Dataset (1954–1962)
 
 [![GitHub Pages: Live App](https://img.shields.io/badge/D%C3%A9mo_En_Ligne-GitHub_Pages-2ea44f.svg?logo=github&logoColor=white)](https://mghemri.github.io/aln-historical-operations-dataset/)
+[![Deploy to Vercel](https://img.shields.io/badge/D%C3%A9ploiement-Vercel-000000.svg?logo=vercel&logoColor=white)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMGhemri%2Faln-historical-operations-dataset)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Format: JSON / GeoJSON](https://img.shields.io/badge/Format-JSON%20%7C%20GeoJSON-2ea44f.svg)](#2-structure-du-schéma-de-données)
 [![Records: 245 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-245-c0392b.svg)](#️-carte-interactive-des-263-opérations-19541962)
@@ -13,7 +14,10 @@ Ce dépôt héberge un corpus de données structuré en accès libre documentant
 > ### 🌐 Application Web Interactive en Ligne
 > **Explorez l'ensemble des 263 opérations dans l'application web officielle :**  
 > 👉 **[Consulter l'Atlas interactif et le moteur de recherche en direct](https://mghemri.github.io/aln-historical-operations-dataset/)**  
-> *(Cartographie dynamique Leaflet avec regroupement par clusters, recherche plein texte instantanée, filtres multicritères par Wilaya et millésime, fiches d'archives complètes et tableau de bord statistique Chart.js).*
+> *(Cartographie dynamique Leaflet avec regroupement par clusters, recherche plein texte instantanée, filtres multicritères par Wilaya et millésime, fiches d'archives complètes et tableau de bord statistique Chart.js).*  
+>
+> 🚀 **Déploiement Vercel :** L'application est nativement configurée pour Vercel via [`vercel.json`](./vercel.json). Vous pouvez la cloner et la déployer en 1 clic :  
+> [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMGhemri%2Faln-historical-operations-dataset)
 
 
 > [!IMPORTANT]
