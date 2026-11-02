@@ -1,10 +1,16 @@
 # FLN/ALN Historical Military Operations Dataset (1954–1962)
 
-[![License: MIT](https://shields.io)](https://opensource.org)
-[![Format: JSON / GeoJSON](https://shields.io)](#structure-du-schéma-de-données)
-[![Historiography](https://shields.io)](#démarche-académique-et-méthodologie)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Format: JSON / GeoJSON](https://img.shields.io/badge/Format-JSON%20%7C%20GeoJSON-2ea44f.svg)](#2-structure-du-schéma-de-données)
+[![Records: 184 Operations](https://img.shields.io/badge/Opérations_documentées-184-c0392b.svg)](#️-carte-interactive-des-184-opérations-19541962)
+[![Historiography: Multi-Source](https://img.shields.io/badge/Historiographie-Sources_Croisées-8e44ad.svg)](#1-démarche-académique-et-méthodologie)
+[![Status: Living Dataset](https://img.shields.io/badge/Statut-Projet_Évolutif_( En_cours )-d35400.svg)](#5-projet-évolutif-et-guide-de-contribution)
 
 Ce dépôt héberge un corpus de données structuré en accès libre documentant, qualifiant et géolocalisant **184 actions militaires, embuscades, batailles, sabotages et opérations de guérilla** menés par le Front de libération nationale (FLN) et l'Armée de libération nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).
+
+> [!IMPORTANT]
+> **Corpus évolutif en construction continue (*Living Dataset*) & Appel à contributions :**
+> Ce travail de recherche historique et d'ingénierie de données **n'est pas figé et se poursuit dans le temps**. Il a vocation à être continuellement enrichi pour couvrir de manière toujours plus exhaustive les combats de chaque Wilaya, zone, région (*mintaka*) et secteur (*nahia*). **Toute contribution (ajout d'opérations, croisement d'archives, affinement des coordonnées géographiques) qui respecte rigoureusement la méthodologie scientifique et le schéma de données du projet est vivement recommandée.** Consultez la section [**5. Projet évolutif et guide de contribution**](#5-projet-évolutif-et-guide-de-contribution) pour les règles détaillées.
 
 ---
 
@@ -16,7 +22,7 @@ Ce dépôt héberge un corpus de données structuré en accès libre documentant
 - 🔴 `#c0392b` **Wilaya I** (Aurès-Nemencha) & Déclenchement
 - 🔵 `#2c3e50` **Wilaya II** (Nord-Constantinois)
 - 🟢 `#27ae60` **Wilaya III** (Kabylie)
-- 🩵 `#16a085` **Wilaya IV** (Algérois / Ouarsenis) & ** Rouge vif `#e74c3c` Zone Autonome d'Alger (ZAA)**
+- 🩵 `#16a085` **Wilaya IV** (Algérois / Ouarsenis) & 🔴 `#e74c3c` **Zone Autonome d'Alger (ZAA)**
 - 🔷 `#2980b9` **Wilaya V** (Oranie / Front Sud-Oranais / ZAO)
 - 🟡 `#f39c12` **Wilaya VI** (Sahara / Atlas saharien)
 - 🟠 `#d35400` **Base de l'Est & Armée des Frontières (EMG)**
@@ -313,6 +319,17 @@ Pour citer ce jeu de données dans un travail académique :
 
 ---
 
-## 5. Contributions
+## 5. Projet évolutif et guide de contribution
 
-Les contributions visant à enrichir la base, à corriger des toponymes ou à ajouter des sources primaires vérifiables sont bienvenues via **Pull Request** ou via l'onglet **Issues**.
+### Un travail de longue haleine qui continue dans le temps
+Ce dépôt constitue une **base ouverte et évolutive (*Work in Progress*)** qui a vocation à s'enrichir dans la durée. L'histoire militaire de la guerre d'indépendance algérienne comporte des milliers d'engagements locaux, d'accrochages de *katibas*, de sabotages et d'opérations urbaines dont l'indexation numérique se poursuit progressivement au fil du dépouillement d'archives et de publications académiques.
+
+### Pourquoi et comment contribuer ?
+**Toute contribution qui respecte rigoureusement les règles méthodologiques et techniques de ce dépôt est vivement recommandée** (chercheurs, historiens, archivistes, doctorants, ingénieurs de données ou passionnés d'histoire).
+
+Pour qu'une proposition d'ajout ou de correction (via **Pull Request** ou **Issue**) soit validée et fusionnée, elle doit **impérativement respecter les 4 règles suivantes** :
+
+1. **Exigence de sourçage vérifiable :** Chaque opération ajoutée ou modifiée doit comporter au moins une source primaire ou secondaire identifiable dans le tableau `sources` (fonds d'archives SHD/ANOM, ouvrage universitaire, article de revue historique, presse d'époque ou encyclopédie sourcée) avec une URL valide et consultable.
+2. **Rigueur et neutralité historiographique :** La rédaction des champs `description` et `impact_strategique` doit rester strictement factuelle, analytique et non partisane. Le champ `bilan_et_pertes` doit systématiquement mentionner les fourchettes ou divergences entre les bilans officiels français, les sources de l'ALN et les estimations d'historiens.
+3. **Précision géospatiale :** Les coordonnées `latitude` et `longitude` doivent correspondre avec précision au lieu de l'engagement (djebel, douar, col, localité ou rue) et respecter l'ordre `[longitude, latitude]` (RFC 7946) lors de la mise à jour du fichier `operations_fln_1954_1962.geojson`.
+4. **Conformité stricte au schéma de données :** Tout ajout doit respecter la nomenclature des identifiants (`OP_YYYY_XXX`), l'encodage UTF-8 sans erreur de syntaxe JSON, la mise à jour du compteur `total_records` et la synchronisation entre `operations_fln_1954_1962.json` et `operations_fln_1954_1962.geojson`.
