@@ -2,7 +2,7 @@
   "dataset_metadata": {
     "title": "Opérations et actions militaires offensives du FLN/ALN (1954-1962)",
     "description": "Recueil documenté des principales actions militaires offensives, embuscades, batailles et campagnes de guérilla menées par le FLN et l'ALN durant la guerre d'indépendance algérienne (1954–1962), enrichi d'après les fonds historiographiques et le corpus events.json.",
-    "generated_at": "2026-11-02",
+    "generated_at": "2026-11-02T20:31:50.924082+00:00",
     "total_records": 245
   },
   "operations": [
@@ -7863,15 +7863,15 @@
     },
     {
       "id": "OP_1956_035",
-      "nom_operation": "Bataille des Ghoualem (Sidi Ghalem)",
+      "nom_operation": "Bataille de Sidi Ghalem (Bataille des Ghoualem)",
       "date_debut": "1956-07-18",
       "date_fin": "1956-07-20",
-      "wilaya_concernee": "Wilaya V (Zone 3 - Sud d'Oran / Tafraoui)",
+      "wilaya_concernee": "Wilaya V (Zone 3 - Massifs de Tafraoui / Monts du Tessala)",
       "localisation": {
-        "region_ou_ville": "Sidi Ghalem / Tafraoui (Sud d'Oran)",
+        "region_ou_ville": "Sidi Ghalem / Forêt de Sidi Ghalem / Tafraoui (Daïra d'Oued Tlélat, Wilaya d'Oran)",
         "coordonnees_approximatives": {
-          "latitude": 35.43124,
-          "longitude": -0.56259
+          "latitude": 35.475,
+          "longitude": -0.548
         }
       },
       "commandement_aln": [
@@ -7908,8 +7908,8 @@
       "localisation": {
         "region_ou_ville": "Massif du Djebel Tessala (Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 35.2778,
-          "longitude": -0.80092
+          "latitude": 35.265,
+          "longitude": -0.772
         }
       },
       "commandement_aln": [
@@ -7940,8 +7940,8 @@
       "localisation": {
         "region_ou_ville": "Oued El Haï / Tessala (Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 35.2778,
-          "longitude": -0.80092
+          "latitude": 35.298,
+          "longitude": -0.745
         }
       },
       "commandement_aln": [
@@ -8004,8 +8004,8 @@
       "localisation": {
         "region_ou_ville": "Sidi Youb / Tilmouni (Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 35.07832,
-          "longitude": -0.53366
+          "latitude": 35.112,
+          "longitude": -0.548
         }
       },
       "commandement_aln": [
@@ -8036,8 +8036,8 @@
       "localisation": {
         "region_ou_ville": "Refafsa / Belarbi (Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 35.15257,
-          "longitude": -0.45717
+          "latitude": 35.185,
+          "longitude": -0.472
         }
       },
       "commandement_aln": [
@@ -8068,8 +8068,8 @@
       "localisation": {
         "region_ou_ville": "Beni Ghezil / Ouled Mimoun (Tlemcen / Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 34.90472,
-          "longitude": -1.03394
+          "latitude": 34.935,
+          "longitude": -1.055
         }
       },
       "commandement_aln": [
@@ -8100,8 +8100,8 @@
       "localisation": {
         "region_ou_ville": "Djebel Moksi / Oued Sefioun (Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 35.10209,
-          "longitude": -0.38234
+          "latitude": 35.135,
+          "longitude": -0.368
         }
       },
       "commandement_aln": [
@@ -8132,8 +8132,8 @@
       "localisation": {
         "region_ou_ville": "Djebel Guediret / Youb (Saïda / Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 34.92186,
-          "longitude": -0.20955
+          "latitude": 34.958,
+          "longitude": -0.235
         }
       },
       "commandement_aln": [
@@ -8164,8 +8164,8 @@
       "localisation": {
         "region_ou_ville": "Djorf Torab / Télagh (Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 34.7827,
-          "longitude": -0.57218
+          "latitude": 34.742,
+          "longitude": -0.531
         }
       },
       "commandement_aln": [
@@ -8196,8 +8196,8 @@
       "localisation": {
         "region_ou_ville": "Monts des M'Hadid / Télagh (Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 34.7827,
-          "longitude": -0.57218
+          "latitude": 34.815,
+          "longitude": -0.635
         }
       },
       "commandement_aln": [
@@ -8228,8 +8228,8 @@
       "localisation": {
         "region_ou_ville": "Sidi Douma / Tafessour (Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 34.63262,
-          "longitude": -0.20512
+          "latitude": 34.675,
+          "longitude": -0.218
         }
       },
       "commandement_aln": [
@@ -8260,8 +8260,8 @@
       "localisation": {
         "region_ou_ville": "Zid El Moumen / Merine (Sidi Bel Abbès)",
         "coordonnees_approximatives": {
-          "latitude": 34.78009,
-          "longitude": -0.45221
+          "latitude": 34.812,
+          "longitude": -0.465
         }
       },
       "commandement_aln": [
@@ -8457,8 +8457,8 @@
       "localisation": {
         "region_ou_ville": "Djebel M'zi / Djenien Bourezg (Aïn Sefra, Naâma)",
         "coordonnees_approximatives": {
-          "latitude": 32.47716,
-          "longitude": -0.88001
+          "latitude": 32.745,
+          "longitude": -0.545
         }
       },
       "commandement_aln": [
@@ -8585,8 +8585,8 @@
       "localisation": {
         "region_ou_ville": "Chouabir / El Ghicha (Laghouat)",
         "coordonnees_approximatives": {
-          "latitude": 33.93157,
-          "longitude": 2.14355
+          "latitude": 33.935,
+          "longitude": 2.145
         }
       },
       "commandement_aln": [
@@ -8714,8 +8714,8 @@
       "localisation": {
         "region_ou_ville": "Secteur d'Ellaba / Saïda",
         "coordonnees_approximatives": {
-          "latitude": 34.83033,
-          "longitude": 0.15171
+          "latitude": 34.895,
+          "longitude": 0.285
         }
       },
       "commandement_aln": [
@@ -8746,8 +8746,8 @@
       "localisation": {
         "region_ou_ville": "Oued El Kifah / Tefrit (Saïda)",
         "coordonnees_approximatives": {
-          "latitude": 34.83033,
-          "longitude": 0.15171
+          "latitude": 34.745,
+          "longitude": 0.078
         }
       },
       "commandement_aln": [
@@ -8778,8 +8778,8 @@
       "localisation": {
         "region_ou_ville": "El Loukda / Secteur des Amayer (Saïda)",
         "coordonnees_approximatives": {
-          "latitude": 34.83033,
-          "longitude": 0.15171
+          "latitude": 34.815,
+          "longitude": 0.225
         }
       },
       "commandement_aln": [
@@ -8981,8 +8981,8 @@
       "localisation": {
         "region_ou_ville": "Massif forestier des Beni Toufout / Collo (Skikda)",
         "coordonnees_approximatives": {
-          "latitude": 37.006,
-          "longitude": 6.56
+          "latitude": 36.945,
+          "longitude": 6.462
         }
       },
       "commandement_aln": [
@@ -9120,8 +9120,8 @@
       "localisation": {
         "region_ou_ville": "Mih Ouensa / Houdh Echouf / El Oued",
         "coordonnees_approximatives": {
-          "latitude": 33.356,
-          "longitude": 6.863
+          "latitude": 33.268,
+          "longitude": 6.725
         }
       },
       "commandement_aln": [
@@ -9149,12 +9149,12 @@
       "nom_operation": "Affrontement armé et tragédie de Melouza (Mechta Kasba)",
       "date_debut": "1957-05-28",
       "date_fin": null,
-      "wilaya_concernee": "Wilaya III (Zone 3 - Monts des Bibans / Beni Ilmane)",
+      "wilaya_concernee": "Wilaya III (Zone 3 - Monts des Bibans / Confins du Hodna)",
       "localisation": {
-        "region_ou_ville": "Mechta Kasba / Melouza (Bordj Bou Arréridj / M'Sila)",
+        "region_ou_ville": "Mechta Kasba / Melouza (Beni Ilmane, flanc sud du Djebel M'zid, Wilaya de M'Sila)",
         "coordonnees_approximatives": {
-          "latitude": 36.073,
-          "longitude": 4.761
+          "latitude": 35.986,
+          "longitude": 4.468
         }
       },
       "commandement_aln": [
@@ -9342,8 +9342,8 @@
       "localisation": {
         "region_ou_ville": "Oasis et reliefs de Foughala (Biskra)",
         "coordonnees_approximatives": {
-          "latitude": 34.573,
-          "longitude": 5.334
+          "latitude": 34.718,
+          "longitude": 5.525
         }
       },
       "commandement_aln": [
@@ -9374,8 +9374,8 @@
       "localisation": {
         "region_ou_ville": "Djebel Asfour / Chechar (Khenchela)",
         "coordonnees_approximatives": {
-          "latitude": 35.036,
-          "longitude": 7.003
+          "latitude": 34.965,
+          "longitude": 7.035
         }
       },
       "commandement_aln": [
@@ -9406,8 +9406,8 @@
       "localisation": {
         "region_ou_ville": "Massif de l'Aurès et hautes plaines d'Aïn Beïda (Oum El Bouaghi)",
         "coordonnees_approximatives": {
-          "latitude": 35.796,
-          "longitude": 7.393
+          "latitude": 35.685,
+          "longitude": 7.315
         }
       },
       "commandement_aln": [
@@ -9438,8 +9438,8 @@
       "localisation": {
         "region_ou_ville": "Djebel Marmoura / Bouhamdane (Hammam Debagh, Guelma)",
         "coordonnees_approximatives": {
-          "latitude": 36.462,
-          "longitude": 7.258
+          "latitude": 36.518,
+          "longitude": 7.285
         }
       },
       "commandement_aln": [
@@ -9475,8 +9475,8 @@
       "localisation": {
         "region_ou_ville": "Bourzam / Aïn Kechra (Skikda)",
         "coordonnees_approximatives": {
-          "latitude": 36.798,
-          "longitude": 6.432
+          "latitude": 36.782,
+          "longitude": 6.415
         }
       },
       "commandement_aln": [
@@ -9649,8 +9649,8 @@
       "localisation": {
         "region_ou_ville": "Djebel Mongorno / Zoubiria (Médéa)",
         "coordonnees_approximatives": {
-          "latitude": 36.108,
-          "longitude": 2.855
+          "latitude": 36.118,
+          "longitude": 2.685
         }
       },
       "commandement_aln": [
@@ -9687,8 +9687,8 @@
       "localisation": {
         "region_ou_ville": "Sidi Khetab / Ouled El Hadj Brahim (Relizane)",
         "coordonnees_approximatives": {
-          "latitude": 35.885,
-          "longitude": 0.514
+          "latitude": 35.915,
+          "longitude": 0.495
         }
       },
       "commandement_aln": [
@@ -9719,8 +9719,8 @@
       "localisation": {
         "region_ou_ville": "Mascara et monts de Beni Chougrane",
         "coordonnees_approximatives": {
-          "latitude": 35.396,
-          "longitude": 0.14
+          "latitude": 35.445,
+          "longitude": 0.185
         }
       },
       "commandement_aln": [
@@ -9751,8 +9751,8 @@
       "localisation": {
         "region_ou_ville": "Sidi Semiane / Monts du Dahra (Tipaza)",
         "coordonnees_approximatives": {
-          "latitude": 36.475,
-          "longitude": 2.025
+          "latitude": 36.521,
+          "longitude": 2.148
         }
       },
       "commandement_aln": [
@@ -9827,8 +9827,8 @@
       "localisation": {
         "region_ou_ville": "Issine / Djanet (Frontière algéro-libyenne)",
         "coordonnees_approximatives": {
-          "latitude": 24.554,
-          "longitude": 9.484
+          "latitude": 24.895,
+          "longitude": 10.125
         }
       },
       "commandement_aln": [

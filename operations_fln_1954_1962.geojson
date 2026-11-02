@@ -1,9 +1,9 @@
 {
   "type": "FeatureCollection",
-  "dataset_metadata": {
+  "metadata": {
     "title": "Opérations et actions militaires offensives du FLN/ALN (1954-1962)",
     "description": "Recueil documenté des principales actions militaires offensives, embuscades, batailles et campagnes de guérilla menées par le FLN et l'ALN durant la guerre d'indépendance algérienne (1954–1962), enrichi d'après les fonds historiographiques et le corpus events.json.",
-    "generated_at": "2026-11-02",
+    "generated_at": "2026-11-02T20:31:50.924082+00:00",
     "total_records": 245
   },
   "features": [
@@ -844,7 +844,7 @@
             "type_source": "Article"
           }
         ],
-        "marker-color": "#16a085",
+        "marker-color": "#27ae60",
         "marker-size": "medium"
       }
     },
@@ -1411,7 +1411,7 @@
             "type_source": "Article"
           }
         ],
-        "marker-color": "#f39c12",
+        "marker-color": "#16a085",
         "marker-size": "medium"
       }
     },
@@ -2121,7 +2121,7 @@
             "type_source": "Archive"
           }
         ],
-        "marker-color": "#2980b9",
+        "marker-color": "#16a085",
         "marker-size": "medium"
       }
     },
@@ -4058,7 +4058,7 @@
             "type_source": "Archive"
           }
         ],
-        "marker-color": "#16a085",
+        "marker-color": "#27ae60",
         "marker-size": "medium"
       }
     },
@@ -4872,7 +4872,7 @@
             "type_source": "Ouvrage académique"
           }
         ],
-        "marker-color": "#f39c12",
+        "marker-color": "#c0392b",
         "marker-size": "medium"
       }
     },
@@ -5174,7 +5174,7 @@
             "type_source": "Ouvrage académique"
           }
         ],
-        "marker-color": "#f39c12",
+        "marker-color": "#16a085",
         "marker-size": "medium"
       }
     },
@@ -6560,7 +6560,7 @@
             "type_source": "Article"
           }
         ],
-        "marker-color": "#e74c3c",
+        "marker-color": "#8e44ad",
         "marker-size": "medium"
       }
     },
@@ -6594,7 +6594,7 @@
             "type_source": "Ouvrage académique"
           }
         ],
-        "marker-color": "#2c3e50",
+        "marker-color": "#8e44ad",
         "marker-size": "medium"
       }
     },
@@ -6764,7 +6764,7 @@
             "type_source": "Article"
           }
         ],
-        "marker-color": "#e74c3c",
+        "marker-color": "#8e44ad",
         "marker-size": "medium"
       }
     },
@@ -7006,16 +7006,16 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.56259,
-          35.43124
+          -0.548,
+          35.475
         ]
       },
       "properties": {
         "id": "OP_1956_035",
-        "nom_operation": "Bataille des Ghoualem (Sidi Ghalem)",
+        "nom_operation": "Bataille de Sidi Ghalem (Bataille des Ghoualem)",
         "date_debut": "1956-07-18",
         "date_fin": "1956-07-20",
-        "wilaya_concernee": "Wilaya V (Zone 3 - Sud d'Oran / Tafraoui)",
+        "wilaya_concernee": "Wilaya V (Zone 3 - Massifs de Tafraoui / Monts du Tessala)",
         "type_action": "Offensive coordonnée / Combat de rencontre",
         "description": "Grande confrontation de trois jours au sud d'Oran dans le secteur de Sidi Ghalem / Tafraoui, où les katibas de l'ALN affrontent les blindés et les chasseurs-bombardiers de l'armée coloniale.",
         "impact_strategique": "Affirmation de la puissance de frappe de l'ALN aux portes méridionales d'Oran, confirmant l'extension irréversible de l'insurrection en Oranie intérieure.",
@@ -7040,8 +7040,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.80092,
-          35.2778
+          -0.772,
+          35.265
         ]
       },
       "properties": {
@@ -7069,8 +7069,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.80092,
-          35.2778
+          -0.745,
+          35.298
         ]
       },
       "properties": {
@@ -7127,8 +7127,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.53366,
-          35.07832
+          -0.548,
+          35.112
         ]
       },
       "properties": {
@@ -7156,8 +7156,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.45717,
-          35.15257
+          -0.472,
+          35.185
         ]
       },
       "properties": {
@@ -7185,8 +7185,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.03394,
-          34.90472
+          -1.055,
+          34.935
         ]
       },
       "properties": {
@@ -7214,8 +7214,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.38234,
-          35.10209
+          -0.368,
+          35.135
         ]
       },
       "properties": {
@@ -7243,8 +7243,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.20955,
-          34.92186
+          -0.235,
+          34.958
         ]
       },
       "properties": {
@@ -7272,8 +7272,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.57218,
-          34.7827
+          -0.531,
+          34.742
         ]
       },
       "properties": {
@@ -7301,8 +7301,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.57218,
-          34.7827
+          -0.635,
+          34.815
         ]
       },
       "properties": {
@@ -7330,8 +7330,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.20512,
-          34.63262
+          -0.218,
+          34.675
         ]
       },
       "properties": {
@@ -7359,8 +7359,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.45221,
-          34.78009
+          -0.465,
+          34.812
         ]
       },
       "properties": {
@@ -7538,8 +7538,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.88001,
-          32.47716
+          -0.545,
+          32.745
         ]
       },
       "properties": {
@@ -7654,8 +7654,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.14355,
-          33.93157
+          2.145,
+          33.935
         ]
       },
       "properties": {
@@ -7770,8 +7770,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.15171,
-          34.83033
+          0.285,
+          34.895
         ]
       },
       "properties": {
@@ -7799,8 +7799,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.15171,
-          34.83033
+          0.078,
+          34.745
         ]
       },
       "properties": {
@@ -7828,8 +7828,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.15171,
-          34.83033
+          0.225,
+          34.815
         ]
       },
       "properties": {
@@ -7969,7 +7969,7 @@
             "type_source": "Ouvrage académique"
           }
         ],
-        "marker-color": "#27ae60",
+        "marker-color": "#c0392b",
         "marker-size": "medium"
       }
     },
@@ -8012,8 +8012,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.56,
-          37.006
+          6.462,
+          36.945
         ]
       },
       "properties": {
@@ -8133,8 +8133,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.863,
-          33.356
+          6.725,
+          33.268
         ]
       },
       "properties": {
@@ -8162,8 +8162,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          4.761,
-          36.073
+          4.468,
+          35.986
         ]
       },
       "properties": {
@@ -8171,7 +8171,7 @@
         "nom_operation": "Affrontement armé et tragédie de Melouza (Mechta Kasba)",
         "date_debut": "1957-05-28",
         "date_fin": null,
-        "wilaya_concernee": "Wilaya III (Zone 3 - Monts des Bibans / Beni Ilmane)",
+        "wilaya_concernee": "Wilaya III (Zone 3 - Monts des Bibans / Confins du Hodna)",
         "type_action": "Combat fratricide / Opération de représailles",
         "description": "Dans le contexte de l'affrontement sanglant contre les maquis rivaux messalistes du MNA soutenus et armés par l'armée française, une unité de l'ALN investit le hameau de Mechta Kasba et exécute les partisans armés du MNA.",
         "impact_strategique": "Épisode tragique de la guerre intestine FLN-MNA ; instrumentalisé par la propagande coloniale française à l'ONU mais marquant l'éradication militaire définitive du MNA en Kabylie.",
@@ -8332,8 +8332,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          5.334,
-          34.573
+          5.525,
+          34.718
         ]
       },
       "properties": {
@@ -8361,8 +8361,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.003,
-          35.036
+          7.035,
+          34.965
         ]
       },
       "properties": {
@@ -8390,8 +8390,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.393,
-          35.796
+          7.315,
+          35.685
         ]
       },
       "properties": {
@@ -8419,8 +8419,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.258,
-          36.462
+          7.285,
+          36.518
         ]
       },
       "properties": {
@@ -8453,8 +8453,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.432,
-          36.798
+          6.415,
+          36.782
         ]
       },
       "properties": {
@@ -8507,7 +8507,7 @@
             "type_source": "Ouvrage académique"
           }
         ],
-        "marker-color": "#27ae60",
+        "marker-color": "#2c3e50",
         "marker-size": "medium"
       }
     },
@@ -8608,8 +8608,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.855,
-          36.108
+          2.685,
+          36.118
         ]
       },
       "properties": {
@@ -8642,8 +8642,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.514,
-          35.885
+          0.495,
+          35.915
         ]
       },
       "properties": {
@@ -8671,8 +8671,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.14,
-          35.396
+          0.185,
+          35.445
         ]
       },
       "properties": {
@@ -8700,8 +8700,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.025,
-          36.475
+          2.148,
+          36.521
         ]
       },
       "properties": {
@@ -8768,8 +8768,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.484,
-          24.554
+          10.125,
+          24.895
         ]
       },
       "properties": {
