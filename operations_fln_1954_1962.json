@@ -1,9 +1,9 @@
 {
   "dataset_metadata": {
     "title": "Opérations et actions militaires offensives du FLN/ALN (1954-1962)",
-    "description": "Recueil documenté des principales actions militaires offensives, embuscades, batailles et campagnes de guérilla de la guerre d'indépendance algérienne, croisé à partir du portail Wikipédia (Guerre d'Algérie, Chronologie et Catégorie:Bataille de la guerre d'Algérie) et vérifié auprès de sources institutionnelles et académiques.",
+    "description": "Recueil documenté des principales actions militaires offensives, embuscades, batailles et campagnes de guérilla menées par le FLN et l'ALN durant la guerre d'indépendance algérienne (1954–1962), enrichi d'après les fonds historiographiques et le corpus events.json.",
     "generated_at": "2026-11-02",
-    "total_records": 184
+    "total_records": 245
   },
   "operations": [
     {
@@ -50,6 +50,46 @@
           "titre": "Déclenchement d'une insurrection armée en Algérie — Perspective Monde (Université de Sherbrooke)",
           "url": "https://perspective.usherbrooke.ca/bilan/servlet/BMEve/47",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Actions du déclenchement (ambalg.ma)",
+          "url": "https://www.ambalg.ma/histoire-dalgerie/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attaque du poste de gendarmerie (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mvuz37r6-l-attaque-contre-la-gendarmerie-coloniale-de-sidi-ali-un-haut-fait-d-armes-au-c%C5%93ur-des-monts-du-dahra-dans-la-nuit-du-1er-novembre-1954",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attaques du déclenchement (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mvuu8h9u-l-etincelle-de-la-revolution-dans-les-ziban-et-le-sud-du-pays",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Embuscade des gorges de Tighanimine (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/l-evenement/la-premiere-semaine-de-la-guerre-de-liberation-vue-par-l-echo-d-alger-les-commentaires-d-un-journal-colonialiste-225935",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Opérations de la nuit du déclenchement en Kabylie (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/histoire/ighil-imoula-le-souvenir-de-la-proclamation-du-1er-novembre-1010",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Sabotages et maquis entre Dahra et Ouarsenis (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Op%C3%A9ration_Couronne",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Sabotages du 1er novembre et batailles des cèdres du Belezma (horizons.dz)",
+          "url": "https://www.horizons.dz/2025/03/mostefa-ben-boulaid-une-source-dinspiration/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Sabotages ferroviaires et embuscades de l'axe Batna–Biskra (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Mostefa_Ben_Boula%C3%AFd",
+          "type_source": "Article"
         }
       ]
     },
@@ -129,6 +169,21 @@
           "titre": "Guerre de libération : l'offensive du 20 août 1955 — Cairn.info",
           "url": "https://shs.cairn.info/guerre-de-liberation--9789961634547-page-97?lang=fr",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Offensive du Nord-Constantinois (radioalgerie.dz)",
+          "url": "https://radioalgerie.dz/news/fr/node/198036",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Soulèvement populaire et représailles à El Halia (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/l-evenement/l-offensive-du-20-aout-1955-impact-decisif-des-represailles-a-grande-echelle-187171",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attaques du 20 août et embuscades de l'ALN (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/msyu4f59-un-tournant-decisif-de-la-glorieuse-revolution",
+          "type_source": "Article"
         }
       ]
     },
@@ -169,6 +224,11 @@
           "titre": "Répertoire des archives de la Guerre d'Algérie (Série 1H) — Service historique de la Défense",
           "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T1.pdf",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Bataille d’El Djorf (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/muct7l2t-tebessa-commemore-le-71e-anniversaire-de-la-grande-bataille-d-el-djorf",
+          "type_source": "Article"
         }
       ]
     },
@@ -207,6 +267,16 @@
         {
           "titre": "Guerre d'Algérie — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Guerre_d%27Alg%C3%A9rie",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Bataille du douar Souadek et martyre de Didouche Mourad (elwatan.dz)",
+          "url": "https://elwatan.dz/18-janvier-1955-la-bataille-de-douar-souadek-la-resistance-heroique-de-didouche-mourad-et-de-ses-hommes/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Bataille du douar Souadek et martyre de Didouche Mourad (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Didouche_Mourad",
           "type_source": "Article"
         }
       ]
@@ -292,6 +362,16 @@
           "titre": "Notice biographique MAÏLLOT Henri — Le Maitron",
           "url": "https://maitron.fr/maillot-henri/",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Embuscade de Palestro (Djerrah) (elwatan.dz)",
+          "url": "https://elwatan.dz/70e-anniversaire-de-lembuscade-de-djerrah-pres-de-lakhdaria-quand-le-commando-ali-khodja-fait-trembler-larmee-coloniale/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Embuscade de Palestro (Djerrah) (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Embuscade_de_Palestro",
+          "type_source": "Article"
         }
       ]
     },
@@ -368,6 +448,26 @@
           "titre": "Fiche mémorielle de l'enseigne de vaisseau Jacques Alibert — Mémorial AEN",
           "url": "http://memorial-aen.fr/detail.php?&id=1801",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Attentats du Milk Bar, de la Cafétéria et d’Air France à Alger-Centre (journals.codesria.org)",
+          "url": "https://journals.codesria.org/index.php/arb/article/download/5039/5350/7736",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Attentats du Milk Bar, de la Cafétéria et d’Air France à Alger-Centre (h-france.net)",
+          "url": "https://h-france.net/fffh/reviews/re-viewing-the-battle-of-algiers-with-zohra-drif",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentats du Milk Bar, de la Cafétéria et d’Air France à Alger-Centre (reuters.screenocean.com)",
+          "url": "https://reuters.screenocean.com/record/573518",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentats du Milk Bar, de la Cafétéria et d’Air France à Alger-Centre (universalis.fr)",
+          "url": "https://www.universalis.fr/encyclopedie/guerre-d-algerie/5-dans-l-engrenage-de-la-terreur-la-bataille-d-alger/",
+          "type_source": "Article"
         }
       ]
     },
@@ -567,6 +667,21 @@
           "titre": "Attentats pendant la guerre d'Algérie — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Attentats_pendant_la_guerre_d%27Alg%C3%A9rie",
           "type_source": "Article"
+        },
+        {
+          "titre": "Bataille d’Alger (lemonde.fr)",
+          "url": "https://www.lemonde.fr/a-la-une/article/2007/01/29/50-ans-apres-les-survivants-du-nettoyage-d-alger_860986_3208.html",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Dynamitage du 5 rue des Abderrames (horizons.dz)",
+          "url": "https://www.horizons.dz/2023/10/ain-defla-commemoration-du-66e-anniversaire-de-la-mort-en-martyr-dali-la-pointe/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Dynamitage du 5 rue des Abderrames (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Ali_la_Pointe",
+          "type_source": "Article"
         }
       ]
     },
@@ -608,6 +723,46 @@
           "titre": "Une grève générale anticoloniale algérienne : la grève des 8 jours en 1957 — Histoire coloniale et postcoloniale",
           "url": "https://histoirecoloniale.net/une-greve-generale-anticoloniale-algerienne-la-greve-des-8-jours-en-1957/",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Attentats de l’Otomatic, de la Cafétéria et de la brasserie du Coq Hardi (areq.net)",
+          "url": "https://areq.net/lang/fr/1957.html",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentats de l’Otomatic, de la Cafétéria et de la brasserie du Coq Hardi (en.wikipedia.org)",
+          "url": "https://en.wikipedia.org/wiki/Djamila_Bouazza",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentats de l’Otomatic, de la Cafétéria et de la brasserie du Coq Hardi (en.wikipedia.org)",
+          "url": "https://en.wikipedia.org/wiki/Djamila_Bouhired",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentats de l’Otomatic, de la Cafétéria et de la brasserie du Coq Hardi (algerie360.com)",
+          "url": "https://www.algerie360.com/la-femme-algerienne-et-la-lutte-de-liberation-un-long-combat-pour-briser-loppression-coloniale-2/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentats de l’Otomatic, de la Cafétéria et de la brasserie du Coq Hardi (africanmanager.com)",
+          "url": "https://africanmanager.com/13_algerie-deces-de-djamila-bouazza-lun-des-symboles-de-la-guerre-de-liberation-video/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentats de l’Otomatic, de la Cafétéria et de la brasserie du Coq Hardi (radioalgerie.dz)",
+          "url": "https://news.radioalgerie.dz/en/node/82023",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentats de l’Otomatic, de la Cafétéria et de la brasserie du Coq Hardi (jadaliyya.com)",
+          "url": "https://www.jadaliyya.com/Details/27072/Djamila-Bouhired-A-Profile-From-the-Archives",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentats de l’Otomatic, de la Cafétéria et de la brasserie du Coq Hardi (majalla.com)",
+          "url": "https://en.majalla.com/node/82741",
+          "type_source": "Article"
         }
       ]
     },
@@ -648,6 +803,11 @@
           "titre": "Bataille d'Alger — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Bataille_d%27Alger",
           "type_source": "Article"
+        },
+        {
+          "titre": "Combats de Bouzegza (lemonde.fr)",
+          "url": "https://www.lemonde.fr/archives/article/1957/08/07/violent-combat-au-sud-d-alger_2325287_1819218.html",
+          "type_source": "Article"
         }
       ]
     },
@@ -687,6 +847,16 @@
           "titre": "Répertoire des archives militaires de la Guerre d'Algérie — Service historique de la Défense",
           "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T1.pdf",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Bataille de Fellaoucene (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mo7csj5d-commemoration-du-69e-anniversaire-de-la-grande-bataille-de-felaoucene",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Bataille de Fellaoucene (asjp.cerist.dz)",
+          "url": "https://asjp.cerist.dz/en/article/78595",
+          "type_source": "Ouvrage académique"
         }
       ]
     },
@@ -766,6 +936,21 @@
           "titre": "Combattre en Algérie — Ministère des Armées (Chemins de mémoire)",
           "url": "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/ressources-historiques/guerre-dalgerie/combattre-algerie-combattre-metropole-3",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Explosions aux stades d’El Biar et du Ruisseau (areq.net)",
+          "url": "https://areq.net/lang/fr/1957.html",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Explosions aux stades d’El Biar et du Ruisseau (universalis.fr)",
+          "url": "https://www.universalis.fr/encyclopedie/guerre-d-algerie/5-dans-l-engrenage-de-la-terreur-la-bataille-d-alger/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Explosions aux stades d’El Biar et du Ruisseau (en.wikipedia.org)",
+          "url": "https://en.wikipedia.org/wiki/Baya_Hocine",
+          "type_source": "Article"
         }
       ]
     },
@@ -805,6 +990,36 @@
           "titre": "L'attentat du stade de Colombes (26 mai 1957) — OpenEdition Journals",
           "url": "https://journals.openedition.org/genesis/1376",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Attentat du Casino de la Corniche (pressreader.com)",
+          "url": "https://www.pressreader.com/uk/history-of-war/20171102/282565903401480",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentat du Casino de la Corniche (tnp-villeurbanne.com)",
+          "url": "https://www.tnp-villeurbanne.com/app/uploads/2022/09/6.-les-scenes-historiques-et-contemporaines.pdf",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentat du Casino de la Corniche (herodote.net)",
+          "url": "https://www.herodote.net/histoire01071.php",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentat du Casino de la Corniche (hal.parisnanterre.fr)",
+          "url": "https://hal.parisnanterre.fr/hal-04282961v1/document",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentat du Casino de la Corniche (dzexams.pro)",
+          "url": "https://dzexams.pro/ar/bac/fr_le_2019.pdf",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Attentat du Casino de la Corniche (registry.newsreels.net)",
+          "url": "https://registry.newsreels.net/stories/83743",
+          "type_source": "Article"
         }
       ]
     },
@@ -960,6 +1175,61 @@
           "titre": "Bataille des frontières (guerre d'Algérie) — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Bataille_des_fronti%C3%A8res_(guerre_d%27Alg%C3%A9rie)",
           "type_source": "Article"
+        },
+        {
+          "titre": "« Bataille des frontières » et franchissement de la ligne Morice (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/muct7l2t-tebessa-commemore-le-71e-anniversaire-de-la-grande-bataille-d-el-djorf",
+          "type_source": "Article"
+        },
+        {
+          "titre": "« Bataille des frontières » et franchissement de la ligne Morice (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
+          "type_source": "Article"
+        },
+        {
+          "titre": "« Bataille des frontières » et franchissement de la ligne Morice (defense.gouv.fr)",
+          "url": "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/ressources-historiques/guerre-dalgerie/combattre-algerie-combattre-metropole-3",
+          "type_source": "Article"
+        },
+        {
+          "titre": "« Bataille des frontières » et franchissement de la ligne Morice (en.wikipedia.org)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_the_borders_(Algerian_War)",
+          "type_source": "Article"
+        },
+        {
+          "titre": "« Bataille des frontières » et franchissement de la ligne Morice (letemps.ch)",
+          "url": "https://www.letemps.ch/opinions/etait-une-ligne-morice-algerie-un-mur-contre-lineluctable",
+          "type_source": "Article"
+        },
+        {
+          "titre": "« Bataille des frontières » et franchissement de la ligne Morice (theatrum-belli.com)",
+          "url": "https://theatrum-belli.com/1er-juin-1956-creation-de-la-25-division-parachutiste/?pdf=378235",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Édification du barrage électrifié Est (Ligne Morice) (algerie360.com)",
+          "url": "https://www.algerie360.com/barrage-electrifie-a-la-frontiere-algero-tunisienneles-maquisards-face-a-la-theorie-du-champ-clos/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Édification du barrage électrifié Est (Ligne Morice) (echoroukonline.com)",
+          "url": "https://www.echoroukonline.com/15-000-mines-datant-de-la-colonisation-ont-ete-decouvertes-en-octobre",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Édification du barrage électrifié Est (Ligne Morice) (apminebanconvention.org)",
+          "url": "https://old.apminebanconvention.org/fileadmin/APMBC/MSP/16MSP/Algeria-completion-declaration-FR.pdf",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Édification du barrage électrifié Est (Ligne Morice) (jadaliyya.com)",
+          "url": "https://www.jadaliyya.com/Details/41391/Photographing-Confinement",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Édification du barrage électrifié Est (Ligne Morice) (cdn.netboard.me)",
+          "url": "https://cdn.netboard.me/206365/files/8fec082e0efe835d6b4e364f49a4f867.pdf",
+          "type_source": "Article"
         }
       ]
     },
@@ -999,6 +1269,11 @@
           "titre": "Le 1er REP et la bataille des frontières — Fédération des Sociétés d'Anciens de la Légion Étrangère (FSALE)",
           "url": "https://www.legionetrangere.fr/la-fsale/actualites-de-la-fsale/1689-jean-balazuc-p-p-p-p-1er-rep-la-bataille-des-frontieres-en-1959.html",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Grande bataille de Souk Ahras (mdn.dz)",
+          "url": "https://www.mdn.dz/site_cfdat/sommaire/actualites/fr/27102025.php",
+          "type_source": "Article"
         }
       ]
     },
@@ -1249,6 +1524,26 @@
           "titre": "Si El Haouès et les combats de 1959 — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
           "type_source": "Article"
+        },
+        {
+          "titre": "Bataille de Tizra-Aïssa (Vougarfen) à Aït Yahia Moussa (en.wikipedia.org)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Ath_Yahia_Moussa",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Bataille de Tizra-Aïssa (Vougarfen) à Aït Yahia Moussa (djazairess.com)",
+          "url": "https://www.djazairess.com/djazairnews/11400",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Bataille de Tizra-Aïssa (Vougarfen) à Aït Yahia Moussa (archive.wikiwix.com)",
+          "url": "https://archive.wikiwix.com/cache/index2.php?url=https://www.depechedekabylie.com/national/il-y-a-61-ans-la-grande-bataille-de-vougarfen/#federation=archive.wikiwix.com&tab=url",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Bataille de Tizra-Aïssa (Vougarfen) à Aït Yahia Moussa (books.google.com)",
+          "url": "https://books.google.com/books?id=yS0hAAAAMAAJ&q=%22Capitaine+Graziani%22+++%22chassin%22",
+          "type_source": "Article"
         }
       ]
     },
@@ -1288,6 +1583,11 @@
         {
           "titre": "Si El Haouès et la bataille du Djebel Tamer — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Combat du Djebel Thameur (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mnanrw2x-commemoration-de-la-mort-en-martyrs-des-colonels-amirouche-et-si-el-houes",
           "type_source": "Article"
         }
       ]
@@ -1731,6 +2031,11 @@
           "titre": "Répertoire numérique de la série 1H (Corps d'armée d'Oran) — Service Historique de la Défense (SHD)",
           "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T1.pdf",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Offensive contre les fermes coloniales (museeto.dz)",
+          "url": "https://www.museeto.dz/dz/index.php/mhtat/m24",
+          "type_source": "Article"
         }
       ]
     },
@@ -1883,6 +2188,11 @@
           "titre": "Les opérations militaires en Wilaya V historique — Revue académique CERIST (ASJP)",
           "url": "https://asjp.cerist.dz/en/downArticle/686/10/1/290720",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Bataille du Djebel El Menaouer (dknews-dz.com)",
+          "url": "https://www.dknews-dz.com/article/160526-mascara-commemoration-du-65e-anniversaire-de-la-bataille-de-djebel-el-menaouer.html",
+          "type_source": "Article"
         }
       ]
     },
@@ -1920,6 +2230,11 @@
         {
           "titre": "La lutte armée dans le Sud-Oranais et l'Atlas saharien — Revue académique CERIST (ASJP)",
           "url": "https://asjp.cerist.dz/en/downArticle/20/16/5/254394",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Combats du Djebel Aïssa (asjp.cerist.dz)",
+          "url": "https://asjp.cerist.dz/en/article/34346",
           "type_source": "Ouvrage académique"
         }
       ]
@@ -2265,6 +2580,16 @@
           "titre": "Bachir Chihani et le commandement de l'Aurès-Nemencha — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Bachir_Chihani",
           "type_source": "Article"
+        },
+        {
+          "titre": "Acheminement maritime d'armes (yacht Dina) et maquis côtiers (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Abdelhafid_Boussouf",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Acheminement maritime d'armes (yacht Dina) et maquis côtiers (ambalg.ma)",
+          "url": "https://www.ambalg.ma/histoire-dalgerie/",
+          "type_source": "Article"
         }
       ]
     },
@@ -2497,6 +2822,16 @@
           "titre": "Répertoire numérique de la série 1H (Zone Est Constantinois / Tébessa) — SHD",
           "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Combats de la corniche jijelienne et maquis de Texenna (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/hacen-tiliani-ecrivain-et-historien-un-combattant-heroique-194131",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Combats de la corniche jijelienne et maquis de Texenna (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/msyu4f59-un-tournant-decisif-de-la-glorieuse-revolution",
+          "type_source": "Article"
         }
       ]
     },
@@ -2991,6 +3326,16 @@
           "titre": "Combattre en Algérie, combattre en métropole — Ministère des Armées (Chemins de mémoire)",
           "url": "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/ressources-historiques/guerre-dalgerie/combattre-algerie-combattre-metropole-2",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Combats des monts de Tiaret et des forêts de Frenda (insaniyat.crasc.dz)",
+          "url": "https://insaniyat.crasc.dz/en/article/les-wilayas-dans-la-crise-du-fln-de-lete-1962",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Combats des monts de Tiaret et des forêts de Frenda (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Plan_Challe",
+          "type_source": "Article"
         }
       ]
     },
@@ -3029,6 +3374,26 @@
           "titre": "Fonds des juridictions militaires (TPFA de Metz) — FranceArchives",
           "url": "https://francearchives.gouv.fr/fr/facomponent/211f6b2f72cb3624375b780f8627ed54eefae289",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Opération « Étincelles » dans les monts du Hodna (Plan Challe) (editions-harmattan.fr)",
+          "url": "https://www.editions-harmattan.fr/media/104794/download/Site%20du%20C.D.H.A.-1.pdf",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Opération « Étincelles » dans les monts du Hodna (Plan Challe) (bibliotheque.ummto.dz)",
+          "url": "https://bibliotheque.ummto.dz/fr/opac/download_document/824269",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Opération « Étincelles » dans les monts du Hodna (Plan Challe) (symboles-et-traditions.fr)",
+          "url": "https://symboles-et-traditions.fr/wp-content/uploads/2024/06/BAT-intervention-FM.pdf",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Opération « Étincelles » dans les monts du Hodna (Plan Challe) (en.wikipedia.org)",
+          "url": "https://en.wikipedia.org/wiki/Challe_Plan",
+          "type_source": "Article"
         }
       ]
     },
@@ -3377,6 +3742,16 @@
           "titre": "Inventaire des archives de la préfecture et de l'IGAME de Constantine — Archives nationales d'outre-mer (ANOM)",
           "url": "https://recherche-anom.culture.gouv.fr/ark:/61561/zf476wvrwx",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Batailles d'Oum Toub et du bassin d'El Harrouch (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/l-evenement/l-offensive-du-20-aout-1955-impact-decisif-des-represailles-a-grande-echelle-187171",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Batailles d'Oum Toub et du bassin d'El Harrouch (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Massacres_d%27ao%C3%BBt_1955_dans_le_Constantinois",
+          "type_source": "Article"
         }
       ]
     },
@@ -3415,6 +3790,16 @@
         {
           "titre": "Virée dans les refuges de la Wilaya II historique — El Moudjahid",
           "url": "https://www.elmoudjahid.dz/fr/actualite/viree-dans-les-refuges-de-la-wilaya-ii-historique-ces-sanctuaires-oublies-242668",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Embuscades de Ras El Akba et actions d'août 1955 (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/forum-de-la-memoire-d-el-moudjahid-zighoud-youcef-l-homme-symbole-15378",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Embuscades de Ras El Akba et actions d'août 1955 (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Youcef_Zighoud",
           "type_source": "Article"
         }
       ]
@@ -3613,6 +3998,16 @@
           "titre": "Guelma, la wilaya aux 5 000 martyrs — El Moudjahid",
           "url": "https://www.elmoudjahid.dz/fr/l-evenement/guelma-la-wilaya-au-5-000-martyrs-195645",
           "type_source": "Article"
+        },
+        {
+          "titre": "Combats du versant sud du Djurdjura (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Op%C3%A9ration_Jumelles",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Combats du versant sud du Djurdjura (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/22-juillet-1959-debut-de-l-operation-jumelles-le-deluge-de-feu-en-kabylie-n-a-pas-aneanti-l-aln-202689",
+          "type_source": "Article"
         }
       ]
     },
@@ -3651,6 +4046,16 @@
         {
           "titre": "Wilaya II historique — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Wilaya_II_historique",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Batailles du Djebel Maâdid et couloir du Hodna (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mnanrw2x-commemoration-de-la-mort-en-martyrs-des-colonels-amirouche-et-si-el-houes",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Batailles du Djebel Maâdid et couloir du Hodna (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Amirouche_A%C3%AFt_Hamouda",
           "type_source": "Article"
         }
       ]
@@ -3691,6 +4096,16 @@
           "titre": "La Wilaya II historique — Cairn.info",
           "url": "https://shs.cairn.info/la-wilaya-ii-historique--9789947394052-page-103?lang=fr",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Résistance face à l'Opération Jumelles (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/22-juillet-1959-debut-de-l-operation-jumelles-le-deluge-de-feu-en-kabylie-n-a-pas-aneanti-l-aln-202689",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Résistance face à l'Opération Jumelles (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Op%C3%A9ration_Jumelles",
+          "type_source": "Article"
         }
       ]
     },
@@ -3925,6 +4340,16 @@
           "titre": "Opération Oiseau bleu et les maquis de Kabylie maritime — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Op%C3%A9ration_Oiseau_bleu",
           "type_source": "Article"
+        },
+        {
+          "titre": "Embuscades et batailles des contreforts du Djurdjura (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/22-juillet-1959-debut-de-l-operation-jumelles-le-deluge-de-feu-en-kabylie-n-a-pas-aneanti-l-aln-202689",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Embuscades et batailles des contreforts du Djurdjura (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Amirouche_A%C3%AFt_Hamouda",
+          "type_source": "Article"
         }
       ]
     },
@@ -3963,6 +4388,16 @@
         {
           "titre": "Wilaya III historique — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Wilaya_III_historique",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Batailles du Guergour et des monts Babors (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Amirouche_A%C3%AFt_Hamouda",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Batailles du Guergour et des monts Babors (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/ces-jeunes-intellectuels-dans-les-maquis-261319",
           "type_source": "Article"
         }
       ]
@@ -4003,6 +4438,16 @@
           "titre": "Répertoire numérique de la série 1H (Secteur de Bougie et de Sétif) — Service Historique de la Défense (SHD)",
           "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Batailles du Djebel Zaccar (dknews-dz.com)",
+          "url": "https://www.dknews-dz.com/article/92792-des-recherches-pour-elucider-les-circonstances-exactes-de-la-mort-du-colonel-si-mhamed-bougara.html",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Batailles du Djebel Zaccar (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/M%27Hamed_Bougara",
+          "type_source": "Article"
         }
       ]
     },
@@ -4198,6 +4643,16 @@
           "titre": "Wilaya III historique — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Wilaya_III_historique",
           "type_source": "Article"
+        },
+        {
+          "titre": "Sabotages des Portes de Fer et affrontements dans les Bibans (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Massacre_de_Melouza",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Sabotages des Portes de Fer et affrontements dans les Bibans (insaniyat.crasc.dz)",
+          "url": "https://insaniyat.crasc.dz/en/article/les-wilayas-dans-la-crise-du-fln-de-lete-1962",
+          "type_source": "Ouvrage académique"
         }
       ]
     },
@@ -4352,6 +4807,16 @@
           "titre": "Dictionnaire de la guerre d'Algérie — Cairn.info",
           "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-380?lang=fr",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Résistance face à l'Opération Couronne (Plan Challe) (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Op%C3%A9ration_Couronne",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Résistance face à l'Opération Couronne (Plan Challe) (jeune-independant.net)",
+          "url": "https://www.jeune-independant.net/medea-commemoration-du-63e-anniversaire-de-la-mort-du-colonel-mhamed-bougara/",
+          "type_source": "Article"
         }
       ]
     },
@@ -4390,6 +4855,11 @@
           "titre": "La question kabyle dans le nationalisme algérien — Cairn.info",
           "url": "https://shs.cairn.info/question-kabyle-nationalisme-algerien--9782365122757-page-421?lang=fr",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Combat du Djebel Béchar (dknews-dz.com)",
+          "url": "https://www.dknews-dz.com/article/103057-bechar-commemoration-du-59e-anniversaire-de-la-mort-du-colonel-lotfi-et-ses-compagnons.html",
+          "type_source": "Article"
         }
       ]
     },
@@ -4468,6 +4938,16 @@
           "titre": "Inventaire des archives de la préfecture d'Alger et de l'IGAME — Archives nationales d'outre-mer (ANOM)",
           "url": "https://recherche-anom.culture.gouv.fr/ark:/61561/zf476wvrwx",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Embuscades des gorges de Ténès et combats du Dahra (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/M%27Hamed_Bougara",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Embuscades des gorges de Ténès et combats du Dahra (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Plan_Challe",
+          "type_source": "Article"
         }
       ]
     },
@@ -4546,6 +5026,16 @@
           "titre": "Wilaya IV historique — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
           "type_source": "Article"
+        },
+        {
+          "titre": "Maquis côtier de Mizrana et batailles du littoral kabyle (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Krim_Belkacem",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Maquis côtier de Mizrana et batailles du littoral kabyle (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/22-juillet-1959-debut-de-l-operation-jumelles-le-deluge-de-feu-en-kabylie-n-a-pas-aneanti-l-aln-202689",
+          "type_source": "Article"
         }
       ]
     },
@@ -4622,6 +5112,16 @@
         {
           "titre": "Wilaya IV historique — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Combats du massif du Chenoua et des forêts de Gouraya (maitron.fr)",
+          "url": "https://maitron.fr/bounaama-djilali-dit-si-mohamed-dictionnaire-algerie/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Combats du massif du Chenoua et des forêts de Gouraya (dknews-dz.com)",
+          "url": "https://www.dknews-dz.com/article/92792-des-recherches-pour-elucider-les-circonstances-exactes-de-la-mort-du-colonel-si-mhamed-bougara.html",
           "type_source": "Article"
         }
       ]
@@ -4779,6 +5279,16 @@
           "titre": "Wilaya IV historique — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
           "type_source": "Article"
+        },
+        {
+          "titre": "Combats de l’Ouarsenis oriental et résistance au Plan Challe (asjp.cerist.dz)",
+          "url": "https://asjp.cerist.dz/en/article/224957",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Combats de l’Ouarsenis oriental et résistance au Plan Challe (asjp.cerist.dz)",
+          "url": "https://asjp.cerist.dz/en/article/144558",
+          "type_source": "Ouvrage académique"
         }
       ]
     },
@@ -4824,6 +5334,16 @@
           "titre": "Lakhdar Bourégaâ — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Lakhdar_Bouregaa",
           "type_source": "Article"
+        },
+        {
+          "titre": "Bataille d’Ouled Bouachra au Djebel Mokorno (Mongorno) (djazairess.com)",
+          "url": "https://www.djazairess.com/aps/409240",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Bataille d’Ouled Bouachra au Djebel Mokorno (Mongorno) (babzman.com)",
+          "url": "https://babzman.com/un-30-decembre-1958-la-bataille-de-djebel-mongorno/",
+          "type_source": "Article"
         }
       ]
     },
@@ -4861,6 +5381,16 @@
         {
           "titre": "Wilaya IV historique — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Wilaya_IV_historique",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Martyre du colonel Si M'Hammed Bougara (jeune-independant.net)",
+          "url": "https://www.jeune-independant.net/medea-commemoration-du-63e-anniversaire-de-la-mort-du-colonel-mhamed-bougara/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Martyre du colonel Si M'Hammed Bougara (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/M%27Hamed_Bougara",
           "type_source": "Article"
         }
       ]
@@ -4940,6 +5470,16 @@
           "titre": "Répertoire numérique de la série 1H (Secteur de Biskra et Territoires du Sud) — Service Historique de la Défense (SHD)",
           "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_REP_1H_1091_A_4881_T2_1.pdf",
           "type_source": "Archive"
+        },
+        {
+          "titre": "Embuscades des gorges de Kherrata et liaison Kabylie–Constantinois (asjp.cerist.dz)",
+          "url": "https://asjp.cerist.dz/en/article/234015",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Embuscades des gorges de Kherrata et liaison Kabylie–Constantinois (asjp.cerist.dz)",
+          "url": "https://asjp.cerist.dz/en/article/96298",
+          "type_source": "Ouvrage académique"
         }
       ]
     },
@@ -5138,6 +5678,16 @@
           "titre": "La question saharienne et le FLN (L'Année du Maghreb) — OpenEdition Journals",
           "url": "https://journals.openedition.org/anneemaghreb/3647?lang=fr",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Batailles du massif de Senalba (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mnanrw2x-commemoration-de-la-mort-en-martyrs-des-colonels-amirouche-et-si-el-houes",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Batailles du massif de Senalba (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/premier-commandant-de-la-vie-wilaya-historique-ali-mellah-du-djurdjura-au-sahara-249960",
+          "type_source": "Article"
         }
       ]
     },
@@ -5214,6 +5764,16 @@
           "titre": "Si El Haouès — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
           "type_source": "Article"
+        },
+        {
+          "titre": "Combats du Djebel Dira et du bataillon Zoubiria (journals.openedition.org)",
+          "url": "https://journals.openedition.org/insaniyat/13172?lang=en",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Combats du Djebel Dira et du bataillon Zoubiria (dknews-dz.com)",
+          "url": "https://www.dknews-dz.com/article/92792-des-recherches-pour-elucider-les-circonstances-exactes-de-la-mort-du-colonel-si-mhamed-bougara.html",
+          "type_source": "Article"
         }
       ]
     },
@@ -5253,6 +5813,11 @@
           "titre": "Si El Haouès — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
           "type_source": "Article"
+        },
+        {
+          "titre": "Bataille d’Ouedj El Baten et Bataille des 48 heures au Djebel Boukahil (asjp.cerist.dz)",
+          "url": "https://asjp.cerist.dz/en/article/198298",
+          "type_source": "Ouvrage académique"
         }
       ]
     },
@@ -5601,6 +6166,11 @@
           "titre": "Si El Haouès — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
           "type_source": "Article"
+        },
+        {
+          "titre": "Combats et opération de Timimoun (gloriousalgeria.dz)",
+          "url": "https://gloriousalgeria.dz/Fr/Post/show/125/La-Phase-d-Organisation-et-de-Propagation-1956-1958",
+          "type_source": "Article"
         }
       ]
     },
@@ -5641,6 +6211,16 @@
           "titre": "Les wilayas du Sud et la question saharienne (L'Année du Maghreb) — OpenEdition Journals",
           "url": "https://journals.openedition.org/anneemaghreb/335?lang=ar",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Échec et liquidation de la dissidence de Bellounis (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Mohammed_Bellounis",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Échec et liquidation de la dissidence de Bellounis (elmoudjahid.dz)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/premier-commandant-de-la-vie-wilaya-historique-ali-mellah-du-djurdjura-au-sahara-249960",
+          "type_source": "Article"
         }
       ]
     },
@@ -5680,6 +6260,16 @@
           "titre": "Le Sahara dans la guerre d'Algérie — Dictionnaire de la guerre d'Algérie (Cairn.info)",
           "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-902?lang=fr",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Batailles du Djebel Lazreg et des monts des Ouled Naïl (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Si_El_Haou%C3%A8s",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Batailles du Djebel Lazreg et des monts des Ouled Naïl (aps.dz)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mnanrw2x-commemoration-de-la-mort-en-martyrs-des-colonels-amirouche-et-si-el-houes",
+          "type_source": "Article"
         }
       ]
     },
@@ -5723,6 +6313,26 @@
           "titre": "Le Sahara dans la guerre d'Algérie — Dictionnaire de la guerre d'Algérie (Cairn.info)",
           "url": "https://shs.cairn.info/dictionnaire-de-la-guerre-d-algerie--9782382923061-page-902?lang=fr",
           "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Opération « Pierres précieuses » dans le Nord-Constantinois (Plan Challe) (editions-harmattan.fr)",
+          "url": "https://www.editions-harmattan.fr/media/104794/download/Site%20du%20C.D.H.A.-1.pdf",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Opération « Pierres précieuses » dans le Nord-Constantinois (Plan Challe) (bibliotheque.ummto.dz)",
+          "url": "https://bibliotheque.ummto.dz/fr/opac/download_document/824269",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Opération « Pierres précieuses » dans le Nord-Constantinois (Plan Challe) (journals.univ-msila.dz)",
+          "url": "https://journals.univ-msila.dz/index.php/AHJ/article/view/9051",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Opération « Pierres précieuses » dans le Nord-Constantinois (Plan Challe) (cheminsdememoire.gouv.fr)",
+          "url": "https://www.cheminsdememoire.gouv.fr/en/node/8448",
+          "type_source": "Article"
         }
       ]
     },
@@ -5838,6 +6448,16 @@
         {
           "titre": "Colonel Lotfi — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Colonel_Lotfi",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Batailles de franchissement du barrage frontalier de l'Ouest (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Ligne_Morice",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Batailles de franchissement du barrage frontalier de l'Ouest (fr.wikipedia.org)",
+          "url": "https://fr.wikipedia.org/wiki/Abdelhafid_Boussouf",
           "type_source": "Article"
         }
       ]
@@ -7172,6 +7792,2071 @@
         {
           "titre": "Chronologie de la guerre d'Algérie (Juin 1962) — Wikipédia",
           "url": "https://fr.wikipedia.org/wiki/Chronologie_de_la_guerre_d%27Alg%C3%A9rie",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_034",
+      "nom_operation": "Bataille de Sidi Zeggaï et d'El Kachkacha dans les monts du Dahra",
+      "date_debut": "1956-09-13",
+      "date_fin": "1956-09-16",
+      "wilaya_concernee": "Wilaya V (Zone 4 - Dahra de Mostaganem)",
+      "localisation": {
+        "region_ou_ville": "Sidi Ali / El Kachkacha (Mostaganem)",
+        "coordonnees_approximatives": {
+          "latitude": 36.09732,
+          "longitude": 0.42222
+        }
+      },
+      "commandement_aln": [
+        "Si Mohamed Djebli",
+        "Si Othmane"
+      ],
+      "type_action": "Guérilla de montagne / Combat de rencontre",
+      "description": "Combat héroïque de quatre jours livré par le bataillon de l'ALN commandé par Si Mohamed Djebli dans les reliefs escarpés du Dahra face à d'importantes colonnes coloniales appuyées par l'aviation.",
+      "bilan_et_pertes": {
+        "aln": "Pertes modérées parmi les moudjahidine retranchés",
+        "forces_francaises": "Lourdes pertes infligées aux colonnes terrestres coloniales",
+        "civils": "Représailles sur les douars environnants"
+      },
+      "impact_strategique": "Consolidation de l'implantation militaire de l'ALN dans le Dahra oranais et échec des premières offensives de pacification dans le secteur de Mostaganem.",
+      "sources": [
+        {
+          "titre": "Bataille de Sidi Zeggaï, une épopée héroïque dans les monts de la Dahra (L'Expression)",
+          "url": "https://www.lexpression.dz/index.php/info-en-continu/bataille-de-sidi-zeggai-une-epopee-heroique-dans-les-monts-de-la-dahra-de-mostaganem-328030",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1954_009",
+      "nom_operation": "Combat de Ghar Boudjlida et capture d'Ahmed Zabana",
+      "date_debut": "1954-11-08",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone V - Oranie / Mascara)",
+      "localisation": {
+        "region_ou_ville": "El Gaâda / Ghar Boudjlida (Mascara)",
+        "coordonnees_approximatives": {
+          "latitude": 35.4218,
+          "longitude": -0.309
+        }
+      },
+      "commandement_aln": [
+        "Ahmed Zabana"
+      ],
+      "type_action": "Combat de rencontre",
+      "description": "Accrochage héroïque opposant le groupe armé d'Ahmed Zabana aux troupes coloniales dans la grotte de Ghar Boudjlida une semaine après le déclenchement de la Révolution. Blessé, Zabana est capturé avant de devenir le premier martyr guillotiné à Barberousse en 1956.",
+      "bilan_et_pertes": {
+        "aln": "Ahmed Zabana blessé et capturé, plusieurs djounouds tombés au champ d'honneur",
+        "forces_francaises": "Pertes lors de l'assaut contre la grotte",
+        "civils": "0"
+      },
+      "impact_strategique": "Symbole inaugural de sacrifice et de détermination de l'ALN en Oranie ; l'exécution de Zabana provoquera en 1956 la riposte armée urbaine de la Zone autonome d'Alger.",
+      "sources": [
+        {
+          "titre": "La bataille de Ghar Boudjlida, une épopée retraçant les exploits du martyr Ahmed Zabana (APS)",
+          "url": "https://www.aps.dz/fr/algerie/actualite-nationale/mhou2jwl-la-bataille-de-ghar-boudjlida-une-epopee-retracant-les-exploits-du-martyr-ahmed-zabana",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_035",
+      "nom_operation": "Bataille des Ghoualem (Sidi Ghalem)",
+      "date_debut": "1956-07-18",
+      "date_fin": "1956-07-20",
+      "wilaya_concernee": "Wilaya V (Zone 3 - Sud d'Oran / Tafraoui)",
+      "localisation": {
+        "region_ou_ville": "Sidi Ghalem / Tafraoui (Sud d'Oran)",
+        "coordonnees_approximatives": {
+          "latitude": 35.43124,
+          "longitude": -0.56259
+        }
+      },
+      "commandement_aln": [
+        "Kada Ben Saha",
+        "Commandement de zone de la Wilaya V"
+      ],
+      "type_action": "Offensive coordonnée / Combat de rencontre",
+      "description": "Grande confrontation de trois jours au sud d'Oran dans le secteur de Sidi Ghalem / Tafraoui, où les katibas de l'ALN affrontent les blindés et les chasseurs-bombardiers de l'armée coloniale.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs dizaines de moudjahidine tombés au champ d'honneur",
+        "forces_francaises": "Lourdes pertes en hommes et véhicules blindés endommagés",
+        "civils": "Victimes civiles lors des bombardements sur les mechtas voisines"
+      },
+      "impact_strategique": "Affirmation de la puissance de frappe de l'ALN aux portes méridionales d'Oran, confirmant l'extension irréversible de l'insurrection en Oranie intérieure.",
+      "sources": [
+        {
+          "titre": "La bataille de Sidi Ghalem à travers le témoignage du moudjahid Ben Saha Kada (CRASC)",
+          "url": "https://www.crasc.dz/fr/scientific-event/la-bataille-de-sidi-ghalem-a-travers-le-temoignage-du-moudjahid-ben-saha-kada",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Une des épopées héroïques de la glorieuse révolution de libération (APS)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mrrwhz0b-une-des-epopees-heroiques-de-la-glorieuse-revolution-de-liberation",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_036",
+      "nom_operation": "Combats et embuscades du Djebel Tessala",
+      "date_debut": "1956-07-01",
+      "date_fin": "1956-07-31",
+      "wilaya_concernee": "Wilaya V (Zone 5 - Sidi Bel Abbès)",
+      "localisation": {
+        "region_ou_ville": "Massif du Djebel Tessala (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 35.2778,
+          "longitude": -0.80092
+        }
+      },
+      "commandement_aln": [
+        "Commandement ALN de la Zone 5"
+      ],
+      "type_action": "Guérilla de montagne / Embuscade",
+      "description": "Série d'accrochages et d'embuscades menés par les katibas de la Wilaya V dans le massif stratégique du Tessala dominant la plaine et la garnison centrale de la Légion étrangère à Sidi Bel Abbès.",
+      "bilan_et_pertes": {
+        "aln": "Une quinzaine de maquisards tués au combat",
+        "forces_francaises": "Pertes régulières au sein des convois de la Légion étrangère",
+        "civils": "0"
+      },
+      "impact_strategique": "Démonstration de force de l'ALN défiant la Légion étrangère sur ses terres d'implantation historique ; documenté par Rédouane Ainad Tabet.",
+      "sources": [
+        {
+          "titre": "Sidi Bel-Abbès : des mythes fondateurs de la colonisation à la libération (Insaniyat / CRASC)",
+          "url": "https://insaniyat.crasc.dz/fr/article/sidi-bel-abbes-des-mythes-fondateurs-de-la-colonisation-a-la-liberation",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_037",
+      "nom_operation": "Bataille d'Oued El Haï dans le secteur de Tessala",
+      "date_debut": "1958-06-25",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone 5 - Secteur de Tessala)",
+      "localisation": {
+        "region_ou_ville": "Oued El Haï / Tessala (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 35.2778,
+          "longitude": -0.80092
+        }
+      },
+      "commandement_aln": [
+        "Katibas ALN de la Zone 5"
+      ],
+      "type_action": "Combat de rencontre / Embuscade",
+      "description": "Combat intense engagé dans le secteur d'Oued El Haï opposant une unité de l'ALN aux troupes d'intervention coloniales appuyées par l'aviation.",
+      "bilan_et_pertes": {
+        "aln": "Une dizaine de moudjahidine tombés au champ d'honneur",
+        "forces_francaises": "Pertes substantielles chez les troupes aéroportées",
+        "civils": "0"
+      },
+      "impact_strategique": "Maintien de la pression militaire de l'ALN sur les voies d'accès à Sidi Bel Abbès ; consigné dans l'étude historique d'Abdelhak Kerkeb.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 5 de la Wilaya V (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/127641",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_037",
+      "nom_operation": "Embuscade de l'axe Télagh–Slissen",
+      "date_debut": "1956-06-01",
+      "date_fin": "1956-06-30",
+      "wilaya_concernee": "Wilaya V (Zone 5 - Sud de Sidi Bel Abbès)",
+      "localisation": {
+        "region_ou_ville": "Axe routier Télagh–Moulay Slissen (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 34.8222,
+          "longitude": -0.76062
+        }
+      },
+      "commandement_aln": [
+        "Commandos ALN de la Zone 5"
+      ],
+      "type_action": "Embuscade",
+      "description": "Embuscade tendue sur la route stratégique reliant Télagh à Moulay Slissen contre un convoi de ravitaillement et de surveillance militaire de l'armée coloniale.",
+      "bilan_et_pertes": {
+        "aln": "1 blessé léger",
+        "forces_francaises": "Véhicules détruits et plusieurs soldats mis hors de combat",
+        "civils": "0"
+      },
+      "impact_strategique": "Entrave durable des liaisons militaires françaises dans le sud de Sidi Bel Abbès ; documenté par Rédouane Ainad Tabet.",
+      "sources": [
+        {
+          "titre": "Sidi Bel-Abbès : des mythes fondateurs de la colonisation à la libération (Insaniyat / CRASC)",
+          "url": "https://insaniyat.crasc.dz/fr/article/sidi-bel-abbes-des-mythes-fondateurs-de-la-colonisation-a-la-liberation",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_040",
+      "nom_operation": "Bataille de Sidi Youb près de Tilmouni",
+      "date_debut": "1957-06-01",
+      "date_fin": "1957-06-30",
+      "wilaya_concernee": "Wilaya V (Zone 5 - Secteur de Tilmouni)",
+      "localisation": {
+        "region_ou_ville": "Sidi Youb / Tilmouni (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 35.07832,
+          "longitude": -0.53366
+        }
+      },
+      "commandement_aln": [
+        "Katiba ALN de la Zone 5"
+      ],
+      "type_action": "Combat de rencontre",
+      "description": "Affrontement armé près de Tilmouni opposant une section de moudjahidine à une patrouille motorisée coloniale, documenté par Rédouane Ainad Tabet.",
+      "bilan_et_pertes": {
+        "aln": "Quelques combattants tombés au champ d'honneur",
+        "forces_francaises": "Pertes infligées au détachement colonial",
+        "civils": "0"
+      },
+      "impact_strategique": "Harcèlement du dispositif de surveillance colonial dans le bassin agricole de Tilmouni.",
+      "sources": [
+        {
+          "titre": "Sidi Bel-Abbès : des mythes fondateurs de la colonisation à la libération (Insaniyat / CRASC)",
+          "url": "https://insaniyat.crasc.dz/fr/article/sidi-bel-abbes-des-mythes-fondateurs-de-la-colonisation-a-la-liberation",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_041",
+      "nom_operation": "Bataille de Refafsa (Commune de Belarbi)",
+      "date_debut": "1957-06-01",
+      "date_fin": "1957-06-30",
+      "wilaya_concernee": "Wilaya V (Zone 5 - Commune de Belarbi)",
+      "localisation": {
+        "region_ou_ville": "Refafsa / Belarbi (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 35.15257,
+          "longitude": -0.45717
+        }
+      },
+      "commandement_aln": [
+        "Katiba ALN de Belarbi"
+      ],
+      "type_action": "Combat de rencontre / Embuscade",
+      "description": "Engagement armé dans la commune de Belarbi (anciennement Baudens) entre les maquisards de la Wilaya V et les troupes françaises, documenté par Abdelhak Kerkeb.",
+      "bilan_et_pertes": {
+        "aln": "Pertes limitées",
+        "forces_francaises": "Pertes confirmées parmi les unités terrestres",
+        "civils": "0"
+      },
+      "impact_strategique": "Enracinement des structures de soutien de l'ALN dans les centres coloniaux de peuplement de la plaine oranaise.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 5 de la Wilaya V (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/127641",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_042",
+      "nom_operation": "Combat de Beni Ghezil dans le secteur d'Ouled Mimoun",
+      "date_debut": "1957-10-01",
+      "date_fin": "1957-10-31",
+      "wilaya_concernee": "Wilaya V (Zone 1 / Zone 2 - Secteur d'Ouled Mimoun)",
+      "localisation": {
+        "region_ou_ville": "Beni Ghezil / Ouled Mimoun (Tlemcen / Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 34.90472,
+          "longitude": -1.03394
+        }
+      },
+      "commandement_aln": [
+        "Détachement ALN d'Ouled Mimoun"
+      ],
+      "type_action": "Combat de rencontre",
+      "description": "Accrochage dans le secteur d'Ouled Mimoun opposant un détachement de moudjahidine à une colonne de ratissage française, documenté par Abdelhak Kerkeb.",
+      "bilan_et_pertes": {
+        "aln": "Faibles pertes parmi les moudjahidine",
+        "forces_francaises": "Plusieurs soldats français mis hors de combat",
+        "civils": "0"
+      },
+      "impact_strategique": "Préservation des couloirs de liaison clandestins reliant les monts de Tlemcen aux maquis de Sidi Bel Abbès.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 5 de la Wilaya V (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/127641",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_043",
+      "nom_operation": "Bataille du Djebel Moksi à Oued Sefioun",
+      "date_debut": "1957-01-02",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone 5 - Oued Sefioun)",
+      "localisation": {
+        "region_ou_ville": "Djebel Moksi / Oued Sefioun (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 35.10209,
+          "longitude": -0.38234
+        }
+      },
+      "commandement_aln": [
+        "Katiba de la Zone 5"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Combat d'ouverture de l'année 1957 livré dans les reliefs du Djebel Moksi contre des détachements de chasseurs et parachutistes coloniaux.",
+      "bilan_et_pertes": {
+        "aln": "Estimées à 8 chouhada",
+        "forces_francaises": "Une quinzaine de soldats mis hors de combat",
+        "civils": "0"
+      },
+      "impact_strategique": "Échec d'une manœuvre d'encerclement hivernal française dans le couloir d'Oued Sefioun.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 5 de la Wilaya V (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/127641",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_038",
+      "nom_operation": "Bataille de Guediret (Gdirat) dans le secteur de Youb",
+      "date_debut": "1958-03-19",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone 5 / Zone 6 - Secteur Daoud-Berthelot / Youb)",
+      "localisation": {
+        "region_ou_ville": "Djebel Guediret / Youb (Saïda / Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 34.92186,
+          "longitude": -0.20955
+        }
+      },
+      "commandement_aln": [
+        "Commandement conjoint Zones 5 et 6"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Affrontement armé sur les crêtes du Djebel Guediret dans le secteur Daoud–Berthelot (Youb), documenté par Abdelhak Kerkeb.",
+      "bilan_et_pertes": {
+        "aln": "Une douzaine de martyrs",
+        "forces_francaises": "Lourdes pertes infligées aux colonnes de ratissage françaises",
+        "civils": "0"
+      },
+      "impact_strategique": "Contrôle des zones de passage stratégiques entre Saïda et Sidi Bel Abbès face aux offensives coloniales printanières.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 5 de la Wilaya V (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/127641",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_039",
+      "nom_operation": "Bataille de Djorf Torab à Télagh",
+      "date_debut": "1958-05-26",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone 5 - Commune de Télagh)",
+      "localisation": {
+        "region_ou_ville": "Djorf Torab / Télagh (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 34.7827,
+          "longitude": -0.57218
+        }
+      },
+      "commandement_aln": [
+        "Katiba ALN de Télagh"
+      ],
+      "type_action": "Combat de rencontre",
+      "description": "Combat engagé entre une unité de l'ALN retranchée à Djorf Torab et des unités aéroportées françaises appuyées par l'aviation, documenté par Abdelhak Kerkeb.",
+      "bilan_et_pertes": {
+        "aln": "Pertes modérées",
+        "forces_francaises": "Pertes substantielles chez les parachutistes coloniaux",
+        "civils": "0"
+      },
+      "impact_strategique": "Preuve de la capacité de résistance frontale des unités de l'ALN face aux réserves générales de l'armée française.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 5 de la Wilaya V (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/127641",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_040",
+      "nom_operation": "Bataille des M'Hadid (Mahamid)",
+      "date_debut": "1958-08-28",
+      "date_fin": "1958-08-30",
+      "wilaya_concernee": "Wilaya V (Zone 5 - Commune de Télagh)",
+      "localisation": {
+        "region_ou_ville": "Monts des M'Hadid / Télagh (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 34.7827,
+          "longitude": -0.57218
+        }
+      },
+      "commandement_aln": [
+        "Commandement ALN de la Zone 5"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Bataille défensive de trois jours dans le massif des M'Hadid opposant les moudjahidine à des forces combinées coloniales, documentée par Abdelhak Kerkeb.",
+      "bilan_et_pertes": {
+        "aln": "Environ 15 moudjahidine tombés au champ d'honneur",
+        "forces_francaises": "Pertes humaines significatives et hélicoptères touchés",
+        "civils": "0"
+      },
+      "impact_strategique": "Retrait des troupes françaises après trois jours d'assauts infructueux ; renforcement de la cohésion des maquis du Sud-Sidi Bel Abbès.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 5 de la Wilaya V (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/127641",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_041",
+      "nom_operation": "Bataille de Sidi Douma au nord de Tafessour",
+      "date_debut": "1958-11-18",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone 5 - Commune de Tafessour)",
+      "localisation": {
+        "region_ou_ville": "Sidi Douma / Tafessour (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 34.63262,
+          "longitude": -0.20512
+        }
+      },
+      "commandement_aln": [
+        "Détachement ALN de Tafessour"
+      ],
+      "type_action": "Combat de rencontre",
+      "description": "Affrontement au nord de Tafessour opposant les combattants de l'ALN à une opération de bouclage de l'armée française, documenté par Abdelhak Kerkeb.",
+      "bilan_et_pertes": {
+        "aln": "Une dizaine de combattants tués",
+        "forces_francaises": "Lourdes pertes au sein des blindés et de l'infanterie coloniale",
+        "civils": "0"
+      },
+      "impact_strategique": "Maintien du verrou de Tafessour sur la route des caravanes d'armement vers le nord de la Wilaya V.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 5 de la Wilaya V (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/127641",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1959_018",
+      "nom_operation": "Bataille de Zid El Moumen à Merine",
+      "date_debut": "1959-10-01",
+      "date_fin": "1959-10-31",
+      "wilaya_concernee": "Wilaya V (Zone 5 - Commune de Merine)",
+      "localisation": {
+        "region_ou_ville": "Zid El Moumen / Merine (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 34.78009,
+          "longitude": -0.45221
+        }
+      },
+      "commandement_aln": [
+        "Katiba ALN de Merine"
+      ],
+      "type_action": "Guérilla de montagne / Combat de rencontre",
+      "description": "Combat en pleine phase du Plan Challe dans la commune de Merine entre une katiba de la Wilaya V et les troupes d'assaut coloniales.",
+      "bilan_et_pertes": {
+        "aln": "Pertes sévères sous les bombardements aériens",
+        "forces_francaises": "Pertes reconnues dans les rangs des troupes d'intervention",
+        "civils": "0"
+      },
+      "impact_strategique": "Preuve de la résilience et de l'activité offensive des maquis de la Wilaya V malgré les opérations massives Challe.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 5 de la Wilaya V (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/127641",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_017",
+      "nom_operation": "Combat et harcèlement de Sidi Ali Benyoub",
+      "date_debut": "1961-07-31",
+      "date_fin": "1961-08-02",
+      "wilaya_concernee": "Wilaya V (Zone 5 - Sidi Bel Abbès)",
+      "localisation": {
+        "region_ou_ville": "Sidi Ali Benyoub (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 34.95,
+          "longitude": -0.71667
+        }
+      },
+      "commandement_aln": [
+        "Commandos ALN de la Zone 5"
+      ],
+      "type_action": "Combat de rencontre / Embuscade",
+      "description": "Engagement de harcèlement et de résistance armée mené pendant près de trois jours dans le secteur de Sidi Ali Benyoub, documenté par Abdelhak Kerkeb.",
+      "bilan_et_pertes": {
+        "aln": "Quelques martyrs",
+        "forces_francaises": "Pertes matérielles et militaires infligées aux garnisons locales",
+        "civils": "0"
+      },
+      "impact_strategique": "Démonstration de force politique et militaire de l'ALN à la veille des négociations finales d'Évian.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 5 de la Wilaya V (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/127641",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_044",
+      "nom_operation": "Bataille de Ras El Ma (Bedeau)",
+      "date_debut": "1957-02-01",
+      "date_fin": "1957-02-28",
+      "wilaya_concernee": "Wilaya V (Zone 5 - Sud de Sidi Bel Abbès)",
+      "localisation": {
+        "region_ou_ville": "Ras El Ma / Bedeau (Sidi Bel Abbès)",
+        "coordonnees_approximatives": {
+          "latitude": 34.49791,
+          "longitude": -0.8188
+        }
+      },
+      "commandement_aln": [
+        "Commandement ALN Zone 5"
+      ],
+      "type_action": "Offensive coordonnée / Combat de rencontre",
+      "description": "Grande confrontation armée dans le secteur steppique de Ras El Ma opposant les katibas de la Zone 5 aux troupes de secteur coloniales.",
+      "bilan_et_pertes": {
+        "aln": "Pertes modérées",
+        "forces_francaises": "Dizaines de soldats français tués et blessés, armement récupéré",
+        "civils": "0"
+      },
+      "impact_strategique": "Rupture des communications militaires françaises sur la ligne ferroviaire et routière des Hauts Plateaux oranais.",
+      "sources": [
+        {
+          "titre": "La bataille de Ras El Ma en février 1957 à Sidi Bel Abbès (APS)",
+          "url": "https://www.aps.dz/fr/algerie/actualite-nationale/mm3hrs1s-la-bataille-de-ras-el-ma-en-fevrier-1957-a-sidi-bel-abbes-une-etape-heroique-dans-l-histoire-de-la-lutte-du-peuple-algerien",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_042",
+      "nom_operation": "Bataille d'El Merdja et d'Aïn Chouik",
+      "date_debut": "1958-10-13",
+      "date_fin": "1958-10-14",
+      "wilaya_concernee": "Wilaya V (Zones 5 et 6 - Saïda)",
+      "localisation": {
+        "region_ou_ville": "El Merdja / Doui Thabet (Saïda)",
+        "coordonnees_approximatives": {
+          "latitude": 34.89062,
+          "longitude": -0.01647
+        }
+      },
+      "commandement_aln": [
+        "Coordination des Zones 5 et 6 de la Wilaya V"
+      ],
+      "type_action": "Offensive coordonnée / Combat de rencontre",
+      "description": "Opération conjointe d'envergure menée dans le secteur de Doui Thabet (Aïn Chouik) par les unités des Zones 5 et 6 contre une puissante colonne militaire coloniale.",
+      "bilan_et_pertes": {
+        "aln": "Nombreux martyrs tombés au combat",
+        "forces_francaises": "Lourdes pertes en personnel et véhicules blindés détruits",
+        "civils": "0"
+      },
+      "impact_strategique": "Succès tactique illustrant l'efficacité de la coopération opérationnelle inter-zones au sein de la Wilaya V ; documenté par Faffa Bekkouche (ASJP).",
+      "sources": [
+        {
+          "titre": "Bataille d'El Merdja (L'Écho d'Algérie)",
+          "url": "https://lechodalgerie.dz/wp-content/uploads/2025/10/ED-4011-du-16-10-2025-b.pdf",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Étude historique sur la Zone 6 (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/254394",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_045",
+      "nom_operation": "Bataille d'Oued Allala (Ouled Ben Abderrahim)",
+      "date_debut": "1957-11-13",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone 4 - Relizane)",
+      "localisation": {
+        "region_ou_ville": "Oued Allala / Mendes (Relizane)",
+        "coordonnees_approximatives": {
+          "latitude": 35.65008,
+          "longitude": 0.86452
+        }
+      },
+      "commandement_aln": [
+        "Katiba ALN de la Zone 4"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Épique engagement armé livré dans la commune de Mendes au sud de Relizane opposant les moudjahidine à une vaste opération de ratissage colonial.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs combattants tombés en martyrs",
+        "forces_francaises": "Pertes substantielles parmi les unités d'infanterie coloniales",
+        "civils": "0"
+      },
+      "impact_strategique": "Mise en échec de la tentative de verrouillage colonial de la vallée de la Mina.",
+      "sources": [
+        {
+          "titre": "La bataille de Oued Allala : une épopée héroïque des moudjahidine de l'ALN (APS)",
+          "url": "https://www.aps.dz/fr/algerie/actualite-nationale/mhvx1cjl-la-bataille-de-oued-allala-une-epopee-heroique-des-moudjahidine-de-l-armee-de-liberation-nationale",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_046",
+      "nom_operation": "Bataille du Djebel Sikh (Siège des grottes d'Ouled Maâla)",
+      "date_debut": "1957-11-14",
+      "date_fin": "1957-11-22",
+      "wilaya_concernee": "Wilaya V (Zone 4 - Dahra de Mostaganem)",
+      "localisation": {
+        "region_ou_ville": "Djebel Sikh / Ouled Maâla (Mostaganem)",
+        "coordonnees_approximatives": {
+          "latitude": 36.04563,
+          "longitude": 0.59162
+        }
+      },
+      "commandement_aln": [
+        "Commandement ALN du Dahra oranais"
+      ],
+      "type_action": "Siège et combat de grottes",
+      "description": "Siège héroïque de huit jours mené par l'armée française contre le réseau de grottes du Djebel Sikh servant de base de transit, de dépôt d'armes et d'infirmerie près de Sidi Messaoud.",
+      "bilan_et_pertes": {
+        "aln": "Résistance acharnée jusqu'à épuisement des munitions, nombreux martyrs asphyxiés ou tués",
+        "forces_francaises": "Pertes importantes lors des assauts contre les cavités rocheuses",
+        "civils": "Victimes civiles dans les mechtas environnantes"
+      },
+      "impact_strategique": "Symbole de la guerre des grottes dans le Dahra et de la détermination des maquisards face aux méthodes d'enfumage colonial.",
+      "sources": [
+        {
+          "titre": "La bataille de Djebel Sikh, une étape importante dans l'histoire de la région du Dahra (L'Écho d'Algérie)",
+          "url": "https://lechodalgerie.dz/mostaganem-la-bataille-de-djebel-sikh-une-etape-importante-dans-lhistoire-de-la-region-du-dahra/",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1960_014",
+      "nom_operation": "Grande bataille du Djebel M'zi (Imzi) dans les monts des Ksour",
+      "date_debut": "1960-05-06",
+      "date_fin": "1960-05-08",
+      "wilaya_concernee": "Wilaya V (Zone 8 - Naâma / Aïn Sefra)",
+      "localisation": {
+        "region_ou_ville": "Djebel M'zi / Djenien Bourezg (Aïn Sefra, Naâma)",
+        "coordonnees_approximatives": {
+          "latitude": 32.47716,
+          "longitude": -0.88001
+        }
+      },
+      "commandement_aln": [
+        "Commandement de la Zone 8 de la Wilaya V"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Grande confrontation de trois jours en mai 1960 dans le massif escarpé du Djebel M'zi (Imzi), au sud d'Aïn Sefra, opposant les katibas de la Zone 8 aux régiments d'élite français appuyés par une intense aviation.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs dizaines de moudjahidine tombés au champ d'honneur",
+        "forces_francaises": "Très lourdes pertes infligées aux colonnes coloniales, aéronefs endommagés",
+        "civils": "0"
+      },
+      "impact_strategique": "L'une des plus célèbres batailles du Sud-Oranais en 1960, brisant le verrouillage colonial sur la route saharienne des armes.",
+      "sources": [
+        {
+          "titre": "La bataille d'Imzi à Naâma témoigne de l'héroïsme des moudjahidine de l'ALN (L'Expression)",
+          "url": "https://www.lexpressiondz.com/index.php/info-en-continu/la-bataille-d-imzi-a-naama-temoigne-de-l-heroisme-des-moudjahidine-de-l-aln-face-aux-crimes-abjects-du-colonialisme-francais-342001",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1960_015",
+      "nom_operation": "Combat de Beni Smir–Oued Sidi Saïd",
+      "date_debut": "1960-03-01",
+      "date_fin": "1960-03-31",
+      "wilaya_concernee": "Wilaya V (Zone 8 - Béchar / Ras Beni Smir)",
+      "localisation": {
+        "region_ou_ville": "Ras Beni Smir / Oued Sidi Saïd (Béchar)",
+        "coordonnees_approximatives": {
+          "latitude": 32.4036,
+          "longitude": -1.12094
+        }
+      },
+      "commandement_aln": [
+        "Détachement ALN Front Sud-Oranais"
+      ],
+      "type_action": "Combat de rencontre",
+      "description": "Affrontement armé dans les défilés rocheux de Beni Smir consigné dans le témoignage du moudjahid Khlifi Bounoua publié par Hocine Touati.",
+      "bilan_et_pertes": {
+        "aln": "Faibles pertes",
+        "forces_francaises": "Pertes au sein des patrouilles sahariennes coloniales",
+        "civils": "0"
+      },
+      "impact_strategique": "Maintien des couloirs de pénétration sahariens vers Béchar.",
+      "sources": [
+        {
+          "titre": "Témoignage sur les combats du Sud-Oranais (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/34346",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1960_016",
+      "nom_operation": "Combat de Beni Smir–Kalkhabou",
+      "date_debut": "1960-11-01",
+      "date_fin": "1960-11-30",
+      "wilaya_concernee": "Wilaya V (Zone 8 - Béchar / Ras Beni Smir)",
+      "localisation": {
+        "region_ou_ville": "Ras Beni Smir / Kalkhabou (Béchar)",
+        "coordonnees_approximatives": {
+          "latitude": 32.4036,
+          "longitude": -1.12094
+        }
+      },
+      "commandement_aln": [
+        "Détachement ALN Front Sud-Oranais"
+      ],
+      "type_action": "Combat de rencontre / Embuscade",
+      "description": "Second combat distingué à la fin de l'année 1960 dans le même secteur de Beni Smir, confirmant l'activité ininterrompue des unités frontalières.",
+      "bilan_et_pertes": {
+        "aln": "Pertes limitées",
+        "forces_francaises": "Militaires français mis hors de combat",
+        "civils": "0"
+      },
+      "impact_strategique": "Harcèlement permanent du dispositif colonial de surveillance du Sud-Oranais.",
+      "sources": [
+        {
+          "titre": "Témoignage sur les combats du Sud-Oranais (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/34346",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_043",
+      "nom_operation": "Bataille du Djebel Ksel à El Bayadh",
+      "date_debut": "1958-04-17",
+      "date_fin": "1958-04-18",
+      "wilaya_concernee": "Wilaya V (Zone 7 / Front Sud-Oranais - El Bayadh)",
+      "localisation": {
+        "region_ou_ville": "Djebel Ksel / El Bayadh",
+        "coordonnees_approximatives": {
+          "latitude": 33.72114,
+          "longitude": 1.15081
+        }
+      },
+      "commandement_aln": [
+        "Commandement ALN Zone 7 / Djebel Amour"
+      ],
+      "type_action": "Guérilla de montagne / Combat de rencontre",
+      "description": "Bataille majeure livrée pendant deux jours dans le massif du Ksel contre d'importantes forces coloniales appuyées par des bombardements aériens.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs dizaines de moudjahidine tombés au champ d'honneur",
+        "forces_francaises": "Lourdes pertes en hommes et matériel pour l'armée coloniale",
+        "civils": "0"
+      },
+      "impact_strategique": "Affirmation de la présence de l'ALN sur les crêtes de l'Atlas saharien et échec des tentatives d'éradication des maquis d'El Bayadh.",
+      "sources": [
+        {
+          "titre": "La wilaya d'El Bayadh commémore l'une des épopées héroïques face au colonialisme français (APS)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mo4g3cyp-la-wilaya-d-el-bayadh-commemore-l-une-des-epopees-heroiques-face-au-colonialisme-francais",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_038",
+      "nom_operation": "Bataille de Chouabir à El Ghicha (Djebel Amour)",
+      "date_debut": "1956-10-03",
+      "date_fin": "1956-10-04",
+      "wilaya_concernee": "Wilaya V (Zone 7 - Djebel Amour / Laghouat)",
+      "localisation": {
+        "region_ou_ville": "Chouabir / El Ghicha (Laghouat)",
+        "coordonnees_approximatives": {
+          "latitude": 33.93157,
+          "longitude": 2.14355
+        }
+      },
+      "commandement_aln": [
+        "Commandement ALN du Djebel Amour"
+      ],
+      "type_action": "Offensive coordonnée / Embuscade",
+      "description": "Considérée comme la première grande défaite de l'armée coloniale dans le Djebel Amour, cette bataille de deux jours a opposé les combattants de l'ALN à une armada coloniale.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs martyrs",
+        "forces_francaises": "Dizaines de soldats coloniaux tués, matériel militaire abondant récupéré",
+        "civils": "0"
+      },
+      "impact_strategique": "Retentissement immense dans toute la région saharienne et ralliement massif des populations du Djebel Amour à la cause de l'ALN.",
+      "sources": [
+        {
+          "titre": "La bataille de Chouabir à El Ghicha : première grosse défaite de l'armée coloniale dans la région (APS)",
+          "url": "https://www.aps.dz/fr/algerie/actualite-nationale/mgq8qooq-la-bataille-de-chouabir-a-el-ghicha-laghouat-1e-grosse-defaite-de-l-armee-coloniale-dans-cette-region-de-pays",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1955_012",
+      "nom_operation": "Attentats et actions urbaines du groupe Boumelik à Sidi Bel-Abbès",
+      "date_debut": "1955-10-01",
+      "date_fin": "1955-10-31",
+      "wilaya_concernee": "Wilaya V (Zone 5 - Secteur urbain de Sidi Bel-Abbès)",
+      "localisation": {
+        "region_ou_ville": "Sidi Bel-Abbès (Centre urbain)",
+        "coordonnees_approximatives": {
+          "latitude": 35.18994,
+          "longitude": -0.63085
+        }
+      },
+      "commandement_aln": [
+        "Groupe Boumelik",
+        "Réseaux urbains FLN de Sidi Bel-Abbès"
+      ],
+      "type_action": "Guérilla urbaine / Sabotage",
+      "description": "Première campagne d'explosions et de sabotages à la bombe artisanale menée par le groupe de fidaïyine de Boumelik contre des édifices coloniaux dans la capitale de la Légion étrangère.",
+      "bilan_et_pertes": {
+        "aln": "Réseau clandestin préservé",
+        "forces_francaises": "Dégâts matériels importants et climat de panique chez les autorités coloniales",
+        "civils": "0"
+      },
+      "impact_strategique": "Entrée de la lutte armée urbaine dans la ville garnison emblématique de l'Algérie coloniale ; documenté par Rédouane Ainad Tabet.",
+      "sources": [
+        {
+          "titre": "Sidi Bel-Abbès : des mythes fondateurs de la colonisation à la libération (Insaniyat / CRASC)",
+          "url": "https://insaniyat.crasc.dz/fr/article/sidi-bel-abbes-des-mythes-fondateurs-de-la-colonisation-a-la-liberation",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1954_010",
+      "nom_operation": "Incendie et sabotage du dépôt de liège de Hafir",
+      "date_debut": "1954-11-01",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone V - Monts de Tlemcen)",
+      "localisation": {
+        "region_ou_ville": "Forêt de Hafir / Tlemcen",
+        "coordonnees_approximatives": {
+          "latitude": 34.78042,
+          "longitude": -1.42411
+        }
+      },
+      "commandement_aln": [
+        "Premiers commandos de la Zone V"
+      ],
+      "type_action": "Sabotage",
+      "description": "Action inaugurale de la Toussaint rouge dans la région de Tlemcen, consistant en l'incendie et la destruction du grand dépôt d'exploitation de liège de l'administration forestière coloniale à Hafir.",
+      "bilan_et_pertes": {
+        "aln": "0",
+        "forces_francaises": "Destruction totale des stocks coloniaux de liège",
+        "civils": "0"
+      },
+      "impact_strategique": "Marque le déclenchement de la guerre de libération dans les monts de Tlemcen aux côtés des actions de la Zone V.",
+      "sources": [
+        {
+          "titre": "L'insurrection du 1er Novembre en Oranie (ASJP)",
+          "url": "https://asjp.cerist.dz/en/downArticle/144/11/1/115789",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_044",
+      "nom_operation": "Bataille du Djebel Bou Atrous",
+      "date_debut": "1958-01-02",
+      "date_fin": "1958-01-07",
+      "wilaya_concernee": "Wilaya V (Zone 6 - Saïda)",
+      "localisation": {
+        "region_ou_ville": "Djebel Bou Atrous / Saïda",
+        "coordonnees_approximatives": {
+          "latitude": 35.0372,
+          "longitude": 0.20463
+        }
+      },
+      "commandement_aln": [
+        "Katibas de la Zone 6 de la Wilaya V"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Violent affrontement hivernal dans le massif du Djebel Bou Atrous opposant les maquisards de Saïda aux régiments coloniaux de secteur.",
+      "bilan_et_pertes": {
+        "aln": "Pertes au cours des assauts répétés",
+        "forces_francaises": "Pertes sensibles parmi les troupes d'infanterie françaises",
+        "civils": "0"
+      },
+      "impact_strategique": "Échec d'une tentative coloniale d'anéantissement des katibas de Saïda au début de l'année 1958 ; documenté par Faffa Bekkouche.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 6 (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/254394",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_045",
+      "nom_operation": "Bataille d'Ellaba (El Labba)",
+      "date_debut": "1958-02-07",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone 6 - Région de Saïda)",
+      "localisation": {
+        "region_ou_ville": "Secteur d'Ellaba / Saïda",
+        "coordonnees_approximatives": {
+          "latitude": 34.83033,
+          "longitude": 0.15171
+        }
+      },
+      "commandement_aln": [
+        "Katiba ALN de Saïda"
+      ],
+      "type_action": "Combat de rencontre",
+      "description": "Bataille rangée livrée dans la région de Saïda contre une colonne française engagée dans un ratissage de zone.",
+      "bilan_et_pertes": {
+        "aln": "Quelques combattants tombés au champ d'honneur",
+        "forces_francaises": "Plusieurs soldats français tués ou blessés",
+        "civils": "0"
+      },
+      "impact_strategique": "Maintien de la pression militaire de l'ALN dans l'Ouarsenis-Sud et le secteur de Saïda.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 6 (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/254394",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_046",
+      "nom_operation": "Combat d'Oued El Kifah (Secteur de Tefrit)",
+      "date_debut": "1958-03-10",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone 6 - Saïda)",
+      "localisation": {
+        "region_ou_ville": "Oued El Kifah / Tefrit (Saïda)",
+        "coordonnees_approximatives": {
+          "latitude": 34.83033,
+          "longitude": 0.15171
+        }
+      },
+      "commandement_aln": [
+        "Détachement ALN de Tefrit"
+      ],
+      "type_action": "Embuscade / Combat de rencontre",
+      "description": "Accrochage violent dans les gorges d'Oued El Kifah où les moudjahidine interceptent une patrouille française de reconnaissance.",
+      "bilan_et_pertes": {
+        "aln": "Pertes minimes",
+        "forces_francaises": "Véhicules endommagés et militaires coloniaux mis hors de combat",
+        "civils": "0"
+      },
+      "impact_strategique": "Interdiction aux forces françaises d'accéder librement aux zones refuges de Tefrit.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 6 (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/254394",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_047",
+      "nom_operation": "Bataille d'El Loukda (El Oukda) dans le secteur des Amayer",
+      "date_debut": "1958-03-12",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone 6 - Saïda)",
+      "localisation": {
+        "region_ou_ville": "El Loukda / Secteur des Amayer (Saïda)",
+        "coordonnees_approximatives": {
+          "latitude": 34.83033,
+          "longitude": 0.15171
+        }
+      },
+      "commandement_aln": [
+        "Katiba de la Zone 6"
+      ],
+      "type_action": "Combat de rencontre",
+      "description": "Engagement armé dans le secteur des Amayer opposant une unité de l'ALN à une colonne de blindés et de troupes aéroportées coloniales.",
+      "bilan_et_pertes": {
+        "aln": "Pertes parmi les rangs de l'ALN",
+        "forces_francaises": "Lourdes pertes chez les assaillants français",
+        "civils": "0"
+      },
+      "impact_strategique": "Défense victorieuse des zones de campement de l'ALN dans les reliefs de Saïda.",
+      "sources": [
+        {
+          "titre": "Étude historique sur la Zone 6 (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/254394",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_048",
+      "nom_operation": "Bataille du Djebel El Akhdar à Ouled Brahim",
+      "date_debut": "1958-12-19",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya V (Zone 6 - Saïda)",
+      "localisation": {
+        "region_ou_ville": "Djebel El Akhdar / Ouled Brahim (Saïda)",
+        "coordonnees_approximatives": {
+          "latitude": 34.98333,
+          "longitude": 0.46667
+        }
+      },
+      "commandement_aln": [
+        "Katiba ALN d'Ouled Brahim"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Combat stratégique livré sur les hauteurs du Djebel El Akhdar pour protéger un corridor vital d'acheminement d'armes, de médicaments et d'évacuation des blessés.",
+      "bilan_et_pertes": {
+        "aln": "Une quinzaine de chouhada",
+        "forces_francaises": "Pertes considérables chez les parachutistes coloniaux",
+        "civils": "0"
+      },
+      "impact_strategique": "Sauvegarde des convois sanitaires et logistiques de l'ALN reliant les Hauts Plateaux à l'Ouarsenis.",
+      "sources": [
+        {
+          "titre": "Il y a 64 ans a eu lieu la bataille du Djebel El Akhdar (Jazaïr Hope)",
+          "url": "https://jazairhope.org/fr/saida-il-y-a-64-ans-a-eu-lieu-la-bataille-du-djebel-el-akhdar/",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_039",
+      "nom_operation": "Combat et martyre de Mostefa Ben Boulaïd au Djebel Nara",
+      "date_debut": "1956-03-22",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya I (Aurès - Secteur de Menaâ / Oued Abdi)",
+      "localisation": {
+        "region_ou_ville": "Nara / Djebel Nara (Menaâ, Batna)",
+        "coordonnees_approximatives": {
+          "latitude": 35.314,
+          "longitude": 6.012
+        }
+      },
+      "commandement_aln": [
+        "Mostefa Ben Boulaïd"
+      ],
+      "type_action": "Combat de rencontre / Piège colonial",
+      "description": "Le chef historique et 'père de la Révolution' Mostefa Ben Boulaïd tombe en martyr avec plusieurs officiers de l'ALN lors de l'explosion d'un poste émetteur-récepteur piégé largué par les services secrets de l'armée coloniale au Djebel Nara.",
+      "bilan_et_pertes": {
+        "aln": "Mostefa Ben Boulaïd et plusieurs cadres de la Wilaya I tombés en martyrs",
+        "forces_francaises": "0 (opération d'intoxication et de piège)",
+        "civils": "0"
+      },
+      "impact_strategique": "Perte immense pour le commandement de la Wilaya I et de la Révolution ; l'événement déclenchera des réorganisations majeures dans les Aurès et accélérera la tenue du Congrès de la Soummam.",
+      "sources": [
+        {
+          "titre": "Mostefa Ben Boulaïd, une source d'inspiration (Horizons)",
+          "url": "https://www.horizons.dz/2025/03/mostefa-ben-boulaid-une-source-dinspiration/",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Mostefa Ben Boulaïd (Wikipédia)",
+          "url": "https://fr.wikipedia.org/wiki/Mostefa_Ben_Boula%C3%AFd",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1955_013",
+      "nom_operation": "Embuscades et résistance du canyon de l'Oued El Abiodh (Balcons du Rhoufi)",
+      "date_debut": "1955-01-01",
+      "date_fin": "1956-12-31",
+      "wilaya_concernee": "Wilaya I (Aurès - Secteur de Ghassira / Rhoufi)",
+      "localisation": {
+        "region_ou_ville": "Canyon d'Ighzir Amellal / Balcons du Rhoufi (Batna)",
+        "coordonnees_approximatives": {
+          "latitude": 35.05,
+          "longitude": 6.171
+        }
+      },
+      "commandement_aln": [
+        "Chihani Bachir",
+        "Commandement local des Aurès"
+      ],
+      "type_action": "Embuscade / Guérilla de montagne",
+      "description": "Série de harcèlements et d'embuscades meurtrières tendues par les moudjahidine dans les gorges encaissées du Rhoufi contre les convois militaires reliant Batna à Biskra.",
+      "bilan_et_pertes": {
+        "aln": "Faibles pertes grâce à l'utilisation des habitats troglodytiques",
+        "forces_francaises": "Convois de camions et blindés détruits, nombreuses pertes chez les troupes de convoi",
+        "civils": "0"
+      },
+      "impact_strategique": "Sanctuarisation du couloir de l'Oued El Abiodh et interdiction de passage sans escorte blindée et couverture aérienne pour l'armée coloniale.",
+      "sources": [
+        {
+          "titre": "L'étincelle de la révolution dans les Ziban et le sud du pays (APS)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mvuu8h9u-l-etincelle-de-la-revolution-dans-les-ziban-et-le-sud-du-pays",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_040",
+      "nom_operation": "Combats de liaison et résistance du Djebel Boutaleb (Hodna)",
+      "date_debut": "1956-01-01",
+      "date_fin": "1958-12-31",
+      "wilaya_concernee": "Wilaya I / Wilaya III (Confins du Hodna - Barika)",
+      "localisation": {
+        "region_ou_ville": "Massif du Djebel Boutaleb / Barika (Batna / Sétif)",
+        "coordonnees_approximatives": {
+          "latitude": 35.708,
+          "longitude": 5.334
+        }
+      },
+      "commandement_aln": [
+        "Unités de liaison inter-wilayas"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Combats répétés livrés sur les crêtes du Boutaleb pour protéger les routes clandestines de transmission reliant l'Aurès (Wilaya I) à la Kabylie (Wilaya III) et au Sahara (Wilaya VI).",
+      "bilan_et_pertes": {
+        "aln": "Pertes régulières au sein des compagnies de marche",
+        "forces_francaises": "Pertes infligées aux bataillons héliportés coloniaux",
+        "civils": "0"
+      },
+      "impact_strategique": "Préservation du nœud stratégique de communication inter-wilayas au cœur des Hauts Plateaux.",
+      "sources": [
+        {
+          "titre": "Les wilayas dans la crise du FLN (Insaniyat / CRASC)",
+          "url": "https://insaniyat.crasc.dz/en/article/les-wilayas-dans-la-crise-du-fln-de-lete-1962",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_041",
+      "nom_operation": "Accrochage de Koudiet Boukerker et martyre du colonel Zighoud Youcef",
+      "date_debut": "1956-09-23",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya II (Nord-Constantinois - Secteur de Sidi Mezghiche)",
+      "localisation": {
+        "region_ou_ville": "Koudiet Boukerker / Sidi Mezghiche (Skikda)",
+        "coordonnees_approximatives": {
+          "latitude": 36.685,
+          "longitude": 6.702
+        }
+      },
+      "commandement_aln": [
+        "Zighoud Youcef"
+      ],
+      "type_action": "Combat de rencontre",
+      "description": "Le chef historique de la Wilaya II et architecte du 20 août 1955, le colonel Zighoud Youcef, tombe les armes à la main lors d'un accrochage violent avec une patrouille française au retour du Congrès de la Soummam.",
+      "bilan_et_pertes": {
+        "aln": "Le colonel Zighoud Youcef et ses compagnons tombés en martyrs",
+        "forces_francaises": "Plusieurs soldats français tués ou blessés lors de l'échange de tirs",
+        "civils": "0"
+      },
+      "impact_strategique": "Choc politique majeur pour la Révolution ; Lakhdar Bentobbal et Ali Kafi prendront le relais pour consolider l'organisation militaire de la Wilaya II.",
+      "sources": [
+        {
+          "titre": "Forum de la mémoire d'El Moudjahid : Zighoud Youcef, l'homme-symbole (El Moudjahid)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/forum-de-la-memoire-d-el-moudjahid-zighoud-youcef-l-homme-symbole-15378",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Youcef Zighoud (Wikipédia)",
+          "url": "https://fr.wikipedia.org/wiki/Youcef_Zighoud",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_042",
+      "nom_operation": "Batailles et résistance du bastion des Beni Toufout dans le massif de Collo",
+      "date_debut": "1956-01-01",
+      "date_fin": "1959-12-31",
+      "wilaya_concernee": "Wilaya II (Nord-Constantinois - Presqu'île de Collo)",
+      "localisation": {
+        "region_ou_ville": "Massif forestier des Beni Toufout / Collo (Skikda)",
+        "coordonnees_approximatives": {
+          "latitude": 37.006,
+          "longitude": 6.56
+        }
+      },
+      "commandement_aln": [
+        "Zighoud Youcef",
+        "Lakhdar Bentobbal",
+        "Ali Kafi"
+      ],
+      "type_action": "Guérilla de montagne / Défense de bastion",
+      "description": "Défense inexpugnable de la forteresse forestière des Beni Toufout, servant de PC secret et de refuge logistique à l'état-major de la Wilaya II, résistant aux débarquements et ratissages aéroportés.",
+      "bilan_et_pertes": {
+        "aln": "Pertes limitées grâce au relief et à la couverture végétale dense",
+        "forces_francaises": "Pertes régulières chez les fusiliers marins et l'infanterie de marine",
+        "civils": "Déportations de populations villageoises vers des camps de regroupement"
+      },
+      "impact_strategique": "Maintien d'un sanctuaire inviolable de commandement au cœur du Nord-Constantinois tout au long de la guerre.",
+      "sources": [
+        {
+          "titre": "Un tournant décisif de la glorieuse révolution (APS)",
+          "url": "https://www.aps.dz/fr/algerie/societe/msyu4f59-un-tournant-decisif-de-la-glorieuse-revolution",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1954_011",
+      "nom_operation": "Combats de Baniane et résistance à l'Opération Véronique",
+      "date_debut": "1954-11-15",
+      "date_fin": "1955-01-31",
+      "wilaya_concernee": "Wilaya I (Aurès - M'Chouneche / Ahmar Khaddou)",
+      "localisation": {
+        "region_ou_ville": "Baniane / M'Chouneche (Biskra)",
+        "coordonnees_approximatives": {
+          "latitude": 34.965,
+          "longitude": 6.002
+        }
+      },
+      "commandement_aln": [
+        "Mostefa Ben Boulaïd",
+        "Si El Haouès"
+      ],
+      "type_action": "Guérilla de montagne / Combat de rencontre",
+      "description": "Première grande opération aéroportée et blindée française (« Véronique ») lancée contre les bastions de l'Ahmar Khaddou ; les moudjahidine infligent de lourdes pertes aux troupes coloniales dans les gorges de Baniane.",
+      "bilan_et_pertes": {
+        "aln": "Quelques chouhada parmi les premiers combattants de l'Aurès",
+        "forces_francaises": "Plusieurs blindés endommagés et soldats tués dans les défilés",
+        "civils": "Bombardements aériens sur les palmeraies"
+      },
+      "impact_strategique": "Échec de la première tentative coloniale d'anéantissement de l'ALN au berceau de l'insurrection.",
+      "sources": [
+        {
+          "titre": "L'étincelle de la révolution dans les Ziban et le sud du pays (APS)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mvuu8h9u-l-etincelle-de-la-revolution-dans-les-ziban-et-le-sud-du-pays",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1955_014",
+      "nom_operation": "Résistance du sanctuaire de Kimmel (Beni Imloul) à l'Opération Violette",
+      "date_debut": "1955-01-20",
+      "date_fin": "1955-02-15",
+      "wilaya_concernee": "Wilaya I (Aurès - Forêt de Kimmel)",
+      "localisation": {
+        "region_ou_ville": "Forêt de Kimmel / Beni Imloul (Batna)",
+        "coordonnees_approximatives": {
+          "latitude": 35.105,
+          "longitude": 6.512
+        }
+      },
+      "commandement_aln": [
+        "Mostefa Ben Boulaïd",
+        "Bachir Chihani"
+      ],
+      "type_action": "Défense de bastion / Guérilla de montagne",
+      "description": "Opération française de grande envergure (« Violette ») mobilisant des milliers de soldats contre la forêt de Kimmel ; l'ALN esquive l'encerclement et harcèle les arrières de l'ennemi.",
+      "bilan_et_pertes": {
+        "aln": "Pertes limitées",
+        "forces_francaises": "Lourdes pertes infligées par des tirs embusqués sous couvert forestier",
+        "civils": "0"
+      },
+      "impact_strategique": "Confirmation du rôle de forteresse naturelle imprenable du massif de Kimmel pour l'état-major de l'Aurès.",
+      "sources": [
+        {
+          "titre": "Mostefa Ben Boulaïd (Wikipédia)",
+          "url": "https://fr.wikipedia.org/wiki/Mostefa_Ben_Boula%C3%AFd",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1955_015",
+      "nom_operation": "Grandes batailles des Nemencha (Djebel Amrane et Djebel Krouma)",
+      "date_debut": "1955-06-01",
+      "date_fin": "1957-12-31",
+      "wilaya_concernee": "Wilaya I (Monts des Nemencha - Chéria / Tébessa)",
+      "localisation": {
+        "region_ou_ville": "Djebel Amrane / Djebel Krouma / Chéria (Tébessa)",
+        "coordonnees_approximatives": {
+          "latitude": 35.271,
+          "longitude": 7.752
+        }
+      },
+      "commandement_aln": [
+        "Abbas Laghrour",
+        "Bachir Chihani",
+        "Lazhar Cheriet"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Série de batailles rangées et d'accrochages acharnés livrés par les katibas d'Abbas Laghrour et de Bachir Chihani contre la Légion étrangère et les parachutistes dans les crêtes déchiquetées des Nemencha.",
+      "bilan_et_pertes": {
+        "aln": "Pertes notables lors des affrontements au sommet",
+        "forces_francaises": "Dizaines de légionnaires et parachutistes tués, hélicoptères abattus",
+        "civils": "0"
+      },
+      "impact_strategique": "Maintien de la souveraineté militaire de l'ALN sur le plateau de Chéria, verrouillant le transit vers la frontière tunisienne.",
+      "sources": [
+        {
+          "titre": "Abbas Laghrour (Wikipédia)",
+          "url": "https://fr.wikipedia.org/wiki/Abbas_Laghrour",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Bachir Chihani (Wikipédia)",
+          "url": "https://fr.wikipedia.org/wiki/Bachir_Chihani",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1955_016",
+      "nom_operation": "Batailles des dunes du Souf (Mih Ouensa et Houdh Echouf)",
+      "date_debut": "1955-08-01",
+      "date_fin": "1957-12-31",
+      "wilaya_concernee": "Wilaya I (Zone saharienne - El Oued / Oued Souf)",
+      "localisation": {
+        "region_ou_ville": "Mih Ouensa / Houdh Echouf / El Oued",
+        "coordonnees_approximatives": {
+          "latitude": 33.356,
+          "longitude": 6.863
+        }
+      },
+      "commandement_aln": [
+        "Hamma Lakhdar",
+        "Ali Ben Messaoud"
+      ],
+      "type_action": "Combat saharien / Protection de caravanes",
+      "description": "Combats épiques en plein désert de dunes menés par le commandant Hamma Lakhdar pour protéger les convois chameliers d'acheminement d'armes venant de Libye et de Tunisie.",
+      "bilan_et_pertes": {
+        "aln": "Le commandant Hamma Lakhdar et plusieurs fidayin tombés en martyrs",
+        "forces_francaises": "Blindés légers et patrouilles méharistes coloniales anéantis",
+        "civils": "0"
+      },
+      "impact_strategique": "Sécurisation de l'axe logistique transfrontalier saharien alimentant les Wilayas I, II et III en armement moderne.",
+      "sources": [
+        {
+          "titre": "L'étincelle de la révolution dans les Ziban et le sud du pays (APS)",
+          "url": "https://www.aps.dz/fr/algerie/societe/mvuu8h9u-l-etincelle-de-la-revolution-dans-les-ziban-et-le-sud-du-pays",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_047",
+      "nom_operation": "Affrontement armé et tragédie de Melouza (Mechta Kasba)",
+      "date_debut": "1957-05-28",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya III (Zone 3 - Monts des Bibans / Beni Ilmane)",
+      "localisation": {
+        "region_ou_ville": "Mechta Kasba / Melouza (Bordj Bou Arréridj / M'Sila)",
+        "coordonnees_approximatives": {
+          "latitude": 36.073,
+          "longitude": 4.761
+        }
+      },
+      "commandement_aln": [
+        "Commandement zonal Wilaya III"
+      ],
+      "type_action": "Combat fratricide / Opération de représailles",
+      "description": "Dans le contexte de l'affrontement sanglant contre les maquis rivaux messalistes du MNA soutenus et armés par l'armée française, une unité de l'ALN investit le hameau de Mechta Kasba et exécute les partisans armés du MNA.",
+      "bilan_et_pertes": {
+        "aln": "0",
+        "forces_francaises": "0 (instrumentalisation propagandiste immédiate par les autorités coloniales)",
+        "civils": "Plus de 300 villageois et militants messalistes tués"
+      },
+      "impact_strategique": "Épisode tragique de la guerre intestine FLN-MNA ; instrumentalisé par la propagande coloniale française à l'ONU mais marquant l'éradication militaire définitive du MNA en Kabylie.",
+      "sources": [
+        {
+          "titre": "Les violences algéro-algériennes : le drame de Melouza (Encyclopædia Universalis)",
+          "url": "https://www.universalis.fr/encyclopedie/guerre-d-algerie/4-les-violences-algero-algeriennes/",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Massacre de Melouza (Wikipédia)",
+          "url": "https://fr.wikipedia.org/wiki/Massacre_de_Melouza",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1961_018",
+      "nom_operation": "Siège du PC de Blida et martyre du colonel Djilali Bounaâma (Si Mohamed)",
+      "date_debut": "1961-08-08",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya IV (Algérois - Secteur urbain de Blida)",
+      "localisation": {
+        "region_ou_ville": "Blida (Centre-ville)",
+        "coordonnees_approximatives": {
+          "latitude": 36.425,
+          "longitude": 2.877
+        }
+      },
+      "commandement_aln": [
+        "Djilali Bounaâma (Si Mohamed)"
+      ],
+      "type_action": "Combat urbain / Résistance jusqu'à la mort",
+      "description": "Le chef de la Wilaya IV, le colonel Djilali Bounaâma, encerclé par les parachutistes et les blindés coloniaux dans son PC clandestin de Blida, refuse de se rendre et meurt les armes à la main après plusieurs heures de combat.",
+      "bilan_et_pertes": {
+        "aln": "Le colonel Si Mohamed et ses officiers d'état-major tombés en martyrs",
+        "forces_francaises": "Plusieurs soldats coloniaux blessés ou tués lors de l'assaut du bâtiment",
+        "civils": "0"
+      },
+      "impact_strategique": "Perte tragique d'un grand chef de la Wilaya IV ; Si Hassan (Youcef Khatib) lui succédera et mènera la wilaya jusqu'au cessez-le-feu de 1962.",
+      "sources": [
+        {
+          "titre": "Djilali Bounaâma dit Si Mohamed (Dictionnaire biographique Le Maitron)",
+          "url": "https://maitron.fr/bounaama-djilali-dit-si-mohamed-dictionnaire-algerie/",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Djilali Bounaâma (Wikipédia)",
+          "url": "https://fr.wikipedia.org/wiki/Djilali_Bouna%C3%A2ma",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_043",
+      "nom_operation": "Arraisonnement naval du cargo d'armement « Athos » au large de Nemours",
+      "date_debut": "1956-10-15",
+      "date_fin": "1956-10-16",
+      "wilaya_concernee": "Wilaya V (Façade maritime des Trara - Ghazaouet / Nemours)",
+      "localisation": {
+        "region_ou_ville": "Au large de Ghazaouet (ex-Nemours, Tlemcen)",
+        "coordonnees_approximatives": {
+          "latitude": 35.102,
+          "longitude": -1.86
+        }
+      },
+      "commandement_aln": [
+        "Délégation extérieure du FLN (Le Caire)",
+        "Commandement de la Zone V"
+      ],
+      "type_action": "Opération logistique maritime / Arraisonnement",
+      "description": "Parti d'Alexandrie chargé de 70 tonnes d'armes et munitions destinées à équiper les katibas de la Wilaya V, le navire marchand Athos est repéré et intercepté au large de Nemours par la marine de guerre française.",
+      "bilan_et_pertes": {
+        "aln": "Saisie de la cargaison militaire et équipage capturé",
+        "forces_francaises": "0",
+        "civils": "0"
+      },
+      "impact_strategique": "L'arraisonnement provoque une crise diplomatique internationale majeure entre la France et l'Égypte, précipitant l'intervention franco-britannique de Suez quelques jours plus tard.",
+      "sources": [
+        {
+          "titre": "L'interception de l'Athos et ses répercussions diplomatiques (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/256401",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Rapport du Conseil de sécurité de l'ONU sur l'affaire de l'Athos (ONU)",
+          "url": "https://digitallibrary.un.org/record/633315/files/S_PV-747-EN.pdf",
+          "type_source": "Archive"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_048",
+      "nom_operation": "Soulèvement des compagnies méharistes et ralliement à l'ALN à Metlili",
+      "date_debut": "1957-01-01",
+      "date_fin": "1960-12-31",
+      "wilaya_concernee": "Wilaya VI (Sahara central - Metlili / Sud du M'Zab)",
+      "localisation": {
+        "region_ou_ville": "Metlili des Chaâmba (Ghardaïa)",
+        "coordonnees_approximatives": {
+          "latitude": 32.273,
+          "longitude": 3.633
+        }
+      },
+      "commandement_aln": [
+        "Officiers méharistes ralliés",
+        "Commandement de la Wilaya VI"
+      ],
+      "type_action": "Mutinerie militaire / Ralliement armé",
+      "description": "Soulèvement de pelotons méharistes algériens qui éliminent leurs officiers coloniaux et rejoignent les maquis de l'ALN avec leurs armes de guerre, munitions et montures de bât.",
+      "bilan_et_pertes": {
+        "aln": "Ralliement de dizaines de combattants aguerris du désert",
+        "forces_francaises": "Officiers français éliminés et perte du contrôle des pistes sahariennes",
+        "civils": "0"
+      },
+      "impact_strategique": "Coup psychologique sévère pour l'armée coloniale et transfert d'une expertise inégalée du combat dunaire aux katibas de la Wilaya VI.",
+      "sources": [
+        {
+          "titre": "Premier commandant de la VIe Wilaya historique : Ali Mellah (El Moudjahid)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/premier-commandant-de-la-vie-wilaya-historique-ali-mellah-du-djurdjura-au-sahara-249960",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Les wilayas dans la crise du FLN (Insaniyat / CRASC)",
+          "url": "https://insaniyat.crasc.dz/en/article/les-wilayas-dans-la-crise-du-fln-de-lete-1962",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1955_017",
+      "nom_operation": "Batailles d'Oum El Kmakem et du Djebel Ergou (Argou)",
+      "date_debut": "1955-07-23",
+      "date_fin": "1956-06-17",
+      "wilaya_concernee": "Wilaya I (Monts des Nemencha - Bir El Ater)",
+      "localisation": {
+        "region_ou_ville": "Oum El Kmakem / Djebel Ergou (Bir El Ater, Tébessa)",
+        "coordonnees_approximatives": {
+          "latitude": 34.748,
+          "longitude": 8.058
+        }
+      },
+      "commandement_aln": [
+        "Lazhar Cheriet",
+        "Bachir Chihani",
+        "Abbas Laghrour"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Deux grandes batailles consécutives dans les Nemencha (juillet 1955 et juin 1956) où les katibas de Lazhar Cheriet mettent en échec les parachutistes coloniaux de Bigeard.",
+      "bilan_et_pertes": {
+        "aln": "Pertes au cours des bombardements aériens intensifs",
+        "forces_francaises": "Dizaines de parachutistes tués et blessés (dont le colonel Bigeard blessé)",
+        "civils": "0"
+      },
+      "impact_strategique": "Victoire militaire éclatante consolidant l'autorité de l'ALN sur le versant sud des monts des Nemencha.",
+      "sources": [
+        {
+          "titre": "La bataille d'Oum El Kmakem dans les Nemencha (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/138657",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Lazhar Cheriet, héros des Nemencha (Zoom Algérie)",
+          "url": "https://zoomalgerie.com/lazhar-cheriet/",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_049",
+      "nom_operation": "Bataille de Foughala dans les Ziban occidentaux",
+      "date_debut": "1958-02-23",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya I (Zone des Ziban - Foughala / Biskra)",
+      "localisation": {
+        "region_ou_ville": "Oasis et reliefs de Foughala (Biskra)",
+        "coordonnees_approximatives": {
+          "latitude": 34.573,
+          "longitude": 5.334
+        }
+      },
+      "commandement_aln": [
+        "Commandement ALN des Ziban"
+      ],
+      "type_action": "Combat de rencontre",
+      "description": "Affrontement d'envergure dans l'oasis de Foughala opposant une unité de l'ALN de la Wilaya I aux troupes coloniales motorisées appuyées par l'aviation.",
+      "bilan_et_pertes": {
+        "aln": "Une quinzaine de chouhada",
+        "forces_francaises": "Lourdes pertes infligées aux colonnes terrestres françaises",
+        "civils": "Dégâts dans les palmeraies"
+      },
+      "impact_strategique": "Échec d'une tentative de pacification des Ziban occidentaux par l'état-major français de Biskra.",
+      "sources": [
+        {
+          "titre": "La bataille de Foughala (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/180829",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_044",
+      "nom_operation": "Bataille du Djebel Asfour à Chechar",
+      "date_debut": "1956-05-01",
+      "date_fin": "1956-05-31",
+      "wilaya_concernee": "Wilaya I (Aurès-Nemencha - Chechar / Khenchela)",
+      "localisation": {
+        "region_ou_ville": "Djebel Asfour / Chechar (Khenchela)",
+        "coordonnees_approximatives": {
+          "latitude": 35.036,
+          "longitude": 7.003
+        }
+      },
+      "commandement_aln": [
+        "Katibas de Chechar (Wilaya I)"
+      ],
+      "type_action": "Guérilla de montagne / Combat de rencontre",
+      "description": "Engagement armé dans le secteur sud de Khenchela où les katibas de l'ALN brisent une puissante opération d'encerclement de l'armée française.",
+      "bilan_et_pertes": {
+        "aln": "Pertes maîtrisées sous couvert des falaises",
+        "forces_francaises": "Plusieurs dizaines de soldats coloniaux mis hors de combat",
+        "civils": "0"
+      },
+      "impact_strategique": "Maintien de la continuité territoriale entre les maquis de Khenchela et ceux des Nemencha.",
+      "sources": [
+        {
+          "titre": "Étude sur les batailles de l'Aurès-Nemencha (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/277462",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1960_017",
+      "nom_operation": "Résistance de l'ALN à l'Opération Ariège dans l'Aurès",
+      "date_debut": "1960-10-06",
+      "date_fin": "1960-11-20",
+      "wilaya_concernee": "Wilaya I (Aurès - Oum El Bouaghi / Aïn Beïda)",
+      "localisation": {
+        "region_ou_ville": "Massif de l'Aurès et hautes plaines d'Aïn Beïda (Oum El Bouaghi)",
+        "coordonnees_approximatives": {
+          "latitude": 35.796,
+          "longitude": 7.393
+        }
+      },
+      "commandement_aln": [
+        "Ali Souaï / Commandement intérimaire Wilaya I"
+      ],
+      "type_action": "Guérilla d'usure face à grande offensive coloniale",
+      "description": "Vaste offensive du Plan Challe dans les massifs aurassiens ; les commandos de l'ALN fractionnent leurs effectifs et infligent des pertes continuelles aux troupes coloniales par harcèlement nocturne.",
+      "bilan_et_pertes": {
+        "aln": "Pertes sévères dues au déploiement massif de l'aviation",
+        "forces_francaises": "Pertes sensibles lors des embuscades de diversion",
+        "civils": "0"
+      },
+      "impact_strategique": "Échec de l'armée française à déraciner définitivement l'ALN de son berceau historique aurassien.",
+      "sources": [
+        {
+          "titre": "L'Opération Ariège et la résistance de la Wilaya I (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/257176",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_050",
+      "nom_operation": "Bataille du Djebel Marmoura et mort du commandant du 1er REP",
+      "date_debut": "1958-05-28",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya II (Secteur de Guelma / Bouhamdane)",
+      "localisation": {
+        "region_ou_ville": "Djebel Marmoura / Bouhamdane (Hammam Debagh, Guelma)",
+        "coordonnees_approximatives": {
+          "latitude": 36.462,
+          "longitude": 7.258
+        }
+      },
+      "commandement_aln": [
+        "Bataillons ALN de la Wilaya II"
+      ],
+      "type_action": "Combat de rencontre / Tir antiaérien",
+      "description": "Affrontement décisif dans les monts de Bouhamdane où les moudjahidine abattent au fusil-mitrailleur l'hélicoptère de commandement du lieutenant-colonel Pierre Jeanpierre, chef emblématique du 1er REP de la Légion étrangère, qui est tué sur le coup.",
+      "bilan_et_pertes": {
+        "aln": "Pertes notables lors des bombardements ultérieurs",
+        "forces_francaises": "Mort du lieutenant-colonel Jeanpierre et de son équipage, nombreux légionnaires tués",
+        "civils": "0"
+      },
+      "impact_strategique": "Victoire militaire et psychologique retentissante de l'ALN, décapitant le commandement opérationnel du régiment d'élite parachutiste français.",
+      "sources": [
+        {
+          "titre": "La bataille du Djebel Marmoura et la mort du colonel Jeanpierre (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/180830",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Combats de la Wilaya II (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/144244",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_045",
+      "nom_operation": "Bataille de Bourzam dans le massif de Collo",
+      "date_debut": "1956-05-12",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya II (Zone 2 - Massif de Collo / Aïn Kechra)",
+      "localisation": {
+        "region_ou_ville": "Bourzam / Aïn Kechra (Skikda)",
+        "coordonnees_approximatives": {
+          "latitude": 36.798,
+          "longitude": 6.432
+        }
+      },
+      "commandement_aln": [
+        "Zighoud Youcef",
+        "Ali Kafi"
+      ],
+      "type_action": "Embuscade / Guérilla de montagne",
+      "description": "Embuscade et bataille rangée emblématique livrée dans le relief de Bourzam par les katibas de la Wilaya II contre une colonne motorisée coloniale.",
+      "bilan_et_pertes": {
+        "aln": "Pertes modérées",
+        "forces_francaises": "Dizaines de soldats coloniaux mis hors de combat et armement lourd saisi",
+        "civils": "0"
+      },
+      "impact_strategique": "Démonstration éclatante de la maîtrise tactique de la guérilla de montagne par l'état-major du Nord-Constantinois avant le Congrès de la Soummam.",
+      "sources": [
+        {
+          "titre": "Batailles de Bourzam et d'Oued Zeggar en Wilaya II (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/125124",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Histoire de la Wilaya II (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/254922",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_049",
+      "nom_operation": "Batailles des caravanes d'armement d'Aïn El Ksob et d'Estiha",
+      "date_debut": "1957-01-01",
+      "date_fin": "1959-12-31",
+      "wilaya_concernee": "Wilaya II / Wilaya III (Confins de Jijel et Mila - Sidi Maârouf)",
+      "localisation": {
+        "region_ou_ville": "Aïn El Ksob / Estiha / Sidi Maârouf (Jijel)",
+        "coordonnees_approximatives": {
+          "latitude": 36.645,
+          "longitude": 6.261
+        }
+      },
+      "commandement_aln": [
+        "Compagnies de transport d'armes Wilaya III et Wilaya II"
+      ],
+      "type_action": "Bataille d'escorte et de rupture d'encerclement",
+      "description": "Combats héroïques livrés conjointement par les compagnies de transport d'armes de la Wilaya III et les unités locales de la Wilaya II pour briser les embuscades françaises et acheminer l'armement vers le Djurdjura.",
+      "bilan_et_pertes": {
+        "aln": "Pertes chez les djounouds d'escorte",
+        "forces_francaises": "Pertes importantes infligées aux embuscades coloniales",
+        "civils": "0"
+      },
+      "impact_strategique": "Ravitaillement continu en fusils-mitrailleurs et munitions des maquis de Kabylie depuis la frontière tunisienne.",
+      "sources": [
+        {
+          "titre": "Les batailles des caravanes d'armes en Wilaya II et III (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/201345",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_046",
+      "nom_operation": "Batailles du versant sud du Djurdjura à M'Chedallah et Ath Leqsar",
+      "date_debut": "1956-06-01",
+      "date_fin": "1960-12-31",
+      "wilaya_concernee": "Wilaya III (Zone 1 - Flanc méridional du Djurdjura)",
+      "localisation": {
+        "region_ou_ville": "M'Chedallah / Saharidj / Ath Leqsar (Bouira)",
+        "coordonnees_approximatives": {
+          "latitude": 36.365,
+          "longitude": 4.195
+        }
+      },
+      "commandement_aln": [
+        "Amirouche Aït Hamouda",
+        "Commandants de zone de la Wilaya III"
+      ],
+      "type_action": "Guérilla de montagne / Embuscade",
+      "description": "Série d'affrontements intenses sur le flanc méridional du Djurdjura opposant les katibas de la Wilaya III aux troupes d'intervention coloniales (notamment après le ralliement de l'aspirant Maillot en 1956).",
+      "bilan_et_pertes": {
+        "aln": "Pertes modérées sous couvert du relief rocheux",
+        "forces_francaises": "Pertes sensibles parmi les détachements de chasseurs alpins",
+        "civils": "0"
+      },
+      "impact_strategique": "Verrouillage des défilés reliant la vallée du Sahel aux crêtes du Djurdjura.",
+      "sources": [
+        {
+          "titre": "Les batailles de M'Chedallah et du Djurdjura (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/193679",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_051",
+      "nom_operation": "Assaut et destruction du poste militaire d'El Haourane",
+      "date_debut": "1958-02-01",
+      "date_fin": "1958-02-28",
+      "wilaya_concernee": "Wilaya III (Zone 3 - Monts des Bibans / Mansoura)",
+      "localisation": {
+        "region_ou_ville": "Poste d'El Haourane / Mansoura (Bordj Bou Arréridj)",
+        "coordonnees_approximatives": {
+          "latitude": 36.082,
+          "longitude": 4.462
+        }
+      },
+      "commandement_aln": [
+        "Commandos de choc de la Wilaya III"
+      ],
+      "type_action": "Offensive coordonnée / Assaut de poste fortifié",
+      "description": "Attaque nocturne foudroyante menée par les commandos de la Wilaya III contre le poste militaire fortifié d'El Haourane, détruisant les casemates et récupérant un lot important d'armes automatiques.",
+      "bilan_et_pertes": {
+        "aln": "Faibles pertes grâce à l'effet de surprise",
+        "forces_francaises": "Garnison du poste anéantie ou mise en fuite, armement récupéré",
+        "civils": "0"
+      },
+      "impact_strategique": "Démantèlement d'un point d'appui colonial clé verrouillant le passage entre la Soummam et les Bibans.",
+      "sources": [
+        {
+          "titre": "L'assaut du poste d'El Haourane (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/263113",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1959_019",
+      "nom_operation": "Résistance à l'Opération Courroie (Plan Challe) dans l'Ouarsenis",
+      "date_debut": "1959-04-18",
+      "date_fin": "1959-06-18",
+      "wilaya_concernee": "Wilaya IV (Zone 3 - Massif de l'Ouarsenis / Théniet El Had)",
+      "localisation": {
+        "region_ou_ville": "Forêt des Cèdres / Théniet El Had (Tissemsilt)",
+        "coordonnees_approximatives": {
+          "latitude": 35.871,
+          "longitude": 2.028
+        }
+      },
+      "commandement_aln": [
+        "Si M'Hammed Bougara",
+        "Si Salah",
+        "Lakhdar Bourégaâ"
+      ],
+      "type_action": "Guérilla de rupture face à grande offensive",
+      "description": "Deuxième grande offensive du Plan Challe mobilisant 25 000 soldats français dans l'Ouarsenis oriental ; les katibas de la Wilaya IV se scindent en petits commandos d'usure et infligent des pertes continuelles aux arrières coloniaux.",
+      "bilan_et_pertes": {
+        "aln": "Pertes sévères sous les bombardements massifs d'artillerie et de napalm",
+        "forces_francaises": "Nombreux soldats coloniaux tués dans les combats rapprochés en forêt",
+        "civils": "0"
+      },
+      "impact_strategique": "Mise en échec de l'objectif colonial d'anéantissement total des structures de la Wilaya IV dans l'Ouarsenis.",
+      "sources": [
+        {
+          "titre": "Le Plan Challe et l'Opération Courroie (Encyclopædia Universalis)",
+          "url": "https://www.universalis.fr/encyclopedie/guerre-d-algerie/7-victoire-militaire-et-doutes-politiques/",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Challe Plan (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Challe_Plan",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_052",
+      "nom_operation": "Première bataille du Djebel Mongorno (Katiba El Zoubiria)",
+      "date_debut": "1958-03-01",
+      "date_fin": "1958-03-31",
+      "wilaya_concernee": "Wilaya IV (Zone 2 - Médéa / Zoubiria)",
+      "localisation": {
+        "region_ou_ville": "Djebel Mongorno / Zoubiria (Médéa)",
+        "coordonnees_approximatives": {
+          "latitude": 36.108,
+          "longitude": 2.855
+        }
+      },
+      "commandement_aln": [
+        "Katiba El Zoubiria",
+        "Si M'Hammed Bougara"
+      ],
+      "type_action": "Combat de rencontre / Guérilla de montagne",
+      "description": "Violente bataille dans les reliefs du Titteri où la célèbre katiba El Zoubiria repousse un assaut coordonné d'unités blindées et de troupes aéroportées coloniales.",
+      "bilan_et_pertes": {
+        "aln": "Pertes contenues parmi les djounouds retranchés",
+        "forces_francaises": "Lourdes pertes enregistrées par l'armée coloniale sous les feux croisés",
+        "civils": "0"
+      },
+      "impact_strategique": "Consolidation du prestige militaire de la katiba El Zoubiria, fer de lance de la Wilaya IV dans le Titteri.",
+      "sources": [
+        {
+          "titre": "Combats de la Wilaya IV (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/144558",
+          "type_source": "Ouvrage académique"
+        },
+        {
+          "titre": "Histoire de la katiba Zoubiria (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/145315",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_047",
+      "nom_operation": "Batailles d'El Kechakcha et d'Ouled El Hadj Brahim à Sidi Khetab",
+      "date_debut": "1956-01-01",
+      "date_fin": "1957-12-31",
+      "wilaya_concernee": "Wilaya V (Zone 4 - Bas-Chélif / Relizane)",
+      "localisation": {
+        "region_ou_ville": "Sidi Khetab / Ouled El Hadj Brahim (Relizane)",
+        "coordonnees_approximatives": {
+          "latitude": 35.885,
+          "longitude": 0.514
+        }
+      },
+      "commandement_aln": [
+        "Commandement ALN Zone 4"
+      ],
+      "type_action": "Guérilla de plaine / Combat de rencontre",
+      "description": "Affrontements héroïques livrés par les moudjahidine du secteur de Sidi Khetab contre des colonnes motorisées et blindées de l'armée française.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs chouhada",
+        "forces_francaises": "Pertes au sein des détachements de surveillance coloniaux",
+        "civils": "0"
+      },
+      "impact_strategique": "Ancrage des réseaux armés de la Wilaya V dans le bassin agricole du Bas-Chélif.",
+      "sources": [
+        {
+          "titre": "Témoignages sur la Révolution dans le secteur de Relizane (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/286057",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1956_048",
+      "nom_operation": "Opérations fidaïyes et maquis des Beni Chougrane à Mascara",
+      "date_debut": "1956-01-01",
+      "date_fin": "1958-12-31",
+      "wilaya_concernee": "Wilaya V (Zone 6 - Mascara)",
+      "localisation": {
+        "region_ou_ville": "Mascara et monts de Beni Chougrane",
+        "coordonnees_approximatives": {
+          "latitude": 35.396,
+          "longitude": 0.14
+        }
+      },
+      "commandement_aln": [
+        "Réseaux urbains et katibas de la Zone 6"
+      ],
+      "type_action": "Guérilla urbaine et rurale combinée",
+      "description": "Multiplication des actions de choc des commandos fidaïyine en ville et embuscades des katibas dans les contreforts des Beni Chougrane.",
+      "bilan_et_pertes": {
+        "aln": "Quelques arrestations et combattants tués",
+        "forces_francaises": "Attentats ciblés contre officiers de police et patrouilles militaires",
+        "civils": "0"
+      },
+      "impact_strategique": "Fixation d'importantes forces de police et de gendarmerie dans l'agglomération de Mascara au détriment des ratissages de djebel.",
+      "sources": [
+        {
+          "titre": "Le mouvement fidaï à Mascara (ASJP)",
+          "url": "https://asjp.cerist.dz/en/article/128366",
+          "type_source": "Ouvrage académique"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_050",
+      "nom_operation": "Bataille de Sidi Semiane dans les monts du Dahra",
+      "date_debut": "1957-05-20",
+      "date_fin": null,
+      "wilaya_concernee": "Wilaya IV (Zone 3 - Massif du Dahra / Cherchell - Ténès)",
+      "localisation": {
+        "region_ou_ville": "Sidi Semiane / Monts du Dahra (Tipaza)",
+        "coordonnees_approximatives": {
+          "latitude": 36.475,
+          "longitude": 2.025
+        }
+      },
+      "commandement_aln": [
+        "Si Slimane",
+        "Si Mahfoud"
+      ],
+      "type_action": "Combat de rencontre / Résistance héroïque",
+      "description": "Combat acharné de plus de quatre heures dans le massif boisé du Dahra opposant une section de l'ALN (35 moudjahidine) à un bataillon complet de 850 soldats français appuyés par l'aviation, coûtant la vie à Si Slimane et Si Mahfoud.",
+      "bilan_et_pertes": {
+        "aln": "18 moudjahidine tombés au champ d'honneur dont Si Slimane et Si Mahfoud",
+        "forces_francaises": "Plus de 40 soldats coloniaux tués et des dizaines de blessés selon les témoignages",
+        "civils": "0"
+      },
+      "impact_strategique": "Bataille devenue légendaire dans la mémoire du Dahra pour la bravoure d'une poignée de combattants face à des effectifs vingt fois supérieurs.",
+      "sources": [
+        {
+          "titre": "Battle of Sidi Semiane (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Sidi_Semiane",
+          "type_source": "Article"
+        },
+        {
+          "titre": "On était 35 moudjahidine contre 850 soldats français (L'Expression)",
+          "url": "https://www.lexpressiondz.com/nationale/on-etait-35-moudjahidine-contre-850-soldats-francais-19500",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1958_053",
+      "nom_operation": "Bataille de Bab El Bekkouche dans l'Ouarsenis",
+      "date_debut": "1958-05-28",
+      "date_fin": "1958-05-31",
+      "wilaya_concernee": "Wilaya IV (Zone 3 - Ouarsenis / Lardjem)",
+      "localisation": {
+        "region_ou_ville": "Bab El Bekkouche / Lardjem (Tissemsilt)",
+        "coordonnees_approximatives": {
+          "latitude": 35.751,
+          "longitude": 1.547
+        }
+      },
+      "commandement_aln": [
+        "Si Ameur Mesbah",
+        "Katiba El Karimia"
+      ],
+      "type_action": "Offensive coordonnée / Assauts de diversion",
+      "description": "Face à un puissant encerclement colonial dans l'Ouarsenis, la katiba El Karimia commandée par Si Ameur Mesbah lance des attaques de diversion audacieuses contre les postes de Bordj Bounaama, Lardjem et Tamalaht pendant quatre jours de combats féroces.",
+      "bilan_et_pertes": {
+        "aln": "Pertes sévères mais rupture de l'encerclement ennemi",
+        "forces_francaises": "Lourdes pertes infligées aux garnisons de poste et troupes de secours",
+        "civils": "0"
+      },
+      "impact_strategique": "Désorganisation complète du dispositif de ratissage français dans l'Ouarsenis occidental.",
+      "sources": [
+        {
+          "titre": "Battle of Bab El Bekkouche (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Bab_El_Bekkouche",
+          "type_source": "Article"
+        },
+        {
+          "titre": "La grande bataille de Bab El Bekkouche (APS)",
+          "url": "http://www.oran-aps.dz/spip.php?article28327",
+          "type_source": "Article"
+        }
+      ]
+    },
+    {
+      "id": "OP_1957_051",
+      "nom_operation": "Bataille d'Issine (Essien) aux confins algéro-libyens",
+      "date_debut": "1957-10-03",
+      "date_fin": "1957-10-04",
+      "wilaya_concernee": "Wilaya VI (Sahara oriental - Djanet / Confins libyens)",
+      "localisation": {
+        "region_ou_ville": "Issine / Djanet (Frontière algéro-libyenne)",
+        "coordonnees_approximatives": {
+          "latitude": 24.554,
+          "longitude": 9.484
+        }
+      },
+      "commandement_aln": [
+        "Détachement ALN du Sahara oriental",
+        "Forces de volontaires libyens"
+      ],
+      "type_action": "Embuscade transfrontalière / Combat combiné",
+      "description": "À la suite d'une embuscade de l'ALN contre un convoi colonial et du bombardement français en représailles du village libyen d'Issine, les combattants de l'ALN et les forces libyennes interceptent une puissante colonne motorisée française le 4 octobre 1957.",
+      "bilan_et_pertes": {
+        "aln": "Plusieurs martyrs algériens et volontaires libyens",
+        "forces_francaises": "Véhicules blindés détruits et dizaines de soldats coloniaux tués ou capturés",
+        "civils": "Destruction de maisons à Issine par les raids aériens français"
+      },
+      "impact_strategique": "Scelle la fraternité d'armes et la solidarité algéro-libyenne pour la sécurisation des filières d'approvisionnement en armement lourd à travers le Sahara.",
+      "sources": [
+        {
+          "titre": "Battle of Essien 1957 (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Essien_(1957)",
+          "type_source": "Article"
+        },
+        {
+          "titre": "Djanet : la bataille d'Issine, importante étape ayant scellé la solidarité algéro-libyenne (APS)",
+          "url": "https://www.aps.dz/algerie/128452-djanet-la-bataille-d-issine-importante-etape-ayant-scelle-la-solidarite-algero-libyenne",
+          "type_source": "Article"
+        },
+        {
+          "titre": "La bataille d'Issine, symbole de fraternité et de sacrifice (El Moudjahid)",
+          "url": "https://www.elmoudjahid.dz/fr/actualite/il-y-a-66-ans-la-bataille-d-issine-symbole-de-fraternite-de-sacrifice-et-de-cohesion-entre-algeriens-et-libyens-206523",
           "type_source": "Article"
         }
       ]
