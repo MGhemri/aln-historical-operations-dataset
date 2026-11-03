@@ -33,7 +33,7 @@ const WILAYAS = [
   { id: 'W5', label: 'Wilaya V (Oranie)', color: '#2980b9', pattern: /Wilaya V|Zone V|Oranie/i },
   { id: 'W6', label: 'Wilaya VI (Sahara)', color: '#f39c12', pattern: /Wilaya VI|Zone VI|Sahara/i },
   { id: 'EMG', label: 'Base de l\'Est & EMG', color: '#d35400', pattern: /Base de l'Est|Armée des Frontières|EMG/i },
-  { id: 'W7', label: '7e Wilaya (France)', color: '#8e44ad', pattern: /VII|7e|France|Fédération de France/i }
+  { id: 'W7', label: '7e Wilaya (France)', color: '#8e44ad', pattern: /Fédération de France|7e Wilaya|Wilaya VII\b/i }
 ];
 
 // --------------------------------------------------------------------------
@@ -105,25 +105,40 @@ function getOperationCategory(op) {
   let catId = 'OTHER';
   let color = '#c0392b';
 
-  if (/VII|7e|France|Fédération de France/i.test(w) || /France/i.test(r)) {
+  // 1. 7e Wilaya (Fédération de France) - strictly metropolitan France
+  if (/Fédération de France|7e Wilaya|Wilaya VII\b/i.test(w) || (/France métropolitaine/i.test(r) && !/Algérie|Wilaya/i.test(w))) {
     catId = 'W7';
-  } else if (/Zone autonome d'Alger|ZAA/i.test(w)) {
-    catId = 'ZAA';
-  } else if (/Zone Autonome d'Oran|ZAO/i.test(w) || /ZAO/i.test(r)) {
+  } else if (/Zone Autonome d'Oran|\bZAO\b/i.test(w)) {
     catId = 'ZAO';
+  } else if (/Zone autonome d'Alger|\bZAA\b/i.test(w)) {
+    catId = 'ZAA';
+  } else if (/^Armée des Frontières|^Base de l'Est/i.test(w)) {
+    catId = 'EMG';
+  } else if (/Wilaya I\b|Zone I\b|Aurès|Nemencha/i.test(w) && !/Wilaya II|Wilaya III|Wilaya IV|Wilaya V|Wilaya VI/i.test(w)) {
+    catId = 'W1';
+  } else if (/Wilaya II\b|Zone II\b|Nord-Constantinois|Constantine/i.test(w) && !/Wilaya I\b|Wilaya III\b|Wilaya IV\b|Wilaya V/i.test(w)) {
+    catId = 'W2';
+  } else if (/Wilaya III\b|Zone III\b|Kabylie/i.test(w) && !/Wilaya I\b|Wilaya II\b|Wilaya IV\b|Wilaya V/i.test(w)) {
+    catId = 'W3';
+  } else if (/Wilaya IV\b|Zone IV\b|Algérois|Ouarsenis/i.test(w) && !/Wilaya I\b|Wilaya II\b|Wilaya III\b|Wilaya V/i.test(w)) {
+    catId = 'W4';
+  } else if (/Wilaya V\b|Zone V\b|Oranie/i.test(w) && !/Wilaya I\b|Wilaya II\b|Wilaya III\b|Wilaya IV\b|Wilaya VI/i.test(w)) {
+    catId = 'W5';
+  } else if (/Wilaya VI\b|Zone VI\b|Sahara/i.test(w) && !/Wilaya I\b|Wilaya II\b|Wilaya III\b|Wilaya IV\b|Wilaya V/i.test(w)) {
+    catId = 'W6';
   } else if (/Base de l'Est|Armée des Frontières|EMG/i.test(w)) {
     catId = 'EMG';
-  } else if (/Wilaya I\b|Zone I\b|Aurès|Nemencha/i.test(w)) {
+  } else if (/Wilaya I\b|Zone I\b/i.test(w)) {
     catId = 'W1';
-  } else if (/Wilaya II\b|Zone II\b|Nord-Constantinois/i.test(w)) {
+  } else if (/Wilaya II\b|Zone II\b|Constantine/i.test(w)) {
     catId = 'W2';
-  } else if (/Wilaya III\b|Zone III\b|Kabylie/i.test(w)) {
+  } else if (/Wilaya III\b|Zone III\b/i.test(w)) {
     catId = 'W3';
-  } else if (/Wilaya IV\b|Zone IV\b|Algérois|Ouarsenis/i.test(w)) {
+  } else if (/Wilaya IV\b|Zone IV\b/i.test(w)) {
     catId = 'W4';
-  } else if (/Wilaya V\b|Zone V\b|Oranie/i.test(w)) {
+  } else if (/Wilaya V\b|Zone V\b/i.test(w)) {
     catId = 'W5';
-  } else if (/Wilaya VI\b|Zone VI\b|Sahara/i.test(w)) {
+  } else if (/Wilaya VI\b|Zone VI\b/i.test(w)) {
     catId = 'W6';
   }
 

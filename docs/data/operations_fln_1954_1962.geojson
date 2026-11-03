@@ -10240,8 +10240,8 @@
         "nom_operation": "Opérations des fidayin de Constantine et défense de la Souika et de Bellevue face aux réseaux OAS",
         "date_debut": "1961-06-10",
         "date_fin": "1961-08-25",
-        "wilaya_concernee": "Wilaya II (Zone autonome / Secteur urbain de Constantine)",
-        "lieu": "Constantine : quartiers de la Souika (Médina), Sidi Mabrouk, Bellevue, Coudiat et Rue de France (Wilaya de Constantine)",
+        "wilaya_concernee": "Wilaya II (Nord-Constantinois - Secteur urbain de Constantine)",
+        "lieu": "Constantine : quartiers de la Souika (Médina), Sidi Mabrouk, Bellevue, Coudiat et centre-ville (ex-Rue de France) (Wilaya de Constantine)",
         "type_action": "Attentat ciblé",
         "commandement_aln": [
           "Salah Boubnider dit Sawt El Arab (Colonel de la Wilaya II)",
@@ -10694,7 +10694,7 @@
         "nom_operation": "Combats d'El Milia et contre-offensives urbaines des commandos FLN face à l'OAS",
         "date_debut": "1962-01-01",
         "date_fin": "1962-03-19",
-        "wilaya_concernee": "Wilaya II (Secteur d'El Milia), Wilaya IV et Zone autonome d'Alger (ZAA)",
+        "wilaya_concernee": "Wilaya II (Secteur d'El Milia), Wilaya IV, Zone autonome d'Alger (ZAA) et Zone Autonome d'Oran (ZAO)",
         "lieu": "Massif d'El Milia (Wilaya de Jijel) et agglomérations d'Alger et d'Oran",
         "type_action": "Guérilla urbaine",
         "commandement_aln": [
