@@ -1186,6 +1186,11 @@ function escapeHtml(text) {
 // Event Listeners Initialization
 // --------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
+  // Remove GitHub button on Vercel deployment while preserving on GitHub Pages
+  if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('vercel')) {
+    document.querySelectorAll('.github-btn, #github-link-btn').forEach(el => el.remove());
+  }
+
   initMap();
   loadData();
 

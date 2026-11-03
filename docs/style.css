@@ -202,6 +202,12 @@ button, input, select {
   border-color: var(--border-light);
 }
 
+/* Hide GitHub link when deployed on Vercel (preserved on GitHub Pages) */
+.is-vercel .github-btn,
+.is-vercel #github-link-btn {
+  display: none !important;
+}
+
 .icon {
   width: 18px;
   height: 18px;
