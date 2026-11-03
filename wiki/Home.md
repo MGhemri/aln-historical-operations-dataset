@@ -25,6 +25,7 @@ Ce corpus en **humanités numériques** documente, qualifie et géolocalise **26
 | **5. Typologie des actions militaires** | Classification des opérations : offensives coordonnées, embuscades, attentats ciblés, sabotages, guérilla urbaine, batailles rangées. | [Typologie des opérations](Typologie-des-Operations-Militaires) |
 | **6. Corpus des sources & Appareil critique** | Présentation des revues académiques (ASJP/CERIST), des travaux du CRASC (*Insaniyat*), des dépêches de l'APS et des archives du SHD. | [Corpus des sources](Corpus-des-Sources-et-Appareil-Critique) |
 | **7. Guide SIG & Exploitation des données** | Utilisation des fichiers JSON et GeoJSON (RFC 7946) avec Python, QGIS, ArcGIS, Mapbox et Leaflet. | [Guide SIG & Données](Guide-SIG-et-Exploitation-des-Donnees) |
+| **8. API REST v1 (Développeurs & Chercheurs)** | Accès programmatique direct, filtrage multi-critères, format GeoJSON et exemples Python/JS/R/cURL. | [API REST v1](API-REST-v1) |
 
 ---
 
