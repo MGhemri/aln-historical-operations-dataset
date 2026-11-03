@@ -847,6 +847,33 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === statsModal) statsModal.classList.remove('open');
   });
 
+  // Methodology Modal
+  const methModal = document.getElementById('methodology-modal');
+  const methBtn = document.getElementById('methodology-btn');
+  if (methBtn && methModal) {
+    methBtn.addEventListener('click', () => {
+      methModal.classList.add('open');
+    });
+    const closeMethBtn = document.getElementById('close-methodology-btn');
+    if (closeMethBtn) {
+      closeMethBtn.addEventListener('click', () => {
+        methModal.classList.remove('open');
+      });
+    }
+    methModal.addEventListener('click', (e) => {
+      if (e.target === methModal) methModal.classList.remove('open');
+    });
+  }
+
+  // Global Escape key handler
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (statsModal) statsModal.classList.remove('open');
+      if (methModal) methModal.classList.remove('open');
+      closeDrawer();
+    }
+  });
+
   // Export Dropdown Menu
   const exportBtn = document.getElementById('export-dropdown-btn');
   const exportMenu = document.getElementById('export-menu');

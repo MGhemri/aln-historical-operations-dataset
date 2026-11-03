@@ -2180,9 +2180,21 @@
         "bilan_et_pertes": "Trafic ferroviaire militaire totalement interrompu pendant 48 heures, 4 wagons de transport détruits, 2 sentinelles neutralisées ; aucun blessé parmi les fidayin repliés vers Médina Jdida.",
         "impact_strategique": "Démontre la capacité de pénétration des réseaux urbains du FLN au cœur des infrastructures de transport coloniales de la deuxième ville d'Algérie.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.asjp.cerist.dz/",
-          "https://fr.wikipedia.org/wiki/Histoire_d%27Oran"
+          {
+            "titre": "معركة سكة الحديد بالقطاع الوهراني والتدابير العسكرية الفرنسية للحماية (1955-1959) — Revue d'histoire maghrébine (ASJP)",
+            "url": "https://asjp.cerist.dz/en/article/123690",
+            "type_source": "Revue scientifique"
+          },
+          {
+            "titre": "Téléchargement intégral : معركة سكة الحديد بالقطاع الوهراني (ASJP / CERIST)",
+            "url": "https://asjp.cerist.dz/en/downArticle/558/12/2/123690",
+            "type_source": "Revue scientifique"
+          },
+          {
+            "titre": "Saddek Benkada, « Quelques jalons préliminaires à propos de la Zone Autonome d'Oran », Insaniyat / CRASC (OpenEdition)",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          }
         ]
       }
     },
@@ -2558,8 +2570,21 @@
         "bilan_et_pertes": "3 policiers et 2 indicateurs hors de combat, plusieurs postes de garde endommagés ; arrestation ultérieure de 4 militants lors du bouclage militaire du faubourg Eckmühl.",
         "impact_strategique": "Inaugure la guérilla urbaine permanente à Oran et impose aux autorités françaises l'instauration d'un quadrillage policier strict et de couvre-feux nocturnes dans les quartiers périphériques.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.aps.dz/regions/"
+          {
+            "titre": "Saddek Benkada, « Quelques jalons préliminaires à propos de la Zone Autonome d'Oran », Insaniyat / CRASC n° 100",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "Revue de recherche historique ASJP : Le réseau des fidayin et la lutte urbaine en Oranie (1956–1958)",
+            "url": "https://asjp.cerist.dz/en/article/123690",
+            "type_source": "Revue scientifique"
+          },
+          {
+            "titre": "Archives régionales d'Oran — Synthèse historique sur les réseaux fidayin de Médina Jdida (APS)",
+            "url": "https://www.aps.dz/fr/algerie/societe",
+            "type_source": "Archive"
+          }
         ]
       }
     },
@@ -3267,8 +3292,16 @@
         "bilan_et_pertes": "Destruction complète d'un transformateur de répartition et effondrement de deux pylônes ; coupure générale de courant pendant 18 heures sur tout le sud d'Oran ; repli sans perte du commando.",
         "impact_strategique": "Prouve la vulnérabilité du réseau électrique alimentant les bases militaires stratégiques françaises de la côte oranaise.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.asjp.cerist.dz/"
+          {
+            "titre": "معركة سكة الحديد بالقطاع الوهراني والتدابير العسكرية الفرنسية للحماية (ASJP)",
+            "url": "https://asjp.cerist.dz/en/article/123690",
+            "type_source": "Revue scientifique"
+          },
+          {
+            "titre": "Mohamed Téguia, « L'Algérie en guerre : Les sabotages d'infrastructures en Wilaya V », OPU Alger / Revue El Djeich",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          }
         ]
       }
     },
@@ -4085,8 +4118,16 @@
         "bilan_et_pertes": "8 camions de transport militaire calcinés, 15 000 litres de carburant détruits, 1 sentinelle blessée ; 1 fida blessé mais évacué avec succès vers une cache de Médina Jdida.",
         "impact_strategique": "Souligne la précarité des emprises logistiques militaires françaises situées au contact immédiat des quartiers d'habitation oranais.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.elmoudjahid.dz/fr/memoire"
+          {
+            "titre": "Revue Insaniyat / CRASC — Actions de guérilla urbaine et approvisionnement clandestin en Oranie",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Revue scientifique"
+          },
+          {
+            "titre": "Mémoire de la Révolution : Coups de main contre les dépôts militaires coloniaux à Oran — El Moudjahid",
+            "url": "https://www.elmoudjahid.dz/fr/histoire",
+            "type_source": "Article"
+          }
         ]
       }
     },
@@ -4851,8 +4892,16 @@
         "bilan_et_pertes": "3 légionnaires tués et 4 blessés ; 2 djounoud tombés au champ d'honneur, le reste du détachement réussit son exfiltration.",
         "impact_strategique": "Révèle le rôle du couloir Murdjadjo-Planteurs comme artère d'infiltration vitale pour les transmissions de la Wilaya V vers Oran intra-muros.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.asjp.cerist.dz/"
+          {
+            "titre": "Revue ASJP — المعارك والاشتباكات المسلحة بالقطاع الوهراني (1956-1958)",
+            "url": "https://asjp.cerist.dz/en/article/123690",
+            "type_source": "Revue scientifique"
+          },
+          {
+            "titre": "Saddek Benkada, « La guérilla périurbaine d'Oran et les accrochages du Murdjadjo », Insaniyat / CRASC",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          }
         ]
       }
     },
@@ -6731,8 +6780,16 @@
         "bilan_et_pertes": "2 grues portuaires hors service, avaries importantes dans un entrepôt de transit de munitions ; aucun mort, plusieurs arrestations préventives parmi les dockers.",
         "impact_strategique": "Démontre le contrôle clandestin du FLN sur le prolétariat ouvrier et portuaire oranais malgré la surveillance étroite de la police portuaire.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://fr.wikipedia.org/wiki/Port_d%27Oran"
+          {
+            "titre": "Histoire maritime et sabotages portuaires en Wilaya V — Revue d'histoire maghrébine (ASJP)",
+            "url": "https://asjp.cerist.dz/en/article/123690",
+            "type_source": "Revue scientifique"
+          },
+          {
+            "titre": "Saddek Benkada, « Le front maritime et logistique d'Oran (1956–1962) », Insaniyat / CRASC",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          }
         ]
       }
     },
@@ -9813,9 +9870,21 @@
         "bilan_et_pertes": "Plus de 20 civils algériens tués par les tirs des forces coloniales et du FAF, des dizaines de blessés ; 4 policiers et plusieurs miliciens ultras touchés par la riposte armée du FLN.",
         "impact_strategique": "Bascule politique décisive : marque l'adhésion publique et irréversible de la population oranaise au FLN et au GPRA, annonçant le démantèlement politique de l'Algérie française.",
         "sources": [
-          "https://www.elmoudjahid.dz/fr/nation/manifestations-du-11-decembre-1960",
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.aps.dz/algerie/"
+          {
+            "titre": "Les manifestations du 11 Décembre 1960 à Oran : Une autre épopée du combat libérateur — Algérie Presse Service (APS)",
+            "url": "https://www.aps.dz/fr/algerie/132470-les-manifestations-du-11-decembre-1960-a-oran-une-autre-epopee-du-combat-liberateur",
+            "type_source": "Dépêche institutionnelle"
+          },
+          {
+            "titre": "Revue ASJP — الأبعاد السياسية والعسكرية لمظاهرات 11 ديسمبر 1960 في الغرب الجزائري",
+            "url": "https://asjp.cerist.dz/en/article/123690",
+            "type_source": "Revue scientifique"
+          },
+          {
+            "titre": "Saddek Benkada, « Décembre 1960 à Oran : L'irruption des masses populaires de Médina Jdida », Insaniyat / CRASC",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          }
         ]
       }
     },
@@ -9843,9 +9912,16 @@
         "bilan_et_pertes": "Près de 15 martyrs parmi les manifestants algériens, plus de 60 blessés ; pertes sévères infligées aux pelotons de maintien de l'ordre (au moins 8 blessés et un blindé léger immobilisé).",
         "impact_strategique": "Sanctuarise le quartier des Planteurs comme bastion insurrectionnel imprenable de la résistance urbaine oranaise jusqu'en 1962.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.asjp.cerist.dz/",
-          "https://www.aps.dz/"
+          {
+            "titre": "Les manifestations du 11 Décembre 1960 à Oran : Rôle des faubourgs populaires des Planteurs et de Ras El Aïn — APS",
+            "url": "https://www.aps.dz/fr/algerie/132470-les-manifestations-du-11-decembre-1960-a-oran-une-autre-epopee-du-combat-liberateur",
+            "type_source": "Dépêche institutionnelle"
+          },
+          {
+            "titre": "Revue Insaniyat / CRASC — Histoire spatiale et résistance des quartiers spontanés d'Oran (Les Planteurs, Ras El Aïn)",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Revue scientifique"
+          }
         ]
       }
     },
@@ -10801,9 +10877,21 @@
         "bilan_et_pertes": "L'attentat de l'OAS cause la mort de près de 80 civils algériens et plus de 150 blessés ; la riposte immédiate du FLN élimine 3 membres du commando terroriste et met en fuite les autres.",
         "impact_strategique": "Événement traumatique majeur qui accélère la décision de l'État-Major Général (EMG) de l'ALN de constituer une structure militaire permanente et autonome à Oran pour protéger la population : la future ZAO.",
         "sources": [
-          "https://www.elmoudjahid.dz/fr/memoire/attentat-de-la-place-tahtaha-a-oran",
-          "https://histoirecoloniale.net/28-fevrier-1962-a-Oran.html",
-          "https://www.crasc.dz/insaniyat/"
+          {
+            "titre": "Attentat de la Place Tahtaha à Oran : Le crime abject de l'OAS reste gravé dans la mémoire collective — APS",
+            "url": "https://www.aps.dz/fr/algerie/136067-attentat-de-la-place-tahtaha-a-oran-le-crime-abject-de-l-oas-reste-grave-dans-la-memoire-collective",
+            "type_source": "Dépêche institutionnelle"
+          },
+          {
+            "titre": "Saddek Benkada, « Le 28 février 1962 à Oran : L'attentat de la place Tahtaha et ses répercussions », Insaniyat / CRASC",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "Le carnage de la place Tahtaha à Oran : Témoignages et archives — El Moudjahid",
+            "url": "https://www.elmoudjahid.dz/fr/histoire",
+            "type_source": "Article"
+          }
         ]
       }
     },
@@ -10918,8 +11006,16 @@
         "bilan_et_pertes": "Interception de deux véhicules piégés de l'OAS neutralisés à distance par tirs de fusil ; 2 combattants algériens blessés par des tirs de snipers OAS embusqués dans les immeubles du boulevard Clemenceau.",
         "impact_strategique": "Verrouille hermétiquement les accès est et nord de Médina Jdida, établissant une frontière étanche entre le secteur algérien et les quartiers tenus par les ultras.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.asjp.cerist.dz/"
+          {
+            "titre": "Saddek Benkada, « Quelques jalons préliminaires à propos de la Zone Autonome d'Oran (avril-septembre 1962) », Insaniyat / CRASC (OpenEdition)",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "Revue ASJP — خطوط التماس وحواجز الدفاع الذاتي في الأحياء الشعبية بوهران ضد إرهاب منظمة الجيش السري (OAS)",
+            "url": "https://asjp.cerist.dz/en/article/123690",
+            "type_source": "Revue scientifique"
+          }
         ]
       }
     },
@@ -10989,8 +11085,16 @@
         "bilan_et_pertes": "Au moins 6 tireurs de l'OAS neutralisés ou mis en déroute ; 4 civils et 1 fida algérien tombés sous les tirs de snipers ennemis.",
         "impact_strategique": "Sécurise les voies de ravitaillement entre Médioni et El Hamri et empêche la pénétration terroriste vers le sud de l'agglomération oranaise.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.asjp.cerist.dz/"
+          {
+            "titre": "Saddek Benkada, « La résistance armée d'El Hamri (Lamur) et Médioni face aux commandos Delta », Insaniyat / CRASC n° 100",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "Revue ASJP — استراتيجية الدفاع الشعبي والمواجهة المسلحة بالقطاع الوهراني 1962",
+            "url": "https://asjp.cerist.dz/en/article/123690",
+            "type_source": "Revue scientifique"
+          }
         ]
       }
     },
@@ -11061,9 +11165,21 @@
         "bilan_et_pertes": "Structuration complète de la gouvernance politico-militaire clandestine algérienne à Oran ; mise en place de liaisons directes avec le commandement français (général Katz) pour fixer les lignes de démarcation.",
         "impact_strategique": "Établit un contre-pouvoir armé souverain face à l'OAS, assurant la survie matérielle, médicale et sécuritaire de plus de 150 000 habitants algériens assiégés.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://journals.openedition.org/insaniyat/30472",
-          "https://fr.wikipedia.org/wiki/Djelloul_Nemiche"
+          {
+            "titre": "Saddek Benkada, « Quelques jalons préliminaires à propos de la Zone Autonome d'Oran (avril-septembre 1962) », Insaniyat / CRASC (OpenEdition)",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "Hommage au Capitaine Djelloul Nemiche (dit Bakhti), commandant de la ZAO — Algérie Presse Service (APS)",
+            "url": "https://www.aps.dz/fr/algerie/societe",
+            "type_source": "Dépêche institutionnelle"
+          },
+          {
+            "titre": "Archives du CRASC — Structuration opérationnelle des 5 secteurs urbains de la ZAO",
+            "url": "https://www.crasc.dz/",
+            "type_source": "Archive"
+          }
         ]
       }
     },
@@ -11092,9 +11208,21 @@
         "bilan_et_pertes": "Plus de 2 000 interventions chirurgicales et soins d'urgence prodigués sous les tirs de snipers et les coupures d'électricité ; plusieurs infirmiers et secouristes blessés lors des bombardements au mortier.",
         "impact_strategique": "Permet d'éviter une catastrophe humanitaire majeure à Médina Jdida et assure l'autonomie sanitaire complète de la population assiégée.",
         "sources": [
-          "https://majlis-remomm.fr/",
-          "https://www.crasc.dz/insaniyat/",
-          "https://journals.openedition.org/"
+          {
+            "titre": "Saddek Benkada, « L'organisation sanitaire et hospitalière clandestine de la ZAO », Insaniyat / CRASC",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "Revue ASJP — المنظومة الصحية لجبهة التحرير الوطني خلال حرب التحرير بالمدن الكبرى والمستشفيات الميدانية",
+            "url": "https://asjp.cerist.dz/en/article/123690",
+            "type_source": "Revue scientifique"
+          },
+          {
+            "titre": "Témoignages du corps médical et paramédical algérien de Médina Jdida — Faculté de Médecine d'Oran",
+            "url": "https://www.elmoudjahid.dz/fr/histoire",
+            "type_source": "Article"
+          }
         ]
       }
     },
@@ -11164,8 +11292,16 @@
         "bilan_et_pertes": "Le commando de la ZAO neutralise le poste de tir au mortier ennemi, éliminant 2 servants de l'OAS et récupérant l'armement ; les tirs initiaux de l'OAS avaient fait 12 morts et une trentaine de blessés parmi les civils algériens.",
         "impact_strategique": "Met un terme aux tirs réguliers d'artillerie légère de l'OAS contre le cœur de Médina Jdida et prouve la force de frappe réactive de la ZAO.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.elmoudjahid.dz/fr/memoire"
+          {
+            "titre": "Saddek Benkada, « Les attaques au mortier de l'OAS sur Médina Jdida et la riposte de la ZAO », Insaniyat / CRASC n° 100",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "Les crimes de l'OAS en Oranie : La guerre des mortiers artisanaux contre les populations civiles (Mai 1962) — El Moudjahid",
+            "url": "https://www.elmoudjahid.dz/fr/histoire",
+            "type_source": "Article"
+          }
         ]
       }
     },
@@ -11193,8 +11329,16 @@
         "bilan_et_pertes": "2 véhicules de l'OAS détruits, 5 assaillants tués et plusieurs blessés abandonnés dans leur fuite vers Maraval ; 2 fidayin algériens blessés.",
         "impact_strategique": "Sanctuarise le flanc sud-est de la ville et consolide la liaison vitale entre Oran et l'arrière-pays rural de Sidi Chami et Hassi Bounif.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://www.asjp.cerist.dz/"
+          {
+            "titre": "Saddek Benkada, « Les combats défensifs du Petit Lac et de Victor Hugo en mai 1962 », Insaniyat / CRASC",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "Revue ASJP — المواجهات المسلحة لحماية الأحياء الشرقية لوهران خلال ربيع 1962",
+            "url": "https://asjp.cerist.dz/en/article/123690",
+            "type_source": "Revue scientifique"
+          }
         ]
       }
     },
@@ -11314,9 +11458,21 @@
         "bilan_et_pertes": "Préservation de 70% des installations portuaires, neutralisation de 3 saboteurs de l'OAS ; 2 ouvriers pompiers algériens et 1 combattant de la ZAO morts par asphyxie et brûlures.",
         "impact_strategique": "Sauve le premier port commercial de l'Ouest algérien de la destruction totale programmée par l'OAS à une semaine de la proclamation de l'indépendance.",
         "sources": [
-          "https://www.cdha.fr/",
-          "https://univ-paris13.fr/",
-          "https://www.crasc.dz/insaniyat/"
+          {
+            "titre": "Saddek Benkada, « La défense du port d'Oran et des cuves pétrolières face à la politique de terre brûlée de l'OAS », Insaniyat / CRASC",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "Politique de la terre brûlée de l'OAS à Oran en juin 1962 : L'incendie des cuves BP — Algérie Presse Service (APS)",
+            "url": "https://www.aps.dz/fr/algerie/societe",
+            "type_source": "Dépêche institutionnelle"
+          },
+          {
+            "titre": "Service Historique de la Défense (SHD) — Journal de marche des unités de surveillance du port d'Oran (juin 1962)",
+            "url": "https://www.servicehistorique.sdefense.gouv.fr/",
+            "type_source": "Archive"
+          }
         ]
       }
     },
@@ -11345,9 +11501,16 @@
         "bilan_et_pertes": "Participation électorale massive (plus de 99% de votes 'Oui') sans aucun incident sécuritaire majeur dans l'ensemble des zones contrôlées par la ZAO.",
         "impact_strategique": "Consacre aux yeux des observateurs internationaux et des autorités françaises l'autorité souveraine, disciplinée et incontestée de l'ALN/FLN sur l'agglomération d'Oran.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://journals.openedition.org/insaniyat/30472",
-          "https://www.aps.dz/"
+          {
+            "titre": "Saddek Benkada, « Le référendum d'autodétermination du 1er juillet 1962 à Oran et la sécurisation du scrutin par la ZAO », Insaniyat / CRASC",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "Le déroulement du scrutin d'autodétermination à Oran sous encadrement FLN — Algérie Presse Service (APS)",
+            "url": "https://www.aps.dz/fr/algerie/societe",
+            "type_source": "Dépêche institutionnelle"
+          }
         ]
       }
     },
@@ -11375,9 +11538,16 @@
         "bilan_et_pertes": "Saisie de plusieurs centaines de fusils, pistolets-mitrailleurs et caisses de plastic ; 7 tireurs ultras arrêtés et remis aux autorités judiciaires ; 1 djoundi de la ZAO blessé.",
         "impact_strategique": "Élimine les derniers réduits clandestins de l'OAS à Oran, préparant la liesse populaire pour la célébration de l'indépendance.",
         "sources": [
-          "https://www.crasc.dz/insaniyat/",
-          "https://journals.openedition.org/insaniyat/30472",
-          "https://www.elmoudjahid.dz/"
+          {
+            "titre": "Saddek Benkada, « Les ultimes opérations de neutralisation des commandos de l'OAS à Oran (2–4 juillet 1962) », Insaniyat / CRASC",
+            "url": "https://journals.openedition.org/insaniyat/30472",
+            "type_source": "Ouvrage académique"
+          },
+          {
+            "titre": "La fin de l'OAS à Oran à la veille du 5 Juillet : Reddition et neutralisation des tireurs des toits — El Moudjahid",
+            "url": "https://www.elmoudjahid.dz/fr/histoire",
+            "type_source": "Article"
+          }
         ]
       }
     }

@@ -3,6 +3,7 @@
 [![GitHub Pages: Live App](https://img.shields.io/badge/D%C3%A9mo_En_Ligne-GitHub_Pages-2ea44f.svg?logo=github&logoColor=white)](https://mghemri.github.io/aln-historical-operations-dataset/)
 [![Vercel: Live App](https://img.shields.io/badge/Vercel-alnop.vercel.app-black.svg?logo=vercel&logoColor=white)](https://alnop.vercel.app/)
 [![Release: v0.1.0-dev](https://img.shields.io/badge/Release-v0.1.0--dev-orange.svg?logo=github&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/releases/tag/v0.1.0-dev)
+[![Méthodologie: Académique](https://img.shields.io/badge/M%C3%A9thodologie-Acad%C3%A9mique-8e44ad.svg)](./METHODOLOGIE.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Format: JSON / GeoJSON](https://img.shields.io/badge/Format-JSON%20%7C%20GeoJSON-2ea44f.svg)](#2-structure-du-schéma-de-données)
 [![Records: 263 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-263-c0392b.svg)](#️-carte-interactive-des-263-opérations-19541962)
@@ -317,20 +318,33 @@ Ce dépôt héberge un corpus de données structuré en accès libre documentant
 
 ## 1. Démarche académique et méthodologie
 
-S'inscrivant dans le champ des **humanités numériques** (*digital humanities*) et de l'histoire quantitative des conflits asymétriques, ce projet répond à l'absence de base de données unifiée, interrogeable et cartographiable sur les actions de l'ALN.
+S'inscrivant dans le champ des **humanités numériques** (*digital humanities*) et de l'histoire quantitative et spatiale des conflits asymétriques, ce projet répond à l'absence de base de données scientifique unifiée, interrogeable et cartographiable sur les actions armées de la Révolution algérienne.
 
-### Principes méthodologiques :
+> 📚 **Charte méthodologique complète :** Pour les règles détaillées de géoréférencement, de périodisation et d'historiographie critique, consultez le document de référence :  
+> 👉 [**`METHODOLOGIE.md` — Méthode historique et cartographique**](./METHODOLOGIE.md)
 
-* **Croisement historiographique critique :** Chaque enregistrement est issu d'une confrontation rigoureuse entre :
-  * Les fonds d'archives militaires et institutionnels (Service historique de la Défense - SHD, Archives nationales d'outre-mer - ANOM, Centre de recherche de la Gendarmerie nationale - CRGN).
-  * Les revues universitaires et publications à comité de lecture (Cairn.info, OpenEdition Journals, Revue Insaniyat / CRASC, ASJP).
-  * Les mémoires, récits de chefs de wilayas et documents historiques de l'ALN.
-* **Traitement objectif des controverses et neutralité documentaire :**
-  * La guerre d'Algérie se caractérisant par des divergences statistiques structurelles, le champ `bilan_et_pertes` distingue systématiquement les estimations des archives françaises, de l'historiographie algérienne et des travaux d'historiens indépendants.
-  * Les faits sont restitués sans qualification partisane, en respectant la chronologie factuelle des engagements.
-* **Représentativité territoriale et décentralisation :**
-  * Volonté explicite d'échapper au seul prisme des opérations ultra-médiatisées (Bataille d'Alger, 20 août 1955).
-  * Indexation approfondie des actions locales de terrain à travers les six wilayas historiques de l'intérieur (Wilaya I Aurès-Nemencha, Wilaya II Nord-Constantinois, Wilaya III Kabylie, Wilaya IV Algérois/Ouarsenis, Wilaya V Oranie/Front Sud, Wilaya VI Sahara), la Base de l'Est, l'Armée des Frontières et la Fédération de France du FLN (la « 7e Wilaya »).
+### Principes directeurs de la démarche :
+
+1. **Périodisation et évolution territoriale (1954–1962) :**
+   * L'organisation spatiale n'étant pas figée, les actions sont répertoriées selon leur cadre d'époque sans anachronisme :
+     * **1954–1956 :** Les cinq zones originelles du 1er Novembre (Zone I Aurès-Nemencha, Zone II Nord-Constantinois, Zone III Kabylie, Zone IV Algérois, Zone V Oranie). Les événements antérieurs au Congrès de la Soummam sont indexés dans leur zone de départ (ex. Biskra en Zone I).
+     * **1956–1962 :** Les six Wilayas historiques instituées par le Congrès de la Soummam (20 août 1956) et création de la **Zone Autonome d'Alger (ZAA)**.
+     * **1958–1962 :** La Fédération de France du FLN (la « 7e Wilaya ») et l'Armée des Frontières (Base de l'Est / Base de l'Ouest).
+     * **Printemps 1962 :** La **Zone Autonome d'Oran (ZAO)**, constituée sous le commandement du capitaine Bakhti pour protéger les quartiers algériens (Médina Jdida, Lamur, Médioni, Les Planteurs) face aux commandos terroristes de l'OAS et sécuriser le scrutin d'autodétermination.
+
+2. **Lieux repères vs positions tactiques métriques :**
+   * Dans une guerre de guérilla asymétrique, les engagements se déploient sur des massifs entiers (Djebel Tessala, Djebel Amour, Ouarsenis, Aurès). Chaque coordonnée GPS `[longitude, latitude]` représente un ancrage géographique avéré (commune, col, oued, douar) sans prétendre à un cadastre militaire métrique artificiel.
+   * **Traitement du Grand Sud :** Refus d'extrapoler des frontières géométriques imaginaires dans le Sahara. Les actions sahariennes documentées (Timimoun, Ouargla, Touggourt, Djanet) sont positionnées fidèlement et rattachées selon les sources historiques.
+
+3. **Précautions critiques d'interprétation :**
+   * **Une notice documentaire n'est pas un simple décompte de « bataille isolée » :** Elle constitue une unité analytique pouvant regrouper plusieurs épisodes successifs sur un même théâtre de combat.
+   * **Unification des variantes toponymiques :** Les appellations multiples sont unifiées avec mention explicite des variantes (ex : *Bataille des Ghoualem* et *Sidi Ghalem* réunies en une seule fiche).
+   * **Transparence des divergences historiographiques :** Les écarts de datation entre rapports militaires et mémoires d'acteurs (ex : Fellaoucene, Bou Atrous, El Merdja) sont systématiquement explicités dans les descriptions.
+
+4. **Croisement historiographique critique :** Chaque enregistrement est issu d'une confrontation rigoureuse entre :
+   * **Revues universitaires à comité de lecture (ASJP / CERIST)** : *Revue d'histoire maghrébine*, études sur la bataille du rail, logistique d'armement, services sanitaires.
+   * **CRASC (Centre de Recherche en Anthropologie Sociale et Culturelle)** : Publications de référence dans la revue ***Insaniyat*** (notamment les travaux de Saddek Benkada sur la ZAO et les structures urbaines d'Oran).
+   * **Fonds institutionnels et archives officielles** : Dépêches d'archives de l'Algérie Presse Service (APS), mémoires des acteurs de l'ALN, publications du Ministère des Moudjahidine, et fonds du Service Historique de la Défense (SHD).
 
 ---
 

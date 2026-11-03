@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="style.css?v=2.4">
+  <link rel="stylesheet" href="style.css?v=2.5">
 </head>
 <body>
 
@@ -54,6 +54,10 @@
     </div>
 
     <div class="header-right">
+      <button id="methodology-btn" class="nav-btn" title="Consulter la démarche académique et méthodologique">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>Méthodologie</span>
+      </button>
       <button id="stats-btn" class="nav-btn" title="Statistiques globales">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="12" width="4" height="8" rx="1"/><rect x="10" y="8" width="4" height="12" rx="1"/><rect x="17" y="4" width="4" height="16" rx="1"/></svg>
         <span>Statistiques</span>
@@ -259,6 +263,93 @@
     </div>
   </div>
 
+  <!-- Methodology Modal -->
+  <div id="methodology-modal" class="modal-overlay">
+    <div class="modal-container modal-container-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <h2 class="modal-title">Démarche Académique & Rigueur Méthodologique</h2>
+        </div>
+        <button id="close-methodology-btn" class="icon-btn" aria-label="Fermer le modal">&times;</button>
+      </div>
+
+      <div class="modal-body methodology-body">
+        
+        <div class="methodology-banner">
+          <p class="methodology-lead">
+            Ce projet en <strong>humanités numériques</strong> recense, qualifie et géolocalise <strong>263 actions militaires</strong> de l'Armée de Libération Nationale (1954–1962). La démarche repose sur une stricte contextualisation historiographique, un croisement critique des sources et la transparence cartographique.
+          </p>
+        </div>
+
+        <div class="methodology-grid">
+          
+          <div class="methodology-card">
+            <div class="card-icon-title">
+              <span class="step-num">1</span>
+              <h3>Des Zones aux Wilayas (1954–1962)</h3>
+            </div>
+            <p>L'organisation territoriale de la Révolution a évolué en plusieurs phases distinctes que la base de données respecte sans anachronisme :</p>
+            <ul class="methodology-list">
+              <li><strong>Novembre 1954 :</strong> Découpage originel en 5 zones (Aurès, Nord-Constantinois, Kabylie, Algérois, Oranie). Les événements antérieurs au 20 août 1956 sont indexés dans leur zone de départ.</li>
+              <li><strong>Août 1956 (Soummam) :</strong> Institutionnalisation des 6 Wilayas historiques et création de la <em>Zone Autonome d'Alger (ZAA)</em>.</li>
+              <li><strong>1958–1960 :</strong> Structuration de la Fédération de France du FLN (la « 7e Wilaya ») et des bases frontalières (Base de l'Est / Base de l'Ouest).</li>
+              <li><strong>Printemps 1962 :</strong> Création de la <em>Zone Autonome d'Oran (ZAO)</em> sous le commandement du capitaine Bakhti pour protéger les faubourgs algériens face à l'OAS et sécuriser l'autodétermination.</li>
+            </ul>
+          </div>
+
+          <div class="methodology-card">
+            <div class="card-icon-title">
+              <span class="step-num">2</span>
+              <h3>Lieux Repères vs Positions Tactiques</h3>
+            </div>
+            <p>Dans une guerre de maquis et d'embuscades asymétriques, les coordonnées géographiques répondent à une charte scientifique claire :</p>
+            <ul class="methodology-list">
+              <li><strong>Ancrage spatial vérifié :</strong> Chaque point GPS correspond à un repère communal, un col (<em>teniet</em>), un oued ou un massif montagneux (<em>djebel</em>), sans prétendre à un relevé métrique artificiel de chaque tiraillement.</li>
+              <li><strong>Neutralité sur le Sahara :</strong> Refus d'extrapoler des frontières géométriques imaginaires dans le Grand Sud. Les actions de Timimoun, Ouargla, Touggourt ou Djanet sont géolocalisées avec précision et rattachées selon les sources historiques.</li>
+            </ul>
+          </div>
+
+          <div class="methodology-card">
+            <div class="card-icon-title">
+              <span class="step-num">3</span>
+              <h3>Corpus & Précautions Critiques</h3>
+            </div>
+            <p>Pour éviter les décomptes trompeurs propres aux listes brutes :</p>
+            <ul class="methodology-list">
+              <li><strong>Unité documentaire :</strong> Une notice représente une unité d'analyse documentaire et peut regrouper plusieurs engagements successifs sur un même théâtre d'opération.</li>
+              <li><strong>Unification toponymique :</strong> Les variantes graphiques courantes sont unifiées (ex : la <em>Bataille des Ghoualem</em> et de <em>Sidi Ghalem</em> réunies en une seule fiche synthétique).</li>
+              <li><strong>Transparence des divergences :</strong> Les écarts de datation entre rapports militaires et mémoires d'acteurs (ex : Fellaoucene, Bou Atrous, El Merdja) sont explicités dans les fiches.</li>
+            </ul>
+          </div>
+
+          <div class="methodology-card">
+            <div class="card-icon-title">
+              <span class="step-num">4</span>
+              <h3>Croisement Systématique des Sources</h3>
+            </div>
+            <p>100% des opérations intègrent des liens cliquables vers des publications vérifiables :</p>
+            <ul class="methodology-list">
+              <li><strong>Revues universitaires ASJP / CERIST :</strong> Articles à comité de lecture (<em>Revue d'histoire maghrébine</em>, études sur la bataille du rail, logistique militaire).</li>
+              <li><strong>CRASC & Revue <em>Insaniyat</em> :</strong> Études de référence (Saddek Benkada sur la ZAO, sociologie des mobilisations urbaines).</li>
+              <li><strong>Archives institutionnelles :</strong> Dépêches d'archives de l'APS, mémoires d'acteurs de la Révolution, rapports du SHD (Service Historique de la Défense).</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="methodology-footer-callout">
+          <div class="callout-content">
+            <h4>📖 Documentation scientifique complète</h4>
+            <p>Consultez le document intégral <a href="https://github.com/MGhemri/aln-historical-operations-dataset/blob/main/METHODOLOGIE.md" target="_blank" rel="noopener">METHODOLOGIE.md</a> sur GitHub pour les protocoles de géoréférencement, les références bibliographiques complètes et le guide de citation.</p>
+          </div>
+          <a href="https://github.com/MGhemri/aln-historical-operations-dataset/blob/main/METHODOLOGIE.md" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.5rem 1rem; border-radius:6px; background:var(--accent-blue); color:#fff; text-decoration:none; font-size:0.85rem; font-weight:600;">Consulter METHODOLOGIE.md ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- Leaflet & MarkerCluster JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
@@ -266,7 +357,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Application Logic -->
-  <script src="app.js?v=2.4"></script>
+  <script src="app.js?v=2.5"></script>
 
 </body>
 </html>
