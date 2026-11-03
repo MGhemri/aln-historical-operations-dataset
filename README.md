@@ -415,10 +415,16 @@ Ce jeu de données a été modélisé pour permettre :
 
 ---
 
-## 4. Licence et citation
+## 4. Licence, citation et contact
 
-Ce projet est distribué sous **licence MIT**. Vous êtes libre de réutiliser, modifier et redistribuer ces données sous réserve de conserver la notice de copyright d'origine.
+Ce projet est distribué sous **licence MIT**. Vous êtes libre de réutiliser, modifier et redistribuer ces données sous réserve de conserver la notice de copyright d'origine :
+`Copyright (c) 2026 Ghemri M. <contact@connect-gm.com>`
 
+### Contact & Correspondance
+Pour toute question de recherche, échange scientifique ou proposition d'enrichissement documentaire, vous pouvez joindre l'auteur (**Ghemri M.**) à l'adresse suivante :  
+📧 **contact@connect-gm.com**
+
+### Citation académique
 Pour citer ce jeu de données dans un travail académique :
 
 ```bibtex
@@ -427,7 +433,8 @@ Pour citer ce jeu de données dans un travail académique :
   title = {FLN/ALN Historical Military Operations Dataset (1954–1962)},
   year = {2026},
   publisher = {GitHub},
-  howpublished = {\url{https://github.com/MGhemri/aln-historical-operations-dataset}}
+  howpublished = {\url{https://github.com/MGhemri/aln-historical-operations-dataset}},
+  note = {Contact: contact@connect-gm.com}
 }
 ```
 
@@ -439,7 +446,7 @@ Pour citer ce jeu de données dans un travail académique :
 Ce dépôt constitue une **base ouverte et évolutive (*Work in Progress*)** qui a vocation à s'enrichir dans la durée. L'histoire militaire de la guerre d'indépendance algérienne comporte des milliers d'engagements locaux, d'accrochages de *katibas*, de sabotages et d'opérations urbaines dont l'indexation numérique se poursuit progressivement au fil du dépouillement d'archives et de publications académiques.
 
 ### Pourquoi et comment contribuer ?
-**Toute contribution qui respecte rigoureusement les règles méthodologiques et techniques de ce dépôt est vivement recommandée** (chercheurs, historiens, archivistes, doctorants, ingénieurs de données ou passionnés d'histoire).
+**Toute contribution qui respecte rigoureusement les règles méthodologiques et techniques de ce dépôt est vivement recommandée** (chercheurs, historiens, archivistes, doctorants, ingénieurs de données ou passionnés d'histoire). Les échanges et propositions d'archives peuvent être soumis via **Pull Request**, **Issue**, ou par courriel directement à l'auteur (**Ghemri M.**) à l'adresse : **contact@connect-gm.com**.
 
 Pour qu'une proposition d'ajout ou de correction (via **Pull Request** ou **Issue**) soit validée et fusionnée, elle doit **impérativement respecter les 4 règles suivantes** :
 

@@ -84,6 +84,10 @@ Ce corpus est mis à disposition dans un esprit de **Science Ouverte** (*Open Da
 - **JSON hiérarchique documenté** : `operations_fln_1954_1962.json` contenant la totalité des métadonnées, bilans estimés, commandements et bibliographie.
 - **Accès aux modèles d'IA et LLMs** : L'utilisation de ce corpus pour le fine-tuning, le RAG (Retrieval-Augmented Generation) et la recherche académique assistée par IA est encouragée sous mention de la paternité du projet.
 
+### Contact & Correspondance académique
+Pour toute question méthodologique, suggestion d'archives ou signalement d'ajustement historique, l'auteur (**Ghemri M.**) est joignable à l'adresse suivante :  
+📧 **contact@connect-gm.com**
+
 ### Citation académique recommandée
 ```bibtex
 @dataset{aln_operations_dataset_2026,
@@ -92,6 +96,7 @@ Ce corpus est mis à disposition dans un esprit de **Science Ouverte** (*Open Da
   year         = {2026},
   publisher    = {GitHub / Vercel},
   version      = {v0.1.0-dev},
-  url          = {https://alnop.vercel.app/}
+  url          = {https://alnop.vercel.app/},
+  note         = {Contact: contact@connect-gm.com}
 }
 ```
