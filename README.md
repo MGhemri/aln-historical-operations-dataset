@@ -457,13 +457,13 @@ L'interface web hébergée dans le dossier [docs/](./docs) propose une consultat
 
 Pour exécuter l'application web sur votre machine sans dépendance complexe :
 
-`bash
+```bash
 # Se placer dans le répertoire du projet
 cd aln-historical-operations-dataset
 
 # Démarrer un serveur HTTP local pointant sur docs/
 python -m http.server 8000 --directory docs
-`
+```
 
 Puis ouvrez votre navigateur à l'adresse [http://localhost:8000](http://localhost:8000).
 
