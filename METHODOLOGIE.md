@@ -87,7 +87,7 @@ Ce corpus est mis à disposition dans un esprit de **Science Ouverte** (*Open Da
 ### Citation académique recommandée
 ```bibtex
 @dataset{aln_operations_dataset_2026,
-  author       = {Ghemri, M. et al.},
+  author       = {Ghemri, M.},
   title        = {FLN/ALN Historical Military Operations Dataset (1954–1962): Base de données géospatiale et corpus documentaire},
   year         = {2026},
   publisher    = {GitHub / Vercel},
