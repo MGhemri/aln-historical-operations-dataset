@@ -3,7 +3,7 @@
 [![GitHub Pages: Live App](https://img.shields.io/badge/D%C3%A9mo_En_Ligne-GitHub_Pages-2ea44f.svg?logo=github&logoColor=white)](https://mghemri.github.io/aln-historical-operations-dataset/)
 [![Vercel: Live App](https://img.shields.io/badge/Vercel-alnop.vercel.app-black.svg?logo=vercel&logoColor=white)](https://alnop.vercel.app/)
 [![API: REST v1](https://img.shields.io/badge/API_REST-v1.0.0-0ea5e9.svg?logo=fastapi&logoColor=white)](./API.md)
-[![Release: v0.1.0-dev](https://img.shields.io/badge/Release-v0.1.0--dev-orange.svg?logo=github&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/releases/tag/v0.1.0-dev)
+[![Release: v1.0.0](https://img.shields.io/badge/Release-v1.0.0_Stable-2ea44f.svg?logo=github&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/releases/tag/v1.0.0)
 [![Méthodologie: Académique](https://img.shields.io/badge/M%C3%A9thodologie-Acad%C3%A9mique-8e44ad.svg)](./METHODOLOGIE.md)
 [![Wiki: Documentation](https://img.shields.io/badge/Wiki-Documentation-0284c7.svg?logo=bookstack&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/wiki)
 [![Langues: Bilingue FR / AR](https://img.shields.io/badge/Langues-Bilingue_FR_%2F_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-007a3d.svg)](https://alnop.vercel.app/)
