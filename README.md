@@ -4,6 +4,7 @@
 [![Vercel: Live App](https://img.shields.io/badge/Vercel-alnop.vercel.app-black.svg?logo=vercel&logoColor=white)](https://alnop.vercel.app/)
 [![Release: v0.1.0-dev](https://img.shields.io/badge/Release-v0.1.0--dev-orange.svg?logo=github&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/releases/tag/v0.1.0-dev)
 [![Méthodologie: Académique](https://img.shields.io/badge/M%C3%A9thodologie-Acad%C3%A9mique-8e44ad.svg)](./METHODOLOGIE.md)
+[![Wiki: Documentation](https://img.shields.io/badge/Wiki-Documentation-0284c7.svg?logo=bookstack&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/wiki)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Format: JSON / GeoJSON](https://img.shields.io/badge/Format-JSON%20%7C%20GeoJSON-2ea44f.svg)](#2-structure-du-schéma-de-données)
 [![Records: 263 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-263-c0392b.svg)](#️-carte-interactive-des-263-opérations-19541962)
@@ -321,7 +322,8 @@ Ce dépôt héberge un corpus de données structuré en accès libre documentant
 S'inscrivant dans le champ des **humanités numériques** (*digital humanities*) et de l'histoire quantitative et spatiale des conflits asymétriques, ce projet répond à l'absence de base de données scientifique unifiée, interrogeable et cartographiable sur les actions armées de la Révolution algérienne.
 
 > 📚 **Charte méthodologique complète :** Pour les règles détaillées de géoréférencement, de périodisation et d'historiographie critique, consultez le document de référence :  
-> 👉 [**`METHODOLOGIE.md` — Méthode historique et cartographique**](./METHODOLOGIE.md)
+> 👉 [**`METHODOLOGIE.md` — Méthode historique et cartographique**](./METHODOLOGIE.md)  
+> 📖 [**Wiki Officiel du projet sur GitHub**](https://github.com/MGhemri/aln-historical-operations-dataset/wiki) *(monographies des Wilayas, dossiers ZAA & ZAO, guide SIG & typologie militaire)*
 
 ### Principes directeurs de la démarche :
 
