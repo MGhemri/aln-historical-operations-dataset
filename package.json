@@ -1,0 +1,12 @@
+{
+  "name": "aln-historical-operations-dataset",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Base de données historique et cartographie interactive des opérations de l'ALN (1954-1962)",
+  "scripts": {
+    "test": "node validate_dataset.py"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}

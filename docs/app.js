@@ -912,6 +912,50 @@ function renderStatsModalTexts() {
   if (chartTitles[2]) chartTitles[2].textContent = isAr ? 'تصنيف العمليات العسكرية الهجومية' : 'Typologie des actions militaires offensives';
 }
 
+function renderContactModal() {
+  const isAr = state.lang === 'ar';
+  const modalTitle = document.getElementById('contact-modal-title');
+  if (modalTitle) modalTitle.textContent = t('contactModalTitle');
+
+  const lead = document.getElementById('contact-lead');
+  if (lead) lead.textContent = t('contactLead');
+
+  const labelName = document.getElementById('label-name');
+  if (labelName) labelName.innerHTML = `${escapeHtml(t('contactNameLabel'))} <span class="required">*</span>`;
+  const inputName = document.getElementById('contact-name');
+  if (inputName) inputName.placeholder = t('contactNamePlaceholder');
+
+  const labelEmail = document.getElementById('label-email');
+  if (labelEmail) labelEmail.innerHTML = `${escapeHtml(t('contactEmailLabel'))} <span class="required">*</span>`;
+  const inputEmail = document.getElementById('contact-email');
+  if (inputEmail) inputEmail.placeholder = t('contactEmailPlaceholder');
+
+  const labelSubject = document.getElementById('label-subject');
+  if (labelSubject) labelSubject.innerHTML = `${escapeHtml(t('contactSubjectLabel'))} <span class="required">*</span>`;
+
+  const selectSubject = document.getElementById('contact-subject');
+  if (selectSubject) {
+    const curVal = selectSubject.value;
+    selectSubject.innerHTML = `
+      <option value="Demande d'accès au code source"${curVal === "Demande d'accès au code source" ? ' selected' : ''}>${escapeHtml(t('contactSubject1'))}</option>
+      <option value="Enrichissement de la base de données"${curVal === "Enrichissement de la base de données" ? ' selected' : ''}>${escapeHtml(t('contactSubject2'))}</option>
+      <option value="Proposition de correction / Précision"${curVal === "Proposition de correction / Précision" ? ' selected' : ''}>${escapeHtml(t('contactSubject3'))}</option>
+      <option value="Recherche académique / Collaboration"${curVal === "Recherche académique / Collaboration" ? ' selected' : ''}>${escapeHtml(t('contactSubject4'))}</option>
+      <option value="Autre demande"${curVal === "Autre demande" ? ' selected' : ''}>${escapeHtml(t('contactSubject5'))}</option>
+    `;
+  }
+
+  const labelMessage = document.getElementById('label-message');
+  if (labelMessage) labelMessage.innerHTML = `${escapeHtml(t('contactMessageLabel'))} <span class="required">*</span>`;
+  const inputMessage = document.getElementById('contact-message');
+  if (inputMessage) inputMessage.placeholder = t('contactMessagePlaceholder');
+
+  const submitText = document.getElementById('contact-submit-text');
+  if (submitText && (!submitText.dataset.sending || submitText.dataset.sending === 'false')) {
+    submitText.textContent = t('contactSubmit');
+  }
+}
+
 function renderMethodologyModal() {
   const isAr = state.lang === 'ar';
   const modalTitle = document.querySelector('#methodology-modal .modal-title');
@@ -1106,6 +1150,8 @@ function setLanguage(lang) {
   if (statsBtnSpan) statsBtnSpan.textContent = t('navStats');
   const exportBtnSpan = document.querySelector('#export-dropdown-btn span');
   if (exportBtnSpan) exportBtnSpan.textContent = t('navExport');
+  const contactBtnSpan = document.querySelector('#contact-btn span');
+  if (contactBtnSpan) contactBtnSpan.textContent = t('navContact');
 
   // Update Mobile Tabs
   const tabMapBtn = document.getElementById('tab-map-btn');
@@ -1174,9 +1220,10 @@ function setLanguage(lang) {
     `).join('');
   }
 
-  // Update Methodology & Stats Modal Texts
+  // Update Methodology, Stats & Contact Modal Texts
   renderMethodologyModal();
   renderStatsModalTexts();
+  renderContactModal();
 
   // Re-render components
   setupWilayaChips();
@@ -1337,8 +1384,128 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') {
       if (statsModal) statsModal.classList.remove('open'); document.body.classList.remove('modal-open');
       if (methModal) methModal.classList.remove('open'); document.body.classList.remove('modal-open');
+      if (contactModal) contactModal.classList.remove('open'); document.body.classList.remove('modal-open');
       closeDrawer();
     }
+  // Contact Modal & Form Handling
+  const contactModal = document.getElementById('contact-modal');
+  const contactBtn = document.getElementById('contact-btn');
+  const closeContactBtn = document.getElementById('close-contact-btn');
+  const contactForm = document.getElementById('contact-form');
+  const contactAlert = document.getElementById('contact-alert');
+  const contactSubmitBtn = document.getElementById('contact-submit-btn');
+  const contactSpinner = document.getElementById('contact-spinner');
+  const contactSubmitText = document.getElementById('contact-submit-text');
+  const contactMessage = document.getElementById('contact-message');
+  const charCurrent = document.getElementById('char-current');
+
+  if (contactBtn && contactModal) {
+    contactBtn.addEventListener('click', () => {
+      contactModal.classList.add('open');
+      document.body.classList.add('modal-open');
+      renderContactModal();
+    });
+    if (closeContactBtn) {
+      closeContactBtn.addEventListener('click', () => {
+        contactModal.classList.remove('open');
+        document.body.classList.remove('modal-open');
+      });
+    }
+    contactModal.addEventListener('click', (e) => {
+      if (e.target === contactModal) {
+        contactModal.classList.remove('open');
+        document.body.classList.remove('modal-open');
+      }
+    });
+  }
+
+  if (contactMessage && charCurrent) {
+    contactMessage.addEventListener('input', () => {
+      charCurrent.textContent = contactMessage.value.length;
+    });
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!contactAlert || !contactSubmitBtn || !contactSubmitText || !contactSpinner) return;
+
+      contactAlert.className = 'contact-alert hidden';
+      contactAlert.textContent = '';
+
+      const name = document.getElementById('contact-name')?.value?.trim() || '';
+      const email = document.getElementById('contact-email')?.value?.trim() || '';
+      const subject = document.getElementById('contact-subject')?.value || '';
+      const message = contactMessage?.value?.trim() || '';
+      const _gotcha = document.getElementById('contact-gotcha')?.value || '';
+
+      if (name.length < 2) {
+        contactAlert.className = 'contact-alert error';
+        contactAlert.textContent = t('contactValidationName');
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        contactAlert.className = 'contact-alert error';
+        contactAlert.textContent = t('contactValidationEmail');
+        return;
+      }
+
+      if (message.length < 10) {
+        contactAlert.className = 'contact-alert error';
+        contactAlert.textContent = t('contactValidationMessage');
+        return;
+      }
+
+      contactSubmitBtn.disabled = true;
+      contactSpinner.classList.remove('hidden');
+      contactSubmitText.dataset.sending = 'true';
+      contactSubmitText.textContent = t('contactSending');
+
+      const isGithub = window.location.hostname.includes('github.io');
+      const endpoint = isGithub ? 'https://alnop.vercel.app/api/contact' : '/api/contact';
+
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000);
+
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({ name, email, subject, message, _gotcha }),
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok && data.success) {
+          contactAlert.className = 'contact-alert success';
+          contactAlert.textContent = t('contactSuccess');
+          contactForm.reset();
+          if (charCurrent) charCurrent.textContent = '0';
+        } else {
+          contactAlert.className = 'contact-alert error';
+          contactAlert.textContent = data.error || t('contactError');
+        }
+      } catch (err) {
+        console.error('Contact submission error:', err);
+        contactAlert.className = 'contact-alert error';
+        contactAlert.textContent = t('contactError');
+      } finally {
+        contactSubmitBtn.disabled = false;
+        contactSpinner.classList.add('hidden');
+        contactSubmitText.dataset.sending = 'false';
+        contactSubmitText.textContent = t('contactSubmit');
+      }
+    });
+  }
+
   });
 
   // Export Dropdown Menu

@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="style.css?v=2.9">
+  <link rel="stylesheet" href="style.css?v=3.0">
 
   <!-- Vercel Web Analytics -->
   <script>
@@ -51,8 +51,8 @@
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
       <div class="brand">
-        <span class="flag-icon">🇩🇿</span>
-        <div>
+        <span class="flag-icon" title="République Algérienne Démocratique et Populaire">🇩🇿</span>
+        <div class="brand-text">
           <h1 class="brand-title">FLN/ALN Operations Dataset <span class="badge-version">1954–1962</span></h1>
           <p class="brand-subtitle">Cartographie interactive & moteur de recherche des opérations militaires</p>
         </div>
@@ -78,6 +78,10 @@
           <a href="data/operations_fln_1954_1962.json" download="operations_fln_1954_1962.json" class="dropdown-item">JSON consolidé</a>
         </div>
       </div>
+      <button id="contact-btn" class="nav-btn" title="Contacter l'auteur / Formulaire de contact" aria-label="Contact">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>Contact</span>
+      </button>
       <button id="lang-toggle-btn" class="lang-toggle-btn" title="Changer de langue / تبديل اللغة (عربي / FR)" aria-label="Langue">
         <span class="lang-flag">🇩🇿</span>
         <span class="lang-label" id="lang-label">العربية</span>
@@ -370,6 +374,73 @@
     </div>
   </div>
 
+  <!-- Contact Modal -->
+  <div id="contact-modal" class="modal-overlay">
+    <div class="modal-container modal-container-md">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <h2 class="modal-title" id="contact-modal-title">Formulaire de Contact</h2>
+        </div>
+        <button id="close-contact-btn" class="icon-btn" aria-label="Fermer le modal">&times;</button>
+      </div>
+
+      <div class="modal-body contact-body">
+        <div class="contact-banner">
+          <p class="contact-lead" id="contact-lead">
+            Vous souhaitez demander l'accès au code source, proposer des compléments documentaires, signaler une correction ou initier une collaboration de recherche ? Transmettez votre message ci-dessous :
+          </p>
+        </div>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="_gotcha" id="contact-gotcha" style="display:none !important;" tabindex="-1" autocomplete="off" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name" id="label-name">Nom complet / Institution <span class="required">*</span></label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Ex: Dr. Benali / Chercheur indépendant" required maxlength="100" />
+            </div>
+            <div class="form-group">
+              <label for="contact-email" id="label-email">Adresse Email <span class="required">*</span></label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="votre.email@domaine.com" required maxlength="100" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject" id="label-subject">Motif de votre prise de contact <span class="required">*</span></label>
+            <select id="contact-subject" name="subject" class="form-select" required>
+              <option value="Demande d'accès au code source">Demande d'accès au code source du projet</option>
+              <option value="Enrichissement de la base de données">Enrichissement / Contribution à la base de données</option>
+              <option value="Proposition de correction / Précision">Proposition de correction ou précision historique</option>
+              <option value="Recherche académique / Collaboration">Recherche académique, archives ou partenariat</option>
+              <option value="Autre demande">Autre demande</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message" id="label-message">Votre message <span class="required">*</span></label>
+            <textarea id="contact-message" name="message" class="form-textarea" rows="5" placeholder="Décrivez précisément votre demande, sources ou propositions..." required minlength="10" maxlength="5000"></textarea>
+            <div class="char-count"><span id="char-current">0</span> / 5000</div>
+          </div>
+
+          <div id="contact-alert" class="contact-alert hidden" role="alert"></div>
+
+          <div class="contact-form-footer">
+            <button type="submit" id="contact-submit-btn" class="btn-primary btn-submit">
+              <span class="btn-spinner hidden" id="contact-spinner"></span>
+              <span class="btn-text" id="contact-submit-text">Envoyer le message</span>
+              <svg class="icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <!-- Leaflet & MarkerCluster JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
@@ -377,9 +448,9 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Internationalization (AR/FR) -->
-  <script src="i18n.js?v=2.9"></script>
+  <script src="i18n.js?v=3.0"></script>
   <!-- Application Logic -->
-  <script src="app.js?v=2.9"></script>
+  <script src="app.js?v=3.0"></script>
 
 </body>
 </html>
