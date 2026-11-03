@@ -5,6 +5,7 @@
 [![Release: v0.1.0-dev](https://img.shields.io/badge/Release-v0.1.0--dev-orange.svg?logo=github&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/releases/tag/v0.1.0-dev)
 [![Méthodologie: Académique](https://img.shields.io/badge/M%C3%A9thodologie-Acad%C3%A9mique-8e44ad.svg)](./METHODOLOGIE.md)
 [![Wiki: Documentation](https://img.shields.io/badge/Wiki-Documentation-0284c7.svg?logo=bookstack&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/wiki)
+[![Langues: Bilingue FR / AR](https://img.shields.io/badge/Langues-Bilingue_FR_%2F_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-007a3d.svg)](https://alnop.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Format: JSON / GeoJSON](https://img.shields.io/badge/Format-JSON%20%7C%20GeoJSON-2ea44f.svg)](#2-structure-du-schéma-de-données)
 [![Records: 263 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-263-c0392b.svg)](#️-carte-interactive-des-263-opérations-19541962)
@@ -21,6 +22,10 @@ Ce dépôt héberge un corpus de données structuré en accès libre documentant
 >
 > 🚀 **Application Vercel en direct :** L'application est déployée en production sur Vercel avec le même UI/UX, performances Edge et API ouverte :  
 > 👉 **[Ouvrir l'application sur Vercel (https://alnop.vercel.app)](https://alnop.vercel.app/)**
+>
+
+> 🇩🇿 **Interface Intégralement Bilingue (Français / العربية) :**
+> L'application propose un commutateur instantané FR / العربية avec persistance du choix. L'appareil critique et les 263 opérations ont été traduits selon la terminologie historiographique révolutionnaire algérienne contextuelle (ministère des Moudjahidines, revues ASJP, CRASC d'Oran, archives APS), avec disposition bidirectionnelle complète (RTL / Cairo & Amiri).
 
 
 > [!IMPORTANT]
