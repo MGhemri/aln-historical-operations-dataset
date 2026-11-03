@@ -202,9 +202,10 @@ button, input, select {
   border-color: var(--border-light);
 }
 
-/* Hide GitHub link when deployed on Vercel (preserved on GitHub Pages) */
+/* Hide GitHub link & GitHub methodology callout when deployed on Vercel (preserved on GitHub Pages) */
 .is-vercel .github-btn,
-.is-vercel #github-link-btn {
+.is-vercel #github-link-btn,
+.is-vercel .methodology-footer-callout {
   display: none !important;
 }
 

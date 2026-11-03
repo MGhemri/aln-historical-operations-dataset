@@ -1046,6 +1046,12 @@ function renderMethodologyModal() {
       </div>
     `;
   }
+
+  // Remove GitHub methodology callout on Vercel
+  if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('vercel')) {
+    const callout = body.querySelector('.methodology-footer-callout');
+    if (callout) callout.remove();
+  }
 }
 
 // --------------------------------------------------------------------------
@@ -1188,7 +1194,7 @@ function escapeHtml(text) {
 document.addEventListener('DOMContentLoaded', () => {
   // Remove GitHub button on Vercel deployment while preserving on GitHub Pages
   if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('vercel')) {
-    document.querySelectorAll('.github-btn, #github-link-btn').forEach(el => el.remove());
+    document.querySelectorAll('.github-btn, #github-link-btn, .methodology-footer-callout').forEach(el => el.remove());
   }
 
   initMap();
