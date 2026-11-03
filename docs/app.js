@@ -707,6 +707,7 @@ function selectOperation(opId, zoomToMap = true) {
   `;
 
   drawer.classList.add('open');
+  document.body.classList.add('drawer-open');
 
   if (zoomToMap && hasCoords) {
     map.setView([coords.latitude, coords.longitude], 11, { animate: true, duration: 0.8 });
@@ -721,6 +722,7 @@ window.selectOperation = selectOperation;
 function closeDrawer() {
   const drawer = document.getElementById('detail-drawer');
   if (drawer) drawer.classList.remove('open');
+  document.body.classList.remove('drawer-open');
   state.selectedOpId = null;
   document.querySelectorAll('.op-card').forEach(c => c.classList.remove('selected'));
 }
@@ -1088,6 +1090,8 @@ function setLanguage(lang) {
   const tabMapBtn = document.getElementById('tab-map-btn');
   const tabListBtn = document.getElementById('tab-list-btn');
   if (tabMapBtn) tabMapBtn.textContent = t('tabMap');
+  const drawerBackText = document.querySelector('.drawer-back-btn .back-text');
+  if (drawerBackText) drawerBackText.textContent = state.lang === 'ar' ? 'الخريطة' : 'Carte';
   if (tabListBtn) tabListBtn.innerHTML = `${t('tabList')} (<span id="mobile-count">${state.filteredOperations.length}</span>)`;
 
   // Update Search
@@ -1229,6 +1233,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Drawer Close
   document.getElementById('close-drawer-btn').addEventListener('click', closeDrawer);
+  const closeDrawerBackBtn = document.getElementById('close-drawer-back-btn');
+  if (closeDrawerBackBtn) closeDrawerBackBtn.addEventListener('click', closeDrawer);
 
   // Theme Toggle
   const themeToggle = document.getElementById('theme-toggle');
@@ -1273,13 +1279,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Stats Modal
   const statsModal = document.getElementById('stats-modal');
   document.getElementById('stats-btn').addEventListener('click', () => {
-    statsModal.classList.add('open');
+    statsModal.classList.add('open'); document.body.classList.add('modal-open');
   });
   document.getElementById('close-stats-btn').addEventListener('click', () => {
-    statsModal.classList.remove('open');
+    statsModal.classList.remove('open'); document.body.classList.remove('modal-open');
   });
   statsModal.addEventListener('click', (e) => {
-    if (e.target === statsModal) statsModal.classList.remove('open');
+    if (e.target === statsModal) statsModal.classList.remove('open'); document.body.classList.remove('modal-open');
   });
 
   // Methodology Modal
@@ -1287,24 +1293,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const methBtn = document.getElementById('methodology-btn');
   if (methBtn && methModal) {
     methBtn.addEventListener('click', () => {
-      methModal.classList.add('open');
+      methModal.classList.add('open'); document.body.classList.add('modal-open');
     });
     const closeMethBtn = document.getElementById('close-methodology-btn');
     if (closeMethBtn) {
       closeMethBtn.addEventListener('click', () => {
-        methModal.classList.remove('open');
+        methModal.classList.remove('open'); document.body.classList.remove('modal-open');
       });
     }
     methModal.addEventListener('click', (e) => {
-      if (e.target === methModal) methModal.classList.remove('open');
+      if (e.target === methModal) methModal.classList.remove('open'); document.body.classList.remove('modal-open');
     });
   }
 
   // Global Escape key handler
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      if (statsModal) statsModal.classList.remove('open');
-      if (methModal) methModal.classList.remove('open');
+      if (statsModal) statsModal.classList.remove('open'); document.body.classList.remove('modal-open');
+      if (methModal) methModal.classList.remove('open'); document.body.classList.remove('modal-open');
       closeDrawer();
     }
   });

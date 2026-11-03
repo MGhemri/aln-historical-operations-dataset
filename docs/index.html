@@ -2,7 +2,7 @@
 <html lang="fr" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>FLN/ALN Operations Dataset (1954–1962)</title>
   <meta name="description" content="Plateforme cartographique et moteur de recherche historique des 263 opérations militaires de l'Armée de Libération Nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).">
   
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="style.css?v=2.6">
+  <link rel="stylesheet" href="style.css?v=2.7">
 </head>
 <body>
 
@@ -45,12 +45,6 @@
           <p class="brand-subtitle">Cartographie interactive & moteur de recherche des opérations militaires</p>
         </div>
       </div>
-    </div>
-
-    <!-- Mobile Screen View Switcher -->
-    <div class="mobile-view-tabs" id="mobile-view-tabs">
-      <button id="tab-map-btn" class="tab-btn active">🗺️ Carte</button>
-      <button id="tab-list-btn" class="tab-btn">📋 Liste & Filtres (<span id="mobile-count">263</span>)</button>
     </div>
 
     <div class="header-right">
@@ -199,14 +193,24 @@
       </div>
     </main>
 
+    <!-- Mobile Screen Floating View Switcher (Thumb Ergonomics) -->
+    <nav class="mobile-view-tabs" id="mobile-view-tabs" aria-label="Navigation mobile">
+      <button id="tab-map-btn" class="tab-btn active">🗺️ Carte</button>
+      <button id="tab-list-btn" class="tab-btn">📋 Liste & Filtres (<span id="mobile-count">263</span>)</button>
+    </nav>
+
     <!-- Right Drawer: Detail Panel -->
     <div class="detail-drawer" id="detail-drawer">
       <div class="drawer-header">
         <div class="drawer-header-meta">
+          <button id="close-drawer-back-btn" class="drawer-back-btn" aria-label="Retour à la carte" title="Retour à la carte">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            <span class="back-text">Carte</span>
+          </button>
           <span class="op-id-badge" id="drawer-id">OP_XXXX</span>
           <span class="op-wilaya-badge" id="drawer-wilaya">Wilaya</span>
         </div>
-        <button id="close-drawer-btn" class="icon-btn close-drawer-btn" aria-label="Fermer la fiche">
+        <button id="close-drawer-btn" class="icon-btn close-drawer-btn" aria-label="Fermer la fiche" title="Fermer la fiche">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
       </div>
@@ -363,7 +367,7 @@
   <!-- Internationalization (AR/FR) -->
   <script src="i18n.js?v=2.6"></script>
   <!-- Application Logic -->
-  <script src="app.js?v=2.6"></script>
+  <script src="app.js?v=2.7"></script>
 
 </body>
 </html>
