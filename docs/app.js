@@ -560,13 +560,14 @@ function renderOperationsList() {
     `;
 
     card.addEventListener('click', () => {
-      if (window.innerWidth <= 900) {
+      const isMobile = window.innerWidth <= 900;
+      if (isMobile) {
         const sidebar = document.getElementById('sidebar');
         sidebar.classList.remove('mobile-open');
         document.getElementById('tab-map-btn').classList.add('active');
         document.getElementById('tab-list-btn').classList.remove('active');
       }
-      selectOperation(op.id, true);
+      selectOperation(op.id, true, true, isMobile);
     });
 
     fragment.appendChild(card);
@@ -578,8 +579,16 @@ function renderOperationsList() {
 // --------------------------------------------------------------------------
 // Select Operation & Show Details Drawer
 // --------------------------------------------------------------------------
-function selectOperation(opId, zoomToMap = true) {
+function selectOperation(opId, zoomToMap = true, pushHistory = true, fromList = false) {
   state.selectedOpId = opId;
+
+  if (pushHistory) {
+    if (history.state && history.state.view === 'detail') {
+      history.replaceState({ view: 'detail', opId: opId, fromList: history.state.fromList ?? fromList }, '', `#op-${opId}`);
+    } else {
+      history.pushState({ view: 'detail', opId: opId, fromList: fromList }, '', `#op-${opId}`);
+    }
+  }
 
   document.querySelectorAll('.op-card').forEach(c => {
     c.classList.toggle('selected', c.dataset.id === opId);
@@ -734,12 +743,32 @@ function selectOperation(opId, zoomToMap = true) {
 }
 window.selectOperation = selectOperation;
 
-function closeDrawer() {
+function closeDrawer(syncHistory = true) {
   const drawer = document.getElementById('detail-drawer');
   if (drawer) drawer.classList.remove('open');
   document.body.classList.remove('drawer-open');
   state.selectedOpId = null;
   document.querySelectorAll('.op-card').forEach(c => c.classList.remove('selected'));
+
+  if (syncHistory && history.state && history.state.view === 'detail') {
+    history.back();
+  }
+}
+
+function openModal(modalEl, modalKey) {
+  if (!modalEl) return;
+  modalEl.classList.add('open');
+  document.body.classList.add('modal-open');
+  history.pushState({ view: 'modal', modal: modalKey }, '', `#${modalKey}`);
+}
+
+function closeModal(modalEl, syncHistory = true) {
+  if (!modalEl) return;
+  modalEl.classList.remove('open');
+  document.body.classList.remove('modal-open');
+  if (syncHistory && history.state && history.state.view === 'modal') {
+    history.back();
+  }
 }
 
 // --------------------------------------------------------------------------
@@ -1189,6 +1218,10 @@ function setLanguage(lang) {
   if (listTitle) listTitle.textContent = state.lang === 'ar' ? 'العمليات المصفاة' : 'Résultats filtrés';
   const sortIndicator = document.getElementById('sort-indicator');
   if (sortIndicator) sortIndicator.textContent = state.lang === 'ar' ? 'ترتيب زمني' : 'Chronologique';
+  const scrollFiltersText = document.querySelector('.scroll-filters-text');
+  if (scrollFiltersText) scrollFiltersText.textContent = t('scrollFilters');
+  const scrollFiltersBtn = document.getElementById('scroll-to-filters-btn');
+  if (scrollFiltersBtn) scrollFiltersBtn.title = t('scrollFilters');
 
   // Update Map Controls
   const basemapSelect = document.getElementById('basemap-select');
@@ -1233,7 +1266,7 @@ function setLanguage(lang) {
   updateCharts();
 
   if (state.selectedOpId) {
-    selectOperation(state.selectedOpId, false);
+    selectOperation(state.selectedOpId, false, false);
   }
 }
 
@@ -1285,7 +1318,20 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => map.invalidateSize(), 310);
   });
 
-  // Mobile Tabs
+  // Initialize History state if empty
+  if (!history.state) {
+    history.replaceState({ view: 'map' }, '', window.location.pathname + window.location.search);
+  }
+
+  // Mobile Smooth Scroll to Filters Button
+  const scrollToFiltersBtn = document.getElementById('scroll-to-filters-btn');
+  if (scrollToFiltersBtn && sidebar) {
+    scrollToFiltersBtn.addEventListener('click', () => {
+      sidebar.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Mobile Tabs with History Integration
   const tabMapBtn = document.getElementById('tab-map-btn');
   const tabListBtn = document.getElementById('tab-list-btn');
 
@@ -1295,19 +1341,25 @@ document.addEventListener('DOMContentLoaded', () => {
       tabMapBtn.classList.add('active');
       tabListBtn.classList.remove('active');
       setTimeout(() => map.invalidateSize(), 200);
+      if (history.state && history.state.view === 'list') {
+        history.back();
+      }
     });
 
     tabListBtn.addEventListener('click', () => {
       sidebar.classList.add('mobile-open');
       tabListBtn.classList.add('active');
       tabMapBtn.classList.remove('active');
+      if (!history.state || history.state.view !== 'list') {
+        history.pushState({ view: 'list' }, '', '#list');
+      }
     });
   }
 
   // Drawer Close
-  document.getElementById('close-drawer-btn').addEventListener('click', closeDrawer);
+  document.getElementById('close-drawer-btn').addEventListener('click', () => closeDrawer(true));
   const closeDrawerBackBtn = document.getElementById('close-drawer-back-btn');
-  if (closeDrawerBackBtn) closeDrawerBackBtn.addEventListener('click', closeDrawer);
+  if (closeDrawerBackBtn) closeDrawerBackBtn.addEventListener('click', () => closeDrawer(true));
 
   // Theme Toggle
   const themeToggle = document.getElementById('theme-toggle');
@@ -1352,13 +1404,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Stats Modal
   const statsModal = document.getElementById('stats-modal');
   document.getElementById('stats-btn').addEventListener('click', () => {
-    statsModal.classList.add('open'); document.body.classList.add('modal-open');
+    openModal(statsModal, 'stats');
   });
   document.getElementById('close-stats-btn').addEventListener('click', () => {
-    statsModal.classList.remove('open'); document.body.classList.remove('modal-open');
+    closeModal(statsModal, true);
   });
   statsModal.addEventListener('click', (e) => {
-    if (e.target === statsModal) statsModal.classList.remove('open'); document.body.classList.remove('modal-open');
+    if (e.target === statsModal) closeModal(statsModal, true);
   });
 
   // Methodology Modal
@@ -1366,28 +1418,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const methBtn = document.getElementById('methodology-btn');
   if (methBtn && methModal) {
     methBtn.addEventListener('click', () => {
-      methModal.classList.add('open'); document.body.classList.add('modal-open');
+      openModal(methModal, 'methodology');
     });
     const closeMethBtn = document.getElementById('close-methodology-btn');
     if (closeMethBtn) {
       closeMethBtn.addEventListener('click', () => {
-        methModal.classList.remove('open'); document.body.classList.remove('modal-open');
+        closeModal(methModal, true);
       });
     }
     methModal.addEventListener('click', (e) => {
-      if (e.target === methModal) methModal.classList.remove('open'); document.body.classList.remove('modal-open');
+      if (e.target === methModal) closeModal(methModal, true);
     });
   }
-
-  // Global Escape key handler
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      if (statsModal) { statsModal.classList.remove('open'); document.body.classList.remove('modal-open'); }
-      if (methModal) { methModal.classList.remove('open'); document.body.classList.remove('modal-open'); }
-      if (contactModal) { contactModal.classList.remove('open'); document.body.classList.remove('modal-open'); }
-      closeDrawer();
-    }
-  });
 
   // Contact Modal & Form Handling
   const contactModal = document.getElementById('contact-modal');
@@ -1403,23 +1445,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (contactBtn && contactModal) {
     contactBtn.addEventListener('click', () => {
-      contactModal.classList.add('open');
-      document.body.classList.add('modal-open');
+      openModal(contactModal, 'contact');
       renderContactModal();
     });
     if (closeContactBtn) {
       closeContactBtn.addEventListener('click', () => {
-        contactModal.classList.remove('open');
-        document.body.classList.remove('modal-open');
+        closeModal(contactModal, true);
       });
     }
     contactModal.addEventListener('click', (e) => {
       if (e.target === contactModal) {
-        contactModal.classList.remove('open');
-        document.body.classList.remove('modal-open');
+        closeModal(contactModal, true);
       }
     });
   }
+
+  // Global Escape key handler
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (statsModal && statsModal.classList.contains('open')) closeModal(statsModal, true);
+      if (methModal && methModal.classList.contains('open')) closeModal(methModal, true);
+      if (contactModal && contactModal.classList.contains('open')) closeModal(contactModal, true);
+      closeDrawer(true);
+    }
+  });
+
+  // Mobile Back Button / Popstate Handler
+  window.addEventListener('popstate', (e) => {
+    // 1. If any modal is open, close it cleanly
+    const openModalEl = document.querySelector('.modal-overlay.open');
+    if (openModalEl) {
+      openModalEl.classList.remove('open');
+      document.body.classList.remove('modal-open');
+      return;
+    }
+
+    // 2. If detail drawer is open, close it cleanly
+    const drawer = document.getElementById('detail-drawer');
+    const wasDrawerOpen = drawer && drawer.classList.contains('open');
+    if (wasDrawerOpen) {
+      drawer.classList.remove('open');
+      document.body.classList.remove('drawer-open');
+      state.selectedOpId = null;
+      document.querySelectorAll('.op-card').forEach(c => c.classList.remove('selected'));
+    }
+
+    // 3. Coordinate mobile view state (Map vs List)
+    if (window.innerWidth <= 900 && sidebar) {
+      if (e.state && e.state.view === 'list') {
+        sidebar.classList.add('mobile-open');
+        tabListBtn?.classList.add('active');
+        tabMapBtn?.classList.remove('active');
+      } else if (!e.state || e.state.view === 'map') {
+        sidebar.classList.remove('mobile-open');
+        tabMapBtn?.classList.add('active');
+        tabListBtn?.classList.remove('active');
+        if (map) setTimeout(() => map.invalidateSize(), 200);
+      }
+    }
+  });
 
   if (contactMessage && charCurrent) {
     contactMessage.addEventListener('input', () => {

@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="style.css?v=3.1">
+  <link rel="stylesheet" href="style.css?v=3.2">
 
   <!-- Vercel Web Analytics -->
   <script>
@@ -157,7 +157,13 @@
       <!-- Operations List Cards -->
       <div class="operations-list-header">
         <span class="list-title">Résultats filtrés</span>
-        <span class="sort-indicator" id="sort-indicator">Chronologique</span>
+        <div class="list-header-actions">
+          <span class="sort-indicator" id="sort-indicator">Chronologique</span>
+          <button id="scroll-to-filters-btn" class="scroll-filters-btn" title="Remonter aux filtres">
+            <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+            <span class="scroll-filters-text">Filtres</span>
+          </button>
+        </div>
       </div>
       <div class="operations-list" id="operations-list">
         <!-- Rendered dynamically via JS -->
@@ -448,9 +454,9 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Internationalization (AR/FR) -->
-  <script src="i18n.js?v=3.1"></script>
+  <script src="i18n.js?v=3.2"></script>
   <!-- Application Logic -->
-  <script src="app.js?v=3.1"></script>
+  <script src="app.js?v=3.2"></script>
 
 </body>
 </html>

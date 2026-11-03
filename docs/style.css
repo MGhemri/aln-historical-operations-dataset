@@ -556,6 +556,37 @@ button, input, select {
   letter-spacing: 0.04em;
 }
 
+.list-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scroll-filters-btn {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--accent-blue);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.scroll-filters-btn:hover {
+  background: var(--border-color);
+  color: #ffffff;
+}
+
+.scroll-filters-btn .icon-inline {
+  width: 13px;
+  height: 13px;
+}
+
 .operations-list {
   flex: 1;
   overflow-y: auto;
@@ -1401,28 +1432,42 @@ button, input, select {
     transform: translate(-50%, 25px);
   }
 
-  /* Sidebar: Fullscreen Slide-in */
+  /* Sidebar: Fullscreen Slide-in with unified natural scroll */
   .sidebar {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    height: 100dvh;
     z-index: 850;
     transform: translateX(-100%);
     margin-left: 0 !important;
     background: var(--bg-secondary);
     border: none;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
   }
 
   .sidebar.mobile-open {
     transform: translateX(0);
   }
 
+  .search-box {
+    flex-shrink: 0;
+  }
+
+  .results-bar {
+    flex-shrink: 0;
+  }
+
   .filters-container {
-    max-height: 38vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    max-height: none;
+    overflow: visible;
+    flex-shrink: 0;
     padding: 0.75rem 1rem;
     gap: 0.75rem;
   }
@@ -1439,9 +1484,26 @@ button, input, select {
     font-size: 0.78rem;
   }
 
+  .operations-list-header {
+    position: sticky;
+    top: 0;
+    background: var(--bg-secondary);
+    z-index: 30;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+  }
+
+  .scroll-filters-btn {
+    display: inline-flex;
+  }
+
   .operations-list {
-    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
-    -webkit-overflow-scrolling: touch;
+    overflow: visible;
+    flex: none;
+    min-height: auto;
+    padding-bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px));
   }
 
   .op-card {
