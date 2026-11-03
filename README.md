@@ -457,7 +457,7 @@ L'interface web hébergée dans le dossier [docs/](./docs) propose une consultat
 
 Pour exécuter l'application web sur votre machine sans dépendance complexe :
 
-`ash
+`bash
 # Se placer dans le répertoire du projet
 cd aln-historical-operations-dataset
 
