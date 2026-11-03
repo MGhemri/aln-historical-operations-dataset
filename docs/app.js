@@ -985,6 +985,19 @@ function renderContactModal() {
   }
 }
 
+function renderApiModal() {
+  const modalTitle = document.getElementById('api-modal-title');
+  if (modalTitle) modalTitle.textContent = t('apiModalTitle');
+  const apiLead = document.getElementById('api-lead');
+  if (apiLead) apiLead.textContent = t('apiLead');
+  const endpointsTitle = document.getElementById('api-endpoints-title');
+  if (endpointsTitle) endpointsTitle.textContent = t('apiEndpointsTitle');
+  const codeTitle = document.getElementById('api-code-title');
+  if (codeTitle) codeTitle.textContent = t('apiCodeTitle');
+  const copyBtnText = document.getElementById('copy-btn-text');
+  if (copyBtnText) copyBtnText.textContent = state.lang === 'ar' ? 'نسخ' : 'Copier';
+}
+
 function renderMethodologyModal() {
   const isAr = state.lang === 'ar';
   const modalTitle = document.querySelector('#methodology-modal .modal-title');
@@ -1181,6 +1194,8 @@ function setLanguage(lang) {
   if (exportBtnSpan) exportBtnSpan.textContent = t('navExport');
   const contactBtnSpan = document.querySelector('#contact-btn span');
   if (contactBtnSpan) contactBtnSpan.textContent = t('navContact');
+  const apiBtnSpan = document.querySelector('#api-btn span');
+  if (apiBtnSpan) apiBtnSpan.textContent = t('navApi');
 
   // Update Mobile Tabs
   const tabMapBtn = document.getElementById('tab-map-btn');
@@ -1253,10 +1268,11 @@ function setLanguage(lang) {
     `).join('');
   }
 
-  // Update Methodology, Stats & Contact Modal Texts
+  // Update Methodology, Stats, Contact & API Modal Texts
   renderMethodologyModal();
   renderStatsModalTexts();
   renderContactModal();
+  renderApiModal();
 
   // Re-render components
   setupWilayaChips();
@@ -1287,9 +1303,9 @@ function escapeHtml(text) {
 // Event Listeners Initialization
 // --------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
-  // Remove GitHub button on Vercel deployment while preserving on GitHub Pages
+  // Remove GitHub button & callouts on Vercel deployment while preserving on GitHub Pages
   if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('vercel')) {
-    document.querySelectorAll('.github-btn, #github-link-btn, .methodology-footer-callout').forEach(el => el.remove());
+    document.querySelectorAll('.github-btn, #github-link-btn, .methodology-footer-callout, .api-footer-callout').forEach(el => el.remove());
   }
 
   initMap();
@@ -1460,12 +1476,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // API Documentation Modal
+  const apiModal = document.getElementById('api-modal');
+  const apiBtn = document.getElementById('api-btn');
+  const closeApiBtn = document.getElementById('close-api-btn');
+  const copyBaseUrlBtn = document.getElementById('copy-base-url-btn');
+  const copyBtnText = document.getElementById('copy-btn-text');
+
+  if (apiBtn && apiModal) {
+    apiBtn.addEventListener('click', () => {
+      openModal(apiModal, 'api');
+      renderApiModal();
+    });
+    if (closeApiBtn) {
+      closeApiBtn.addEventListener('click', () => {
+        closeModal(apiModal, true);
+      });
+    }
+    apiModal.addEventListener('click', (e) => {
+      if (e.target === apiModal) {
+        closeModal(apiModal, true);
+      }
+    });
+  }
+
+  if (copyBaseUrlBtn && copyBtnText) {
+    copyBaseUrlBtn.addEventListener('click', () => {
+      const baseUrl = document.getElementById('api-base-url')?.textContent || 'https://alnop.vercel.app/api/v1';
+      navigator.clipboard.writeText(baseUrl).then(() => {
+        copyBtnText.textContent = t('copySuccess') || 'Copié !';
+        setTimeout(() => {
+          copyBtnText.textContent = state.lang === 'ar' ? 'نسخ' : 'Copier';
+        }, 2000);
+      }).catch(err => {
+        console.error('Copy failed:', err);
+      });
+    });
+  }
+
+  // API Code Tabs switcher
+  const apiTabButtons = document.querySelectorAll('.api-tab-btn');
+  apiTabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetTab = btn.dataset.tab;
+      apiTabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('.tab-pane').forEach(pane => {
+        pane.classList.toggle('active', pane.id === `pane-${targetTab}`);
+      });
+    });
+  });
+
   // Global Escape key handler
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (statsModal && statsModal.classList.contains('open')) closeModal(statsModal, true);
       if (methModal && methModal.classList.contains('open')) closeModal(methModal, true);
       if (contactModal && contactModal.classList.contains('open')) closeModal(contactModal, true);
+      if (apiModal && apiModal.classList.contains('open')) closeModal(apiModal, true);
       closeDrawer(true);
     }
   });

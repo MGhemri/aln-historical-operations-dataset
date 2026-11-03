@@ -2,12 +2,41 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "outputDirectory": "docs",
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/v1", "destination": "/api/v1/index" },
+    { "source": "/api/v1/", "destination": "/api/v1/index" },
+    { "source": "/api/v1/operations/:id", "destination": "/api/v1/operations/[id]?id=:id" }
+  ],
   "functions": {
     "api/contact.js": {
       "maxDuration": 15
+    },
+    "api/v1/**/*.js": {
+      "maxDuration": 10
     }
   },
   "headers": [
+    {
+      "source": "/api/v1/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Accept"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
     {
       "source": "/api/(.*)",
       "headers": [
@@ -17,11 +46,11 @@
         },
         {
           "key": "Access-Control-Allow-Methods",
-          "value": "POST, OPTIONS"
+          "value": "GET, POST, OPTIONS"
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type"
+          "value": "Content-Type, Accept"
         }
       ]
     },

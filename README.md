@@ -2,6 +2,7 @@
 
 [![GitHub Pages: Live App](https://img.shields.io/badge/D%C3%A9mo_En_Ligne-GitHub_Pages-2ea44f.svg?logo=github&logoColor=white)](https://mghemri.github.io/aln-historical-operations-dataset/)
 [![Vercel: Live App](https://img.shields.io/badge/Vercel-alnop.vercel.app-black.svg?logo=vercel&logoColor=white)](https://alnop.vercel.app/)
+[![API: REST v1](https://img.shields.io/badge/API_REST-v1.0.0-0ea5e9.svg?logo=fastapi&logoColor=white)](./API.md)
 [![Release: v0.1.0-dev](https://img.shields.io/badge/Release-v0.1.0--dev-orange.svg?logo=github&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/releases/tag/v0.1.0-dev)
 [![Méthodologie: Académique](https://img.shields.io/badge/M%C3%A9thodologie-Acad%C3%A9mique-8e44ad.svg)](./METHODOLOGIE.md)
 [![Wiki: Documentation](https://img.shields.io/badge/Wiki-Documentation-0284c7.svg?logo=bookstack&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/wiki)
@@ -22,6 +23,8 @@ Ce dépôt héberge un corpus de données structuré en accès libre documentant
 >
 > 🚀 **Application Vercel en direct :** L'application est déployée en production sur Vercel avec le même UI/UX, performances Edge et API ouverte :  
 > 👉 **[Ouvrir l'application sur Vercel (https://alnop.vercel.app)](https://alnop.vercel.app/)**
+>
+> ⚡ **API REST v1 publique disponible :** Consultez la [**Documentation complète de l'API (API.md)**](./API.md) pour interroger le jeu de données via HTTP (cURL, Python, Pandas, JS, R) ou importer directement le flux GeoJSON dans QGIS.
 >
 
 > 🇩🇿 **Interface Intégralement Bilingue (Français / العربية) :**
