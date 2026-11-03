@@ -1382,11 +1382,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Global Escape key handler
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      if (statsModal) statsModal.classList.remove('open'); document.body.classList.remove('modal-open');
-      if (methModal) methModal.classList.remove('open'); document.body.classList.remove('modal-open');
-      if (contactModal) contactModal.classList.remove('open'); document.body.classList.remove('modal-open');
+      if (statsModal) { statsModal.classList.remove('open'); document.body.classList.remove('modal-open'); }
+      if (methModal) { methModal.classList.remove('open'); document.body.classList.remove('modal-open'); }
+      if (contactModal) { contactModal.classList.remove('open'); document.body.classList.remove('modal-open'); }
       closeDrawer();
     }
+  });
+
   // Contact Modal & Form Handling
   const contactModal = document.getElementById('contact-modal');
   const contactBtn = document.getElementById('contact-btn');
@@ -1505,8 +1507,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  });
 
   // Export Dropdown Menu
   const exportBtn = document.getElementById('export-dropdown-btn');
