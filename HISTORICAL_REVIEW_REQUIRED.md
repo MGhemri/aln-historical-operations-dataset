@@ -82,3 +82,36 @@ Toute future révision ou enrichissement du corpus devra impérativement suivre 
 2. **Attribution de source primaire ou académique cotée :** Titre, auteur, page, cote d'archive ou lien pérenne (DOI / ASJP).
 3. **Double revue :** Accord formel d'au moins deux historiens ou du comité scientifique ALNOP.
 4. **Journalisation :** Inscription de la modification dans le changelog officiel avec date et identité du relecteur.
+
+---
+
+## 6. Résolution Historiographique : Délimitation Chronologique Wilaya V vs ZAO (ALNOP-021)
+
+### Contexte & Problématique Historiographique
+Une vérification critique de l'attribution territoriale des opérations de la métropole d'Oran a révélé une rétro-projection anachronique : plusieurs fiches couvrant les années 1956 à 1960 portaient la mention `Zone Autonome d'Oran (ZAO)`.
+
+Or, selon l'état de la recherche historique (notamment les travaux de référence du chercheur Saddek Benkada, CRASC / revue *Insaniyat*) :
+1. **Période 1954–1961 :** Le Congrès de la Soummam (août 1956) n'a érigé qu'une seule métropole en zone autonome : la Zone Autonome d'Alger (ZAA). La métropole oranaise constituait quant à elle le secteur urbain de la **Wilaya V** (Zone 5 / Zone urbaine d'Oran). Les sabotages ferroviaires et électriques, les actions de fidaïyine et l'encadrement des manifestations de décembre 1960 relevaient organiquement des réseaux urbains de la Wilaya V.
+2. **Période 1962 :** La **Zone Autonome d'Oran (ZAO)** a été officiellement instituée en **avril 1962** par l'État-Major Général (EMG) de l'ALN (Oujda) et confiée au Capitaine Djelloul Nemiche (dit « Si Bakhti ») pour quadriller la ville en 5 secteurs défensifs face au terrorisme de l'OAS et protéger la population civile jusqu'au référendum d'autodétermination.
+
+### Décision & Arbitrage Scientifique Appliqué
+Les 8 fiches pré-1962 ont été réaffectées à la **Wilaya V (Organisation urbaine d'Oran)**, garantissant la rigueur chronologique et institutionnelle du corpus :
+
+| Identifiant | Date début | Intitulé de l'opération | Ancienne valeur (anachronique) | Nouvelle affiliation validée |
+| :--- | :---: | :--- | :--- | :--- |
+| **`OP_1956_049`** | 1956-06-18 | Sabotages ferroviaires gare d'Oran et La Sénia | Zone Autonome d'Oran (ZAO) | **Wilaya V (Organisation urbaine d'Oran - La Sénia / Gare d'Oran)** |
+| **`OP_1956_050`** | 1956-09-14 | Vague d'attentats fidayin de Médina Jdida | Zone Autonome d'Oran (ZAO) | **Wilaya V (Organisation urbaine d'Oran - Fidayin de Médina Jdida)** |
+| **`OP_1956_051`** | 1956-11-20 | Sabotage des réseaux haute tension Maraval - Petit Lac | Zone Autonome d'Oran (ZAO) | **Wilaya V (Organisation urbaine d'Oran - Maraval et Petit Lac)** |
+| **`OP_1957_052`** | 1957-03-24 | Coup de main dépôt militaire de Choupot | Zone Autonome d'Oran (ZAO) | **Wilaya V (Organisation urbaine d'Oran - Choupot)** |
+| **`OP_1957_053`** | 1957-07-12 | Accrochage Djebel Murdjadjo et Les Planteurs | Zone Autonome d'Oran (ZAO) | **Wilaya V (Zone urbaine d'Oran - Murdjadjo et Planteurs)** |
+| **`OP_1958_054`** | 1958-05-08 | Sabotage logistique maritime quai de la Marine (Port d'Oran) | Zone Autonome d'Oran (ZAO) | **Wilaya V (Organisation urbaine d'Oran - Port d'Oran)** |
+| **`OP_1960_018`** | 1960-12-10 | Soulèvement populaire armé de Médina Jdida (10 décembre 1960) | Zone Autonome d'Oran (ZAO) | **Wilaya V (Zone urbaine d'Oran - Médina Jdida)** |
+| **`OP_1960_019`** | 1960-12-11 | Bataille des Planteurs et de Ras El Aïn (décembre 1960) | Zone Autonome d'Oran (ZAO) | **Wilaya V (Zone urbaine d'Oran - Les Planteurs et Ras El Aïn)** |
+
+Les **13 opérations de l'année 1962** (transition immédiate face à l'OAS puis structuration formelle sous Si Bakhti d'avril à juillet 1962) sont maintenues sous l'égide de la **Zone Autonome d'Oran (ZAO)**.
+
+### Références Documentaires & Bibliographiques
+- **Saddek Benkada**, *« Quelques jalons préliminaires à propos de la Zone Autonome d'Oran (avril-septembre 1962) »*, Revue *Insaniyat* / CRASC, n° 100, 2023, pp. 93–122.
+- **Mohamed Téguia**, *L'Algérie en guerre*, Office des Publications Universitaires (OPU), Alger.
+- **Archives régionales d'Oran & APS**, dossiers thématiques sur les réseaux fidayin de Médina Jdida et les manifestations de Décembre 1960.
+

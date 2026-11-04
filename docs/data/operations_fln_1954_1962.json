@@ -1963,7 +1963,7 @@
       "nom_operation": "Sabotages ferroviaires et attaques des dépôts logistiques de la gare d'Oran et de La Sénia",
       "date_debut": "1956-06-18",
       "date_fin": "1956-06-19",
-      "wilaya_concernee": "Zone Autonome d'Oran (ZAO)",
+      "wilaya_concernee": "Wilaya V (Organisation urbaine d'Oran - La Sénia / Gare d'Oran)",
       "localisation": {
         "region_ou_ville": "Gare d'Oran-Ville (Plateau Karguentah) et La Sénia",
         "coordonnees_approximatives": {
@@ -2318,7 +2318,7 @@
       "nom_operation": "Vague d'attentats ciblés des fidayin de Médina Jdida dans les faubourgs mixtes d'Oran (Eckmühl, Gambetta et Choupot)",
       "date_debut": "1956-09-14",
       "date_fin": "1956-09-15",
-      "wilaya_concernee": "Zone Autonome d'Oran (ZAO)",
+      "wilaya_concernee": "Wilaya V (Organisation urbaine d'Oran - Fidayin de Médina Jdida)",
       "localisation": {
         "region_ou_ville": "Eckmühl, Gambetta et Choupot (Oran)",
         "coordonnees_approximatives": {
@@ -2976,7 +2976,7 @@
       "nom_operation": "Sabotage des réseaux électriques haute tension de Maraval et Petit Lac alimentant Mers-el-Kébir",
       "date_debut": "1956-11-20",
       "date_fin": "1956-11-20",
-      "wilaya_concernee": "Zone Autonome d'Oran (ZAO)",
+      "wilaya_concernee": "Wilaya V (Organisation urbaine d'Oran - Maraval et Petit Lac)",
       "localisation": {
         "region_ou_ville": "Maraval et Petit Lac (Oran sud)",
         "coordonnees_approximatives": {
@@ -3730,7 +3730,7 @@
       "nom_operation": "Coup de main contre le dépôt de carburant et de matériel militaire du quartier Choupot",
       "date_debut": "1957-03-24",
       "date_fin": "1957-03-24",
-      "wilaya_concernee": "Zone Autonome d'Oran (ZAO)",
+      "wilaya_concernee": "Wilaya V (Organisation urbaine d'Oran - Choupot)",
       "localisation": {
         "region_ou_ville": "Quartier Choupot (Oran)",
         "coordonnees_approximatives": {
@@ -4436,7 +4436,7 @@
       "nom_operation": "Accrochage des contreforts du Djebel Murdjadjo et des Planteurs",
       "date_debut": "1957-07-12",
       "date_fin": "1957-07-12",
-      "wilaya_concernee": "Zone Autonome d'Oran (ZAO)",
+      "wilaya_concernee": "Wilaya V (Zone urbaine d'Oran - Murdjadjo et Planteurs)",
       "localisation": {
         "region_ou_ville": "Contreforts du Djebel Murdjadjo / Ravin de Ras El Aïn et Les Planteurs",
         "coordonnees_approximatives": {
@@ -6152,7 +6152,7 @@
       "nom_operation": "Opération de sabotage logistique maritime au quai de la Marine du Port d'Oran",
       "date_debut": "1958-05-08",
       "date_fin": "1958-05-08",
-      "wilaya_concernee": "Zone Autonome d'Oran (ZAO)",
+      "wilaya_concernee": "Wilaya V (Organisation urbaine d'Oran - Port d'Oran)",
       "localisation": {
         "region_ou_ville": "Vieux Port d'Oran (Quai de la Marine / Quai Millerand)",
         "coordonnees_approximatives": {
@@ -8961,7 +8961,7 @@
       "nom_operation": "Soulèvement populaire armé et affrontements de Médina Jdida (10 décembre 1960)",
       "date_debut": "1960-12-10",
       "date_fin": "1960-12-10",
-      "wilaya_concernee": "Zone Autonome d'Oran (ZAO)",
+      "wilaya_concernee": "Wilaya V (Zone urbaine d'Oran - Médina Jdida)",
       "localisation": {
         "region_ou_ville": "Place Roux (Place Tahtaha), Médina Jdida (Oran)",
         "coordonnees_approximatives": {
@@ -9000,7 +9000,7 @@
       "nom_operation": "Bataille des Planteurs et de Ras El Aïn lors des manifestations de Décembre 1960",
       "date_debut": "1960-12-11",
       "date_fin": "1960-12-12",
-      "wilaya_concernee": "Zone Autonome d'Oran (ZAO)",
+      "wilaya_concernee": "Wilaya V (Zone urbaine d'Oran - Les Planteurs et Ras El Aïn)",
       "localisation": {
         "region_ou_ville": "Faubourgs des Planteurs, Sidi El Houari et Ras El Aïn (Oran)",
         "coordonnees_approximatives": {
