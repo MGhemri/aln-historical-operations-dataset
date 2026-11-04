@@ -50,6 +50,11 @@ for(const width of [360,390,1280])test(`Vercel ${width}px: atlas navigation and 
   for(const slug of ['methodology','api','contributing','editorial','conduct']){
     const response=await page.goto(`/documentation/${slug}.html`);expect(response.ok()).toBeTruthy();
     await noRepositoryLinks(page);
+    await expect(page.locator('main')).not.toContainText(/Ghemri/i);
+    if(slug==='methodology'){
+      await expect(page.getByRole('heading',{name:'Citation académique recommandée'})).toBeVisible();
+      await expect(page.locator('main')).toContainText('contact@connect-gm.com');
+    }
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
   }
 });

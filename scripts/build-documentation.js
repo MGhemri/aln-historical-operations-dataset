@@ -14,7 +14,21 @@ md.renderer.rules.heading_open=(tokens,index)=>{
   const slug=text.toLowerCase().replace(/[^\p{L}\p{N}_ -]/gu,'').replace(/ /g,'-');
   return `<${tokens[index].tag} id="${md.utils.escapeHtml(slug)}">`;
 };
-for(const [slug,[file,title]] of Object.entries(pages))generated[slug+'.html']=shell(title,md.render(fs.readFileSync(path.join(root,file),'utf8').replace(/^\uFEFF/,'')));
+function publicDocumentation(content){
+  // Public site presentation: retain contact and scientific citation, without a personal name.
+  // Original repository documentation and API v1 responses remain unchanged.
+  return content.replace(/^\uFEFF/,'')
+    .replace("l'auteur (**Ghemri M.**) est joignable à l'adresse suivante",'contactez-nous à l’adresse suivante')
+    .replace(/^[ \t]*author[ \t]*=[ \t]*\{Ghemri, M\.\},?\r?\n/gm,'')
+    .replace(/^[ \t]*"attribution": "Ghemri M\. \(ALN Historical Operations Dataset\)",\r?\n/gm,'')
+    .replace(/Auteur : Ghemri M\. — /g,'')
+    .replace(/Ghemri M\., /g,'');
+}
+for(const [slug,[file,title]] of Object.entries(pages)){
+  const content=publicDocumentation(fs.readFileSync(path.join(root,file),'utf8'));
+  if(/Ghemri/i.test(content))throw new Error(`Personal name remains in public documentation: ${file}`);
+  generated[slug+'.html']=shell(title,md.render(content));
+}
 const directory=path.join(root,'docs/documentation');
 const check=process.argv.includes('--check');
 if(!check)fs.mkdirSync(directory,{recursive:true});
