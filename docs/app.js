@@ -727,6 +727,7 @@ function selectOperation(opId, zoomToMap = true, pushHistory = true, fromList = 
         ${lblSecSources}
       </div>
       <div class="sources-list">${sourcesList}</div>
+      <p><a href="contribute.html?id=${encodeURIComponent(op.id)}">${isAr ? "اقتراح تصحيح" : "Proposer une correction"}</a></p>
     </div>
   `;
 

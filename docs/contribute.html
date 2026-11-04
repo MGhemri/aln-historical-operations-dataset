@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contribuer · ALNOP</title><link rel="stylesheet" href="contribute.css"></head>
+<body><main>
+<nav><a href="./" data-t="back">Retour à l’atlas</a><button id="language" type="button">العربية</button></nav>
+<p class="eyebrow">ALNOP · 1954–1962</p><h1 data-t="heading">Enrichir le corpus historique</h1>
+<p data-t="intro">Proposez une fiche, une correction ou une source. Chaque proposition nécessite une revue humaine avant publication.</p>
+<aside data-t="scope">Corpus documentaire en cours d’enrichissement ; la carte n’est pas exhaustive.</aside>
+<p data-t="privacy">GitHub rend publics votre proposition et votre pseudonyme ; l’historique peut persister. N’indiquez aucune donnée personnelle inutile et ne joignez pas de document protégé sans autorisation.</p>
+<form id="proposal">
+<label for="kind" data-t="kind">Type de contribution</label><select id="kind" required>
+<option value="new-operation" data-t="newOperation">Proposer une opération</option>
+<option value="correction" data-t="correction">Corriger une fiche</option>
+<option value="new-source" data-t="newSource">Ajouter une source</option>
+<option value="duplicate" data-t="duplicate">Signaler un doublon possible</option>
+<option value="historical-dispute" data-t="dispute">Signaler une contradiction</option>
+<option value="place-name" data-t="place">Proposer un toponyme</option></select>
+<label for="operation" data-t="operation">Identifiant(s) de fiche, si connus</label><input id="operation" maxlength="200" dir="auto" placeholder="OP_1954_001">
+<label for="title" data-t="title">Titre de la proposition</label><input id="title" required maxlength="160" dir="auto">
+<label for="description" data-t="description">Description, incertitudes et valeurs divergentes</label><textarea id="description" required maxlength="6000" rows="6" dir="auto"></textarea>
+<label for="citation" data-t="citation">Référence : titre, auteur, date, page ou cote, URL éventuelle</label><textarea id="citation" maxlength="3000" rows="4" dir="auto"></textarea>
+<label for="missing" data-t="missing">Si aucune source : justifiez son absence (publication bloquée en attente de sources)</label><textarea id="missing" maxlength="1500" rows="2" dir="auto"></textarea>
+<label class="consent"><input id="consent" type="checkbox" required><span data-t="consent">Je distingue les faits rapportés, les incertitudes et les interprétations ; je respecte les droits des sources et accepte la revue humaine.</span></label>
+<p><a href="https://github.com/MGhemri/aln-historical-operations-dataset/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-t="guide">Lire les règles de contribution</a></p>
+<p id="error" role="alert" tabindex="-1"></p><button type="submit" data-t="preview">Vérifier ma proposition</button>
+</form>
+<section id="review" hidden aria-labelledby="review-heading"><h2 id="review-heading" data-t="review">Récapitulatif à vérifier</h2>
+<pre id="summary" dir="auto"></pre><p data-t="notSubmitted">Rien n’a été envoyé. Sur GitHub, vérifiez le texte puis créez vous-même l’Issue. Sans compte, téléchargez le fichier pour le transmettre au mainteneur.</p>
+<p id="long-note" hidden data-t="long">Cette proposition est trop longue pour un lien GitHub : téléchargez-la puis copiez son contenu dans une nouvelle Issue.</p>
+<div class="actions"><a id="github" target="_blank" rel="noopener" data-t="github">Préparer l’Issue sur GitHub</a><button id="download" type="button" data-t="download">Télécharger la proposition</button></div>
+<p><a href="https://github.com/MGhemri/aln-historical-operations-dataset/issues" target="_blank" rel="noopener" data-t="tracking">Suivre les propositions sur GitHub</a></p></section>
+</main><script src="i18n.js"></script><script src="contribute.js"></script></body></html>

@@ -6,3 +6,6 @@ Thumbs.db
 node_modules/
 .env
 .env.local
+
+test-results/
+playwright-report/

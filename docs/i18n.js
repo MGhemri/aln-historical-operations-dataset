@@ -323,6 +323,33 @@ const I18N_ACTIONS = {
   "Franchissement de la ligne Morice": "اقتحام وكسر خط موريس المكهرب"
 };
 
+const I18N_CONTRIBUTE = {
+  fr: {
+    proposedStatus:'Statut : proposition',reviewRequired:'Publication bloquée en attente de revue humaine.',sourcesRequired:'Publication bloquée en attente de revue humaine et de sources.',
+    back:'Retour à l’atlas',heading:'Enrichir le corpus historique',
+    intro:'Proposez une fiche, une correction ou une source. Chaque proposition nécessite une revue humaine avant publication.',
+    scope:'Corpus documentaire en cours d’enrichissement ; la carte n’est pas exhaustive.',
+    privacy:'GitHub rend publics votre proposition et votre pseudonyme ; l’historique peut persister. N’indiquez aucune donnée personnelle inutile et ne joignez pas de document protégé sans autorisation.',
+    kind:'Type de contribution',newOperation:'Proposer une opération',correction:'Corriger une fiche',newSource:'Ajouter une source',duplicate:'Signaler un doublon possible',dispute:'Signaler une contradiction',place:'Proposer un toponyme',
+    operation:'Identifiant(s) de fiche, si connus',title:'Titre de la proposition',description:'Description, incertitudes et valeurs divergentes',citation:'Référence : titre, auteur, date, page ou cote, URL éventuelle',missing:'Si aucune source : justifiez son absence (publication bloquée en attente de sources)',
+    consent:'Je distingue les faits rapportés, les incertitudes et les interprétations ; je respecte les droits des sources et accepte la revue humaine.',guide:'Lire les règles de contribution',preview:'Vérifier ma proposition',review:'Récapitulatif à vérifier',
+    notSubmitted:'Rien n’a été envoyé. Sur GitHub, vérifiez le texte puis créez vous-même l’Issue. Sans compte, téléchargez le fichier pour le transmettre au mainteneur.',
+    long:'Cette proposition est trop longue pour un lien GitHub : téléchargez-la puis copiez son contenu dans une nouvelle Issue.',github:'Préparer l’Issue sur GitHub',download:'Télécharger la proposition',tracking:'Suivre les propositions sur GitHub',sourceRequired:'Ajoutez une référence ou justifiez son absence.'
+  },
+  ar: {
+    proposedStatus:'الحالة: مقترح',reviewRequired:'النشر متوقف إلى حين المراجعة البشرية.',sourcesRequired:'النشر متوقف إلى حين المراجعة البشرية وتوفير المصادر.',
+    back:'العودة إلى الأطلس',heading:'المساهمة في إثراء المتن التاريخي',
+    intro:'اقترح بطاقة أو تصحيحاً أو مصدراً. تخضع كل مساهمة لمراجعة بشرية قبل النشر.',
+    scope:'المتن الوثائقي قيد الإثراء؛ الخريطة ليست حصراً شاملاً للأحداث.',
+    privacy:'ينشر GitHub مقترحك واسمك المستعار علناً وقد يبقى السجل متاحاً. لا تدرج بيانات شخصية غير ضرورية ولا ترفق وثائق محمية دون إذن.',
+    kind:'نوع المساهمة',newOperation:'اقتراح عملية',correction:'تصحيح بطاقة',newSource:'إضافة مصدر',duplicate:'الإبلاغ عن تكرار محتمل',dispute:'الإبلاغ عن تعارض',place:'اقتراح اسم مكان',
+    operation:'معرّفات البطاقات إن عُرفت',title:'عنوان المقترح',description:'الوصف ومواضع عدم اليقين والقيم المتعارضة',citation:'المرجع: العنوان والمؤلف والتاريخ والصفحة أو رقم الأرشيف والرابط إن وُجد',missing:'عند غياب المصدر: وضّح السبب (يتوقف النشر إلى حين توفير مصادر)',
+    consent:'أميّز بين الوقائع المنقولة وعدم اليقين والتفسير، وأحترم حقوق المصادر وأقبل المراجعة البشرية.',guide:'قراءة قواعد المساهمة',preview:'مراجعة المقترح',review:'ملخص للمراجعة',
+    notSubmitted:'لم يُرسل شيء. راجع النص على GitHub ثم أنشئ Issue بنفسك. دون حساب، نزّل الملف لإرساله إلى المشرف.',
+    long:'المقترح أطول من الحد المناسب لرابط GitHub. نزّله ثم انسخ محتواه في Issue جديدة.',github:'تحضير Issue على GitHub',download:'تنزيل المقترح',tracking:'متابعة المقترحات على GitHub',sourceRequired:'أضف مرجعاً أو وضّح سبب غيابه.'
+  }
+};
+
 const I18N_SOURCE_TYPES = {
   "Ouvrage académique": "دراسة أكاديمية",
   "Revue scientifique": "مجلة علمية محكمة",
