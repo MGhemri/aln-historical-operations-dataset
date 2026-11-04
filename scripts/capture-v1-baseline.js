@@ -34,7 +34,7 @@ function capture(handler, query, method = 'GET') {
 function snapshot() {
   const dataset = JSON.parse(fs.readFileSync(path.join(root,files[0]),'utf8'));
   // Git may convert line endings on Windows; compare content with LF everywhere.
-  return {files:Object.fromEntries(files.map(file=>[file,digest(fs.readFileSync(path.join(root,file),'utf8').replace(/\r\n/g,'\n')))])),
+  return {files:Object.fromEntries(files.map(file=>[file,digest(fs.readFileSync(path.join(root,file),'utf8').replace(/\r\n/g,'\n'))])),
     ids:dataset.operations.map(op=>op.id),
     contracts:cases.map(([handler,query,method='GET'])=>({handler,query,method,...capture(handler,query,method)}))};
 }
