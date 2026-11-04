@@ -31,3 +31,5 @@ L'installation signale une vulnérabilité élevée dans la dépendance préexis
 ## Fichiers concernés
 
 `src/canonical.js`, `schemas/*.json`, `scripts/migrate-legacy.js`, `scripts/build-canonical.js`, `tests/canonical.test.js`, `data/**`, `generated/**`, `migrations/migration-report.json`, `package.json`, `package-lock.json`, `.github/workflows/validate-dataset.yml`, `docs/ADR/001-canonical-preview.md`, ce bilan. Les fichiers de phase 0 sont conservés dans un changement distinct.
+
+Contrôle de portabilité : fins de ligne LF imposées aux nouveaux artefacts texte ; CSV conservé en CRLF. Le gel v1 compare les contenus après normalisation CRLF/LF. La capture brute Windows originale reste archivée dans migrations/phase-0-windows-raw-checksums.json. Aucun changement de donnée historique.

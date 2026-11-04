@@ -1,0 +1,4 @@
+data/** text eol=lf
+generated/** text eol=lf
+generated/*.csv -text
+migrations/** text eol=lf
