@@ -2,4 +2,7 @@ data/** text eol=lf
 generated/** text eol=lf
 generated/*.csv -text
 migrations/** text eol=lf
+migrations/legacy-initial.json -text
 docs/documentation/** text eol=lf
+docs/data/canonical/** text eol=lf
+docs/data/canonical/*.csv -text

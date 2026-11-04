@@ -14,7 +14,9 @@
     "check:canonical": "node scripts/build-canonical.js --check",
     "test:browser": "playwright test",
     "build:documentation": "node scripts/build-documentation.js",
-    "check:documentation": "node scripts/build-documentation.js --check"
+    "check:documentation": "node scripts/build-documentation.js --check",
+    "validate:canonical": "node scripts/validate-canonical.js",
+    "build": "npm run build:canonical && npm run build:documentation"
   },
   "dependencies": {
     "nodemailer": "^10.3.1"

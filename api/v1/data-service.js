@@ -59,6 +59,14 @@ function getDataset() {
  * Determine primary Wilaya category and code for an operation
  */
 function getOperationCategory(op) {
+  if(op.canonical_metadata){
+    const territories=op.canonical_metadata.territories||[];
+    const primary=territories.find(t=>t.role==='primary');
+    if(primary){const def=WILAYAS.find(w=>w.id===primary.territory_id);return {code:primary.territory_id,
+      label_fr:primary.names.fr,label_ar:primary.names.ar||primary.names.fr,color:def?.color||'#64748b'};}
+    return {code:'OTHER',label_fr:territories.length>1?'Multiterritoriale':'Attribution non déterminée',
+      label_ar:territories.length>1?'متعددة الأقاليم':'إسناد غير محدد',color:'#64748b'};
+  }
   const w = op.wilaya_concernee || '';
   const r = (op.localisation && op.localisation.region_ou_ville) || '';
 
@@ -116,6 +124,9 @@ function getOperationCategory(op) {
  */
 function getTerritorialAffiliations(op) {
   const primaryCat = getOperationCategory(op);
+  if(op.canonical_metadata)return {primary:primaryCat,affiliations:(op.canonical_metadata.territories||[]).map(t=>({
+    code:t.territory_id,label_fr:t.names.fr,label_ar:t.names.ar||t.names.fr,
+    color:WILAYAS.find(w=>w.id===t.territory_id)?.color||'#64748b',role:t.role,source_basis:'canonical_review',source_ids:t.source_ids}))};
   const w = op.wilaya_concernee || '';
 
   const affiliations = [
@@ -341,12 +352,16 @@ function computeStats(operations) {
     const y = (op.date_debut || '').substring(0, 4);
     if (byYear[y] !== undefined) {
       byYear[y]++;
+    } else if(op.canonical_metadata) {
+      byYear.unknown=(byYear.unknown||0)+1;
     }
 
     // Wilaya (counts based on primary category)
     const cat = getOperationCategory(op);
     if (byWilaya[cat.code]) {
       byWilaya[cat.code].count++;
+    }else if(op.canonical_metadata){
+      byWilaya[cat.code]={code:cat.code,label_fr:cat.label_fr,label_ar:cat.label_ar,color:cat.color,count:1};
     }
 
     // Action type
@@ -361,8 +376,8 @@ function computeStats(operations) {
   return {
     total_operations: total,
     dataset_version: '1.0.0',
-    dataset_scope: 'Corpus de recherche historique documenté (263 opérations)',
-    coverage_note: "Statistiques établies sur le corpus de recherche documenté (263 opérations historiques). Ce jeu de données ne constitue pas un recensement exhaustif de l'ensemble des actions de la Guerre de Libération nationale.",
+    dataset_scope: `Corpus de recherche historique documenté (${total} opérations)`,
+    coverage_note: `Statistiques établies sur le corpus de recherche documenté (${total} opérations historiques). Ce jeu de données ne constitue pas un recensement exhaustif de l'ensemble des actions de la Guerre de Libération nationale.`,
     by_year: byYear,
     by_wilaya: byWilaya,
     top_action_types: sortedActions

@@ -31,12 +31,30 @@ function capture(handler, query, method = 'GET') {
   if (res.body?.properties) delete res.body.properties.generated_at;
   return {status:res.statusCode, headers:res.headers, body_sha256:digest(JSON.stringify(res.body))};
 }
-function snapshot() {
-  const dataset = JSON.parse(fs.readFileSync(path.join(root,files[0]),'utf8'));
+function snapshot(directory=root) {
+  const dataset = JSON.parse(fs.readFileSync(path.join(directory,files[0]),'utf8'));
   // Git may convert line endings on Windows; compare content with LF everywhere.
-  return {files:Object.fromEntries(files.map(file=>[file,digest(fs.readFileSync(path.join(root,file),'utf8').replace(/\r\n/g,'\n'))])),
+  return {files:Object.fromEntries(files.map(file=>[file,digest(fs.readFileSync(path.join(directory,file),'utf8').replace(/\r\n/g,'\n'))])),
     ids:dataset.operations.map(op=>op.id),
     contracts:cases.map(([handler,query,method='GET'])=>({handler,query,method,...capture(handler,query,method)}))};
 }
-if (require.main === module) fs.writeFileSync(path.join(root,'tests/baselines/v1.json'),JSON.stringify(snapshot(),null,2)+'\n');
-module.exports = {snapshot,capture};
+function snapshotInitial(){
+  const os=require('node:os');
+  const {migrate}=require('../src/canonical');
+  const {publicArtifacts}=require('../src/publication');
+  const original=require('../migrations/legacy-initial.json');
+  const directory=fs.mkdtempSync(path.join(os.tmpdir(),'alnop-v1-'));
+  const previous=process.cwd();
+  try{
+    for(const [name,content]of Object.entries(publicArtifacts(migrate(original,'97eef827834a7463e85eed8b5bd5c81e08069420')))){
+      const target=path.join(directory,name);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,content);
+    }
+    process.chdir(directory);return snapshot(directory);
+  }finally{
+    process.chdir(previous);
+    if(path.dirname(path.resolve(directory))!==path.resolve(os.tmpdir()) || !path.basename(directory).startsWith('alnop-v1-'))throw new Error('Unsafe test cleanup path');
+    fs.rmSync(directory,{recursive:true});
+  }
+}
+if (require.main === module) fs.writeFileSync(path.join(root,'tests/baselines/v1.json'),JSON.stringify(snapshotInitial(),null,2)+'\n');
+module.exports = {snapshot,snapshotInitial,capture};

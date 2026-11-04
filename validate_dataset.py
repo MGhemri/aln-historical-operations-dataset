@@ -78,9 +78,18 @@ def validate_json_file(file_path):
         ids_list.append(op_id)
 
         # Check required fields
-        for field in ['nom_operation', 'date_debut', 'wilaya_concernee', 'type_action', 'description']:
+        for field in ['nom_operation', 'type_action', 'description']:
             if not op.get(field):
                 errors.append(f"Operation {op_id} is missing required field '{field}'.")
+
+        canonical = op.get('canonical_metadata') or {}
+        if not op.get('date_debut'):
+            if canonical.get('start_date', {}).get('precision') not in ('unknown', 'range'):
+                errors.append(f"Operation {op_id} is missing date_debut without explicit uncertainty.")
+            else:
+                warnings.append(f"Operation {op_id}: date cannot be represented exactly in v1.")
+        if not op.get('wilaya_concernee') and not ('territories' in canonical and canonical['territories'] == []):
+            errors.append(f"Operation {op_id} is missing territorial metadata without explicit unknown status.")
 
         # Check date format & calendar validity
         date_debut = op.get('date_debut')
@@ -121,7 +130,7 @@ def validate_json_file(file_path):
                 errors.append(f"Operation {op_id} has longitude out of bounds: {lon}")
 
         # Scientific quality notices: inter-wilaya operations
-        w = op.get('wilaya_concernee', '')
+        w = op.get('wilaya_concernee') or ''
         if re.search(r'Wilaya.*Wilaya|Zone Autonome.*Wilaya|Fronti|Base de l\'Est.*Wilaya', w, re.I):
             warnings.append(f"Operation {op_id}: Inter-zone engagement ({w})")
 

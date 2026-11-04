@@ -4,11 +4,12 @@ const fs=require('node:fs');
 const path=require('node:path');
 const {migrate,dateBounds,validateCorpus,restoreLegacy,readCorpus,root}=require('../src/canonical');
 const {artifacts}=require('../scripts/build-canonical');
-const original=require('../operations_fln_1954_1962.json');
+const original=require('../migrations/legacy-initial.json');
+const {withProposal,approve}=require('./helpers/corpus');
 const commit='97eef827834a7463e85eed8b5bd5c81e08069420';
 test('T01/T03: exact round trip of 263 complete original records and metadata',()=>{
   const corpus=readCorpus();
-  assert.equal(corpus.operations.length,263);
+  assert.ok(corpus.operations.length>=263);
   assert.deepEqual(restoreLegacy(corpus),original);
   assert.deepEqual(validateCorpus(corpus).errors,[]);
 });
@@ -53,14 +54,11 @@ test('T17: GeoJSON uses lon,lat and labels uncertainty',()=>{
   assert.equal(feature.properties.geometry_role,'representative_point');
 });
 test('T04/T19: synthetic fixture increments preview only when published',()=>{
-  const corpus=readCorpus();
-  const synthetic=structuredClone(corpus.operations[0]);
-  synthetic.id='TEST_SYNTHETIC_001';
-  synthetic.title={fr:'Événement fictif de validation',ar:'حدث تجريبي غير تاريخي'};
-  synthetic.editorial_status='proposed';
-  corpus.operations.push(synthetic);
-  assert.equal(JSON.parse(artifacts(corpus)['operations.json']).operations.length,263);
-  synthetic.editorial_status='published';
-  assert.equal(JSON.parse(artifacts(corpus)['operations.json']).operations.length,264);
+  const {corpus,operation}=withProposal();
+  assert.equal(JSON.parse(artifacts(corpus,{allowSynthetic:true})['operations.json']).operations.length,263);
+  operation.editorial_status='published';assert.throws(()=>artifacts(corpus,{allowSynthetic:true}),/review/);
+  approve(operation);
+  assert.equal(JSON.parse(artifacts(corpus,{allowSynthetic:true})['operations.json']).operations.length,264);
+  assert.throws(()=>artifacts(corpus),/Synthetic/);
   assert.equal(readCorpus().operations.length,263);
 });

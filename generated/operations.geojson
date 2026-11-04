@@ -18,6 +18,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Ensemble du territoire algérien (épicentre dans les Aurès : Batna, Arris, Biskra, Tighanimine, ainsi qu'à Alger, Constantine et Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.1741,
+                35.5559
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -55,6 +70,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif des Aurès et Monts des Nemencha (Arris, Foum Toub, Oued Abdi, Djebel Ahmar Khaddou)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.3422,
+                35.2581
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -83,6 +113,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Gorges de Tighanimine (route Arris-Biskra) et oasis de M'Chouneche (Wilayas de Batna et Biskra)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.0861,
+                35.1258
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -111,6 +156,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Khaled, près de Yabous et Bouhmama, flanc nord du Djebel Chélia (Wilaya de Khenchela)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.65,
+                35.3833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -139,6 +199,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Gorges de T'baboucht, forêt domaniale de Kimel / Beni Melloul (Sud-Est d'Arris, Wilaya de Batna / Biskra)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.4667,
+                35.0667
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -167,6 +242,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Mine de zinc et de plomb du Nador, commune de Hammam N'Baïls, entre Guelma et Souk Ahras (Wilaya de Guelma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.6667,
+                36.3167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -195,6 +285,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Azazga, Tigzirt, Draâ El Mizan et Bordj Menaïel (Wilayas de Tizi Ouzou et Boumerdès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.3722,
+                36.7447
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -223,6 +328,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Blida, Boufarik, Soumaâ et contreforts de l'Atlas blidéen (Wilaya de Blida)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.8277,
+                36.47
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -251,6 +371,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "El Gaâda / Ghar Boudjlida (Mascara)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.309,
+                35.4218
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -278,6 +413,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Forêt de Hafir / Tlemcen",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.42411,
+                34.78042
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -305,6 +455,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Baniane / M'Chouneche (Biskra)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.002,
+                34.965
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -332,6 +497,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Nord-Constantinois : Philippeville (Skikda), El Halia, Collo, Constantine, Guelma, Aïn Abid",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.9092,
+                36.8764
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -363,6 +543,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif d'El Djorf, Monts des Nemencha (Wilaya de Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.95,
+                35.15
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -392,6 +587,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Région de Tlemcen, Maghnia, Nedroma, Sebdou et frontière algéro-marocaine",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.315,
+                34.8783
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -422,6 +632,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oued Hallaïl et Stah Guentis, aux confins des monts des Nemencha (Wilayas de Tébessa et Khenchela)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.3667,
+                35.15
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -452,6 +677,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Foum Toub, Ichmoul et vallée de l'Oued Abdi, au sud-est de Batna (Wilaya de Batna)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.55,
+                35.4056
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -480,6 +720,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Oum Lekmakem, au sud de Chéria et d'El Ma Labiodh, Monts des Nemencha (Wilaya de Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.75,
+                35.1167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -508,6 +763,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oued Boukerker, Douar Souadek, à 12 km de Condé-Smendou (actuelle commune de Zighoud Youcef, Wilaya de Constantine)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.7167,
+                36.5333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -536,6 +806,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djurdjura, Ouacifs, Iboudraren, Aït Ouabane et col de Tirourda (Wilaya de Tizi Ouzou)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.245,
+                36.495
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -564,6 +849,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Vallée de la Soummam, entre Tazmalt, Akbou, Ighzer Amokrane et Sidi Aïch (Wilaya de Béjaïa / Bouira)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.5472,
+                36.4575
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -592,6 +892,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Défilé des gorges d'El Kantara et axe ferroviaire et routier Batna - Biskra (Wilaya de Biskra)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.7014,
+                35.2222
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -622,6 +937,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif de Chréa, col de Sakamody (Larbaâ) et secteur de Tablat (Wilayas de Blida et Médéa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.1667,
+                36.4833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -650,6 +980,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Sidi Bel-Abbès (Centre urbain)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.63085,
+                35.18994
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -677,6 +1022,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Canyon d'Ighzir Amellal / Balcons du Rhoufi (Batna)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.171,
+                35.05
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -704,6 +1064,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Forêt de Kimmel / Beni Imloul (Batna)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.512,
+                35.105
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -731,6 +1106,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Amrane / Djebel Krouma / Chéria (Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.752,
+                35.271
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -759,6 +1149,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Mih Ouensa / Houdh Echouf / El Oued",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.725,
+                33.268
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -786,6 +1191,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oum El Kmakem / Djebel Ergou (Bir El Ater, Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.058,
+                34.748
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -814,6 +1234,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Kabylie maritime : Azeffoun, Iflissen, Tigzirt, massif du Tamgout (Wilaya de Tizi Ouzou)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.4192,
+                36.895
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -842,6 +1277,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "De Miliana (Wilaya d'Aïn Defla) à la forêt de Baïnem (Alger)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.9694,
+                36.7986
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -873,6 +1323,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Gorges de Palestro, près du village de Djerrah (actuelle Lakhdaria, Wilaya de Bouira)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.5892,
+                36.5644
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -901,6 +1366,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Zekri, à 20 km de Nedroma (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.78,
+                35.06
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -933,6 +1413,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Rue Michelet (actuelle rue Didouche Mourad) et place Bugeaud, Alger",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0586,
+                36.7725
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -961,6 +1456,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oued El Khotifa et massif de Chouabir, près d'Aflou et El Ghicha (Wilaya de Laghouat)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.1022,
+                34.1128
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -989,6 +1499,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Usine Électricité et Gaz d'Algérie (EGA) du Hamma, rue Sadi-Carnot (Belcourt, Alger)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0714,
+                36.7492
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1017,6 +1542,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "106 rue Michelet (actuelle rue Didouche Mourad), centre d'Alger",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0531,
+                36.7669
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1045,6 +1585,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Mines de fer de Camerata / Mokta El Hadid à Beni Saf et massif des Trara (Wilaya d'Aïn Témouchent / Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.3836,
+                35.3014
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1073,6 +1628,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Caserne Bedeau / Tlemcen et repli vers les monts de Tlemcen (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.315,
+                34.8783
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1101,6 +1671,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Fellaoucène, entre Nedroma, Ghazaouet et Maghnia (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.7333,
+                35.0167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1129,6 +1714,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "El M'kadid et massif forestier de Sebdou / Beni Bahdel (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.3333,
+                34.6333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1157,6 +1757,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Plaines de la Mekerra (Sidi Bel Abbès), Mercier-Lacombe (Sfissef), Palikao (Tighennif) et plaine de Ghriss (Mascara)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.63,
+                35.1975
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1186,6 +1801,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Asfour et défilé de Khneg Lekhal, au sud de Chechar et Babar (Wilaya de Khenchela)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.0333,
+                34.9667
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1214,6 +1844,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bir Djefeir / Chegga, aux confins des secteurs de Biskra, Batna et Oum El Bouaghi",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.25,
+                35.0333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1242,6 +1887,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Argou, entre Chéria, El Ogla et Tébessa (Wilaya de Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.6833,
+                35.2167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1270,6 +1930,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Secteur de Bissy, Morsott et ligne ferroviaire minière d'El Kouif - Tébessa (Wilaya de Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.05,
+                35.5333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1300,6 +1975,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Col des Oliviers (Aïn Bouziane), El Harrouch et Saint-Charles (Ramdane Djamel), sur l'axe ferroviaire Constantine - Philippeville (Wilaya de Skikda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.7667,
+                36.5917
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1328,6 +2018,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Douar Lefkaline, commune de Sidi Khelifa, près de Mila (Wilaya de Mila)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.2167,
+                36.4167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1356,6 +2061,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Douar Oum El Toub / Sidi Mezghiche, entre El Harrouch, Tamalous et Collo (Wilaya de Skikda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.7167,
+                36.6833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1384,6 +2104,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Hamma Bouziane, Bekira, Djebel El Ouahch et gorges du Rhummel à Constantine (Wilaya de Constantine)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.596,
+                36.412
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1414,6 +2149,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif forestier de Mizrana, Makouda et route côtière entre Dellys et Tigzirt (Wilayas de Tizi Ouzou et Boumerdès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.08,
+                36.845
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1444,6 +2194,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Villages de Taourirt Moussa, Taguemount Azouz et Aït Mahmoud, daïra de Beni Douala (Wilaya de Tizi Ouzou)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.0931,
+                36.6194
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1474,6 +2239,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Gorges de Kherrata (Chabet El Akra) et massif du Mont Babor / Tizi N'Bechar (Confins des Wilayas de Béjaïa et Sétif)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.2778,
+                36.4928
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1504,6 +2284,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Ceinture sud de la Mitidja : Soumaâ, Bouinan, Mouzaïa, El Affroun et voie ferrée Alger - Blida - Oran (Wilaya de Blida)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.6167,
+                36.4667
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1534,6 +2329,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif côtier du Dahra, entre Cherchell, Gouraya, Damous et Ténès (Wilayas de Tipaza et Chlef)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.9,
+                36.5333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1562,6 +2372,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Zaccar, Miliana, Hammam Righa et Khemis Miliana (Wilaya d'Aïn Defla)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.2167,
+                36.3333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1592,6 +2417,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Had-Sahary, Aïn Oussera, Birine et monts du Titteri-Sud / Ouled Naïl (Nord de la Wilaya de Djelfa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.35,
+                35.35
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1620,6 +2460,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oasis de Tolga, Bouchagroune, Sidi Okba et abords de Biskra (Wilaya de Biskra)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.3833,
+                34.7222
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1648,6 +2503,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Axe ferroviaire et routier entre Oued Fodda, El Karimia et Chlef (ex-Orléansville, Wilaya de Chlef)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.5333,
+                36.185
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1676,6 +2546,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Milok, Tadjmout et Aïn Madhi, au nord-ouest de Laghouat (Wilaya de Laghouat)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.55,
+                33.9167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1704,6 +2589,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bab El Assa et col du Guerbouz, entre Marsa Ben M'Hidi (Port-Say), Maghnia et Ghazaouet (Nemours) (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -2.0333,
+                34.9667
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1732,6 +2632,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif côtier du Djebel Tadjera et port de Honaine, entre Ghazaouet (Nemours), Nedroma et Beni Saf (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.6553,
+                35.1764
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1760,6 +2675,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Sidi Ali / El Kachkacha (Mostaganem)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.42222,
+                36.09732
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1787,6 +2717,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Sidi Ghalem / Forêt de Sidi Ghalem / Tafraoui (Daïra d'Oued Tlélat, Wilaya d'Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.548,
+                35.475
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1815,6 +2760,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Tessala (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.772,
+                35.265
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1842,6 +2802,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Axe routier Télagh–Moulay Slissen (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.76062,
+                34.8222
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1869,6 +2844,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Chouabir / El Ghicha (Laghouat)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.145,
+                33.935
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1896,6 +2886,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Nara / Djebel Nara (Menaâ, Batna)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.012,
+                35.314
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1924,6 +2929,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Boutaleb / Barika (Batna / Sétif)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.334,
+                35.708
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1951,6 +2971,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Koudiet Boukerker / Sidi Mezghiche (Skikda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.702,
+                36.685
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -1979,6 +3014,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif forestier des Beni Toufout / Collo (Skikda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.462,
+                36.945
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2006,6 +3056,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Au large de Ghazaouet (ex-Nemours, Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.86,
+                35.102
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2034,6 +3099,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Asfour / Chechar (Khenchela)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.035,
+                34.965
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2061,6 +3141,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bourzam / Aïn Kechra (Skikda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.415,
+                36.782
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2089,6 +3184,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "M'Chedallah / Saharidj / Ath Leqsar (Bouira)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.195,
+                36.365
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2116,6 +3226,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Sidi Khetab / Ouled El Hadj Brahim (Relizane)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.495,
+                35.915
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2143,6 +3268,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Mascara et monts de Beni Chougrane",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.185,
+                35.445
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2170,6 +3310,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Gare d'Oran-Ville (Plateau Karguentah) et La Sénia",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6385,
+                35.6967
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2199,6 +3354,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Eckmühl, Gambetta et Choupot (Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6552,
+                35.6881
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2228,6 +3398,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Maraval et Petit Lac (Oran sud)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6288,
+                35.6742
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2256,6 +3441,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Rue Michelet et rue Charles-Péguy (Plateau des Glières), Alger",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0575,
+                36.7711
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2287,6 +3487,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Alger (épicentre dans la Casbah) et principales villes d'Algérie",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0603,
+                36.7847
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2323,6 +3538,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Stade municipal d'Alger (Belcourt / Le Ruisseau) et Stade d'El Biar, Alger",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0811,
+                36.7456
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2352,6 +3582,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Fellaoucène, entre Nedroma, Maghnia et Ghazaouet (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.7333,
+                35.0167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2382,6 +3627,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Pont d'Oued Zeggar, commune d'Aïn Kechra, massif de Collo (Wilaya de Skikda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.4308,
+                36.7519
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2410,6 +3670,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oued Agounennda, massif du Djurdjura / sud de Larbaâ Nath Irathen et confins de Médéa-Tizi Ouzou",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.15,
+                36.55
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2441,6 +3716,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Stade olympique Yves-du-Manoir, Colombes (Hauts-de-Seine, région parisienne)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.2478,
+                48.9292
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2475,6 +3765,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Arrêts de bus du centre d'Alger et Casino de la Corniche (Pointe-Pescade / Saint-Eugène, Alger)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0336,
+                36.8092
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2504,6 +3809,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Bouzegza, entre Lakhdaria et Boudouaou (Est de la Mitidja, Wilaya de Boumerdès / Bouira)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.4567,
+                36.6094
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2531,6 +3851,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Timimoun, Hassi Rambou et Grand Erg Occidental (Wilaya d'Adrar / Timimoun)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.2311,
+                29.2639
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2559,6 +3894,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Ras El-Ma (ex-Bedeau) et massifs forestiers avoisinants (Sud de la Wilaya de Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.8189,
+                34.4961
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2587,6 +3937,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Douar Hemaïdia (El Bordj / Khalouia), Monts des Beni Chougrane (Wilaya de Mascara)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.25,
+                35.505
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2615,6 +3980,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Forêt de Tafrent, entre Sebdou et El Aricha, Monts de Tlemcen (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.28,
+                34.45
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2643,6 +4023,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel El Menaouer (commune d'El Menaouer, daïra d'El Bordj), Monts des Beni Chougrane (Wilaya de Mascara)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.3208,
+                35.5186
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2672,6 +4067,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Aïssa et axe Mécheria - Aïn Sefra, Monts des Ksour (Wilaya de Naâma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.4833,
+                32.9
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2701,6 +4111,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Mont de Ketfa Saouda (ou El Ketfa), commune de Tamza, près d'El Hamma et Khenchela (Wilaya de Khenchela)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.95,
+                35.3917
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2729,6 +4154,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Mechat / Douar Irarem, entre El Milia et le massif de Collo (Confins des Wilayas de Jijel et Skikda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.3833,
+                36.85
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2757,6 +4197,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif forestier des monts du Belezma (Djebel Touggour et col de Telmet), à l'ouest de Batna et près de Merouana (Wilaya de Batna)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.0667,
+                35.5833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2785,6 +4240,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif d'Aouchaaoua (commune d'El Mehmel / Ouled Rechache / Zoui), à l'est de Khenchela (Wilaya de Khenchela)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.2667,
+                35.3333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2813,6 +4283,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif forestier de Texenna, Djimla et route de la corniche de Jijel (Wilaya de Jijel)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.79,
+                36.66
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2843,6 +4328,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Stah (Staiha), entre Beni Ouelbane, Sidi Mezghiche et Tamalous (Wilaya de Skikda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.615,
+                36.695
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2871,6 +4371,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Axe Oued Zenati - Tamlouka (ex-Montcalm) et massif de la Mahouna (Wilaya de Guelma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.15,
+                36.315
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2899,6 +4414,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Taher, Chahna et Oudjana, dans l'arrière-pays montagneux de Jijel (Wilaya de Jijel)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.8983,
+                36.7719
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2927,6 +4457,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Village d'Izemourene (tribu des Ath Fraoussen), commune de Mekla, à l'est de Tizi Ouzou (Wilaya de Tizi Ouzou)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.2667,
+                36.6833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2955,6 +4500,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Forêt domaniale de Yakouren, Azazga et route côtière d'Azeffoun (ex-Port-Gueydon, Wilaya de Tizi Ouzou)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.4333,
+                36.7333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -2983,6 +4543,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Zbarbar, Kadiria et axe routier Bouira - Lakhdaria (Confins des Wilayas de Bouira et Boumerdès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.6833,
+                36.5167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3011,6 +4586,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Draa Errih (Djebel Tafertas), près de Medjana et El M'hir, chaîne montagneuse des Bibans (Wilaya de Bordj Bou Arreridj)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.65,
+                36.15
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3039,6 +4629,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Col de Tirourda (1 758 m d'altitude), entre Iferhounène (Tizi Ouzou) et Aghbalou / Chorfa (Bouira)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.3514,
+                36.4775
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3069,6 +4674,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Lalla Aouda / Damous (ex-Dupleix) et Beni Haoua, entre Cherchell et Ténès (Wilaya de Tipaza / Chlef)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.7,
+                36.55
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3097,6 +4717,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Versant d'Ahl El Oued, gorges de la Chiffa, au sud-ouest de Blida sur l'axe Blida - Médéa (Wilaya de Blida)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.75,
+                36.4167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3127,6 +4762,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Secteur d'El Hassania, Bourached et massif du Djebel Louh, au sud d'Aïn Defla et d'El Attaf (Wilaya d'Aïn Defla / Chlef)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.95,
+                36.1333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3155,6 +4805,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Grand Pic de l'Ouarsenis (Sidi Amar, 1 985 m), Bordj Bounaama (ex-Molière) et Lazharia (Wilaya de Tissemsilt)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.6167,
+                35.85
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3183,6 +4848,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Zoubiria, Berrouaghia, Ksar El Boukhari (Boghari) et monts du Titteri (Wilaya de Médéa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.9167,
+                36.1
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3211,6 +4891,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Taguersane (secteur de Ben Yagoub / Charef / Djelfa), Monts des Ouled Naïl (Wilaya de Djelfa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.95,
+                34.5833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3239,6 +4934,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massifs du Djebel Kerdada, Ferrero et Aïn Rich, au sud de Bou Saâda (Wilaya de M'Sila)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.1833,
+                35.1667
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3267,6 +4977,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Axe routier et ferroviaire Biskra - El Meghaïer - Djamaâ - Touggourt, vallée de l'Oued Rhir (Wilayas d'El Meghaïer et Touggourt)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.9167,
+                33.95
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3298,6 +5023,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massifs du Djebel Gaïga et du Djebel Doum, entre Messaad, Aïn El Ibel et Zaccar (Wilaya de Djelfa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.3667,
+                34.2167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3327,6 +5067,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Secteur frontalier de Maghnia, Boukanoun et cité minière d'El Abed (face à Oujda, Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.7333,
+                34.6333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3357,6 +5112,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Ain Kebira et Dar Yaghmoracen, entre Nedroma et Ghazaouet (Nemours), Monts des Trara (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.8,
+                35.05
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3385,6 +5155,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Sidi Youb / Tilmouni (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.548,
+                35.112
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3412,6 +5197,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Refafsa / Belarbi (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.472,
+                35.185
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3439,6 +5239,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Beni Ghezil / Ouled Mimoun (Tlemcen / Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.055,
+                34.935
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3466,6 +5281,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Moksi / Oued Sefioun (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.368,
+                35.135
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3493,6 +5323,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Ras El Ma / Bedeau (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.8188,
+                34.49791
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3520,6 +5365,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oued Allala / Mendes (Relizane)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.86452,
+                35.65008
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3547,6 +5407,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Sikh / Ouled Maâla (Mostaganem)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.59162,
+                36.04563
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3574,6 +5449,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Mechta Kasba / Melouza (Beni Ilmane, flanc sud du Djebel M'zid, Wilaya de M'Sila)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.468,
+                35.986
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3602,6 +5492,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Metlili des Chaâmba (Ghardaïa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.633,
+                32.273
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3630,6 +5535,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Aïn El Ksob / Estiha / Sidi Maârouf (Jijel)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.261,
+                36.645
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3657,6 +5577,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Sidi Semiane / Monts du Dahra (Tipaza)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.148,
+                36.521
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3685,6 +5620,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Issine / Djanet (Frontière algéro-libyenne)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                10.125,
+                24.895
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3714,6 +5664,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Quartier Choupot (Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.643,
+                35.6825
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3742,6 +5707,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Contreforts du Djebel Murdjadjo / Ravin de Ras El Aïn et Les Planteurs",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6625,
+                35.7042
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3770,6 +5750,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Secteur frontalier d'El Meridj (Wilaya de Tébessa) et Sakiet Sidi Youssef (Tunisie)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.355,
+                36.2219
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3809,6 +5804,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Col du Fedj Zezoua, forêt des Beni-Mezline, à l'est de Guelma",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.58,
+                36.46
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3838,6 +5848,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Frontière algéro-tunisienne : Souk Ahras, Djebel Beni Salah, Oued Chouk, Zaârouria",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.9511,
+                36.2864
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3867,6 +5892,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "France métropolitaine : Marseille (dépôts pétroliers de Mourepiane), Paris, Gennevilliers, Rouen (Grand-Quevilly), Toulouse, Narbonne",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.3444,
+                43.3519
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3896,6 +5936,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Paris (Champ-de-Mars / Tour Eiffel, cartoucherie de Vincennes, commissariats de la Seine)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.2945,
+                48.8584
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3924,6 +5979,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Place de l'Étoile / Avenue de Friedland, Paris (8e arrondissement)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.295,
+                48.8738
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3952,6 +6022,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif forestier de l'Akfadou et Aourir N'Aït Hssaïne (confins de Tizi Ouzou et Béjaïa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.5833,
+                36.6333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -3980,6 +6065,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Mekther (2 000 m d'altitude), au sud d'Aïn Sefra (Wilaya de Naâma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.55,
+                32.6667
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4008,6 +6108,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Amour, entre El Bayadh (ex-Géryville), Brézina et Aflou (Wilaya d'El Bayadh / Laghouat)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.0167,
+                33.6833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4036,6 +6151,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Axe ferroviaire Saïda - Bouktoub - Mécheria et monts de Saïda (Wilaya de Saïda / El Bayadh)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.15,
+                34.83
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4064,6 +6194,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Dar El Hadada (Beni Sbih), commune de Settara, massif de Collo (Confins des Wilayas de Jijel et Skikda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.3833,
+                36.7167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4092,6 +6237,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Le Petit-Quevilly, zone industrielle et portuaire de Rouen (Seine-Maritime, Normandie)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.0592,
+                49.4275
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4120,6 +6280,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Dépôt pétrolier Mobil Oil (quartier de Lalande / Fenouillet), Toulouse (Haute-Garonne)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.425,
+                43.6486
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4148,6 +6323,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Dépôts pétroliers de Narbonne et du port de Port-la-Nouvelle (Aude, Occitanie)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0439,
+                43.0211
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4176,6 +6366,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Raffinerie de pétrole de Frontignan, près de Sète (Hérault, Occitanie)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.7583,
+                43.4375
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4204,6 +6409,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Lyon (quartiers de La Guillotière, Part-Dieu, Vaise, Gerland) et Villeurbanne (Rhône)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.8422,
+                45.754
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4232,6 +6452,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bassin minier et sidérurgique de Douai, Valenciennes, Denain et Maubeuge (Département du Nord)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.5183,
+                50.3572
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4260,6 +6495,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Saint-Étienne, Firminy et vallée de l'Ondaine / Gier (Département de la Loire)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.3872,
+                45.4397
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4288,6 +6538,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bordeaux, Bassens et zone pétrochimique du bec d'Ambès (Gironde, Nouvelle-Aquitaine)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.5289,
+                45.0111
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4318,6 +6583,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Alahom, Bouhadjar, Aïn Kerma et secteur d'El Tarf / La Calle (Wilaya d'El Tarf / Annaba)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.1833,
+                36.5833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4347,6 +6627,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Mermoura, commune de Boumahra Ahmed, à l'est de Guelma (Wilaya de Guelma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.5167,
+                36.4583
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4377,6 +6672,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Zone portuaire et dépôts d'hydrocarbures de Philippeville (actuelle Skikda, Wilaya de Skikda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.9092,
+                36.8797
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4407,6 +6717,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Anini et gorges de Hammam Guergour (Bougaâ / Harbil, Nord-Ouest de la Wilaya de Sétif)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.0667,
+                36.3167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4435,6 +6760,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Défilé des Portes de Fer (Bab El Hadid / Bibans), entre Beni Mansour, Mansoura et El M'hir (Wilayas de Bouira et Bordj Bou Arreridj)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.46,
+                36.195
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4463,6 +6803,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Bouberak, Baghlia et basse vallée de l'Oued Sébaou, près de Dellys (Wilaya de Boumerdès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.85,
+                36.89
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4491,6 +6846,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Bougaâdoun, Beni Slimane, Bouskène et Tablat (Est de la Wilaya de Médéa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.3167,
+                36.2333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4521,6 +6891,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Mongorno, commune d'Ouled Bouachra, au sud-ouest de Médéa et de Berrouaghia (Wilaya de Médéa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.6833,
+                36.1167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4552,6 +6937,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Secteur d'El Skhouna / Taïbet, entre Touggourt, El Oued et Ouargla (Wilayas de Touggourt et Ouargla)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.0667,
+                33.1
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4580,6 +6980,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Lazrag, El Doum et Sidi Makhlouf, au nord-est de Laghouat et vers Messaad (Wilayas de Laghouat et Djelfa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0167,
+                34.1333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4610,6 +7025,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif des Braz / Djebel Doui, entre Aïn Defla (ex-Duperré), El Abadia et Oued Fodda (Wilayas d'Aïn Defla et Chlef)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.8167,
+                36.2167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4638,6 +7068,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Col des Deux-Bassins, Djebel Zerouela, entre Larbaâ, Meftah (ex-Rivet) et Tablat (Wilayas de Blida et Médéa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.2167,
+                36.5167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4666,6 +7111,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bir El Ahmar / Djebel El Guetar, entre Bou Saâda, Sidi Ameur et Djelfa (Confins des Wilayas de M'Sila et Djelfa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.8833,
+                35.05
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4696,6 +7156,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oumache et Chegga, au sud de Biskra sur l'axe ferroviaire et l'oléoduc Touggourt - Biskra (Wilaya de Biskra)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.6833,
+                34.6933
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4726,6 +7201,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oasis de Moghrar, Tiout et défilé de Djenien Bou Rezg, au sud d'Aïn Sefra vers Figuig (Wilaya de Naâma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6,
+                32.5167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4754,6 +7244,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Tenouchfi (1 843 m) et Sidi Djilali, au sud-ouest de Sebdou (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.5667,
+                34.55
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4782,6 +7287,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel M'zi et oasis d'Asla / Chellala, à l'est et au sud d'Aïn Sefra (Wilaya de Naâma / El Bayadh)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.0833,
+                32.9833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4810,6 +7330,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oued El Haï / Tessala (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.745,
+                35.298
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4837,6 +7372,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Guediret / Youb (Saïda / Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.235,
+                34.958
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4864,6 +7414,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djorf Torab / Télagh (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.531,
+                34.742
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4891,6 +7456,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Monts des M'Hadid / Télagh (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.635,
+                34.815
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4918,6 +7498,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Sidi Douma / Tafessour (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.218,
+                34.675
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4945,6 +7540,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "El Merdja / Doui Thabet (Saïda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.01647,
+                34.89062
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -4973,6 +7583,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Ksel / El Bayadh",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.15081,
+                33.72114
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5000,6 +7625,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Bou Atrous / Saïda",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.20463,
+                35.0372
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5027,6 +7667,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Secteur d'Ellaba / Saïda",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.285,
+                34.895
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5054,6 +7709,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oued El Kifah / Tefrit (Saïda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.078,
+                34.745
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5081,6 +7751,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "El Loukda / Secteur des Amayer (Saïda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.225,
+                34.815
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5108,6 +7793,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel El Akhdar / Ouled Brahim (Saïda)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                0.46667,
+                34.98333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5135,6 +7835,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oasis et reliefs de Foughala (Biskra)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                5.525,
+                34.718
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5162,6 +7877,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Marmoura / Bouhamdane (Hammam Debagh, Guelma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.285,
+                36.518
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5190,6 +7920,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Poste d'El Haourane / Mansoura (Bordj Bou Arréridj)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.462,
+                36.082
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5217,6 +7962,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Mongorno / Zoubiria (Médéa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.685,
+                36.118
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5245,6 +8005,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bab El Bekkouche / Lardjem (Tissemsilt)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.547,
+                35.751
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5273,6 +8048,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Vieux Port d'Oran (Quai de la Marine / Quai Millerand)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6475,
+                35.7088
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5301,6 +8091,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Aït Yahia Moussa (village de Tizra Aïssa / Vougarfène), près de Draâ El Mizan (Wilaya de Tizi Ouzou)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.8886,
+                36.6408
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5333,6 +8138,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif de l'Ouarsenis (Chlef / Tissemsilt) et Djebel Tamer près de Bou Saâda (Wilaya de M'Sila)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.63,
+                35.87
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5362,6 +8182,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massifs du Djurdjura, de l'Akfadou, de Yakouren et vallée de la Soummam (Wilayas de Tizi Ouzou, Béjaïa, Bouira)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.2281,
+                36.4689
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5391,6 +8226,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massifs forestiers de Frenda, Djebel Guezoul et contreforts ouest de l'Ouarsenis entre Tiaret et Relizane (Wilayas de Tiaret et Relizane)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.05,
+                35.06
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5419,6 +8269,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Beni Smir, au sud d'Aïn Sefra et à proximité de Figuig (Wilaya de Naâma / Béchar)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.95,
+                32.35
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5447,6 +8312,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Metz, Thionville, Hayange, Hagondange et vallée de la Fensch / Orne (Moselle, Lorraine)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.1757,
+                49.1193
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5479,6 +8359,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massifs de Grarem Gouga, Hamala et vallée de l'Oued Endja, entre Mila et El Milia (Wilaya de Mila)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.3333,
+                36.5167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5509,6 +8404,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Col de Chellata (village d'Aït M'lika / Taghzout), sur les hauteurs d'Akbou et d'Ighram (Confins des Wilayas de Béjaïa et Tizi Ouzou)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.4667,
+                36.5333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5539,6 +8449,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Commune d'Ouled Bouachra (massif entre Médéa, Berrouaghia et Aïn Boucif, Wilaya de Médéa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.6681,
+                36.1222
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5569,6 +8494,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Ouedj El Baten, massif des Ouled Naïl, région de Djelfa et Messaad (Wilaya de Djelfa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.4167,
+                34.3833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5598,6 +8538,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Piste désertique et axe routier entre Ouargla, Hassi Messaoud et Fort-Lallemand / Hassi Bel Guebbour (Wilaya d'Ouargla)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.0729,
+                31.6804
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5631,6 +8586,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Secteur frontalier d'El Aricha et Djebel Bougarne (face à Aïn Beni Mathar / Berguent au Maroc, Sud de la Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.3,
+                34.2167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5659,6 +8629,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif d'Oulhaça (Sidi Brahim / Souk El Khemis) et Souahlia, entre Beni Saf et Ghazaouet (Wilayas d'Aïn Témouchent et Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.5167,
+                35.2333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5687,6 +8672,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "El Meridj, entre Ouenza, Morsott et la frontière tunisienne de Haïdra / Kalâat Senan (Wilaya de Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.2667,
+                35.8
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5715,6 +8715,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Complexe minier de fer de l'Ouenza et du Djebel Boukhadra, entre Souk Ahras et Tébessa (Wilaya de Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.1333,
+                35.95
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5743,6 +8758,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Secteur forestier d'El Kala (ex-La Calle), Oum Teboul et col d'Aïn Zana, à l'extrémité nord des Lignes Challe et Morice (Wilaya d'El Tarf / Souk Ahras)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.3833,
+                36.7833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5771,6 +8801,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bekkaria, El Kouif et massif du Djebel Anoual, à l'est et au sud-ouest de Tébessa (Wilaya de Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.2333,
+                35.3667
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5799,6 +8844,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Zid El Moumen / Merine (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.465,
+                34.812
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5826,6 +8886,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Forêt des Cèdres / Théniet El Had (Tissemsilt)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.028,
+                35.871
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5854,6 +8929,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel Béchar (Béchar) et massif du Djebel Mzi près d'Aïn Sefra (Wilaya de Naâma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.5833,
+                32.75
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5882,6 +8972,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Alger (Belcourt, Clos-Salembier, Casbah, Bab El Oued), Oran, Constantine, Bône (Annaba)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0692,
+                36.7483
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5910,6 +9015,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Roubaix (quartier du Pile et de l'Épeule), Lille (quartier de Wazemmes et Fives) et Tourcoing (Département du Nord)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.1746,
+                50.6942
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5938,6 +9058,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Presqu'île de Collo, massif d'El Milia, forêt des Beni Toufout et monts de Jijel (Wilayas de Skikda et Jijel)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.45,
+                36.95
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5966,6 +9101,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Dirah, Bordj Khris et Sour El Ghozlane (ex-Aumale), au sud de Bouira (Wilaya de Bouira)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.85,
+                36.0833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -5995,6 +9145,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Tadmit et Djebel Boudrine (El Nessafa), au sud-ouest de Djelfa et vers Messaad (Wilaya de Djelfa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0833,
+                34.2833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6023,6 +9188,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif des Beni Salah / Chréa et monts de Médéa (Wilayas de Blida et Médéa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.8167,
+                36.3833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6051,6 +9231,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Tronçon nord du barrage électrifié Ouest, entre Marsa Ben M'Hidi (Port-Say), Bab El Assa et Maghnia (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -2.1167,
+                35.0333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6079,6 +9274,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Grouz et secteur frontalier de Beni Ounif (face à l'oasis de Figuig, Wilaya de Béchar)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.25,
+                32.05
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6107,6 +9317,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bouhadjar (ex-Lamy), Aïn Kerma et Ouled Driss, sur le double barrage Challe-Morice (Wilayas d'El Tarf et Souk Ahras)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.1056,
+                36.5028
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6135,6 +9360,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Heddada, Sidi Fredj et face à Sakiet Sidi Youssef / Ghardimaou, à l'est de Souk Ahras (Wilaya de Souk Ahras)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.33,
+                36.245
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6163,6 +9403,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Morsott, Bir Dheb et cité minière de phosphates d'El Kouif, au nord-est de Tébessa (Wilaya de Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.3167,
+                35.5
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6191,6 +9446,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bir El Ater, Oum Ali et oasis de Négrine, au sud de Tébessa face à la région de Gafsa / Tozeur (Sud de la Wilaya de Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.0603,
+                34.7486
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6219,6 +9489,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Djebel M'zi / Djenien Bourezg (Aïn Sefra, Naâma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.545,
+                32.745
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6246,6 +9531,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Ras Beni Smir / Oued Sidi Saïd (Béchar)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.12094,
+                32.4036
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6273,6 +9573,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Ras Beni Smir / Kalkhabou (Béchar)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.12094,
+                32.4036
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6300,6 +9615,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif de l'Aurès et hautes plaines d'Aïn Beïda (Oum El Bouaghi)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.315,
+                35.685
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6327,6 +9657,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Place Roux (Place Tahtaha), Médina Jdida (Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6514,
+                35.6922
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6356,6 +9701,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Faubourgs des Planteurs, Sidi El Houari et Ras El Aïn (Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6595,
+                35.7011
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6384,6 +9744,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Agglomération parisienne (13e, 18e, 19e arrondissements, Nanterre, Saint-Denis, Montrouge) et agglomération lyonnaise",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.3592,
+                48.8842
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6413,6 +9788,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif du Djebel Bouk'hil, près de Messaad et Amoura (Wilaya de Djelfa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.8333,
+                34.1667
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6441,6 +9831,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Agglomérations et axes ferroviaires de Metz, Nancy, Longwy et Strasbourg (Moselle, Meurthe-et-Moselle, Bas-Rhin)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.1844,
+                48.6921
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6469,6 +9874,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Secteur frontalier de Souk Ahras, Ouled Driss, Lamy (Bouhadjar) et axe vers Guelma (Wilayas de Souk Ahras, El Tarf et Guelma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.0167,
+                36.3833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6497,6 +9917,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Centre-ville de Blida (Rue d'Alger) et Quartier Noir de Théniet El Had dans l'Ouarsenis (Wilayas de Blida et Tissemsilt)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.0281,
+                35.8711
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6525,6 +9960,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Ghardaïa (Ksar Melika, Berriane, Guerrara), Ouargla, Touggourt et abords de Hassi Messaoud (Wilayas de Ghardaïa, Ouargla et Touggourt)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.6735,
+                32.4909
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6553,6 +10003,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Forthassa Gharbia (Sfisifa), Ich et secteur d'Aïn Sefra sur le barrage frontalier Ouest (Wilaya de Naâma)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.8833,
+                32.7333
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6581,6 +10046,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Nedroma, Djebel Fellaoucène et abords de Ghazaouet (Nemours) (Wilaya de Tlemcen)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -1.7478,
+                35.0136
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6609,6 +10089,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Aïn El Assel (ex-Lacroix), El Aioun et Roum El Souk, dans le secteur frontalier d'El Tarf (Wilaya d'El Tarf)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.3667,
+                36.7833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6637,6 +10132,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif forestier de Mechroha (ex-Laverdure) et Ouillen, entre Souk Ahras et Guelma (Wilaya de Souk Ahras)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.8369,
+                36.3578
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6665,6 +10175,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Postes frontaliers d'El Meridj, Aïn Zerga et Ouenza (Wilaya de Tébessa)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.25,
+                35.7833
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6693,6 +10218,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Merahna, Heddada et Ouled Moumen, à l'est de Souk Ahras sur la Ligne Challe (Wilaya de Souk Ahras)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                8.1556,
+                36.1972
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6721,6 +10261,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Alger : Casbah, Belcourt, Clos-Salembier (El Madania), Climat de France (Oued Koriche) et El Harrach",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0586,
+                36.775
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6749,6 +10304,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Constantine : quartiers de la Souika (Médina), Sidi Mabrouk, Bellevue, Coudiat et centre-ville (ex-Rue de France) (Wilaya de Constantine)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.6147,
+                36.365
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6777,6 +10347,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oran : quartiers de Ville Nouvelle (Médina Jdida / Tahtaha), Médioni (Haï El Menzeh), Lamur (El Hamri) et Saint-Antoine",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6417,
+                35.6911
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6805,6 +10390,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Alger : Belcourt (Mohamed Belouizdad), Ruisseau, Hussein Dey, Maison-Carrée (El Harrach) et Bab El Oued",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0731,
+                36.7456
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6833,6 +10433,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Sidi Ali Benyoub (Sidi Bel Abbès)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.71667,
+                34.95
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6860,6 +10475,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Blida (Centre-ville)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                2.877,
+                36.425
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6888,6 +10518,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif d'El Milia (Wilaya de Jijel) et agglomérations d'Alger et d'Oran",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.2656,
+                36.7542
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6917,6 +10562,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Lyon (3e et 7e arrondissements), Villeurbanne, Vénissieux (Rhône) et Saint-Étienne (Loire)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                4.8795,
+                45.766
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6945,6 +10605,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Ensemble du front Est sur les Lignes Challe et Morice : d'El Kala / El Tarf à Souk Ahras, El Meridj et Tébessa",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                7.9511,
+                36.2864
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -6973,6 +10648,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oran : quartiers du Petit Lac, Médioni, Boulanger (Sidi El Chahmi / El Makkari) et Place des Victoires",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.63,
+                35.675
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7001,6 +10691,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Constantine : quartiers du Coudiat, Saint-Jean, Bellevue et Sidi Mabrouk (Wilaya de Constantine)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                6.6083,
+                36.3622
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7029,6 +10734,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Alger : basse Casbah (Place du Gouvernement / Place des Martyrs), Climat de France (Oued Koriche) et lisière de Bab El Oued",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.0606,
+                36.7853
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7057,6 +10777,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Massif de l'Ouarsenis : entre Oued Fodda, Lamartine (El Karimia) et Bordj Bounaama (ex-Molière, Wilayas de Chlef et Tissemsilt)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                1.5833,
+                36.0167
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7085,6 +10820,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oran : Ville Nouvelle (Médina Jdida / Place Tahtaha), Médioni, Lamur et Petit Lac",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6381,
+                35.6889
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7113,6 +10863,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Alger : Port d'Alger, Belcourt, Clos-Salembier, Ruisseau, Kouba et Maison-Carrée (El Harrach)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.062,
+                36.7525
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7141,6 +10906,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Alger (Faculté d'Alger, Télemly, Hydra, Belcourt) et zone industrielle d'El Harrach / Gué de Constantine",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                3.055,
+                36.7689
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7169,6 +10949,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Oran : Port d'Oran (dépôts de la British Petroleum), Ville Nouvelle, Médioni, Petit Lac et Saint-Eugène",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.645,
+                35.705
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7198,6 +10993,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Place Tahtaha (Médina Jdida, Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.651,
+                35.6925
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7227,6 +11037,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Boulevard Khedim Mustapha (ex-bd de Mascara) et Rue de Tlemcen (Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.648,
+                35.6912
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7255,6 +11080,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Faubourgs El Hamri (Lamur) et Médioni (Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6358,
+                35.6845
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7283,6 +11123,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Quartier général de la ZAO, Médina Jdida et ensemble de l'agglomération d'Oran",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.65,
+                35.694
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7312,6 +11167,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Rue de Tombouctou et Sbitar Bendaoud, Médina Jdida (Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6522,
+                35.6931
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7341,6 +11211,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Marché de Médina Jdida et lisière du Boulevard Clemenceau (Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6495,
+                35.6928
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7369,6 +11254,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Quartiers Petit Lac, Victor Hugo et Boulanger (Oran sud-est)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.621,
+                35.6795
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7397,6 +11297,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Terminaux pétroliers et zone portuaire d'Oran (Bassin du port et jetée du Large)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.639,
+                35.7115
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7426,6 +11341,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Bureaux de vote de Médina Jdida, Médioni, Lamur et Les Planteurs (Oran)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6505,
+                35.6935
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",
@@ -7454,6 +11384,21 @@
           "ar": null
         },
         "geometry_role": "representative_point",
+        "locations": [
+          {
+            "label": "Quartiers Saint-Pierre, Gambetta et Miramar (Oran centre-est)",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                -0.6315,
+                35.702
+              ]
+            },
+            "geometry_role": "representative_point",
+            "review_status": "needs_review"
+          }
+        ],
+        "territorial_assignments": [],
         "quality_flags": [
           "legacy_import_needs_review",
           "territorial_assignment_needs_review",

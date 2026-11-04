@@ -5,6 +5,7 @@
 
 const { test, describe } = require('node:test');
 const assert = require('node:assert/strict');
+const published = require('../docs/data/operations_fln_1954_1962.json').operations;
 
 // Handlers
 const operationsHandler = require('../api/v1/operations.js');
@@ -109,7 +110,7 @@ describe('ALNOP API v1 — Regression & Contract Test Suite', () => {
 
       assert.equal(res.statusCode, 200);
       assert.equal(res.body.meta?.status, 'success');
-      assert.equal(res.body.meta?.total, 263, 'Dataset should contain 263 total operations');
+      assert.equal(res.body.meta?.total, published.length, 'Dataset should contain 263 total operations');
       assert.equal(res.body.meta?.page, 1);
       assert.equal(res.body.meta?.limit, 50);
       assert.equal(res.body.data.length, 50);
@@ -122,7 +123,7 @@ describe('ALNOP API v1 — Regression & Contract Test Suite', () => {
       operationsHandler(req, res);
 
       assert.equal(res.statusCode, 200);
-      assert.equal(res.body.meta?.total, 11, 'Year 1954 should have 11 operations');
+      assert.equal(res.body.meta?.total, published.filter(op => op.date_debut?.startsWith('1954')).length, 'Year 1954 should have 11 operations');
       assert.equal(res.body.data.length, 11);
       assert.ok(res.body.data.every(op => op.annee === 1954 || (op.date_debut && op.date_debut.startsWith('1954'))));
     });
@@ -137,7 +138,7 @@ describe('ALNOP API v1 — Regression & Contract Test Suite', () => {
       assert.equal(res.headers['content-type'], 'application/geo+json; charset=utf-8');
       assert.equal(res.body.type, 'FeatureCollection');
       assert.ok(Array.isArray(res.body.features));
-      assert.equal(res.body.features.length, 263);
+      assert.equal(res.body.features.length, published.length);
       assert.equal(res.body.properties?.pagination?.paginated, false);
       assert.ok(res.body.properties?.pagination?.note);
     });
@@ -353,7 +354,7 @@ describe('ALNOP API v1 — Regression & Contract Test Suite', () => {
 
       assert.equal(res.statusCode, 200);
       assert.equal(res.body.meta?.status, 'success');
-      assert.equal(res.body.data?.total_operations, 263);
+      assert.equal(res.body.data?.total_operations, published.length);
       assert.ok(res.body.data?.by_year);
       assert.ok(res.body.data?.by_wilaya);
     });
