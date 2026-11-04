@@ -1,4 +1,12 @@
 const {test,expect}=require('@playwright/test');
+test.use({baseURL:'https://mghemri.github.io'});
+test.beforeEach(async({page})=>{
+  await page.route('https://mghemri.github.io/**',async route=>{
+    const url=new URL(route.request().url());
+    const response=await route.fetch({url:'http://127.0.0.1:8765'+url.pathname+url.search});
+    await route.fulfill({response});
+  });
+});
 async function fill(page){
   await page.locator('#title').fill('Proposition synthétique — اختبار');
   await page.locator('#description').fill('Exemple fictif réservé aux tests.');

@@ -3,7 +3,8 @@
   const $=id=>document.getElementById(id);
   let lang;
   try {lang=localStorage.getItem('aln_lang')==='ar'?'ar':'fr';} catch {lang='fr';}
-  const t=key=>I18N_CONTRIBUTE[lang][key];
+  const githubPages=window.ALNOP_SITE?.githubPages===true;
+  const t=key=>I18N_CONTRIBUTE[lang][!githubPages && key==='privacy'?'privacyLocal':!githubPages && key==='notSubmitted'?'notSubmittedLocal':key];
   let markdown='';
   let operations=new Map();
   let loadFailed=false;
@@ -88,8 +89,8 @@
     url.searchParams.set('title',value('title'));url.searchParams.set('body',markdown);
     // Generic issue: structured issue templates are available separately on GitHub.
     const tooLong=url.href.length>7500;
-    $('github').hidden=tooLong;$('long-note').hidden=!tooLong;
-    if(tooLong)$('github').removeAttribute('href');else $('github').href=url.href;
+    $('github').hidden=!githubPages||tooLong;$('long-note').hidden=!githubPages||!tooLong;
+    if(!githubPages||tooLong)$('github').removeAttribute('href');else $('github').href=url.href;
     $('review').hidden=false;$('review-heading').tabIndex=-1;$('review-heading').focus();
   });
   $('download').addEventListener('click',()=>{

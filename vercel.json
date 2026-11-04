@@ -3,9 +3,22 @@
   "outputDirectory": "docs",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/api/v1", "destination": "/api/v1/index" },
-    { "source": "/api/v1/", "destination": "/api/v1/index" },
-    { "source": "/api/v1/operations/:id", "destination": "/api/v1/operations/[id]?id=:id" }
+    {
+      "source": "/api/docs",
+      "destination": "/documentation/api.html"
+    },
+    {
+      "source": "/api/v1",
+      "destination": "/api/v1/index"
+    },
+    {
+      "source": "/api/v1/",
+      "destination": "/api/v1/index"
+    },
+    {
+      "source": "/api/v1/operations/:id",
+      "destination": "/api/v1/operations/[id]?id=:id"
+    }
   ],
   "functions": {
     "api/contact.js": {

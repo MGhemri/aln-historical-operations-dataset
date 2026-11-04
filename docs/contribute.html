@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr" dir="ltr">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contribuer · ALNOP</title><link rel="stylesheet" href="contribute.css"></head>
+<script src="site-context.js?v=4.2"></script><title>Contribuer · ALNOP</title><link rel="stylesheet" href="contribute.css"></head>
 <body><main>
 <nav><a href="./" data-t="back">Retour à l’atlas</a><button id="language" type="button">العربية</button></nav>
 <p class="eyebrow">ALNOP · 1954–1962</p><h1 data-t="heading">Enrichir le corpus historique</h1>
@@ -26,12 +26,12 @@
 <label for="citation" data-t="citation">Référence : titre, auteur, date, page ou cote, URL éventuelle</label><textarea id="citation" maxlength="3000" rows="4" dir="auto"></textarea>
 <label for="missing" data-t="missing">Si aucune source : justifiez son absence (publication bloquée en attente de sources)</label><textarea id="missing" maxlength="1500" rows="2" dir="auto"></textarea>
 <label class="consent"><input id="consent" type="checkbox" required><span data-t="consent">Je distingue les faits rapportés, les incertitudes et les interprétations ; je respecte les droits des sources et accepte la revue humaine.</span></label>
-<p><a href="https://github.com/MGhemri/aln-historical-operations-dataset/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener" data-t="guide">Lire les règles de contribution</a></p>
+<p><a href="documentation/contributing.html" target="_blank" rel="noopener" data-t="guide">Lire les règles de contribution</a></p>
 <p id="error" role="alert" tabindex="-1"></p><button type="submit" data-t="preview">Vérifier ma proposition</button>
 </form>
 <section id="review" hidden aria-labelledby="review-heading"><h2 id="review-heading" data-t="review">Récapitulatif à vérifier</h2>
 <pre id="summary" dir="auto"></pre><p data-t="notSubmitted">Rien n’a été envoyé. Sur GitHub, vérifiez le texte puis créez vous-même l’Issue. Sans compte, téléchargez le fichier pour le transmettre au mainteneur.</p>
 <p id="long-note" hidden data-t="long">Cette proposition est trop longue pour un lien GitHub : téléchargez-la puis copiez son contenu dans une nouvelle Issue.</p>
-<div class="actions"><a id="github" target="_blank" rel="noopener" data-t="github">Préparer l’Issue sur GitHub</a><button id="download" type="button" data-t="download">Télécharger la proposition</button></div>
-<p><a href="https://github.com/MGhemri/aln-historical-operations-dataset/issues" target="_blank" rel="noopener" data-t="tracking">Suivre les propositions sur GitHub</a></p></section>
-</main><script src="i18n.js?v=4.1"></script><script src="contribute.js?v=4.1"></script></body></html>
+<div class="actions"><a id="github" hidden data-repo-only target="_blank" rel="noopener" data-t="github">Préparer l’Issue sur GitHub</a><button id="download" type="button" data-t="download">Télécharger la proposition</button></div>
+<p><a hidden data-repo-only data-github-href="https://github.com/MGhemri/aln-historical-operations-dataset/issues" target="_blank" rel="noopener" data-t="tracking">Suivre les propositions sur GitHub</a></p></section>
+</main><script src="i18n.js?v=4.2"></script><script src="contribute.js?v=4.2"></script></body></html>

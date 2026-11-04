@@ -325,6 +325,8 @@ const I18N_ACTIONS = {
 
 const I18N_CONTRIBUTE = {
   fr: {
+    privacyLocal:'Votre proposition reste dans votre navigateur jusqu’au téléchargement. N’indiquez aucune donnée personnelle inutile et ne joignez pas de document protégé sans autorisation.',
+    notSubmittedLocal:'Rien n’a été envoyé. Téléchargez votre proposition, puis utilisez le formulaire Contact de l’atlas pour demander au mainteneur comment la transmettre. Le téléchargement seul ne constitue pas un envoi.',
     chooseOperation:'Choisir une fiche existante',relatedOperation:'Fiche existante concernée',optionalOperation:'Fiche concernée (facultatif)',secondOperation:'Deuxième fiche à comparer',eventDate:'Date ou période, si connue (conserver les incertitudes)',eventPlace:'Lieu(x), si connus',placeName:'Toponyme et variante proposés',
     newHelp:'Aucun identifiant à créer : le mainteneur attribuera un identifiant permanent après validation. Indiquez uniquement ce qui est documenté.',
     correctionHelp:'Sélectionnez la fiche existante. Décrivez le champ concerné, la valeur actuelle, la correction et sa justification.',
@@ -346,6 +348,8 @@ const I18N_CONTRIBUTE = {
     long:'Cette proposition est trop longue pour un lien GitHub : téléchargez-la puis copiez son contenu dans une nouvelle Issue.',github:'Préparer l’Issue sur GitHub',download:'Télécharger la proposition',tracking:'Suivre les propositions sur GitHub',sourceRequired:'Ajoutez une référence ou justifiez son absence.'
   },
   ar: {
+    privacyLocal:'يبقى المقترح في متصفحك حتى تنزيله. لا تدرج بيانات شخصية غير ضرورية ولا ترفق وثائق محمية دون إذن.',
+    notSubmittedLocal:'لم يُرسل شيء. نزّل المقترح ثم استخدم نموذج الاتصال في الأطلس لسؤال المشرف عن طريقة إرساله. التنزيل وحده ليس إرسالاً.',
     chooseOperation:'اختر بطاقة موجودة',relatedOperation:'البطاقة الموجودة المعنية',optionalOperation:'البطاقة المعنية (اختياري)',secondOperation:'البطاقة الثانية للمقارنة',eventDate:'التاريخ أو الفترة إن عُرفا (مع الحفاظ على عدم اليقين)',eventPlace:'المكان أو الأماكن إن عُرفت',placeName:'اسم المكان والصيغة المقترحة',
     newHelp:'لا تُنشئ معرّفاً: يخصص المشرف معرّفاً دائماً بعد التحقق. اذكر المعلومات الموثقة فقط.',
     correctionHelp:'اختر بطاقة موجودة واذكر الحقل والقيمة الحالية والتصحيح ومبرراته.',
@@ -499,7 +503,7 @@ const I18N_UI = {
       "<strong>Archives institutionnelles :</strong> Dépêches d'archives de l'APS, mémoires d'acteurs de la Révolution, rapports du SHD (Service Historique de la Défense)."
     ],
     methFooterTitle: "Documentation scientifique complète",
-    methFooterDesc: "Consultez le document intégral METHODOLOGIE.md sur GitHub pour les protocoles de géoréférencement, les références bibliographiques complètes et le guide de citation.",
+    methFooterDesc: "Consultez le document intégral METHODOLOGIE.md sur ce site pour les protocoles de géoréférencement, les références bibliographiques complètes et le guide de citation.",
     methFooterBtn: "Consulter METHODOLOGIE.md ↗"
   },
 
@@ -624,7 +628,7 @@ const I18N_UI = {
       "<strong>الأرشيف الوطني والمؤسساتي:</strong> برقيات وكالة الأنباء الجزائرية (APS)، ملفات ذاكرة مجلة <em>المجاهد</em>، ووثائق مصلحة الأرشيف التاريخي للجيش الفرنسي (SHD)."
     ],
     methFooterTitle: "الوثيقة المنهجية الكاملة باللغة الفرنسية والمصطلحات الأكاديمية",
-    methFooterDesc: "يمكنكم الاطلاع على وثيقة METHODOLOGIE.md الكاملة على منصة GitHub للتعرف على تفاصيل الإسناد الجغرافي وقواعد الاقتباس الأكاديمي.",
+    methFooterDesc: "يمكنكم الاطلاع على وثيقة METHODOLOGIE.md الكاملة على هذا الموقع للتعرف على تفاصيل الإسناد الجغرافي وقواعد الاقتباس الأكاديمي.",
     methFooterBtn: "فتح ملف METHODOLOGIE.md ↗"
   }
 };

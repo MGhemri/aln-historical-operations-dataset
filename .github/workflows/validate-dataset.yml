@@ -32,6 +32,9 @@ jobs:
       - name: Check canonical preview exports
         run: npm run check:canonical
 
+      - name: Check local documentation
+        run: npm run check:documentation
+
       - name: Run API Contract & Regression Tests
         run: npm run test:api
 

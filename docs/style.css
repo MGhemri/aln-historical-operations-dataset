@@ -204,13 +204,8 @@ button, input, select {
   border-color: var(--border-light);
 }
 
-/* Hide GitHub link & callouts when deployed on Vercel (preserved on GitHub Pages) */
-.is-vercel .github-btn,
-.is-vercel #github-link-btn,
-.is-vercel .methodology-footer-callout,
-.is-vercel .api-footer-callout {
-  display: none !important;
-}
+.standalone-site [data-repo-only], .standalone-site a[hidden] { display: none !important; }
+.nav-btn { text-decoration: none; }
 
 .icon {
   width: 18px;
@@ -880,6 +875,10 @@ button, input, select {
 
 .detail-drawer.open {
   transform: translateX(0);
+}
+.detail-drawer:not(.open) { visibility: hidden; pointer-events: none; }
+@media (max-width: 900px) {
+  .sidebar:not(.mobile-open) { visibility: hidden; pointer-events: none; }
 }
 
 .drawer-header {
@@ -2487,4 +2486,19 @@ html[dir="rtl"] .drawer-header-meta {
   .copy-btn {
     align-self: flex-end;
   }
+}
+
+/* Keep every navigation action reachable on narrow phones and smaller laptops. */
+@media (min-width: 769px) and (max-width: 1450px) {
+  .header-right .nav-btn span { display: none; }
+  .header-right .nav-btn { padding: 8px; min-width: 36px; }
+  .brand-title { flex-wrap: wrap; }
+  .header-left { min-width: 0; }
+}
+@media (max-width: 768px) {
+  :root { --header-height: 110px; }
+  .app-header { align-items: center; }
+  .header-right { flex-wrap: wrap; min-width: 0; max-width: calc(100% - 76px); }
+  .header-right > * { flex-shrink: 0; }
+  .header-right .nav-btn, .header-right .icon-btn { width: 44px; height: 44px; }
 }

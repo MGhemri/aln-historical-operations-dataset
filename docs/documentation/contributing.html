@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contribuer · ALNOP</title><script>const base=document.createElement('base');base.href=location.pathname.split('/documentation')[0].replace(/\/api\/docs$/,'')+'/documentation/';document.head.append(base);</script><link rel="stylesheet" href="documentation.css"><script src="../site-context.js?v=4.2"></script></head><body><main><nav><a href="../index.html">Atlas · الأطلس</a><a href="../contribute.html">Contribuer · ساهم</a><a href="index.html">Documentation · الوثائق</a></nav><h1 id="contribuer-à-alnop--المساهمة-في-alnop">Contribuer à ALNOP / المساهمة في ALNOP</h1>
+<p>Le corpus est incomplet et en enrichissement. Ne jamais compléter un fait historique par supposition.</p>
+<h2 id="proposer">Proposer</h2>
+<p>Utiliser <code>contribute.html</code> dans l'atlas ou choisir un formulaire dans les Issues GitHub. Une proposition est publique ; le pseudonyme et l'historique peuvent rester visibles. Aucun compte ALNOP, adresse électronique ou identité civile n'est demandé.</p>
+<p>Sans compte GitHub : télécharger la proposition Markdown puis la transmettre au mainteneur par un canal choisi par vous. Le téléchargement ne constitue pas un envoi. Aucune proposition n'est enregistrée sur le serveur par le formulaire.</p>
+<p>Donner les IDs concernés, les valeurs proposées et divergentes, les incertitudes et une référence précise (titre, auteur, date, page ou cote et URL éventuelle). Sans source, justifier son absence ; cela ne permet pas une publication directe. Ne pas téléverser un document protégé sans autorisation.</p>
+<h2 id="passer-dune-issue-à-une-publication">Passer d'une Issue à une publication</h2>
+<ol>
+<li>Un mainteneur examine la proposition et demande les informations manquantes.</li>
+<li>Une PR distincte présente les changements canoniques et leurs preuves, sans écraser les assertions contradictoires.</li>
+<li>Exécuter <code>npm ci</code>, <code>npm test</code> et <code>npm run check:canonical</code>. Pour l'interface : <code>npx playwright install chromium</code> puis <code>npm run test:browser</code>.</li>
+<li>Un mainteneur habilité documente sa décision et valide avant fusion. Les modifications historiques substantielles doivent demander une seconde lecture lorsque possible ; la règle finale reste à décider.</li>
+<li>Vérifier la génération des exports et le déploiement après fusion. Le système actuel reste en prévisualisation canonique : ne pas annoncer une publication automatique de la PR.</li>
+</ol>
+<p>Les brouillons et Issues non validées n'entrent pas dans les données publiques. Aucun script ne modifie le corpus depuis une Issue.</p>
+<h2 id="العربية">العربية</h2>
+<p>المتن غير شامل وقيد الإثراء. لا تُكمل الوقائع بالافتراض. استخدم صفحة المساهمة أو نماذج GitHub، مع ذكر معرّفات البطاقات والمراجع الدقيقة ومواضع عدم اليقين. دون حساب، نزّل المقترح وأرسله بنفسك إلى المشرف؛ التنزيل ليس إرسالاً. غياب المصدر يوقف النشر. تخضع التغييرات لمراجعة بشرية موثقة قبل الدمج، ولا تُضاف المقترحات غير المعتمدة إلى البيانات المنشورة.</p>
+<h2 id="champs-selon-le-type-de-proposition">Champs selon le type de proposition</h2>
+<ul>
+<li>Nouvelle opération : aucun identifiant à créer ; le mainteneur l'attribue après validation. Date/période et lieux facultatifs si inconnus ; conserver les incertitudes.</li>
+<li>Correction : sélectionner une fiche existante, indiquer le champ, la valeur actuelle et la correction justifiée.</li>
+<li>Source : sélectionner une fiche existante et fournir obligatoirement une référence.</li>
+<li>Doublon : sélectionner deux fiches différentes et expliquer les points communs et différences.</li>
+<li>Contradiction : sélectionner la fiche et détailler les affirmations divergentes et leurs références.</li>
+<li>Toponyme : indiquer le nom et sa variante ; association à une fiche existante facultative.</li>
+</ul>
+<p>Le formulaire charge les fiches du corpus : il ne permet pas de saisir un nouvel ID dans le sélecteur. Les modèles GitHub demandent de copier les IDs existants ; la revue vérifie leur existence. Aucune proposition ne crée automatiquement de fiche ou d'identifiant.</p>
+</main></body></html>

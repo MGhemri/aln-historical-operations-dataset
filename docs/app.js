@@ -1072,9 +1072,9 @@ function renderMethodologyModal() {
       <div class="methodology-footer-callout">
         <div class="callout-content">
           <h4>📖 التوثيق العلمي والمنهجي الكامل</h4>
-          <p>راجع الوثيقة الشاملة <a href="https://github.com/MGhemri/aln-historical-operations-dataset/blob/main/METHODOLOGIE.md" target="_blank" rel="noopener">METHODOLOGIE.md</a> على GitHub للاطلاع على بروتوكولات الإسناد الجغرافي، المراجع البيبليوغرافية الشاملة، ودليل الاقتباس الأكاديمي.</p>
+          <p>راجع الوثيقة الشاملة <a href="documentation/methodology.html" target="_blank" rel="noopener">METHODOLOGIE.md</a> على هذا الموقع للاطلاع على بروتوكولات الإسناد الجغرافي، المراجع البيبليوغرافية الشاملة، ودليل الاقتباس الأكاديمي.</p>
         </div>
-        <a href="https://github.com/MGhemri/aln-historical-operations-dataset/blob/main/METHODOLOGIE.md" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.5rem 1rem; border-radius:6px; background:var(--accent-blue); color:#fff; text-decoration:none; font-size:0.85rem; font-weight:600;">تصفح METHODOLOGIE.md ↗</a>
+        <a href="documentation/methodology.html" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.5rem 1rem; border-radius:6px; background:var(--accent-blue); color:#fff; text-decoration:none; font-size:0.85rem; font-weight:600;">تصفح METHODOLOGIE.md ↗</a>
       </div>
     `;
   } else {
@@ -1142,18 +1142,14 @@ function renderMethodologyModal() {
       <div class="methodology-footer-callout">
         <div class="callout-content">
           <h4>📖 Documentation scientifique complète</h4>
-          <p>Consultez le document intégral <a href="https://github.com/MGhemri/aln-historical-operations-dataset/blob/main/METHODOLOGIE.md" target="_blank" rel="noopener">METHODOLOGIE.md</a> sur GitHub pour les protocoles de géoréférencement, les références bibliographiques complètes et le guide de citation.</p>
+          <p>Consultez le document intégral <a href="documentation/methodology.html" target="_blank" rel="noopener">METHODOLOGIE.md</a> sur ce site pour les protocoles de géoréférencement, les références bibliographiques complètes et le guide de citation.</p>
         </div>
-        <a href="https://github.com/MGhemri/aln-historical-operations-dataset/blob/main/METHODOLOGIE.md" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.5rem 1rem; border-radius:6px; background:var(--accent-blue); color:#fff; text-decoration:none; font-size:0.85rem; font-weight:600;">Consulter METHODOLOGIE.md ↗</a>
+        <a href="documentation/methodology.html" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.5rem 1rem; border-radius:6px; background:var(--accent-blue); color:#fff; text-decoration:none; font-size:0.85rem; font-weight:600;">Consulter METHODOLOGIE.md ↗</a>
       </div>
     `;
   }
 
-  // Remove GitHub methodology callout on Vercel
-  if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('vercel')) {
-    const callout = body.querySelector('.methodology-footer-callout');
-    if (callout) callout.remove();
-  }
+
 }
 
 // --------------------------------------------------------------------------
@@ -1304,10 +1300,6 @@ function escapeHtml(text) {
 // Event Listeners Initialization
 // --------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
-  // Remove GitHub button & callouts on Vercel deployment while preserving on GitHub Pages
-  if (window.location.hostname.includes('vercel.app') || window.location.hostname.includes('vercel')) {
-    document.querySelectorAll('.github-btn, #github-link-btn, .methodology-footer-callout, .api-footer-callout').forEach(el => el.remove());
-  }
 
   initMap();
   loadData();
