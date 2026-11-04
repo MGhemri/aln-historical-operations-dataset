@@ -286,6 +286,28 @@ components:
         wilaya_color:
           type: string
           example: '#c0392b'
+        primary_affiliation:
+          type: string
+          example: W1
+        territorial_affiliations:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+                example: W1
+              label_fr:
+                type: string
+              label_ar:
+                type: string
+              color:
+                type: string
+              role:
+                type: string
+                example: primary
+              source_basis:
+                type: string
         type_action:
           type: string
           example: Attaque de caserne

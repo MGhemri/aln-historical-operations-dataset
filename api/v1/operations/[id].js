@@ -6,7 +6,7 @@
 
 const {
   getDataset,
-  getOperationCategory,
+  getTerritorialAffiliations,
   buildEnvelope,
   setStandardHeaders
 } = require('../data-service');
@@ -53,13 +53,15 @@ module.exports = (req, res) => {
       });
     }
 
-    const cat = getOperationCategory(op);
+    const terr = getTerritorialAffiliations(op);
     const enrichedOp = {
       ...op,
-      wilaya_code: cat.code,
-      wilaya_label_fr: cat.label_fr,
-      wilaya_label_ar: cat.label_ar,
-      wilaya_color: cat.color
+      wilaya_code: terr.primary.code,
+      wilaya_label_fr: terr.primary.label_fr,
+      wilaya_label_ar: terr.primary.label_ar,
+      wilaya_color: terr.primary.color,
+      primary_affiliation: terr.primary.code,
+      territorial_affiliations: terr.affiliations
     };
 
     return res.status(200).json(buildEnvelope({

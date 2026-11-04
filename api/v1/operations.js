@@ -8,7 +8,7 @@ const {
   getDataset,
   filterOperations,
   toGeoJSON,
-  getOperationCategory,
+  getTerritorialAffiliations,
   buildEnvelope,
   setStandardHeaders
 } = require('./data-service');
@@ -59,14 +59,16 @@ module.exports = (req, res) => {
         });
       }
 
-      // Enrich with Wilaya metadata
-      const cat = getOperationCategory(op);
+      // Enrich with Wilaya metadata & territorial affiliations (ALNOP-007)
+      const terr = getTerritorialAffiliations(op);
       const enrichedOp = {
         ...op,
-        wilaya_code: cat.code,
-        wilaya_label_fr: cat.label_fr,
-        wilaya_label_ar: cat.label_ar,
-        wilaya_color: cat.color
+        wilaya_code: terr.primary.code,
+        wilaya_label_fr: terr.primary.label_fr,
+        wilaya_label_ar: terr.primary.label_ar,
+        wilaya_color: terr.primary.color,
+        primary_affiliation: terr.primary.code,
+        territorial_affiliations: terr.affiliations
       };
 
       return res.status(200).json(buildEnvelope({
@@ -100,15 +102,17 @@ module.exports = (req, res) => {
     const startIndex = (page - 1) * limit;
     const paginated = filtered.slice(startIndex, startIndex + limit);
 
-    // Enrich each operation with category tags
+    // Enrich each operation with category tags & multi-affiliations (ALNOP-007)
     const enrichedPaginated = paginated.map(op => {
-      const cat = getOperationCategory(op);
+      const terr = getTerritorialAffiliations(op);
       return {
         ...op,
-        wilaya_code: cat.code,
-        wilaya_label_fr: cat.label_fr,
-        wilaya_label_ar: cat.label_ar,
-        wilaya_color: cat.color
+        wilaya_code: terr.primary.code,
+        wilaya_label_fr: terr.primary.label_fr,
+        wilaya_label_ar: terr.primary.label_ar,
+        wilaya_color: terr.primary.color,
+        primary_affiliation: terr.primary.code,
+        territorial_affiliations: terr.affiliations
       };
     });
 
