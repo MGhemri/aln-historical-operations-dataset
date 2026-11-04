@@ -4,7 +4,9 @@
   "private": true,
   "description": "Base de données historique et cartographie interactive des opérations de l'ALN (1954-1962)",
   "scripts": {
-    "test": "node validate_dataset.py"
+    "test": "npm run test:api && npm run test:data",
+    "test:api": "node --test tests/*.test.js",
+    "test:data": "node tests/run-validation.js"
   },
   "dependencies": {
     "nodemailer": "^6.9.16"

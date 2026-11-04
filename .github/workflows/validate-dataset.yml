@@ -1,20 +1,36 @@
-name: Validate Dataset Integrity
+name: Validate Dataset & API Test Suite
 
 on:
   push:
     branches:
       - main
+      - 'fix/**'
+      - 'feat/**'
   pull_request:
     branches:
       - main
   workflow_dispatch:
 
 jobs:
-  validate:
+  test-and-validate:
+    name: Test API & Validate Dataset Integrity
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run API Contract & Regression Tests
+        run: npm run test:api
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -22,5 +38,4 @@ jobs:
           python-version: '3.11'
 
       - name: Run dataset validation suite
-        run: |
-          python validate_dataset.py
+        run: python validate_dataset.py

@@ -62,7 +62,7 @@ module.exports = (req, res) => {
         data: enrichedOp,
         total: 1,
         count: 1,
-        query: { id: targetId }
+        query: { id: rawId }
       }));
     }
 
