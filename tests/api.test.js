@@ -1,6 +1,6 @@
 /**
  * ALNOP REST API v1 — Automated Test Suite
- * Tests handler contracts, filtering, pagination, and regressions (Phase A & Phase B).
+ * Tests handler contracts, filtering, pagination, and regressions (Phase A, B & C).
  */
 
 const { test, describe } = require('node:test');
@@ -261,6 +261,48 @@ describe('ALNOP API v1 — Regression & Contract Test Suite', () => {
     });
   });
 
+  describe('ALNOP-007: Territorial Multi-Affiliations', () => {
+    test('Operation with inter-wilaya scope exposes primary and secondary territorial affiliations', () => {
+      // OP_1954_001 mentions multiple historical zones
+      const req = { method: 'GET', query: { id: 'OP_1954_001' } };
+      const res = createMockRes();
+
+      operationsHandler(req, res);
+
+      assert.equal(res.statusCode, 200);
+      assert.ok(res.body.data.primary_affiliation, 'Should have primary_affiliation');
+      assert.ok(Array.isArray(res.body.data.territorial_affiliations), 'Should have territorial_affiliations array');
+      assert.ok(res.body.data.territorial_affiliations.length >= 1, 'Should contain at least the primary affiliation');
+      assert.equal(res.body.data.territorial_affiliations[0].role, 'primary');
+    });
+  });
+
+  describe('ALNOP-008: Non-Exhaustiveness & Dataset Versioning Metadata', () => {
+    test('API response envelope contains dataset_version and coverage_note', () => {
+      const req = { method: 'GET', query: { limit: '1' } };
+      const res = createMockRes();
+
+      operationsHandler(req, res);
+
+      assert.equal(res.statusCode, 200);
+      assert.equal(res.body.meta.dataset_version, '1.0.0');
+      assert.ok(res.body.meta.coverage_note, 'Expected coverage_note in metadata');
+      assert.ok(res.body.meta.coverage_note.includes('Non exhaustif'));
+    });
+
+    test('Stats endpoint contains dataset_version and explicit coverage_note', () => {
+      const req = { method: 'GET', query: {} };
+      const res = createMockRes();
+
+      statsHandler(req, res);
+
+      assert.equal(res.statusCode, 200);
+      assert.equal(res.body.data.dataset_version, '1.0.0');
+      assert.ok(res.body.data.coverage_note);
+      assert.ok(res.body.data.coverage_note.toLowerCase().includes('exhaustif'));
+    });
+  });
+
   describe('ALNOP-014: Deterministic Sorting & Pagination Consistency', () => {
     test('Pages 1 and 2 (limit 20) have zero overlapping IDs and preserve chronological tie-breaker', () => {
       const req1 = { method: 'GET', query: { page: '1', limit: '20' } };
@@ -280,7 +322,6 @@ describe('ALNOP API v1 — Regression & Contract Test Suite', () => {
       assert.equal(page1Ids.length, 20);
       assert.equal(page2Ids.length, 20);
 
-      // Verify zero intersection between page 1 and page 2
       const intersection = page1Ids.filter(id => page2Ids.includes(id));
       assert.deepEqual(intersection, [], 'Pagination must not produce duplicate records across pages');
     });

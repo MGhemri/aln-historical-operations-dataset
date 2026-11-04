@@ -56,7 +56,7 @@ function getDataset() {
 }
 
 /**
- * Determine Wilaya category and code for an operation
+ * Determine primary Wilaya category and code for an operation
  */
 function getOperationCategory(op) {
   const w = op.wilaya_concernee || '';
@@ -107,6 +107,47 @@ function getOperationCategory(op) {
     label_fr: def ? def.label_fr : catId,
     label_ar: def ? def.label_ar : catId,
     color: def ? def.color : '#c0392b'
+  };
+}
+
+/**
+ * Determine primary and secondary territorial affiliations for an operation (ALNOP-007)
+ * Preserves backward compatibility of primary category while exposing inter-wilaya / joint actions.
+ */
+function getTerritorialAffiliations(op) {
+  const primaryCat = getOperationCategory(op);
+  const w = op.wilaya_concernee || '';
+
+  const affiliations = [
+    {
+      code: primaryCat.code,
+      label_fr: primaryCat.label_fr,
+      label_ar: primaryCat.label_ar,
+      color: primaryCat.color,
+      role: 'primary',
+      source_basis: 'wilaya_concernee_primary'
+    }
+  ];
+
+  // Detect secondary cross-wilaya / joint actions without altering primary attribution
+  WILAYAS.forEach(wilaya => {
+    if (wilaya.id !== primaryCat.code) {
+      if (wilaya.pattern && wilaya.pattern.test(w)) {
+        affiliations.push({
+          code: wilaya.id,
+          label_fr: wilaya.label_fr,
+          label_ar: wilaya.label_ar,
+          color: wilaya.color,
+          role: 'joint_or_adjacent',
+          source_basis: 'explicit_mention_in_wilaya_concernee'
+        });
+      }
+    }
+  });
+
+  return {
+    primary: primaryCat,
+    affiliations
   };
 }
 
@@ -215,7 +256,7 @@ function filterOperations(ops, query = {}) {
 function toGeoJSON(operations) {
   const features = operations.map(op => {
     const coords = (op.localisation && op.localisation.coordonnees_approximatives) || {};
-    const cat = getOperationCategory(op);
+    const terr = getTerritorialAffiliations(op);
 
     const hasCoords = coords.latitude != null && coords.longitude != null;
     const geometry = hasCoords
@@ -235,10 +276,12 @@ function toGeoJSON(operations) {
         date_debut: op.date_debut,
         date_fin: op.date_fin,
         wilaya_concernee: op.wilaya_concernee,
-        wilaya_code: cat.code,
-        wilaya_label_fr: cat.label_fr,
-        wilaya_label_ar: cat.label_ar,
-        wilaya_color: cat.color,
+        wilaya_code: terr.primary.code,
+        wilaya_label_fr: terr.primary.label_fr,
+        wilaya_label_ar: terr.primary.label_ar,
+        wilaya_color: terr.primary.color,
+        primary_affiliation: terr.primary.code,
+        territorial_affiliations: terr.affiliations,
         type_action: op.type_action,
         region_ou_ville: (op.localisation && op.localisation.region_ou_ville) || '',
         description: op.description,
@@ -254,6 +297,7 @@ function toGeoJSON(operations) {
     type: 'FeatureCollection',
     properties: {
       generated_at: new Date().toISOString(),
+      dataset_version: '1.0.0',
       total_features: features.length,
       license: 'https://creativecommons.org/licenses/by/4.0/',
       attribution: 'Ghemri M. (ALN Historical Operations Dataset)',
@@ -268,7 +312,7 @@ function toGeoJSON(operations) {
 }
 
 /**
- * Compute aggregate statistics over a set of operations
+ * Compute aggregate statistics over a set of operations (ALNOP-008)
  */
 function computeStats(operations) {
   const total = operations.length;
@@ -299,7 +343,7 @@ function computeStats(operations) {
       byYear[y]++;
     }
 
-    // Wilaya
+    // Wilaya (counts based on primary category)
     const cat = getOperationCategory(op);
     if (byWilaya[cat.code]) {
       byWilaya[cat.code].count++;
@@ -316,6 +360,9 @@ function computeStats(operations) {
 
   return {
     total_operations: total,
+    dataset_version: '1.0.0',
+    dataset_scope: 'Corpus de recherche historique documenté (263 opérations)',
+    coverage_note: "Statistiques établies sur le corpus de recherche documenté (263 opérations historiques). Ce jeu de données ne constitue pas un recensement exhaustif de l'ensemble des actions de la Guerre de Libération nationale.",
     by_year: byYear,
     by_wilaya: byWilaya,
     top_action_types: sortedActions
@@ -323,14 +370,16 @@ function computeStats(operations) {
 }
 
 /**
- * Standard HTTP response envelope with metadata and attribution
+ * Standard HTTP response envelope with metadata and attribution (ALNOP-008)
  */
 function buildEnvelope({ data, total, count, page, limit, query = {} }) {
   const meta = {
     api_version: 'v1',
+    dataset_version: '1.0.0',
     status: 'success',
     total: total !== undefined ? total : (Array.isArray(data) ? data.length : 1),
     count: count !== undefined ? count : (Array.isArray(data) ? data.length : 1),
+    coverage_note: "Corpus de recherche historique documenté (1954–1962). Non exhaustif.",
     license: 'https://creativecommons.org/licenses/by/4.0/',
     attribution: 'Ghemri M. (ALN Historical Operations Dataset)',
     documentation: 'https://alnop.vercel.app/api/docs',
@@ -368,6 +417,7 @@ module.exports = {
   WILAYAS,
   getDataset,
   getOperationCategory,
+  getTerritorialAffiliations,
   normalizeString,
   filterOperations,
   toGeoJSON,
