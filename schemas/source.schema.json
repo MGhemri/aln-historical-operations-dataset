@@ -1,0 +1,11 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object","additionalProperties":false,
+  "required":["source_id","title","legacy","review_status"],
+  "properties":{
+    "source_id":{"type":"string","pattern":"^SRC_[a-f0-9]{24}$"},
+    "title":{"type":["string","null"]},
+    "legacy":{"type":"object"},
+    "review_status":{"const":"needs_review"}
+  }
+}

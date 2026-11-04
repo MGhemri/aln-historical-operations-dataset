@@ -8,9 +8,16 @@
     "test:api": "node --test tests/*.test.js",
     "test:blind": "node tests/blind-test.js",
     "test:data": "node tests/run-validation.js",
-    "build:data": "node scripts/sync-dataset.js"
+    "build:data": "node scripts/sync-dataset.js",
+    "migrate:legacy": "node scripts/migrate-legacy.js",
+    "build:canonical": "node scripts/build-canonical.js",
+    "check:canonical": "node scripts/build-canonical.js --check"
   },
   "dependencies": {
     "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
   }
 }
