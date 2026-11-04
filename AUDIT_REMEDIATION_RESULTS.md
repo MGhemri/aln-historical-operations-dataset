@@ -1,7 +1,7 @@
 # ALNOP — Journal des Modifications et Résultats de Recette
 
 **Dépôt :** https://github.com/MGhemri/aln-historical-operations-dataset  
-**Branche :** `fix/alnop-api-audit-v1`  
+**Branche actuelle :** `fix/alnop-api-phase-b`  
 **Date :** 4 novembre 2026  
 **Responsable technique :** Antigravity (Google DeepMind pair-programming agent)  
 **Référence d'audit :** `AUDIT_ALNOP_V1_ANTIGRAVITY.md`  
@@ -9,9 +9,7 @@
 
 ---
 
-## 1. Synthèse de la Phase A (Bloquants Immédiats)
-
-Tous les objectifs de la **Phase A** ont été diagnostiqués, reproduits avant correction, corrigés de manière minimale et validés par une suite de tests automatisés.
+## 1. Synthèse de la Phase A (Bloquants Immédiats — Mergée sur main via PR #2)
 
 | Réf. Anomalie | Gravité | Statut | Correction & Preuve |
 | :--- | :--- | :--- | :--- |
@@ -21,98 +19,54 @@ Tous les objectifs de la **Phase A** ont été diagnostiqués, reproduits avant 
 
 ---
 
-## 2. Preuves de Reproduction et de Non-Régression
+## 2. Synthèse de la Phase B (Contrat d'API, Robustesse & Sécurité)
 
-### 2.1 Reproduction d'ALNOP-001 (Avant correction)
-Appel local de `api/v1/operations.js` avec `{ method: 'GET', query: { id: 'OP_1954_001' } }` :
-```
-API Operations error: ReferenceError: targetId is not defined
-    at module.exports (api/v1/operations.js:65:22)
-Response: 500 {
-  status: 'error',
-  error: 'Internal Server Error',
-  message: 'targetId is not defined'
-}
-```
-*Le test automatisé dans `tests/api.test.js` a d'abord échoué (RED) avec `500 !== 200`.*
-
-### 2.2 Validation après correction (Après correction)
-Exécution de `npm test` :
-```
-> aln-historical-operations-dataset@1.0.0 test
-> npm run test:api && npm run test:data
-
-> aln-historical-operations-dataset@1.0.0 test:api
-> node --test tests/*.test.js
-
-▶ ALNOP API v1 — Regression & Contract Test Suite
-  ▶ ALNOP-001 Regression: Single operation via query param (?id=)
-    ✔ GET /api/v1/operations?id=OP_1954_001 returns 200 and valid operation object (not 500) (7.3483ms)
-    ✔ GET /api/v1/operations?id=UNKNOWN_ID returns 404 Not Found (0.3459ms)
-    ✔ GET /api/v1/operations?id=aln-1954-001 handles aliases/normalization smoothly (0.2421ms)
-    ✔ GET /api/v1/operations/:id via direct handler returns 200 and matches query route (0.2622ms)
-    ✔ GET /api/v1/operations/:id with missing ID returns 400 Bad Request (0.139ms)
-  ✔ ALNOP-001 Regression: Single operation via query param (?id=) (9.1621ms)
-  ▶ Operations Collection & Filtering
-    ✔ GET /api/v1/operations returns full collection with default pagination (8.2085ms)
-    ✔ GET /api/v1/operations?year=1954 filters accurately (0.3473ms)
-    ✔ GET /api/v1/operations?format=geojson returns GeoJSON FeatureCollection (1.3485ms)
-  ✔ Operations Collection & Filtering (10.1181ms)
-  ▶ Stats & Wilayas Endpoints
-    ✔ GET /api/v1/stats returns computed statistics matching total dataset count (1.1011ms)
-    ✔ GET /api/v1/wilayas returns 10 historical wilayas & autonomous zones (0.7777ms)
-  ✔ Stats & Wilayas Endpoints (2.1395ms)
-  ▶ HTTP Protocol & Methods
-    ✔ OPTIONS request returns 204 No Content with CORS headers (0.1718ms)
-    ✔ POST request returns 405 Method Not Allowed (0.1997ms)
-  ✔ HTTP Protocol & Methods (0.489ms)
-✔ ALNOP API v1 — Regression & Contract Test Suite (22.5479ms)
-ℹ tests 12
-ℹ suites 5
-ℹ pass 12
-ℹ fail 0
-
-> aln-historical-operations-dataset@1.0.0 test:data
-> node tests/run-validation.js
-
-=== Commencing Dataset Validation Suite ===
---> Validating JSON: operations_fln_1954_1962.json
-Success: 263 operations validated successfully in operations_fln_1954_1962.json.
---> Validating GeoJSON: operations_fln_1954_1962.geojson
-Success: 263 GeoJSON features validated successfully in operations_fln_1954_1962.geojson.
---> Validating JSON: docs/data/operations_fln_1954_1962.json
-Success: 263 operations validated successfully in docs/data/operations_fln_1954_1962.json.
---> Validating GeoJSON: docs/data/operations_fln_1954_1962.geojson
-Success: 263 GeoJSON features validated successfully in docs/data/operations_fln_1954_1962.geojson.
-
-ALL CHECKS PASSED: 4/4 files strictly valid with 263 confirmed operations.
-```
+| Réf. Anomalie | Gravité | Statut | Correction & Preuve |
+| :--- | :--- | :--- | :--- |
+| **ALNOP-004** | P2 | **RÉSOLU** | Formalisation du contrat GeoJSON (`format=geojson`) : exporte l'ensemble des entités filtrées sans pagination pour garantir un rendu cartographique complet dans les SIG (Leaflet, QGIS). Métadonnées `pagination: { paginated: false, note: "..." }` explicitées dans la FeatureCollection. |
+| **ALNOP-005** | P2 | **RÉSOLU** | Validation stricte des paramètres de pagination dans `api/v1/validator.js` : `limit` (entier de 1 à 300) et `page` (entier >= 1). Les valeurs malformées (`limit=abc`, `limit=-1`, `page=0`) renvoient désormais HTTP `400 Bad Request` au lieu d'un repli silencieux. |
+| **ALNOP-006** | P2 | **RÉSOLU** | Validation stricte des filtres : rejet des années invalides (`year=abc`), des plages chronologiques inversées (`date_from > date_to`), des formats inconnus (`format=xml`) et des tris invalides avec `HTTP 400 Bad Request`. |
+| **ALNOP-009** | P2 | **RÉSOLU** | Assainissement des erreurs 500 dans tous les endpoints (`operations.js`, `operations/[id].js`, `stats.js`, `wilayas.js`) : message d'erreur générique `Une erreur interne est survenue lors du traitement de la requête.` sans divulgation de détails système ou stack traces. |
+| **ALNOP-014** | P2 | **RÉSOLU** | Tri déterministe dans `api/v1/data-service.js` : ajout de l'identifiant unique canonique (`op.id`) en bris d'égalité lors du tri chronologique (`date_asc` ou `date_desc`). Zéro doublon ni saut d'enregistrement entre les pages successives (vérifié par test unitaire). |
+| **ALNOP-015** | P3 | **RÉSOLU** | Normalisation multilingue et arabe étendue dans `normalizeString` : suppression des diacritiques arabes (Tashkeel: Fatha, Damma, Kasra, Sukun, Tanwin), du Tatweel (`ـ`), normalisation des variantes d'Alef (إ, أ, آ, ٱ -> ا), de Ta Marbuta (ة -> ه) et de Ya (ى -> ي). Recherche plein texte étendue aux titres de sources académiques arabes et labels wilayas. |
+| **ALNOP-016** | P3 | **RÉSOLU** | Création de la spécification OpenAPI 3.0 officielle `openapi.yaml` couvrant tous les endpoints, paramètres, formats GeoJSON/JSON, codes 200/400/404/405/500 et schémas d'enveloppe. Documentation `API.md` alignée. |
 
 ---
 
-## 3. Intégrité des Données Historiques
+## 3. Résultats des Suites de Tests Automatisées
 
-- **263 opérations** strictement conservées sans altération.
-- Fichiers canoniques `operations_fln_1954_1962.json`, `.geojson`, et leurs copies miroirs dans `docs/data/` sont rigoureusement intacts (aucune modification textuelle ou sémantique).
-- Aucune inférence ou interpolation de données n'a été appliquée au corpus.
+### 3.1 Tests de Contrat & Régression (`npm run test:api`)
+- **26 tests automatisés exécutés** via `node:test`.
+- **26/26 réussis (100% PASS)** en ~118ms.
+- Couverture complète :
+  - Régression `targetId` (ALNOP-001)
+  - Filtres temporels, géographiques et thématiques
+  - Rejet HTTP 400 sur `limit=abc`, `limit=-5`, `limit=0`, `limit=500`, `page=0`, `page=-1` (ALNOP-005)
+  - Rejet HTTP 400 sur `year=abc`, `date_from > date_to`, `sort=random_sort`, `format=xml` (ALNOP-006)
+  - Déterminisme de pagination sans chevauchement d'IDs (ALNOP-014)
+  - Recherche arabe vocalisée vs non vocalisée (ALNOP-015)
+  - Codes HTTP 204 (OPTIONS) et 405 (POST)
+
+### 3.2 Fuzzing & Test à l'Aveugle (`npm run test:blind`)
+- **51 cas de test exécutés**.
+- **50 Clean Passes, 1 Behavioral Notice** (comportement GeoJSON non paginé vérifié et documenté).
+- **0 échec critique / crash serveur**.
+
+### 3.3 Intégrité du Corpus (`npm run test:data`)
+- **4/4 fichiers strictement valides** (`operations_fln_1954_1962.json`, `.geojson`, `docs/data/*`).
+- **263 opérations historiques intactes** (aucune altération, suppression ou falsification).
 
 ---
 
-## 4. Plan d'Implémentation des Phases Suivantes
-
-### Phase B — Contrat API, Robustesse & Sécurité
-1. **ALNOP-004 & ALNOP-005 :** Harmonisation de la pagination (`limit` / `page`) et spécification explicite du comportement GeoJSON (renvoi filtré complet vs paginé).
-2. **ALNOP-006 :** Validation stricte des filtres (`year`, dates inversées `date_from > date_to`).
-3. **ALNOP-009 :** Enveloppes d'erreurs 500 sans fuite de stack trace ou de messages d'exception système (`message: 'Une erreur interne est survenue'`).
-4. **ALNOP-014 :** Tri déterministe avec bris d'égalité par `id` (`date_debut` puis `id`).
-5. **ALNOP-016 :** Spécification OpenAPI 3.0 (`openapi.yaml`).
+## 4. Prochaines Étapes (Phase C & D)
 
 ### Phase C — Intégrité Scientifique & Multi-Affiliations
-1. **ALNOP-007 :** Transition progressive de l'heuristique regex exclusive vers le modèle de données `territorial_affiliations[]` et `primary_affiliation` sans modification unilatérale non sourcée.
+1. **ALNOP-007 :** Transition progressive vers le modèle de données `territorial_affiliations[]` et `primary_affiliation` sans modification unilatérale non sourcée.
 2. **ALNOP-008 :** Mention explicite de non-exhaustivité dans les métadonnées et statistiques (« opérations documentées dans ce corpus »).
 3. **ALNOP-013 :** Script de synchronisation déterministe entre la racine et `docs/data/`.
 4. **ALNOP-020 :** Création du registre de révision historique `HISTORICAL_REVIEW_REQUIRED.md`.
 
 ### Phase D — Qualification & Validation Vercel
-1. Vérification des headers CDN (`Cache-Control`, `s-maxage`, `stale-while-revalidate`).
-2. Tests réels sur endpoints déployés avec `curl` et audit CORS en environnement isolé.
+1. Déploiement en préproduction/production sur Vercel.
+2. Vérification des headers CDN (`Cache-Control`, `s-maxage`, `stale-while-revalidate`).
+3. Audit en conditions réelles avec navigateurs et logiciels SIG (QGIS).

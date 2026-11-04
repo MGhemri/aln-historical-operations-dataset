@@ -12,6 +12,7 @@ const {
   buildEnvelope,
   setStandardHeaders
 } = require('./data-service');
+const { validateOperationsQuery } = require('./validator');
 
 module.exports = (req, res) => {
   setStandardHeaders(res);
@@ -31,6 +32,16 @@ module.exports = (req, res) => {
   try {
     const dataset = getDataset();
     const query = req.query || {};
+
+    // Validate query parameters strictly (ALNOP-005, ALNOP-006)
+    const validation = validateOperationsQuery(query);
+    if (!validation.valid) {
+      return res.status(validation.status).json({
+        status: 'error',
+        error: validation.error,
+        message: validation.message
+      });
+    }
 
     // 1. Single operation query via ?id=OP_...
     if (query.id) {
@@ -70,6 +81,7 @@ module.exports = (req, res) => {
     const filtered = filterOperations(dataset, query);
 
     // 3. GeoJSON Format requested (?format=geojson)
+    // Note (ALNOP-004): GeoJSON format returns all filtered features without pagination for GIS cartographic mapping.
     if (String(query.format).toLowerCase() === 'geojson') {
       res.setHeader('Content-Type', 'application/geo+json; charset=utf-8');
       const geojson = toGeoJSON(filtered);
@@ -78,11 +90,11 @@ module.exports = (req, res) => {
 
     // 4. Standard JSON with pagination
     const totalMatching = filtered.length;
-    let limit = parseInt(query.limit, 10);
+    let limit = query.limit !== undefined && query.limit !== '' ? parseInt(query.limit, 10) : 50;
     if (isNaN(limit) || limit <= 0) limit = 50;
-    if (limit > 300) limit = 300; // Cap at 300 (full dataset fits in 263)
+    if (limit > 300) limit = 300;
 
-    let page = parseInt(query.page, 10);
+    let page = query.page !== undefined && query.page !== '' ? parseInt(query.page, 10) : 1;
     if (isNaN(page) || page <= 0) page = 1;
 
     const startIndex = (page - 1) * limit;
@@ -114,10 +126,11 @@ module.exports = (req, res) => {
     }));
   } catch (err) {
     console.error('API Operations error:', err);
+    // ALNOP-009: Sanitize 500 error response to prevent leaking internal error details
     return res.status(500).json({
       status: 'error',
       error: 'Internal Server Error',
-      message: err.message
+      message: 'Une erreur interne est survenue lors du traitement de la requête.'
     });
   }
 };
