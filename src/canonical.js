@@ -102,8 +102,10 @@ function validateCorpus(corpus) {
     }else{
       for(const type of op.event_type)if(!Array.isArray(corpus.vocabularies?.event_types)||!corpus.vocabularies.event_types.includes(type))errors.push(`${op.id}: unknown event type ${type}`);
       if(op.editorial_status==='published' && (!op.provenance.human_review_recorded ||
-          op.review_history.at(-1)?.decision!=='approved' || !op.source_ids.length || !op.event_type.length))
+          op.review_history.at(-1)?.decision!=='approved' || !op.source_ids.length))
         errors.push(`${op.id}: publication requires sources and an explicit approved review`);
+      if(op.editorial_status==='published'&&!op.event_type.length)errors.push(`${op.id}: publication requires an event type from the controlled vocabulary`);
+      if(op.editorial_status==='published'&&(!op.title.fr?.trim()||!op.description.fr?.trim()))errors.push(`${op.id}: publication through v1 requires reviewed French title and description`);
       if(op.editorial_status==='published')for(const id of op.source_ids){
         const source=corpus.sources.find(s=>s?.source_id===id);
         if(!source?.title?.trim())errors.push(`${op.id}: source ${id} needs a bibliographic title before publication`);

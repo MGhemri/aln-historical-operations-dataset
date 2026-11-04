@@ -93,6 +93,10 @@ test('Preparing an emailed proposal creates only an unreviewed draft and exclude
   assert.throws(()=>prepare(submission,{id:'../unsafe'}));
   const corpus=readCorpus();corpus.operations.push(result.operation);corpus.sources.push(result.source);
   assert.deepEqual(validateCorpus(corpus).errors,[]);assert.equal(publishedLegacy(corpus).operations.length,263);
+  const arabic=prepare({...submission,locale:'ar',title:'مقترح تجريبي',description:'وصف تجريبي'},
+    {id:'TEST_ARABIC_DRAFT',sourceCommit:'97eef827834a7463e85eed8b5bd5c81e08069420',createdAt:'2026-11-05T00:00:00Z'});
+  assert.equal(arabic.operation.title.fr,null);assert.equal(arabic.operation.description.fr,null);
+  assert.equal(arabic.operation.title.ar,'مقترح تجريبي');
 });
 test('Unknown dates and territories stay unknown in v1 and are counted explicitly',()=>{
   const {corpus,operation}=withProposal();approve(operation);

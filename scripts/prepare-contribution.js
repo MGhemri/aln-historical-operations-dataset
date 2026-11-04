@@ -7,6 +7,8 @@ function prepare(submission,{id,sourceCommit,createdAt}){
   if(submission.kind!=='new-operation')throw new Error('Only new-operation proposals can be scaffolded; corrections require a reviewed patch of the existing record.');
   if(!/^[A-Za-z0-9_-]+$/.test(id||''))throw new Error('Maintainer must supply a safe permanent --id.');
   if(!submission.title?.trim()||!submission.description?.trim())throw new Error('Title and description are required.');
+  if(submission.locale && !['fr','ar'].includes(submission.locale))throw new Error('Unsupported proposal language.');
+  const arabic=submission.locale==='ar';
   const unknown=()=>dateBounds(null);
   let start=unknown();const notes=[];
   if(submission.eventDate){
@@ -16,11 +18,11 @@ function prepare(submission,{id,sourceCommit,createdAt}){
   const source=submission.citation?.trim()?{source_id:'SRC_'+hash(submission.citation).slice(0,24),
     title:null,notes:submission.citation,review_status:'needs_review'}:null;
   if(submission.missing)notes.push(`Absence de source signalée : ${submission.missing}`);
-  const operation={id,schema_version:'2.0.0',title:{fr:submission.title,ar:null},start_date:start,end_date:unknown(),
+  const operation={id,schema_version:'2.0.0',title:{fr:arabic?null:submission.title,ar:arabic?submission.title:null},start_date:start,end_date:unknown(),
     locations:[{label:submission.eventPlace||null,geometry:null,geometry_role:'unknown',review_status:'needs_review'}],
     legacy_territorial_label:null,territorial_assignments:[],source_ids:source?[source.source_id]:[],
     editorial_status:'proposed',quality_flags:['contribution_needs_review','uncertain_location',...(source?[]:['missing_source'])],
-    description:{fr:submission.description,ar:null},event_type:[],editorial_notes:notes,
+    description:{fr:arabic?null:submission.description,ar:arabic?submission.description:null},event_type:[],editorial_notes:notes,
     provenance:{source_commit:sourceCommit,publication_basis:'human_review',human_review_recorded:false},
     review_history:[],created_at:createdAt,updated_at:createdAt};
   return {operation,source};

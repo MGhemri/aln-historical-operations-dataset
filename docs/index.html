@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="style.css?v=4.2">
+  <link rel="stylesheet" href="style.css?v=4.6">
 
   <!-- Vercel Web Analytics -->
   <script>
@@ -74,6 +74,10 @@
         <div class="dropdown-menu" id="export-menu">
           <a href="data/operations_fln_1954_1962.geojson" download="operations_fln_1954_1962.geojson" class="dropdown-item">GeoJSON (RFC 7946)</a>
           <a href="data/operations_fln_1954_1962.json" download="operations_fln_1954_1962.json" class="dropdown-item">JSON consolidé</a>
+          <a href="data/canonical/operations.json" download class="dropdown-item">JSON v2</a>
+          <a href="data/canonical/operations.geojson" download class="dropdown-item">GeoJSON v2</a>
+          <a href="data/canonical/operations.csv" download class="dropdown-item">CSV UTF-8</a>
+          <a href="data/canonical/dataset-manifest.json" download class="dropdown-item">SHA-256 (JSON)</a>
         </div>
       </div>
       <button id="contact-btn" class="nav-btn" title="Contacter l'auteur / Formulaire de contact" aria-label="Contact">
@@ -272,11 +276,12 @@
             <span class="kpi-label">Wilayas & Zones Autonomes (ZAA, ZAO)</span>
           </div>
           <div class="kpi-card">
-            <span class="kpi-value">100%</span>
-            <span class="kpi-label">Sources croisées & géolocalisées</span>
+            <span class="kpi-value" id="kpi-geocoded">263 / 263</span>
+            <span class="kpi-label">Fiches avec coordonnées renseignées</span>
           </div>
         </div>
 
+        <p id="stats-scope-note"></p>
         <div class="charts-grid">
           <div class="chart-box">
             <h3 class="chart-title">Ventilation chronologique des opérations (1954–1962)</h3>
@@ -616,9 +621,9 @@ console.log(`Chargé ${data.length} opérations sur ${meta.total}`);</code></pre
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Internationalization (AR/FR) -->
-  <script src="i18n.js?v=4.4"></script>
+  <script src="i18n.js?v=4.6"></script>
   <!-- Application Logic -->
-  <script src="app.js?v=4.4"></script>
+  <script src="app.js?v=4.6"></script>
 
 </body>
 </html>

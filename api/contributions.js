@@ -11,6 +11,7 @@ function validate(body){
     if(body[key]!==undefined && (typeof body[key]!=='string'||body[key].length>max))return 'INVALID_FIELD';
   }
   if(!kinds.has(body.kind)||!body.title?.trim()||!body.description?.trim()||body.consent!==true)return 'REQUIRED_FIELD';
+  if(body.locale!==undefined&&!['fr','ar'].includes(body.locale))return 'INVALID_LANGUAGE';
   if(/[\r\n]/.test(body.title))return 'INVALID_TITLE';
   if(!body.citation?.trim()&&!body.missing?.trim())return 'SOURCE_REQUIRED';
   if(body.kind==='new-source'&&!body.citation?.trim())return 'SOURCE_REQUIRED';
@@ -66,10 +67,13 @@ function createHandler({mailer=createMailer,now=Date.now}={}){
       try{
         const {config,transporter}=mailer();
         const text=message(body,reference);
+        const proposal=Object.fromEntries(['kind','title','description','citation','missing','operation','secondOperation','eventDate','eventPlace','placeName','locale','submissionId']
+          .filter(key=>body[key]!==undefined).map(key=>[key,body[key]]));
         const receipt=await transporter.sendMail({from:{name:'ALNOP Contributions',address:config.user},to:config.to,
           ...(body.replyTo?{replyTo:body.replyTo}:{}),subject:`[ALNOP Contribution] ${body.kind} — ${body.title}`,
           messageId:`<${body.submissionId}@connect-gm.com>`,text,
-          attachments:[{filename:'alnop-proposition.md',content:text,contentType:'text/markdown; charset=utf-8'}]});
+          attachments:[{filename:'alnop-proposition.md',content:text,contentType:'text/markdown; charset=utf-8'},
+            {filename:'alnop-proposition.json',content:JSON.stringify(proposal,null,2)+'\n',contentType:'application/json; charset=utf-8'}]});
         if(!receipt.accepted?.length)throw new Error('SMTP_REJECTED');
         return {status:200,body:{success:true,reference,status:'sent_for_review'}};
       }catch{

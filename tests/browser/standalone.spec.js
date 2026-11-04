@@ -1,3 +1,4 @@
+const corpusCount=require('../../docs/data/operations_fln_1954_1962.json').operations.length;
 const {test,expect}=require('@playwright/test');
 const path=require('node:path');
 test.use({baseURL:'https://alnop.vercel.app'});
@@ -28,7 +29,7 @@ async function noRepositoryLinks(page){
 for(const width of [360,390,1280])test(`Vercel ${width}px: atlas navigation and local documentation`,async({page})=>{
   await page.setViewportSize({width,height:844});
   await page.goto('/index.html');
-  await expect(page.locator('.op-card')).toHaveCount(263);
+  await expect(page.locator('.op-card')).toHaveCount(corpusCount);
   await noRepositoryLinks(page);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
   for(const id of ['documentation-link','contribute-link','methodology-btn','api-btn']){
@@ -120,4 +121,37 @@ test('SMTP error keeps proposal and enables a retry; Arabic response is translat
   failed=false;await page.locator('#send-proposal').click();await expect(page.locator('#delivery-status')).toContainText('ALNOP_RETRY');
   expect(sent[0].submissionId).toBe(sent[1].submissionId);
   await page.screenshot({path:'test-results/smtp-contribution-ar.png',fullPage:true});
+});
+test('A reviewed synthetic addition reaches the atlas, statistics and FR/AR detail without a fake point',async({page})=>{
+  const {withProposal,approve}=require('../helpers/corpus');
+  const {publishedLegacy}=require('../../src/publication');
+  const {corpus,operation}=withProposal();approve(operation);
+  operation.description.fr='<img src=x onerror="window.testInjected=true"> Texte synthétique.';
+  await page.route('https://alnop.vercel.app/data/operations_fln_1954_1962.json',route=>route.fulfill({json:publishedLegacy(corpus)}));
+  await page.setViewportSize({width:390,height:844});await page.goto('/index.html');
+  await expect(page.locator('.op-card')).toHaveCount(corpusCount+1);
+  await page.locator('#stats-btn').click();await expect(page.locator('#kpi-total-ops')).toHaveText(String(corpusCount+1));
+  await expect(page.locator('#kpi-geocoded')).toHaveText(`${corpusCount} / ${corpusCount+1}`);
+  expect(await page.evaluate(()=>state.charts.wilayas.data.datasets[0].data.reduce((a,b)=>a+b,0))).toBe(corpusCount+1);
+  await page.keyboard.press('Escape');await page.locator('#tab-list-btn').click();
+  await page.locator('#search-input').fill('Événement fictif');
+  await page.locator(`.op-card[data-id="${operation.id}"]`).click();
+  await expect(page.locator('#drawer-territories')).toContainText('Wilaya I');
+  await expect(page.locator('#drawer-territories')).toContainText('Wilaya III');
+  await expect(page.locator('.review-provenance')).toContainText('TEST_SYNTHETIC_REVIEWER');
+  expect(await page.locator('#drawer-content img').count()).toBe(0);
+  expect(await page.evaluate(()=>window.testInjected)).toBeUndefined();
+  expect(await page.evaluate(()=>markerMap.has('TEST_SYNTHETIC_001'))).toBe(false);
+  await page.locator('#lang-toggle-btn').click();
+  await expect(page.locator('.drawer-title')).toHaveText(operation.title.ar);
+  await noRepositoryLinks(page);
+  await page.screenshot({path:'test-results/canonical-reviewed-fixture-ar.png',fullPage:true});
+});
+test('A reviewed record with a documented point creates a new map marker',async({page})=>{
+  const {withProposal,approve}=require('../helpers/corpus');const {publishedLegacy}=require('../../src/publication');
+  const {corpus,operation}=withProposal();approve(operation);
+  operation.locations=[{label:'Lieu synthétique',geometry:{type:'Point',coordinates:[3,36]},geometry_role:'approximate_site',review_status:'reviewed'}];
+  await page.route('https://alnop.vercel.app/data/operations_fln_1954_1962.json',route=>route.fulfill({json:publishedLegacy(corpus)}));
+  await page.goto('/index.html');await expect(page.locator('.op-card')).toHaveCount(corpusCount+1);
+  expect(await page.evaluate(()=>markerMap.has('TEST_SYNTHETIC_001'))).toBe(true);
 });

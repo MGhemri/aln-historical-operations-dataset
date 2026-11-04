@@ -63,7 +63,7 @@ function getOpTitle(op) {
   if (state.lang === 'ar' && typeof I18N_TITLES_AR !== 'undefined' && I18N_TITLES_AR[op.id]) {
     return I18N_TITLES_AR[op.id];
   }
-  return op.nom_operation;
+  return state.lang === 'ar' && op.canonical_metadata?.title_ar ? op.canonical_metadata.title_ar : op.nom_operation;
 }
 
 function getActionLabel(act) {
@@ -99,6 +99,13 @@ function normalizeString(str) {
 
 // Helper: Determine operation color & category
 function getOperationCategory(op) {
+  if(op.canonical_metadata){
+    const territories=op.canonical_metadata.territories||[];
+    const primary=territories.find(t=>t.role==='primary');
+    if(primary)return {id:primary.territory_id,label:state.lang==='ar'?(primary.names.ar||primary.names.fr):primary.names.fr,
+      color:WILAYAS.find(w=>w.id===primary.territory_id)?.color||'#64748b'};
+    return {id:'OTHER',label:t(territories.length>1?'multiTerritorial':'territoryUnknown'),color:'#64748b'};
+  }
   const w = op.wilaya_concernee || '';
   const r = (op.localisation && op.localisation.region_ou_ville) || '';
 
@@ -491,6 +498,15 @@ function updateResultsCount() {
   const mobileCountEl = document.getElementById('mobile-count');
   const total = state.operations.length;
   const filtered = state.filteredOperations.length;
+  const kpiTotal=document.getElementById('kpi-total-ops');
+  if(kpiTotal)kpiTotal.textContent=total;
+  const geocoded=state.operations.filter(op=>{
+    const c=op.localisation?.coordonnees_approximatives;return c?.latitude!=null&&c?.longitude!=null;
+  }).length;
+  const kpiGeocoded=document.getElementById('kpi-geocoded');
+  if(kpiGeocoded)kpiGeocoded.textContent=`${geocoded} / ${total}`;
+  const scope=document.getElementById('stats-scope-note');
+  if(scope)scope.textContent=t('statsCorpusScope',filtered,total);
 
   if (countEl) {
     if (filtered === 0) {
@@ -626,14 +642,19 @@ function selectOperation(opId, zoomToMap = true, pushHistory = true, fromList = 
 
   const sourcesCount = Array.isArray(op.sources) ? op.sources.length : 0;
   const sourcesList = sourcesCount > 0
-    ? op.sources.map(s => `
-        <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer" class="source-item" title="${escapeHtml(s.titre || s.url)}">
+    ? op.sources.map(s => {
+        let url=null;try{const parsed=new URL(s.url);if(['http:','https:'].includes(parsed.protocol) &&
+          (window.ALNOP_SITE?.githubPages || !['github.com','raw.githubusercontent.com'].includes(parsed.hostname)))url=parsed.href;}catch{}
+        const tag=url?'a':'div';
+        return `
+        <${tag} ${url?`href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer"`:''} class="source-item" title="${escapeHtml(s.titre || s.url)}">
           <div>
             <div class="source-title">${escapeHtml(s.titre || s.url)}</div>
+            ${s.auteur || s.localisation_passage?`<div>${escapeHtml([s.auteur,s.localisation_passage].filter(Boolean).join(' — '))}</div>`:''}
           </div>
           <span class="source-badge">${escapeHtml(getSourceTypeLabel(s.type_source))}</span>
-        </a>
-      `).join('')
+        </${tag}>
+      `;}).join('')
     : `<p style="font-size:0.85rem; color:var(--text-dim);">${isAr ? 'مصادر وثائقية مسجلة في سجل الأرشيف الوطني.' : 'Sources documentaires compilées dans l\'inventaire d\'archive.'}</p>`;
 
   // Field Labels Localized
@@ -643,8 +664,9 @@ function selectOperation(opId, zoomToMap = true, pushHistory = true, fromList = 
   const lblGps = isAr ? 'إحداثيات GPS' : 'Coordonnées GPS';
   const lblCmd = isAr ? 'قيادة جيش التحرير' : 'Commandement ALN';
   const lblAction = isAr ? 'صنف العمل العسكري' : 'Type d\'action militaire';
-  const valActionPonctuelle = isAr ? 'عملية محددة بيوم واحد' : 'Action ponctuelle';
   const valUnknownDate = isAr ? 'غير محدد' : 'Inconnue';
+  const dateLabel=(raw,date)=>raw || (date?.precision==='range'?`${date.earliest} — ${date.latest}`:valUnknownDate);
+  const territoryNames=op.canonical_metadata?.territories?.map(t=>isAr?(t.names.ar||t.names.fr):t.names.fr).join(' ; ');
 
   const lblSecDesc = isAr ? 'السياق التاريخي ومجريات المعركة' : 'Description historique & déroulement';
   const lblSecImpact = isAr ? 'الأثر الاستراتيجي والسياسي' : 'Portée & impact stratégique';
@@ -662,13 +684,14 @@ function selectOperation(opId, zoomToMap = true, pushHistory = true, fromList = 
     <h2 class="drawer-title">${escapeHtml(title)}</h2>
 
     <div class="drawer-meta-grid">
+      ${territoryNames?`<div class="meta-block" style="grid-column:1/-1"><span class="meta-block-label">${escapeHtml(t('territorialAssignments'))}</span><span class="meta-block-value" id="drawer-territories">${escapeHtml(territoryNames)}</span></div>`:''}
       <div class="meta-block">
         <span class="meta-block-label">${lblStartDate}</span>
-        <span class="meta-block-value">📅 ${escapeHtml(op.date_debut || valUnknownDate)}</span>
+        <span class="meta-block-value">📅 ${escapeHtml(dateLabel(op.date_debut,op.canonical_metadata?.start_date))}</span>
       </div>
       <div class="meta-block">
         <span class="meta-block-label">${lblEndDate}</span>
-        <span class="meta-block-value">${op.date_fin ? '📅 ' + escapeHtml(op.date_fin) : valActionPonctuelle}</span>
+        <span class="meta-block-value">${escapeHtml(dateLabel(op.date_fin,op.canonical_metadata?.end_date))}</span>
       </div>
       <div class="meta-block">
         <span class="meta-block-label">${lblLoc}</span>
@@ -727,6 +750,7 @@ function selectOperation(opId, zoomToMap = true, pushHistory = true, fromList = 
         ${lblSecSources}
       </div>
       <div class="sources-list">${sourcesList}</div>
+      ${op.canonical_metadata?.last_review?`<p class="review-provenance">${escapeHtml(t('publicationReview'))} ${escapeHtml(op.canonical_metadata.last_review.reviewer)} · ${escapeHtml(op.canonical_metadata.last_review.reviewed_at)}</p>`:''}
       <p><a href="contribute.html?id=${encodeURIComponent(op.id)}">${isAr ? "اقتراح تصحيح" : "Proposer une correction"}</a></p>
     </div>
   `;
@@ -775,6 +799,14 @@ function closeModal(modalEl, syncHistory = true) {
 // --------------------------------------------------------------------------
 // Statistics Modal & Chart.js Integration
 // --------------------------------------------------------------------------
+function territoryChartData(operations){
+  const groups=new Map(WILAYAS.map(w=>[w.id,{label:getWilayaLabel(w.id),color:w.color,count:0}]));
+  for(const op of operations){const category=getOperationCategory(op);
+    if(!groups.has(category.id))groups.set(category.id,{label:category.id==='OTHER'?t('nonPrimaryTerritory'):category.label,color:category.color,count:0});
+    groups.get(category.id).count++;
+  }
+  return {labels:[...groups.values()].map(g=>g.label),counts:[...groups.values()].map(g=>g.count),colors:[...groups.values()].map(g=>g.color)};
+}
 function setupCharts() {
   const ctxYearsEl = document.getElementById('chart-years');
   const ctxWilayasEl = document.getElementById('chart-wilayas');
@@ -793,12 +825,13 @@ function setupCharts() {
   state.operations.forEach(op => {
     const y = (op.date_debut || '').substring(0, 4);
     if (yearCounts[y] !== undefined) yearCounts[y]++;
+    else yearCounts.unknown=(yearCounts.unknown||0)+1;
   });
 
   state.charts.years = new Chart(ctxYears, {
     type: 'bar',
     data: {
-      labels: Object.keys(yearCounts),
+      labels: Object.keys(yearCounts).map(y=>y==='unknown'?t('dateUnknown'):y),
       datasets: [{
         label: isAr ? 'العمليات العسكرية' : 'Opérations',
         data: Object.values(yearCounts),
@@ -817,20 +850,15 @@ function setupCharts() {
   });
 
   // 2. Data per Wilaya
-  const wilayaCounts = {};
-  WILAYAS.forEach(w => { wilayaCounts[w.id] = 0; });
-  state.operations.forEach(op => {
-    const cat = getOperationCategory(op);
-    if (wilayaCounts[cat.id] !== undefined) wilayaCounts[cat.id]++;
-  });
+  const territorialData=territoryChartData(state.operations);
 
   state.charts.wilayas = new Chart(ctxWilayas, {
     type: 'doughnut',
     data: {
-      labels: WILAYAS.map(w => getWilayaLabel(w.id)),
+      labels: territorialData.labels,
       datasets: [{
-        data: WILAYAS.map(w => wilayaCounts[w.id] || 0),
-        backgroundColor: WILAYAS.map(w => w.color),
+        data: territorialData.counts,
+        backgroundColor: territorialData.colors,
         borderWidth: 0
       }]
     },
@@ -893,20 +921,18 @@ function updateCharts() {
   state.filteredOperations.forEach(op => {
     const y = (op.date_debut || '').substring(0, 4);
     if (yearCounts[y] !== undefined) yearCounts[y]++;
+    else yearCounts.unknown=(yearCounts.unknown||0)+1;
   });
+  state.charts.years.data.labels=Object.keys(yearCounts).map(y=>y==='unknown'?t('dateUnknown'):y);
   state.charts.years.data.datasets[0].data = Object.values(yearCounts);
   state.charts.years.data.datasets[0].label = isAr ? 'العمليات العسكرية' : 'Opérations';
   state.charts.years.update();
 
   // Update Wilayas
-  const wilayaCounts = {};
-  WILAYAS.forEach(w => { wilayaCounts[w.id] = 0; });
-  state.filteredOperations.forEach(op => {
-    const cat = getOperationCategory(op);
-    if (wilayaCounts[cat.id] !== undefined) wilayaCounts[cat.id]++;
-  });
-  state.charts.wilayas.data.labels = WILAYAS.map(w => getWilayaLabel(w.id));
-  state.charts.wilayas.data.datasets[0].data = WILAYAS.map(w => wilayaCounts[w.id] || 0);
+  const territorialData=territoryChartData(state.filteredOperations);
+  state.charts.wilayas.data.labels = territorialData.labels;
+  state.charts.wilayas.data.datasets[0].data = territorialData.counts;
+  state.charts.wilayas.data.datasets[0].backgroundColor = territorialData.colors;
   state.charts.wilayas.options.plugins.legend.position = isAr ? 'left' : 'right';
   state.charts.wilayas.options.plugins.legend.labels.font.family = isAr ? 'Cairo, sans-serif' : 'Inter, sans-serif';
   state.charts.wilayas.update();
@@ -931,10 +957,10 @@ function renderStatsModalTexts() {
   if (modalTitle) modalTitle.textContent = isAr ? 'لوحة المؤشرات الإحصائية' : 'Tableau de bord statistique';
 
   const kpiLabels = document.querySelectorAll('#stats-modal .kpi-label');
-  if (kpiLabels[0]) kpiLabels[0].textContent = isAr ? 'عملية عسكرية موثقة' : 'Opérations documentées';
+  if (kpiLabels[0]) kpiLabels[0].textContent = t('publishedCorpusCount');
   if (kpiLabels[1]) kpiLabels[1].textContent = isAr ? 'سنوات كفاح مسلح (1954–1962)' : 'Années de guerre (1954–1962)';
   if (kpiLabels[2]) kpiLabels[2].textContent = isAr ? 'ولايات تاريخية ومنطقتان مستقلتان' : 'Wilayas & Zones Autonomes (ZAA, ZAO)';
-  if (kpiLabels[3]) kpiLabels[3].textContent = isAr ? 'مصادر متقاطعة ومحددة جغرافياً' : 'Sources croisées & géolocalisées';
+  if (kpiLabels[3]) kpiLabels[3].textContent = t('recordsWithCoordinates');
 
   const chartTitles = document.querySelectorAll('#stats-modal .chart-title');
   if (chartTitles[0]) chartTitles[0].textContent = isAr ? 'التوزيع الزمني للعمليات العسكرية (1954–1962)' : 'Ventilation chronologique des opérations (1954–1962)';
@@ -990,7 +1016,7 @@ function renderApiModal() {
   const modalTitle = document.getElementById('api-modal-title');
   if (modalTitle) modalTitle.textContent = t('apiModalTitle');
   const apiLead = document.getElementById('api-lead');
-  if (apiLead) apiLead.textContent = t('apiLead');
+  if (apiLead) apiLead.textContent = t('apiLead').replace('{total}', state.operations.length);
   const endpointsTitle = document.getElementById('api-endpoints-title');
   if (endpointsTitle) endpointsTitle.textContent = t('apiEndpointsTitle');
   const codeTitle = document.getElementById('api-code-title');
@@ -1081,7 +1107,7 @@ function renderMethodologyModal() {
     body.innerHTML = `
       <div class="methodology-banner">
         <p class="methodology-lead">
-          Ce projet en <strong>humanités numériques</strong> recense, qualifie et géolocalise <strong>263 actions militaires</strong> de l'Armée de Libération Nationale (1954–1962). La démarche repose sur une stricte contextualisation historiographique, un croisement critique des sources et la transparence cartographique.
+          Ce projet en <strong>humanités numériques</strong> recense, qualifie et géolocalise <strong>${state.operations.length} actions militaires</strong> de l'Armée de Libération Nationale (1954–1962). La démarche repose sur une stricte contextualisation historiographique, un croisement critique des sources et la transparence cartographique.
         </p>
       </div>
 

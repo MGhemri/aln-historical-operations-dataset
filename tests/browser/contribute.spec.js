@@ -1,3 +1,4 @@
+const corpusCount=require('../../docs/data/operations_fln_1954_1962.json').operations.length;
 const {test,expect}=require('@playwright/test');
 test.use({baseURL:'https://mghemri.github.io'});
 test.beforeEach(async({page})=>{
@@ -120,12 +121,12 @@ test('All 263 records, including the last, are reachable for every existing-reco
   await page.goto('/contribute.html');
   for(const kind of ['correction','new-source','duplicate','historical-dispute','place-name']){
     await page.locator('#kind').selectOption(kind);
-    await expect(page.locator('#operation option')).toHaveCount(264);
-    await expect(page.locator('#operation-count')).toContainText('263');
+    await expect(page.locator('#operation option')).toHaveCount(corpusCount+1);
+    await expect(page.locator('#operation-count')).toContainText(String(corpusCount));
     await page.locator('#operation').selectOption('OP_1962_021');
     await expect(page.locator('#operation-selected')).toContainText('OP_1962_021');
     if(kind==='duplicate'){
-      await expect(page.locator('#second-operation option')).toHaveCount(264);
+      await expect(page.locator('#second-operation option')).toHaveCount(corpusCount+1);
       await page.locator('#second-operation').selectOption('OP_1962_020');
     }
   }
@@ -138,7 +139,7 @@ test('Search by ID, year, French and Arabic names; preserve choice and reset res
   await page.locator('#operation-search').fill('NO_MATCH_SYNTHETIC');
   await expect(page.locator('#operation-count')).toContainText('Aucune fiche');
   await expect(page.locator('#operation')).toHaveValue('OP_1962_021');
-  await page.locator('#operation-search').fill('');await expect(page.locator('#operation option')).toHaveCount(264);
+  await page.locator('#operation-search').fill('');await expect(page.locator('#operation option')).toHaveCount(corpusCount+1);
   await page.locator('#operation-search').fill('1954');
   await expect(page.locator('#operation option[value="OP_1954_001"]')).toHaveCount(1);
   await page.locator('#operation-search').fill('Toussaint rouge');
@@ -149,5 +150,5 @@ test('Search by ID, year, French and Arabic names; preserve choice and reset res
   await page.screenshot({path:'test-results/searchable-picker-ar.png',fullPage:true});
   await page.locator('#operation-search').fill('1954');await page.locator('#kind').selectOption('new-source');
   await expect(page.locator('#operation-search')).toHaveValue('');
-  await expect(page.locator('#operation option')).toHaveCount(264);
+  await expect(page.locator('#operation option')).toHaveCount(corpusCount+1);
 });

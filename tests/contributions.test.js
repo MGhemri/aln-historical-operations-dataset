@@ -19,6 +19,8 @@ test('SMTP proposal: fixed recipient, no required identity, reference and comple
   assert.equal(res.statusCode,200);assert.equal(res.body.status,'sent_for_review');assert.match(res.body.reference,/^ALNOP-/);
   assert.equal(sent[0].to,'maintainer@example.org');assert.equal(sent[0].replyTo,undefined);
   assert.match(sent[0].attachments[0].content,/OP_1954_001/);assert.match(sent[0].text,/revue humaine/);
+  const proposal=JSON.parse(sent[0].attachments[1].content);
+  assert.equal(proposal.kind,'correction');assert.equal(proposal.to,undefined);assert.equal(proposal.replyTo,undefined);
 });
 test('SMTP failure or rejected recipients never produce success',async()=>{
   for(const sendMail of [async()=>{throw Error('private SMTP error');},async()=>({accepted:[]})]){

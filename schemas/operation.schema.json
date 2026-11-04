@@ -34,7 +34,10 @@
       ],
       "properties": {
         "fr": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "minLength": 1
         },
         "ar": {
@@ -359,7 +362,10 @@
       ],
       "properties": {
         "fr": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "minLength": 1
         },
         "ar": {

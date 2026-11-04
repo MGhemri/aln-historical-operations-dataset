@@ -395,6 +395,14 @@ const I18N_SOURCE_TYPES = {
 
 const I18N_UI = {
   fr: {
+    publicationReview: "Publication après revue :",
+    territorialAssignments: "Territoires documentés",
+    dateUnknown: "Date non déterminée",
+    nonPrimaryTerritory: "Multiterritoriales ou non attribuées",
+    multiTerritorial: "Multiterritoriale", territoryUnknown: "Attribution non déterminée",
+    publishedCorpusCount: "Fiches publiées dans le corpus",
+    recordsWithCoordinates: "Fiches avec coordonnées renseignées",
+    statsCorpusScope: (filtered,total) => `Graphiques : ${filtered} fiches selon les filtres, sur ${total} publiées. Ces effectifs décrivent le corpus documentaire, non l’ensemble des opérations historiques.`,
     appTitle: "FLN/ALN Operations Dataset",
     appSubtitle: "Cartographie interactive & moteur de recherche des opérations militaires",
     badgeYear: "1954–1962",
@@ -409,7 +417,7 @@ const I18N_UI = {
     navApi: "API v1",
     scrollFilters: "Filtres",
     apiModalTitle: "API REST v1 — Développeurs & Chercheurs",
-    apiLead: "Accédez programmatiquement aux 263 opérations militaires documentées de l'ALN (1954–1962). Idéal pour les chercheurs en sciences humaines, data scientists, historiens et développeurs d'applications cartographiques.",
+    apiLead: "Accédez programmatiquement aux {total} opérations militaires documentées de l'ALN (1954–1962). Idéal pour les chercheurs en sciences humaines, data scientists, historiens et développeurs d'applications cartographiques.",
     apiEndpointsTitle: "Points d'accès disponibles (Endpoints)",
     apiCodeTitle: "Exemples d'intégration rapide",
     copySuccess: "Copié !",
@@ -520,6 +528,14 @@ const I18N_UI = {
   },
 
   ar: {
+    publicationReview: "النشر بعد المراجعة:",
+    territorialAssignments: "الأقاليم الموثقة",
+    dateUnknown: "تاريخ غير محدد",
+    nonPrimaryTerritory: "متعددة الأقاليم أو غير مسندة",
+    multiTerritorial: "متعددة الأقاليم", territoryUnknown: "إسناد غير محدد",
+    publishedCorpusCount: "البطاقات المنشورة في المتن",
+    recordsWithCoordinates: "البطاقات ذات الإحداثيات المسجلة",
+    statsCorpusScope: (filtered,total) => `الرسوم: ${filtered} بطاقة حسب المرشحات من أصل ${total} منشورة. تصف هذه الأعداد المتن الوثائقي ولا تحصر جميع العمليات التاريخية.`,
     appTitle: "خريطة وقاعدة بيانات عمليات جيش التحرير الوطني",
     appSubtitle: "المنصة التفاعلية والتوثيقية للعمليات العسكرية الثورية (1954–1962)",
     badgeYear: "1954–1962",
@@ -534,7 +550,7 @@ const I18N_UI = {
     navApi: "واجهة API",
     scrollFilters: "الفلاتر",
     apiModalTitle: "واجهة برمجة التطبيقات REST v1 — للمطورين والباحثين",
-    apiLead: "الوصول البرمجي المباشر إلى 263 عملية عسكرية موثقة لجيش التحرير الوطني (1954–1962). مصممة للباحثين في الإنسانيات الرقمية، علماء البيانات، المؤرخين ومطوري نظم المعلومات الجغرافية.",
+    apiLead: "الوصول البرمجي المباشر إلى {total} عملية عسكرية موثقة لجيش التحرير الوطني (1954–1962). مصممة للباحثين في الإنسانيات الرقمية، علماء البيانات، المؤرخين ومطوري نظم المعلومات الجغرافية.",
     apiEndpointsTitle: "نقاط الوصول المتاحة (Endpoints)",
     apiCodeTitle: "أمثلة الاستخدام البرمجي المباشر",
     copySuccess: "تم النسخ !",

@@ -2502,3 +2502,7 @@ html[dir="rtl"] .drawer-header-meta {
   .header-right > * { flex-shrink: 0; }
   .header-right .nav-btn, .header-right .icon-btn { width: 44px; height: 44px; }
 }
+@media (max-width: 900px) {
+  .sidebar { height: 100%; z-index: 1250; }
+  .mobile-view-tabs { z-index: 1400; }
+}
