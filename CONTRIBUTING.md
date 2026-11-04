@@ -23,3 +23,14 @@ Les brouillons et Issues non validées n'entrent pas dans les données publiques
 ## العربية
 
 المتن غير شامل وقيد الإثراء. لا تُكمل الوقائع بالافتراض. استخدم صفحة المساهمة أو نماذج GitHub، مع ذكر معرّفات البطاقات والمراجع الدقيقة ومواضع عدم اليقين. دون حساب، نزّل المقترح وأرسله بنفسك إلى المشرف؛ التنزيل ليس إرسالاً. غياب المصدر يوقف النشر. تخضع التغييرات لمراجعة بشرية موثقة قبل الدمج، ولا تُضاف المقترحات غير المعتمدة إلى البيانات المنشورة.
+
+## Champs selon le type de proposition
+
+- Nouvelle opération : aucun identifiant à créer ; le mainteneur l'attribue après validation. Date/période et lieux facultatifs si inconnus ; conserver les incertitudes.
+- Correction : sélectionner une fiche existante, indiquer le champ, la valeur actuelle et la correction justifiée.
+- Source : sélectionner une fiche existante et fournir obligatoirement une référence.
+- Doublon : sélectionner deux fiches différentes et expliquer les points communs et différences.
+- Contradiction : sélectionner la fiche et détailler les affirmations divergentes et leurs références.
+- Toponyme : indiquer le nom et sa variante ; association à une fiche existante facultative.
+
+Le formulaire charge les fiches du corpus : il ne permet pas de saisir un nouvel ID dans le sélecteur. Les modèles GitHub demandent de copier les IDs existants ; la revue vérifie leur existence. Aucune proposition ne crée automatiquement de fiche ou d'identifiant.

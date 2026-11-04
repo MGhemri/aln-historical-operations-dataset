@@ -325,6 +325,15 @@ const I18N_ACTIONS = {
 
 const I18N_CONTRIBUTE = {
   fr: {
+    chooseOperation:'Choisir une fiche existante',relatedOperation:'Fiche existante concernée',optionalOperation:'Fiche concernée (facultatif)',secondOperation:'Deuxième fiche à comparer',eventDate:'Date ou période, si connue (conserver les incertitudes)',eventPlace:'Lieu(x), si connus',placeName:'Toponyme et variante proposés',
+    newHelp:'Aucun identifiant à créer : le mainteneur attribuera un identifiant permanent après validation. Indiquez uniquement ce qui est documenté.',
+    correctionHelp:'Sélectionnez la fiche existante. Décrivez le champ concerné, la valeur actuelle, la correction et sa justification.',
+    sourceHelp:'Sélectionnez la fiche à documenter et donnez une référence précise. Une source est obligatoire pour ce type de contribution.',
+    duplicateHelp:'Sélectionnez deux fiches différentes et expliquez les ressemblances et différences. Aucune fusion automatique.',
+    disputeHelp:'Sélectionnez la fiche et présentez les affirmations divergentes avec leurs références. Aucune version ne sera écrasée automatiquement.',
+    placeHelp:'Indiquez le lieu, les graphies ancienne et proposée et leur contexte. Vous pouvez associer une fiche existante.',
+    correctionDescription:'Champ concerné, valeur actuelle, correction proposée et justification',sourceDescription:'Information documentée par cette source et passage pertinent',duplicateDescription:'Éléments suggérant un doublon et différences à vérifier',disputeDescription:'Affirmations contradictoires et références de chaque version',placeDescription:'Graphies, période d’usage et justification du toponyme',
+    invalidOperation:'Choisissez une fiche du corpus existant.',sameOperation:'Choisissez deux fiches différentes.',loadError:'Impossible de charger les fiches. Rechargez la page avant de proposer une modification liée à une fiche.',sourceOnlyRequired:'Une référence est obligatoire pour ajouter une source.',
     proposedStatus:'Statut : proposition',reviewRequired:'Publication bloquée en attente de revue humaine.',sourcesRequired:'Publication bloquée en attente de revue humaine et de sources.',
     back:'Retour à l’atlas',heading:'Enrichir le corpus historique',
     intro:'Proposez une fiche, une correction ou une source. Chaque proposition nécessite une revue humaine avant publication.',
@@ -337,6 +346,15 @@ const I18N_CONTRIBUTE = {
     long:'Cette proposition est trop longue pour un lien GitHub : téléchargez-la puis copiez son contenu dans une nouvelle Issue.',github:'Préparer l’Issue sur GitHub',download:'Télécharger la proposition',tracking:'Suivre les propositions sur GitHub',sourceRequired:'Ajoutez une référence ou justifiez son absence.'
   },
   ar: {
+    chooseOperation:'اختر بطاقة موجودة',relatedOperation:'البطاقة الموجودة المعنية',optionalOperation:'البطاقة المعنية (اختياري)',secondOperation:'البطاقة الثانية للمقارنة',eventDate:'التاريخ أو الفترة إن عُرفا (مع الحفاظ على عدم اليقين)',eventPlace:'المكان أو الأماكن إن عُرفت',placeName:'اسم المكان والصيغة المقترحة',
+    newHelp:'لا تُنشئ معرّفاً: يخصص المشرف معرّفاً دائماً بعد التحقق. اذكر المعلومات الموثقة فقط.',
+    correctionHelp:'اختر بطاقة موجودة واذكر الحقل والقيمة الحالية والتصحيح ومبرراته.',
+    sourceHelp:'اختر البطاقة وقدّم مرجعاً دقيقاً. المرجع إلزامي لهذا النوع من المساهمة.',
+    duplicateHelp:'اختر بطاقتين مختلفتين ووضّح أوجه التشابه والاختلاف. لا يوجد دمج تلقائي.',
+    disputeHelp:'اختر البطاقة وقدّم الروايات المتعارضة ومراجعها. لا تُستبدل أي رواية تلقائياً.',
+    placeHelp:'اذكر المكان والصيغ القديمة والمقترحة وسياقها. يمكن ربط بطاقة موجودة اختيارياً.',
+    correctionDescription:'الحقل والقيمة الحالية والتصحيح المقترح ومبرراته',sourceDescription:'المعلومة التي يوثقها المصدر والموضع المعني',duplicateDescription:'أدلة التكرار المحتمل والاختلافات التي تتطلب التحقق',disputeDescription:'الروايات المتعارضة ومراجع كل رواية',placeDescription:'صيغ الاسم وفترة الاستخدام ومبررات التسمية',
+    invalidOperation:'اختر بطاقة من المتن الموجود.',sameOperation:'اختر بطاقتين مختلفتين.',loadError:'تعذر تحميل البطاقات. أعد تحميل الصفحة قبل اقتراح تغيير مرتبط ببطاقة.',sourceOnlyRequired:'المرجع إلزامي لإضافة مصدر.',
     proposedStatus:'الحالة: مقترح',reviewRequired:'النشر متوقف إلى حين المراجعة البشرية.',sourcesRequired:'النشر متوقف إلى حين المراجعة البشرية وتوفير المصادر.',
     back:'العودة إلى الأطلس',heading:'المساهمة في إثراء المتن التاريخي',
     intro:'اقترح بطاقة أو تصحيحاً أو مصدراً. تخضع كل مساهمة لمراجعة بشرية قبل النشر.',

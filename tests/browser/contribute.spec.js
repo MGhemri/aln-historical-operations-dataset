@@ -48,3 +48,63 @@ test('Desktop and keyboard: labels, focus, no horizontal overflow',async({page})
   await page.getByLabel('Titre de la proposition').fill('Proposition de test');
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
 });
+for(const lang of ['fr','ar'])for(const kind of ['new-operation','correction','new-source','duplicate','historical-dispute','place-name']){
+  test(`${lang}: adapted fields and preview for ${kind}`,async({page})=>{
+    await page.goto('/contribute.html?id=OP_1954_001');
+    if(lang==='ar')await page.locator('#language').click();
+    await page.locator('#kind').selectOption(kind);
+    await fill(page);
+    const isNew=kind==='new-operation';
+    await expect(page.locator('#operation-group')).toBeVisible({visible:!isNew});
+    if(isNew){
+      await expect(page.locator('#operation')).toBeDisabled();
+      await page.locator('#event-date').fill('1956 (à vérifier)');
+      await page.locator('#event-place').fill('Lieu incertain');
+    }else await page.locator('#operation').selectOption(kind==='place-name'?'':'OP_1954_001');
+    if(kind==='duplicate')await page.locator('#second-operation').selectOption('OP_1954_003');
+    if(kind==='place-name')await page.locator('#place-name').fill('Toponyme synthétique / اسم تجريبي');
+    await page.locator('#citation').fill('Référence synthétique, page 1');
+    await page.locator('button[type=submit]').click();
+    await expect(page.locator('#review')).toBeVisible();
+    if(isNew)await expect(page.locator('#summary')).not.toContainText('OP_1954_001');
+    if(kind==='duplicate')await expect(page.locator('#summary')).toContainText('OP_1954_003');
+    await expect(page.locator('#event-group')).toBeVisible({visible:isNew});
+    await expect(page.locator('#second-operation-group')).toBeVisible({visible:kind==='duplicate'});
+    await expect(page.locator('#place-group')).toBeVisible({visible:kind==='place-name'});
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+    if(isNew || kind==='duplicate')await page.screenshot({path:`test-results/contribution-${kind}-${lang}.png`,fullPage:true});
+  });
+}
+test('Duplicate requires different existing records; made-up IDs cannot be selected',async({page})=>{
+  await page.goto('/contribute.html');await page.locator('#kind').selectOption('duplicate');await fill(page);
+  await page.locator('#operation').selectOption('OP_1954_001');
+  await page.locator('#second-operation').selectOption('OP_1954_001');
+  await page.locator('#citation').fill('Source de test');await page.locator('button[type=submit]').click();
+  await expect(page.locator('#error')).toContainText('deux fiches différentes');
+  await expect(page.locator('#review')).toBeHidden();
+  expect(await page.locator('#operation option[value="OP_2099_999"]').count()).toBe(0);
+});
+test('Adding a source requires a reference and excludes stale hidden values',async({page})=>{
+  await page.goto('/contribute.html?id=OP_1954_001');await fill(page);
+  await page.locator('#missing').fill('Justification précédente');
+  await page.locator('#kind').selectOption('new-source');
+  await expect(page.locator('#citation')).toHaveAttribute('required','');
+  await expect(page.locator('#missing')).toBeDisabled();
+  await page.locator('button[type=submit]').click();await expect(page.locator('#review')).toBeHidden();
+  await page.locator('#citation').fill('Référence précise');await page.locator('button[type=submit]').click();
+  await expect(page.locator('#summary')).not.toContainText('Justification précédente');
+});
+test('Dataset failure blocks existing-record edits without blocking new proposals',async({page})=>{
+  await page.route('**/data/operations_fln_1954_1962.json',route=>route.abort());
+  await page.goto('/contribute.html');await page.locator('#kind').selectOption('correction');
+  await expect(page.locator('#error')).toContainText('Impossible de charger');
+  await page.locator('#kind').selectOption('new-operation');await fill(page);
+  await page.locator('#citation').fill('Référence précise');await page.locator('button[type=submit]').click();
+  await expect(page.locator('#review')).toBeVisible();
+});
+test('Existing-record contribution cannot preview without choosing a record',async({page})=>{
+  await page.goto('/contribute.html');await page.locator('#kind').selectOption('correction');
+  await fill(page);await page.locator('#citation').fill('Source de test');
+  await page.locator('button[type=submit]').click();await expect(page.locator('#review')).toBeHidden();
+  await expect(page.locator('#operation')).toHaveAttribute('required','');
+});

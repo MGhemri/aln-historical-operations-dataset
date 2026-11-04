@@ -1,32 +1,46 @@
-name: "Proposer un toponyme / اسم مكان"
+name: Proposer un toponyme / اسم مكان
 description: Proposition soumise à revue humaine / مقترح للمراجعة البشرية
-title: "[place-name] "
+title: '[place-name] '
 body:
-  - type: markdown
-    attributes:
-      value: "Contribution publique : pseudonyme et historique visibles. Aucune publication automatique. / المساهمة علنية ولا تُنشر تلقائياً."
-  - type: input
-    id: operation
-    attributes:
-      label: Identifiant(s) de fiche / معرّفات البطاقات
-      placeholder: OP_1954_001
-  - type: textarea
-    id: description
-    attributes:
-      label: Description et incertitudes / الوصف وعدم اليقين
-    validations:
+- type: markdown
+  attributes:
+    value: 'Contribution publique : pseudonyme et historique visibles. Aucune publication
+      automatique. / المساهمة علنية ولا تُنشر تلقائياً.'
+- type: input
+  id: operation
+  attributes:
+    label: Identifiant d’une fiche existante / معرّف بطاقة موجودة
+    placeholder: OP_1954_001
+    description: Copier l’identifiant depuis l’atlas, ne pas en créer. / انسخ المعرّف
+      من الأطلس ولا تُنشئ معرّفاً جديداً.
+  validations:
+    required: false
+- type: input
+  id: place-name
+  attributes:
+    label: Toponyme et variante proposés / اسم المكان والصيغة المقترحة
+  validations:
+    required: true
+- type: textarea
+  id: description
+  attributes:
+    label: Description et incertitudes / الوصف وعدم اليقين
+    description: Graphies, période et justification / صيغ الاسم وفترة الاستخدام ومبرراته
+  validations:
+    required: true
+- type: textarea
+  id: evidence
+  attributes:
+    label: Sources ou justification de leur absence / المصادر أو سبب غيابها
+    description: Titre, auteur, date, page ou cote et URL. Absence de source = publication
+      bloquée. / العنوان والمؤلف والتاريخ والصفحة والرابط. غياب المصدر يوقف النشر.
+  validations:
+    required: true
+- type: checkboxes
+  id: policy
+  attributes:
+    label: Règles de contribution / قواعد المساهمة
+    options:
+    - label: Je distingue faits et interprétations, respecte les droits et accepte
+        la revue humaine. / أميز الوقائع عن التفسير وأحترم الحقوق وأقبل المراجعة البشرية.
       required: true
-  - type: textarea
-    id: evidence
-    attributes:
-      label: Sources ou justification de leur absence / المصادر أو سبب غيابها
-      description: Titre, auteur, date, page ou cote et URL. Absence de source = publication bloquée. / العنوان والمؤلف والتاريخ والصفحة والرابط. غياب المصدر يوقف النشر.
-    validations:
-      required: true
-  - type: checkboxes
-    id: policy
-    attributes:
-      label: Règles de contribution / قواعد المساهمة
-      options:
-        - label: Je distingue faits et interprétations, respecte les droits et accepte la revue humaine. / أميز الوقائع عن التفسير وأحترم الحقوق وأقبل المراجعة البشرية.
-          required: true

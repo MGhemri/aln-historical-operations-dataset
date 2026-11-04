@@ -1,32 +1,42 @@
-name: "Proposer une opération / اقتراح عملية"
+name: Proposer une opération / اقتراح عملية
 description: Proposition soumise à revue humaine / مقترح للمراجعة البشرية
-title: "[new-operation] "
+title: '[new-operation] '
 body:
-  - type: markdown
-    attributes:
-      value: "Contribution publique : pseudonyme et historique visibles. Aucune publication automatique. / المساهمة علنية ولا تُنشر تلقائياً."
-  - type: input
-    id: operation
-    attributes:
-      label: Identifiant(s) de fiche / معرّفات البطاقات
-      placeholder: OP_1954_001
-  - type: textarea
-    id: description
-    attributes:
-      label: Description et incertitudes / الوصف وعدم اليقين
-    validations:
+- type: markdown
+  attributes:
+    value: 'Contribution publique : pseudonyme et historique visibles. Aucune publication
+      automatique. / المساهمة علنية ولا تُنشر تلقائياً.'
+- type: markdown
+  attributes:
+    value: 'Ne créez aucun identifiant : le mainteneur l’attribuera après validation.
+      / لا تُنشئ معرّفاً؛ يخصصه المشرف بعد التحقق.'
+- type: input
+  id: event-place
+  attributes:
+    label: Lieu(x) si connus / الأماكن إن عُرفت
+- type: input
+  id: event-date
+  attributes:
+    label: Date ou période si connue, avec incertitude / التاريخ أو الفترة إن عُرفا
+- type: textarea
+  id: description
+  attributes:
+    label: Description et incertitudes / الوصف وعدم اليقين
+  validations:
+    required: true
+- type: textarea
+  id: evidence
+  attributes:
+    label: Sources ou justification de leur absence / المصادر أو سبب غيابها
+    description: Titre, auteur, date, page ou cote et URL. Absence de source = publication
+      bloquée. / العنوان والمؤلف والتاريخ والصفحة والرابط. غياب المصدر يوقف النشر.
+  validations:
+    required: true
+- type: checkboxes
+  id: policy
+  attributes:
+    label: Règles de contribution / قواعد المساهمة
+    options:
+    - label: Je distingue faits et interprétations, respecte les droits et accepte
+        la revue humaine. / أميز الوقائع عن التفسير وأحترم الحقوق وأقبل المراجعة البشرية.
       required: true
-  - type: textarea
-    id: evidence
-    attributes:
-      label: Sources ou justification de leur absence / المصادر أو سبب غيابها
-      description: Titre, auteur, date, page ou cote et URL. Absence de source = publication bloquée. / العنوان والمؤلف والتاريخ والصفحة والرابط. غياب المصدر يوقف النشر.
-    validations:
-      required: true
-  - type: checkboxes
-    id: policy
-    attributes:
-      label: Règles de contribution / قواعد المساهمة
-      options:
-        - label: Je distingue faits et interprétations, respecte les droits et accepte la revue humaine. / أميز الوقائع عن التفسير وأحترم الحقوق وأقبل المراجعة البشرية.
-          required: true
