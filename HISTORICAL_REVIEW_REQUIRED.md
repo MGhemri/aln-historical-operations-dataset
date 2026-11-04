@@ -3,8 +3,8 @@
 **Corpus :** Base de données historique et cartographie des opérations de l'ALN (1954–1962)  
 **Version du corpus :** `1.0.0` (263 opérations documentées)  
 **Date d'établissement :** 4 novembre 2026  
-**Auteur du corpus :** Ghemri M.  
-**Auditeur technique :** Antigravity (Google DeepMind)  
+**Auteur du corpus & Responsable scientifique :** Ghemri M.  
+**Auditeur technique :** Algorithme de Contrôle et Validation Déterministe (ALNOP Audit Engine v1.0)  
 **Statut méthodologique :** À destination exclusive des historiens, universitaires et chercheurs qualifiés.
 
 ---
@@ -12,7 +12,7 @@
 ## ⚠️ Avertissement Méthodologique Fondamental (Règle d'Intégrité Scientifique)
 
 Conformément à la charte déontologique de recherche et aux règles de l'audit technique :
-1. **Aucun fait historique n'a été modifié, inventé, déduit ou interpolé de façon unilatérale par une intelligence artificielle.**
+1. **Aucun fait historique n'a été modifié, inventé, déduit ou interpolé de façon unilatérale ou par traitement automatisé non validé.**
 2. Les 263 fiches composant ce corpus sont préservées dans leur intégralité textuelle, chronologique, géographique et bibliographique d'origine.
 3. Le présent registre documente les **ambiguïtés structurelles, incertitudes géospatiales et interactions inter-wilayas** identifiées lors de l'audit informatique, afin de les soumettre à un protocole de revue par les pairs (*peer review*) par des historiens spécialisés de la Guerre de Libération nationale algérienne.
 

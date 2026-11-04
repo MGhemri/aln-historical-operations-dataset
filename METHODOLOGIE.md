@@ -76,13 +76,13 @@ Chaque opération militaire fait l'objet d'un croisement méthodique entre plusi
 
 ---
 
-## 5. Formats, Science Ouverte et Réutilisation IA
+## 5. Formats, Science Ouverte et Réutilisation Scientifique
 
 Ce corpus est mis à disposition dans un esprit de **Science Ouverte** (*Open Data / Open Science*) :
 
 - **GeoJSON standardisé (RFC 7946)** : `operations_fln_1954_1962.geojson` directement exploitable sous QGIS, ArcGIS, Mapbox, Leaflet, Keplr.gl ou Python (GeoPandas).
 - **JSON hiérarchique documenté** : `operations_fln_1954_1962.json` contenant la totalité des métadonnées, bilans estimés, commandements et bibliographie.
-- **Accès aux modèles d'IA et LLMs** : L'utilisation de ce corpus pour le fine-tuning, le RAG (Retrieval-Augmented Generation) et la recherche académique assistée par IA est encouragée sous mention de la paternité du projet.
+- **Interopérabilité & Traitement Computationnel** : L'utilisation de ce corpus pour le traitement automatique des langues (TAL / NLP), l'analyse quantitative et la recherche computationnelle en histoire est encouragée sous mention de la paternité du projet.
 
 ### Contact & Correspondance académique
 Pour toute question méthodologique, suggestion d'archives ou signalement d'ajustement historique, l'auteur (**Ghemri M.**) est joignable à l'adresse suivante :  

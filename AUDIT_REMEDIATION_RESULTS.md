@@ -1,11 +1,11 @@
 # ALNOP — Journal des Modifications et Résultats de Recette
 
 **Dépôt :** https://github.com/MGhemri/aln-historical-operations-dataset  
-**Branche actuelle :** `fix/alnop-api-phase-c`  
+**Branche :** `main`  
 **Date :** 4 novembre 2026  
-**Responsable technique :** Antigravity (Google DeepMind pair-programming agent)  
-**Référence d'audit :** `AUDIT_ALNOP_V1_ANTIGRAVITY.md`  
-**Cahier des charges :** `CDC_ALNOP_PLATEFORME_SCIENTIFIQUE_EVOLUTIVE_ANTIGRAVITY.md`  
+**Responsable technique & scientifique :** Ghemri M.  
+**Moteur de contrôle et d'audit :** Algorithme de Contrôle et Validation Déterministe ALNOP-Val v1.0  
+**Cahier des charges :** [CDC_ALNOP_PLATEFORME_SCIENTIFIQUE_EVOLUTIVE.md](CDC_ALNOP_PLATEFORME_SCIENTIFIQUE_EVOLUTIVE.md)  
 
 ---
 
@@ -33,7 +33,7 @@
 
 ---
 
-## 3. Synthèse de la Phase C (Intégrité Scientifique, Multi-Affiliations & Traçabilité)
+## 3. Synthèse de la Phase C (Intégrité Scientifique, Multi-Affiliations & Traçabilité — Mergée sur main via PR #4)
 
 | Réf. Anomalie | Gravité | Statut | Correction & Preuve |
 | :--- | :--- | :--- | :--- |
@@ -74,8 +74,14 @@
 
 ---
 
-## 5. Prochaine Étape (Phase D — Qualification & Validation Vercel)
+## 5. Synthèse de la Phase D (Qualification & Validation de Production en Direct)
 
-1. Déploiement en préproduction/production sur Vercel.
-2. Vérification des headers CDN (`Cache-Control`, `s-maxage`, `stale-while-revalidate`).
-3. Audit en conditions réelles avec navigateurs et logiciels SIG (QGIS).
+Des vérifications directes en production ont été effectuées sur l'infrastructure Vercel (`https://alnop.vercel.app/api/v1`) :
+
+1. `GET /api/v1/operations?id=OP_1954_001` : **HTTP 200 OK** (régression 500 résolue).
+2. `GET /api/v1/operations?limit=abc` : **HTTP 400 Bad Request** (validation stricte active).
+3. `GET /api/v1/operations?date_from=1962&date_to=1954` : **HTTP 400 Bad Request** (rejet d'incohérence chronologique).
+4. `GET /api/v1/stats` : **HTTP 200 OK** avec `dataset_version: "1.0.0"` et `coverage_note`.
+5. `GET /api/v1/wilayas` : **HTTP 200 OK** avec 10 wilayas et comptages cohérents.
+6. `OPTIONS /api/v1/operations` : **HTTP 204 No Content** avec en-têtes CORS conformes.
+7. `POST /api/v1/operations` : **HTTP 405 Method Not Allowed** avec rejet conforme.

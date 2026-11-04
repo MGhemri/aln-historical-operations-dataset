@@ -414,7 +414,7 @@ Le schéma répond à la structure suivante :
 Ce jeu de données a été modélisé pour permettre :
 * **La cartographie SIG et spatio-temporelle :** Visualisation directe sur GitHub via `operations_fln_1954_1962.geojson` et analyse de l'évolution des fronts, des couloirs logistiques d'acheminement d'armes et de l'intensité des combats dans les environnements SIG (QGIS, Mapbox, Leaflet).
 * **L'analyse statistique et quantitative :** Étude de la périodisation du conflit, de la typologie des actions (guérilla de montagne vs guérilla urbaine vs sabotages industriels) et de l'activité par commandement de wilaya.
-* **L'ingénierie logicielle et IA :** Ingestion dans des bases relationnelles (PostgreSQL/PostGIS, SQLite), graphes de connaissances (Neo4j) ou moteurs de recherche vectoriels pour des applications de recherche historique.
+* **L'ingénierie des données et humanités numériques :** Ingestion dans des bases relationnelles (PostgreSQL/PostGIS, SQLite), graphes de connaissances (Neo4j) ou moteurs de recherche vectoriels pour des applications de recherche historique.
 
 ---
 

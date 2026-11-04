@@ -1,14 +1,14 @@
 # CAHIER DES CHARGES — ALNOP Data Foundation & Research Platform
 
 **Version :** 1.0 — 4 novembre 2026  
-**Statut :** Spécification d'implémentation pour Antigravity  
+**Statut :** Spécification d'implémentation technique et scientifique  
 **Projet :** ALN Historical Operations Dataset (1954–1962)  
 **Dépôt :** https://github.com/MGhemri/aln-historical-operations-dataset  
 **Déploiement actuel :** https://alnop.vercel.app  
 **Nature :** académique, open source, gratuit, pérenne, évolutif  
 **Priorité absolue :** intégrité historique, traçabilité, compatibilité descendante, reproductibilité.
 
-> **Directive à Antigravity :** implémenter progressivement cette spécification dans le dépôt existant. Inspecter les fichiers avant toute modification. Ne pas inventer, supprimer, réécrire ou « corriger » des faits historiques par inférence. Les 263 fiches existantes constituent le corpus initial, **pas un inventaire exhaustif**. Ne jamais interpréter une absence dans ALNOP comme une absence historique. Conserver les URLs et fonctionnalités publiques actuelles. Faire des commits atomiques et fournir des preuves de tests.
+> **Directives d'implémentation :** implémenter progressivement cette spécification dans le dépôt existant. Inspecter les fichiers avant toute modification. Ne pas inventer, supprimer, réécrire ou « corriger » des faits historiques par inférence. Les 263 fiches existantes constituent le corpus initial, **pas un inventaire exhaustif**. Ne jamais interpréter une absence dans ALNOP comme une absence historique. Conserver les URLs et fonctionnalités publiques actuelles. Faire des commits atomiques et fournir des preuves de tests.
 
 ---
 
@@ -26,7 +26,7 @@
 - Le `package.json` fourni contient `"test": "node validate_dataset.py"`, à corriger en cohérence avec l'audit technique antérieur.
 - Exemple de fiche : `OP_1954_001` désigne une opération à portée multiterritoriale ; ne pas la ramener scientifiquement à une seule wilaya.
 
-**Vérification préalable obligatoire :** le dépôt peut avoir évolué depuis cette archive. Antigravity doit comparer la branche actuelle, les fichiers et l'audit précédent `AUDIT_ALNOP_V1_ANTIGRAVITY.md` s'il est disponible. Les affirmations sur le code ci-dessus sont des constats sur l'archive fournie, pas sur les futurs commits.
+**Vérification préalable obligatoire :** le dépôt peut avoir évolué depuis cette archive. L'implémentation doit comparer la branche actuelle, les fichiers et l'audit technique préalable. Les affirmations sur le code ci-dessus sont des constats sur l'archive fournie, pas sur les futurs commits.
 
 ### 0.2 Objectifs fonctionnels
 
@@ -43,10 +43,10 @@
 
 ### 0.3 Hors périmètre de la première livraison
 
-- Entraînement d'un modèle génératif sur les 263 fiches ; réponses IA sans citations.
+- Entraînement de modèles génératifs sans validation des sources ; réponses sans citations scientifiques vérifiables.
 - « Prédiction » de batailles ou reconstitution de faits manquants.
 - Attribution automatique d'une vérité historique à une source en fonction de son origine.
-- Publication automatique de contenus extraits par OCR/LLM sans revue.
+- Publication automatique de contenus extraits par OCR sans revue humaine.
 - Migration obligatoire vers un service payant, un SaaS propriétaire ou une base serveur.
 - Authentification maison, stockage de mots de passe, système de commentaires non modéré.
 - Modification silencieuse des identifiants et schémas de l'API v1.
@@ -474,7 +474,7 @@ Créer `CITATION.cff`, texte de citation recommandé et identifiant de release. 
 
 ---
 
-## 11. Phasage obligatoire pour Antigravity
+## 11. Phasage obligatoire de l'implémentation
 
 ### Phase 0 — Diagnostic et gel des contrats (P0)
 
@@ -532,13 +532,13 @@ Une fonctionnalité n'est terminée que si : code présent ; tests verts ; sché
 7. Périmètre chronologique : 1954–1962 strict pour les opérations, ou événements de contexte hors période dans un référentiel distinct.
 8. Convention de nouveaux identifiants et politique de fusion/scission.
 
-Par défaut, Antigravity doit retenir les options **réversibles, conservatrices, libres et sans suppression**, puis consigner les questions dans `docs/DECISIONS_PENDING.md` plutôt que bloquer les fondations techniques.
+Par défaut, l'implémentation technique doit retenir les options **réversibles, conservatrices, libres et sans suppression**, puis consigner les questions dans `docs/DECISIONS_PENDING.md` plutôt que bloquer les fondations techniques.
 
 ---
 
-## 14. Prompt d'exécution prêt pour Antigravity
+## 14. Cadre d'exécution et directives d'implémentation
 
-> Tu es l'architecte principal et le responsable qualité du projet académique open source ALNOP. Lis intégralement `CDC_ALNOP_PLATEFORME_SCIENTIFIQUE_EVOLUTIVE_ANTIGRAVITY.md`, puis inspecte le dépôt actuel et, s'il est présent, `AUDIT_ALNOP_V1_ANTIGRAVITY.md`. Implémente le CDC **par phases**, en commençant par la phase 0 puis la phase 1. Préserve les 263 fiches et tous leurs identifiants ; ne change jamais une donnée historique par supposition. Conserve l'API REST v1 et le site existant. Fais du dépôt Git la source de vérité et génère les exports de façon déterministe. Ajoute les schémas, migrations réversibles, validations, tests et CI. Pour chaque phase, présente les modifications, les commandes exécutées, les résultats de tests, les éventuelles régressions et les décisions humaines nécessaires. N'affirme jamais qu'un test est passé sans l'avoir exécuté. Ne publie pas de nouvelle donnée historique sans validation humaine. Ne passe à la phase suivante qu'après satisfaction des critères de réception et, pour toute décision irréversible ou scientifique, mon accord.
+> Le responsable technique assure la conformité du projet académique open source ALNOP. Implémenter le cahier des charges par phases, en préservant scrupuleusement les 263 fiches et tous leurs identifiants ; ne jamais modifier une donnée historique par supposition. Conserver l'API REST v1 et le site existant. Faire du dépôt Git la source de vérité et générer les exports de façon déterministe. Ajouter les schémas, validations, tests et CI. Présenter pour chaque phase les résultats des tests et les décisions scientifiques nécessaires.
 
 ---
 
