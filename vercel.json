@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/docs",
-      "destination": "/documentation/api.html"
+      "destination": "/documentation/api"
     },
     {
       "source": "/api/v1",
