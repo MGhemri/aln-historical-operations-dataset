@@ -506,7 +506,7 @@ const I18N_UI = {
     ],
     methFooterTitle: "Documentation scientifique complète",
     methFooterDesc: "Consultez le document intégral METHODOLOGIE.md sur ce site pour les protocoles de géoréférencement, les références bibliographiques complètes et le guide de citation.",
-    methFooterBtn: "Consulter METHODOLOGIE.md ↗"
+    methFooterBtn: "Consulter METHODOLOGIE.md"
   },
 
   ar: {
@@ -631,6 +631,6 @@ const I18N_UI = {
     ],
     methFooterTitle: "الوثيقة المنهجية الكاملة باللغة الفرنسية والمصطلحات الأكاديمية",
     methFooterDesc: "يمكنكم الاطلاع على وثيقة METHODOLOGIE.md الكاملة على هذا الموقع للتعرف على تفاصيل الإسناد الجغرافي وقواعد الاقتباس الأكاديمي.",
-    methFooterBtn: "فتح ملف METHODOLOGIE.md ↗"
+    methFooterBtn: "فتح ملف METHODOLOGIE.md"
   }
 };

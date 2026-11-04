@@ -631,7 +631,7 @@ function selectOperation(opId, zoomToMap = true, pushHistory = true, fromList = 
           <div>
             <div class="source-title">${escapeHtml(s.titre || s.url)}</div>
           </div>
-          <span class="source-badge">${escapeHtml(getSourceTypeLabel(s.type_source))} ↗</span>
+          <span class="source-badge">${escapeHtml(getSourceTypeLabel(s.type_source))}</span>
         </a>
       `).join('')
     : `<p style="font-size:0.85rem; color:var(--text-dim);">${isAr ? 'مصادر وثائقية مسجلة في سجل الأرشيف الوطني.' : 'Sources documentaires compilées dans l\'inventaire d\'archive.'}</p>`;
@@ -677,7 +677,7 @@ function selectOperation(opId, zoomToMap = true, pushHistory = true, fromList = 
       <div class="meta-block">
         <span class="meta-block-label">${lblGps}</span>
         <span class="meta-block-value">
-          ${hasCoords ? `<a href="${osmUrl}" target="_blank" rel="noopener" style="color:var(--accent-blue); text-decoration:none;">${coordsStr} ↗</a>` : coordsStr}
+          ${hasCoords ? `<a href="${osmUrl}" target="_blank" rel="noopener" style="color:var(--accent-blue); text-decoration:none;">${coordsStr}</a>` : coordsStr}
         </span>
       </div>
       <div class="meta-block" style="grid-column: span 2;">
@@ -1071,10 +1071,10 @@ function renderMethodologyModal() {
 
       <div class="methodology-footer-callout">
         <div class="callout-content">
-          <h4>📖 التوثيق العلمي والمنهجي الكامل</h4>
+          <h4>التوثيق العلمي والمنهجي الكامل</h4>
           <p>راجع الوثيقة الشاملة <a href="documentation/methodology.html" target="_blank" rel="noopener">METHODOLOGIE.md</a> على هذا الموقع للاطلاع على بروتوكولات الإسناد الجغرافي، المراجع البيبليوغرافية الشاملة، ودليل الاقتباس الأكاديمي.</p>
         </div>
-        <a href="documentation/methodology.html" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.5rem 1rem; border-radius:6px; background:var(--accent-blue); color:#fff; text-decoration:none; font-size:0.85rem; font-weight:600;">تصفح METHODOLOGIE.md ↗</a>
+        <a href="documentation/methodology.html" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.5rem 1rem; border-radius:6px; background:var(--accent-blue); color:#fff; text-decoration:none; font-size:0.85rem; font-weight:600;">تصفح METHODOLOGIE.md</a>
       </div>
     `;
   } else {
@@ -1141,10 +1141,10 @@ function renderMethodologyModal() {
 
       <div class="methodology-footer-callout">
         <div class="callout-content">
-          <h4>📖 Documentation scientifique complète</h4>
+          <h4>Documentation scientifique complète</h4>
           <p>Consultez le document intégral <a href="documentation/methodology.html" target="_blank" rel="noopener">METHODOLOGIE.md</a> sur ce site pour les protocoles de géoréférencement, les références bibliographiques complètes et le guide de citation.</p>
         </div>
-        <a href="documentation/methodology.html" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.5rem 1rem; border-radius:6px; background:var(--accent-blue); color:#fff; text-decoration:none; font-size:0.85rem; font-weight:600;">Consulter METHODOLOGIE.md ↗</a>
+        <a href="documentation/methodology.html" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex; align-items:center; gap:0.4rem; padding:0.5rem 1rem; border-radius:6px; background:var(--accent-blue); color:#fff; text-decoration:none; font-size:0.85rem; font-weight:600;">Consulter METHODOLOGIE.md</a>
       </div>
     `;
   }

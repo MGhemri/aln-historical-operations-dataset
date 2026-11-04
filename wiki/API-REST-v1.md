@@ -1,4 +1,4 @@
-# ⚡ Guide de l'API REST v1 (Développeurs & Chercheurs)
+# Guide de l'API REST v1 (Développeurs & Chercheurs)
 
 L'**API REST v1** fournit un accès programmatique direct, filtrable et géoréférencé aux **263 opérations militaires documentées** de l'Armée de Libération Nationale (1954–1962).
 
@@ -6,7 +6,7 @@ Elle est conçue pour les chercheurs en sciences humaines numériques (*Digital 
 
 ---
 
-## 📌 Informations Clés
+## Informations Clés
 
 | Propriété | Spécification |
 | :--- | :--- |
@@ -21,7 +21,7 @@ Elle est conçue pour les chercheurs en sciences humaines numériques (*Digital 
 
 ---
 
-## 🗺️ Répertoire des Endpoints
+## Répertoire des Endpoints
 
 ### 1. Index & Métadonnées : `GET /api/v1`
 Retourne la version de l'API, le total des opérations, la licence et la liste des routes.
@@ -83,9 +83,9 @@ curl -X GET "https://alnop.vercel.app/api/v1/wilayas"
 
 ---
 
-## 💻 Exemples d'Intégration Rapide
+## Exemples d'Intégration Rapide
 
-### 🐍 Python (avec `requests` et `pandas`)
+### Python (avec `requests` et `pandas`)
 
 ```python
 import requests
@@ -108,7 +108,7 @@ print(df[["id", "nom_operation", "date_debut", "wilaya_label_fr"]].head())
 
 ---
 
-### 🌐 JavaScript (ES6+ / Node.js / Fetch)
+### JavaScript (ES6+ / Node.js / Fetch)
 
 ```javascript
 async function getWilaya3Battles() {
@@ -127,7 +127,7 @@ getWilaya3Battles();
 
 ---
 
-### 🗺️ Intégration en direct dans QGIS (Flux GeoJSON)
+### Intégration en direct dans QGIS (Flux GeoJSON)
 
 Pour afficher les 263 opérations dans **QGIS** en temps réel sans télécharger de fichier :
 1. Dans QGIS : **Couche > Ajouter une couche > Ajouter une couche vecteur**.
@@ -137,7 +137,7 @@ Pour afficher les 263 opérations dans **QGIS** en temps réel sans télécharge
 
 ---
 
-## ⚖️ Citation Scientifique & Licence
+## Citation Scientifique & Licence
 
 Les données sont publiées sous licence **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**. Tout usage dans un article, un mémoire ou un projet numérique doit mentionner :
 

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>API REST v1 · ALNOP</title><script>const base=document.createElement('base');base.href=location.pathname.split('/documentation')[0].replace(/\/api\/docs$/,'')+'/documentation/';document.head.append(base);</script><link rel="stylesheet" href="documentation.css"><script src="../site-context.js?v=4.2"></script></head><body><main><nav><a href="../index.html">Atlas · الأطلس</a><a href="../contribute.html">Contribuer · ساهم</a><a href="index.html">Documentation · الوثائق</a></nav><h1 id="-documentation-de-lapi-rest-v1--aln-historical-operations-dataset-19541962">🌐 Documentation de l'API REST v1 — ALN Historical Operations Dataset (1954–1962)</h1>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>API REST v1 · ALNOP</title><script>const base=document.createElement('base');base.href=location.pathname.split('/documentation')[0].replace(/\/api\/docs$/,'')+'/documentation/';document.head.append(base);</script><link rel="stylesheet" href="documentation.css"><script src="../site-context.js?v=4.2"></script></head><body><main><nav><a href="../index.html">Atlas · الأطلس</a><a href="../contribute.html">Contribuer · ساهم</a><a href="index.html">Documentation · الوثائق</a></nav><h1 id="documentation-de-lapi-rest-v1--aln-historical-operations-dataset-19541962">Documentation de l'API REST v1 — ALN Historical Operations Dataset (1954–1962)</h1>
 <p>Bienvenue sur la documentation officielle de l'<strong>API REST v1</strong> du jeu de données des opérations militaires de l'Armée de Libération Nationale (ALN) durant la Guerre de Libération algérienne (1954–1962).</p>
 <p>Cette API publique fournit un accès programmatique direct, filtrable et géoréférencé aux <strong>263 actions militaires documentées</strong>, couvrant les 6 Wilayas historiques, les Zones Autonomes d'Alger et d'Oran, la Base de l'Est et la 7e Wilaya (Fédération de France du FLN).</p>
 <hr>
-<h2 id="-informations-générales">📌 Informations Générales</h2>
+<h2 id="informations-générales">Informations Générales</h2>
 <table>
 <thead>
 <tr>
@@ -55,7 +55,7 @@
 </tbody>
 </table>
 <hr>
-<h2 id="-récapitulatif-des-endpoints">🗺️ Récapitulatif des Endpoints</h2>
+<h2 id="récapitulatif-des-endpoints">Récapitulatif des Endpoints</h2>
 <table>
 <thead>
 <tr>
@@ -93,7 +93,7 @@
 </tbody>
 </table>
 <hr>
-<h2 id="-format-standard-des-réponses">📐 Format Standard des Réponses</h2>
+<h2 id="format-standard-des-réponses">Format Standard des Réponses</h2>
 <p>Sauf en cas de demande explicite en GeoJSON (<code>?format=geojson</code>), toutes les réponses sont encapsulées dans un format standardisé garantissant l'intégrité, la traçabilité et le respect de la licence d'attribution :</p>
 <pre><code class="language-json">{
   &quot;meta&quot;: {
@@ -199,8 +199,7 @@
 </tbody>
 </table>
 <blockquote>
-<p>[!NOTE]
-<strong>Contrat GeoJSON &amp; SIG (ALNOP-004) :</strong>
+<p><strong>Contrat GeoJSON &amp; SIG (ALNOP-004) :</strong>
 Lorsque <code>format=geojson</code> est demandé, la réponse GeoJSON applique fidèlement l'ensemble des filtres temporels, territoriaux et thématiques (<code>wilaya</code>, <code>year</code>, <code>q</code>, etc.), mais <strong>n'applique pas de pagination</strong> (<code>limit</code> et <code>page</code> sont ignorés). Cela garantit aux outils SIG (QGIS, Leaflet, Mapbox) une couverture cartographique complète sans troncature arbitraire.</p>
 <p><strong>Tri déterministe (ALNOP-014) :</strong>
 Le tri chronologique (<code>date_asc</code> par défaut ou <code>date_desc</code>) utilise l'identifiant canonique unique <code>id</code> comme second critère de bris d'égalité, garantissant l'absence totale de sauts ou de doublons lors du parcours de pages successives.</p>
@@ -338,7 +337,7 @@ Le tri chronologique (<code>date_asc</code> par défaut ou <code>date_desc</code
 <pre><code class="language-bash">curl -X GET &quot;https://alnop.vercel.app/api/v1/wilayas&quot;
 </code></pre>
 <hr>
-<h2 id="-codes-http-et-gestion-derreurs-standardisée">🚦 Codes HTTP et Gestion d'Erreurs Standardisée</h2>
+<h2 id="codes-http-et-gestion-derreurs-standardisée">Codes HTTP et Gestion d'Erreurs Standardisée</h2>
 <p>Toutes les erreurs renvoyées par l'API respectent un schéma JSON standardisé et prévisible (ALNOP-005, ALNOP-006, ALNOP-009) sans jamais divulguer de détails d'infrastructure ou de traces internes :</p>
 <table>
 <thead>
@@ -389,8 +388,8 @@ Le tri chronologique (<code>date_asc</code> par défaut ou <code>date_desc</code
 }
 </code></pre>
 <hr>
-<h2 id="-exemples-dintégration-programmatique">💻 Exemples d'Intégration Programmatique</h2>
-<h3 id="-python-avec-requests-et-pandas">🐍 Python (avec <code>requests</code> et <code>pandas</code>)</h3>
+<h2 id="exemples-dintégration-programmatique">Exemples d'Intégration Programmatique</h2>
+<h3 id="python-avec-requests-et-pandas">Python (avec <code>requests</code> et <code>pandas</code>)</h3>
 <pre><code class="language-python">import requests
 import pandas as pd
 
@@ -412,7 +411,7 @@ df = pd.DataFrame(payload[&quot;data&quot;])
 print(df[[&quot;id&quot;, &quot;nom_operation&quot;, &quot;date_debut&quot;, &quot;wilaya_code&quot;]].head())
 </code></pre>
 <hr>
-<h3 id="-javascript-es6--nodejs--navigateur">🌐 JavaScript (ES6+ / Node.js / Navigateur)</h3>
+<h3 id="javascript-es6--nodejs--navigateur">JavaScript (ES6+ / Node.js / Navigateur)</h3>
 <pre><code class="language-javascript">// Récupérer les opérations de la Zone Autonome d'Alger (ZAA)
 async function fetchAlgerOperations() {
   const url = new URL('https://alnop.vercel.app/api/v1/operations');
@@ -433,7 +432,7 @@ async function fetchAlgerOperations() {
 fetchAlgerOperations();
 </code></pre>
 <hr>
-<h3 id="-r-avec-httr2-et-jsonlite">📊 R (avec <code>httr2</code> et <code>jsonlite</code>)</h3>
+<h3 id="r-avec-httr2-et-jsonlite">R (avec <code>httr2</code> et <code>jsonlite</code>)</h3>
 <pre><code class="language-r">library(httr2)
 library(jsonlite)
 
@@ -449,7 +448,7 @@ cat(&quot;Nombre d'opérations trouvées :&quot;, body$meta$total, &quot;\n&quot
 operations_df &lt;- as.data.frame(do.call(rbind, body$data))
 </code></pre>
 <hr>
-<h3 id="-import-direct-dans-qgis--leaflet-geojson">🗺️ Import direct dans QGIS / Leaflet (GeoJSON)</h3>
+<h3 id="import-direct-dans-qgis--leaflet-geojson">Import direct dans QGIS / Leaflet (GeoJSON)</h3>
 <p>Pour afficher directement les opérations dans <strong>QGIS</strong> sans télécharger de fichier :</p>
 <ol>
 <li>Dans QGIS, allez dans <strong>Couche &gt; Ajouter une couche &gt; Ajouter une couche vecteur</strong>.</li>
@@ -459,7 +458,7 @@ operations_df &lt;- as.data.frame(do.call(rbind, body$data))
 <li>Cliquez sur <strong>Ajouter</strong>. Les points GPS avec l'intégralité des attributs (titre, bilans, sources, impact) s'affichent instantanément dans votre projet SIG !</li>
 </ol>
 <hr>
-<h2 id="-conditions-dutilisation-et-citation">⚖️ Conditions d'Utilisation et Citation</h2>
+<h2 id="conditions-dutilisation-et-citation">Conditions d'Utilisation et Citation</h2>
 <p>Ce jeu de données et son API sont mis à disposition selon les termes de la licence <strong><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a></strong>.</p>
 <p>Vous êtes libre de :</p>
 <ul>

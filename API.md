@@ -1,4 +1,4 @@
-# 🌐 Documentation de l'API REST v1 — ALN Historical Operations Dataset (1954–1962)
+# Documentation de l'API REST v1 — ALN Historical Operations Dataset (1954–1962)
 
 Bienvenue sur la documentation officielle de l'**API REST v1** du jeu de données des opérations militaires de l'Armée de Libération Nationale (ALN) durant la Guerre de Libération algérienne (1954–1962).
 
@@ -6,7 +6,7 @@ Cette API publique fournit un accès programmatique direct, filtrable et géoré
 
 ---
 
-## 📌 Informations Générales
+## Informations Générales
 
 | Propriété | Valeur |
 | :--- | :--- |
@@ -23,7 +23,7 @@ Cette API publique fournit un accès programmatique direct, filtrable et géoré
 
 ---
 
-## 🗺️ Récapitulatif des Endpoints
+## Récapitulatif des Endpoints
 
 | Méthode | Endpoint | Description |
 | :--- | :--- | :--- |
@@ -35,7 +35,7 @@ Cette API publique fournit un accès programmatique direct, filtrable et géoré
 
 ---
 
-## 📐 Format Standard des Réponses
+## Format Standard des Réponses
 
 Sauf en cas de demande explicite en GeoJSON (`?format=geojson`), toutes les réponses sont encapsulées dans un format standardisé garantissant l'intégrité, la traçabilité et le respect de la licence d'attribution :
 
@@ -97,7 +97,7 @@ Permet d'interroger la base de données selon des filtres précis combinables en
 | `limit` | `integer` | Nombre d'éléments par page (défaut: `50`, maximum: `300`). Toute valeur non entière ou hors limites renvoie `HTTP 400`. | `?limit=25` |
 | `page` | `integer` | Numéro de la page (défaut: `1`, minimum: `1`). Toute valeur non entière ou < 1 renvoie `HTTP 400`. | `?page=2` |
 
-> [!NOTE]
+>
 > **Contrat GeoJSON & SIG (ALNOP-004) :**
 > Lorsque `format=geojson` est demandé, la réponse GeoJSON applique fidèlement l'ensemble des filtres temporels, territoriaux et thématiques (`wilaya`, `year`, `q`, etc.), mais **n'applique pas de pagination** (`limit` et `page` sont ignorés). Cela garantit aux outils SIG (QGIS, Leaflet, Mapbox) une couverture cartographique complète sans troncature arbitraire.
 >
@@ -269,7 +269,7 @@ curl -X GET "https://alnop.vercel.app/api/v1/wilayas"
 
 ---
 
-## 🚦 Codes HTTP et Gestion d'Erreurs Standardisée
+## Codes HTTP et Gestion d'Erreurs Standardisée
 
 Toutes les erreurs renvoyées par l'API respectent un schéma JSON standardisé et prévisible (ALNOP-005, ALNOP-006, ALNOP-009) sans jamais divulguer de détails d'infrastructure ou de traces internes :
 
@@ -293,9 +293,9 @@ Toutes les erreurs renvoyées par l'API respectent un schéma JSON standardisé 
 
 ---
 
-## 💻 Exemples d'Intégration Programmatique
+## Exemples d'Intégration Programmatique
 
-### 🐍 Python (avec `requests` et `pandas`)
+### Python (avec `requests` et `pandas`)
 
 ```python
 import requests
@@ -321,7 +321,7 @@ print(df[["id", "nom_operation", "date_debut", "wilaya_code"]].head())
 
 ---
 
-### 🌐 JavaScript (ES6+ / Node.js / Navigateur)
+### JavaScript (ES6+ / Node.js / Navigateur)
 
 ```javascript
 // Récupérer les opérations de la Zone Autonome d'Alger (ZAA)
@@ -346,7 +346,7 @@ fetchAlgerOperations();
 
 ---
 
-### 📊 R (avec `httr2` et `jsonlite`)
+### R (avec `httr2` et `jsonlite`)
 
 ```r
 library(httr2)
@@ -366,7 +366,7 @@ operations_df <- as.data.frame(do.call(rbind, body$data))
 
 ---
 
-### 🗺️ Import direct dans QGIS / Leaflet (GeoJSON)
+### Import direct dans QGIS / Leaflet (GeoJSON)
 
 Pour afficher directement les opérations dans **QGIS** sans télécharger de fichier :
 1. Dans QGIS, allez dans **Couche > Ajouter une couche > Ajouter une couche vecteur**.
@@ -377,7 +377,7 @@ Pour afficher directement les opérations dans **QGIS** sans télécharger de fi
 
 ---
 
-## ⚖️ Conditions d'Utilisation et Citation
+## Conditions d'Utilisation et Citation
 
 Ce jeu de données et son API sont mis à disposition selon les termes de la licence **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**.
 

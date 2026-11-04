@@ -1,4 +1,4 @@
-# 🇩🇿 Atlas Historique de l'ALN (1954–1962) — Wiki Officiel
+# Atlas Historique de l'ALN (1954–1962) — Wiki Officiel
 
 Bienvenue sur le Wiki académique et technique du projet **FLN/ALN Historical Military Operations Dataset (1954–1962)**.
 
@@ -6,15 +6,15 @@ Ce corpus en **humanités numériques** documente, qualifie et géolocalise **26
 
 ---
 
-## 🗺️ Accès aux plateformes interactives en ligne
+## Accès aux plateformes interactives en ligne
 
-- 🚀 **Application officielle Vercel** : [https://alnop.vercel.app/](https://alnop.vercel.app/)
-- 🌐 **Application GitHub Pages** : [https://mghemri.github.io/aln-historical-operations-dataset/](https://mghemri.github.io/aln-historical-operations-dataset/)
-- 📦 **Dépôt GitHub principal** : [MGhemri/aln-historical-operations-dataset](https://github.com/MGhemri/aln-historical-operations-dataset)
+- **Application officielle Vercel** : [https://alnop.vercel.app/](https://alnop.vercel.app/)
+- **Application GitHub Pages** : [https://mghemri.github.io/aln-historical-operations-dataset/](https://mghemri.github.io/aln-historical-operations-dataset/)
+- **Dépôt GitHub principal** : [MGhemri/aln-historical-operations-dataset](https://github.com/MGhemri/aln-historical-operations-dataset)
 
 ---
 
-## 📚 Sommaire du Wiki
+## Sommaire du Wiki
 
 | Chapitre | Description | Lien |
 | :--- | :--- | :--- |
@@ -29,7 +29,7 @@ Ce corpus en **humanités numériques** documente, qualifie et géolocalise **26
 
 ---
 
-## 📊 Chiffres clés du corpus
+## Chiffres clés du corpus
 
 - **263 opérations militaires documentées** réparties de novembre 1954 à juillet 1962.
 - **8 années de conflit asymétrique** indexées chronologiquement et spatialement.

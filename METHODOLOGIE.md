@@ -86,7 +86,7 @@ Ce corpus est mis à disposition dans un esprit de **Science Ouverte** (*Open Da
 
 ### Contact & Correspondance académique
 Pour toute question méthodologique, suggestion d'archives ou signalement d'ajustement historique, l'auteur (**Ghemri M.**) est joignable à l'adresse suivante :  
-📧 **contact@connect-gm.com**
+ **contact@connect-gm.com**
 
 ### Citation académique recommandée
 ```bibtex

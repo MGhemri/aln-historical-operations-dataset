@@ -1,56 +1,56 @@
 # FLN/ALN Historical Military Operations Dataset (1954–1962)
 
-[![GitHub Pages: Live App](https://img.shields.io/badge/D%C3%A9mo_En_Ligne-GitHub_Pages-2ea44f.svg?logo=github&logoColor=white)](https://mghemri.github.io/aln-historical-operations-dataset/)
-[![Vercel: Live App](https://img.shields.io/badge/Vercel-alnop.vercel.app-black.svg?logo=vercel&logoColor=white)](https://alnop.vercel.app/)
-[![API: REST v1](https://img.shields.io/badge/API_REST-v1.0.0-0ea5e9.svg?logo=fastapi&logoColor=white)](./API.md)
-[![Release: v1.0.0](https://img.shields.io/badge/Release-v1.0.0_Stable-2ea44f.svg?logo=github&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/releases/tag/v1.0.0)
-[![Méthodologie: Académique](https://img.shields.io/badge/M%C3%A9thodologie-Acad%C3%A9mique-8e44ad.svg)](./METHODOLOGIE.md)
-[![Wiki: Documentation](https://img.shields.io/badge/Wiki-Documentation-0284c7.svg?logo=bookstack&logoColor=white)](https://github.com/MGhemri/aln-historical-operations-dataset/wiki)
-[![Langues: Bilingue FR / AR](https://img.shields.io/badge/Langues-Bilingue_FR_%2F_%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-007a3d.svg)](https://alnop.vercel.app/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Format: JSON / GeoJSON](https://img.shields.io/badge/Format-JSON%20%7C%20GeoJSON-2ea44f.svg)](#2-structure-du-schéma-de-données)
-[![Records: 263 Operations](https://img.shields.io/badge/Op%C3%A9rations_document%C3%A9es-263-c0392b.svg)](#️-carte-interactive-des-263-opérations-19541962)
-[![Historiography: Multi-Source](https://img.shields.io/badge/Historiographie-Sources_Crois%C3%A9es-8e44ad.svg)](#1-démarche-académique-et-méthodologie)
-[![Status: Living Dataset](https://img.shields.io/badge/Statut-Projet_%C3%89volutif_(En_cours)-d35400.svg)](#5-projet-évolutif-et-guide-de-contribution)
+- [GitHub Pages: Live App](https://mghemri.github.io/aln-historical-operations-dataset/)
+- [Vercel: Live App](https://alnop.vercel.app/)
+- [API: REST v1](./API.md)
+- [Release: v1.0.0](https://github.com/MGhemri/aln-historical-operations-dataset/releases/tag/v1.0.0)
+- [Méthodologie: Académique](./METHODOLOGIE.md)
+- [Wiki: Documentation](https://github.com/MGhemri/aln-historical-operations-dataset/wiki)
+- [Langues: Bilingue FR / AR](https://alnop.vercel.app/)
+- [License: MIT](./LICENSE)
+- [Format: JSON / GeoJSON](#2-structure-du-schéma-de-données)
+- [Records: 263 Operations](#carte-interactive-des-263-opérations-19541962)
+- [Historiography: Multi-Source](#1-démarche-académique-et-méthodologie)
+- [Status: Living Dataset](#5-projet-évolutif-et-guide-de-contribution)
 
 Ce dépôt héberge un corpus de données structuré en accès libre documentant, qualifiant et géolocalisant **263 actions militaires, embuscades, batailles, sabotages et opérations de guérilla** menés par le Front de libération nationale (FLN) et l'Armée de libération nationale (ALN) durant la guerre d'indépendance algérienne (1954–1962).
 
-> [!TIP]
-> ### 🌐 Application Web Interactive en Ligne
+>
+> ### Application Web Interactive en Ligne
 > **Explorez l'ensemble des 263 opérations dans l'application web officielle :**  
-> 👉 **[Consulter l'Atlas interactif et le moteur de recherche en direct](https://mghemri.github.io/aln-historical-operations-dataset/)**  
+> **[Consulter l'Atlas interactif et le moteur de recherche en direct](https://mghemri.github.io/aln-historical-operations-dataset/)**  
 > *(Cartographie dynamique Leaflet avec regroupement par clusters, recherche plein texte instantanée, filtres multicritères par Wilaya et millésime, fiches d'archives complètes et tableau de bord statistique Chart.js).*  
 >
-> 🚀 **Application Vercel en direct :** L'application est déployée en production sur Vercel avec le même UI/UX, performances Edge et API ouverte :  
-> 👉 **[Ouvrir l'application sur Vercel (https://alnop.vercel.app)](https://alnop.vercel.app/)**
+> **Application Vercel en direct :** L'application est déployée en production sur Vercel avec le même UI/UX, performances Edge et API ouverte :  
+> **[Ouvrir l'application sur Vercel (https://alnop.vercel.app)](https://alnop.vercel.app/)**
 >
-> ⚡ **API REST v1 publique disponible :** Consultez la [**Documentation complète de l'API (API.md)**](./API.md) pour interroger le jeu de données via HTTP (cURL, Python, Pandas, JS, R) ou importer directement le flux GeoJSON dans QGIS.
+> **API REST v1 publique disponible :** Consultez la [**Documentation complète de l'API (API.md)**](./API.md) pour interroger le jeu de données via HTTP (cURL, Python, Pandas, JS, R) ou importer directement le flux GeoJSON dans QGIS.
 >
 
-> 🇩🇿 **Interface Intégralement Bilingue (Français / العربية) :**
+> **Interface Intégralement Bilingue (Français / العربية) :**
 > L'application propose un commutateur instantané FR / العربية avec persistance du choix. L'appareil critique et les 263 opérations ont été traduits selon la terminologie historiographique révolutionnaire algérienne contextuelle (ministère des Moudjahidines, revues ASJP, CRASC d'Oran, archives APS), avec disposition bidirectionnelle complète (RTL / Cairo & Amiri).
 
 
-> [!IMPORTANT]
+>
 > **Corpus évolutif en construction continue (*Living Dataset*) & Appel à contributions :**
 > Ce travail de recherche historique et d'ingénierie de données **n'est pas figé et se poursuit dans le temps**. Il a vocation à être continuellement enrichi pour couvrir de manière toujours plus exhaustive les combats de chaque Wilaya, zone, région (*mintaka*) et secteur (*nahia*). **Toute contribution (ajout d'opérations, croisement d'archives, affinement des coordonnées géographiques) qui respecte rigoureusement la méthodologie scientifique et le schéma de données du projet est vivement recommandée.** Consultez la section [**5. Projet évolutif et guide de contribution**](#5-projet-évolutif-et-guide-de-contribution) pour les règles détaillées.
 
 ---
 
-## 🗺️ Carte interactive des 263 opérations (1954–1962)
+## Carte interactive des 263 opérations (1954–1962)
 
 > **Navigation interactive :** Vous pouvez zoomer, déplacer la carte et cliquer sur chaque marqueur ci-dessous pour afficher les métadonnées de l'opération (`id`, `nom_operation`, `date_debut`, `wilaya_concernee`, `lieu`, `type_action`). Pour consulter les descriptions complètes, les bilans détaillés et les sources cliquables en plein écran, ouvrez directement le fichier [**`operations_fln_1954_1962.geojson`**](./operations_fln_1954_1962.geojson).
 
 **Légende des couleurs par Wilaya / Front :**
-- 🔴 `#c0392b` **Wilaya I** (Aurès-Nemencha) & Déclenchement
-- 🔵 `#2c3e50` **Wilaya II** (Nord-Constantinois)
-- 🟢 `#27ae60` **Wilaya III** (Kabylie)
-- 🩵 `#16a085` **Wilaya IV** (Algérois / Ouarsenis) & 🔴 `#e74c3c` **Zone Autonome d'Alger (ZAA)**
-- 🔷 `#2980b9` **Wilaya V** (Oranie / Front Sud-Oranais)
-- 🔹 `#0ea5e9` **Zone Autonome d'Oran (ZAO)**
-- 🟡 `#f39c12` **Wilaya VI** (Sahara / Atlas saharien)
-- 🟠 `#d35400` **Base de l'Est & Armée des Frontières (EMG)**
-- 🟣 `#8e44ad` **7e Wilaya** (Fédération de France du FLN — Métropole)
+- `#c0392b` **Wilaya I** (Aurès-Nemencha) & Déclenchement
+- `#2c3e50` **Wilaya II** (Nord-Constantinois)
+- `#27ae60` **Wilaya III** (Kabylie)
+- `#16a085` **Wilaya IV** (Algérois / Ouarsenis) &  `#e74c3c` **Zone Autonome d'Alger (ZAA)**
+- `#2980b9` **Wilaya V** (Oranie / Front Sud-Oranais)
+- `#0ea5e9` **Zone Autonome d'Oran (ZAO)**
+- `#f39c12` **Wilaya VI** (Sahara / Atlas saharien)
+- `#d35400` **Base de l'Est & Armée des Frontières (EMG)**
+- `#8e44ad` **7e Wilaya** (Fédération de France du FLN — Métropole)
 
 ```geojson
 {
@@ -329,9 +329,9 @@ Ce dépôt héberge un corpus de données structuré en accès libre documentant
 
 S'inscrivant dans le champ des **humanités numériques** (*digital humanities*) et de l'histoire quantitative et spatiale des conflits asymétriques, ce projet répond à l'absence de base de données scientifique unifiée, interrogeable et cartographiable sur les actions armées de la Révolution algérienne.
 
-> 📚 **Charte méthodologique complète :** Pour les règles détaillées de géoréférencement, de périodisation et d'historiographie critique, consultez le document de référence :  
-> 👉 [**`METHODOLOGIE.md` — Méthode historique et cartographique**](./METHODOLOGIE.md)  
-> 📖 [**Wiki Officiel du projet sur GitHub**](https://github.com/MGhemri/aln-historical-operations-dataset/wiki) *(monographies des Wilayas, dossiers ZAA & ZAO, guide SIG & typologie militaire)*
+> **Charte méthodologique complète :** Pour les règles détaillées de géoréférencement, de périodisation et d'historiographie critique, consultez le document de référence :  
+> [**`METHODOLOGIE.md` — Méthode historique et cartographique**](./METHODOLOGIE.md)  
+> [**Wiki Officiel du projet sur GitHub**](https://github.com/MGhemri/aln-historical-operations-dataset/wiki) *(monographies des Wilayas, dossiers ZAA & ZAO, guide SIG & typologie militaire)*
 
 ### Principes directeurs de la démarche :
 
@@ -425,7 +425,7 @@ Ce projet est distribué sous **licence MIT**. Vous êtes libre de réutiliser, 
 
 ### Contact & Correspondance
 Pour toute question de recherche, échange scientifique ou proposition d'enrichissement documentaire, vous pouvez joindre l'auteur (**Ghemri M.**) à l'adresse suivante :  
-📧 **contact@connect-gm.com**
+ **contact@connect-gm.com**
 
 ### Citation académique
 Pour citer ce jeu de données dans un travail académique :
