@@ -6,6 +6,11 @@ on:
       - main
     paths:
       - 'docs/**'
+      - 'data/**'
+      - 'src/**'
+      - 'schemas/**'
+      - 'scripts/**'
+      - 'package*.json'
       - '.github/workflows/deploy-pages.yml'
   workflow_dispatch:
 
@@ -27,6 +32,22 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: npm ci
+      - run: npm run validate:canonical
+      - run: npm run check:canonical
+      - run: npm run check:documentation
+      - run: npm test
+      - run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

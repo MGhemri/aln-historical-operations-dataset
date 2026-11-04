@@ -4,7 +4,7 @@ Le corpus est incomplet et en enrichissement. Ne jamais compléter un fait histo
 
 ## Proposer
 
-Depuis `contribute.html`, remplir les champs adaptés au type de proposition, vérifier le récapitulatif, puis cliquer sur « Envoyer la proposition au mainteneur ». Le site transmet automatiquement le contenu par courriel, avec une copie Markdown jointe et une référence de suivi. Aucun compte ni nom n'est requis ; une adresse de réponse peut être fournie facultativement.
+Depuis `contribute.html`, remplir les champs adaptés au type de proposition, vérifier le récapitulatif, puis cliquer sur « Envoyer la proposition au mainteneur ». Le site transmet automatiquement le contenu par courriel, avec des copies Markdown et JSON jointes et une référence de suivi. Aucun compte ni nom n'est requis ; une adresse de réponse peut être fournie facultativement.
 
 La confirmation signifie que le serveur SMTP a accepté le message pour le mainteneur. Elle ne constitue pas une validation historique ni une publication. En cas d'erreur, la proposition reste affichée et peut être réessayée ou téléchargée. Ne pas fermer la page avant de l'avoir envoyée ou sauvegardée.
 
@@ -18,7 +18,7 @@ Donner les IDs concernés, les valeurs proposées et divergentes, les incertitud
 2. Une PR distincte présente les changements canoniques et leurs preuves, sans écraser les assertions contradictoires.
 3. Exécuter `npm ci`, `npm test` et `npm run check:canonical`. Pour l'interface : `npx playwright install chromium` puis `npm run test:browser`.
 4. Un mainteneur habilité documente sa décision et valide avant fusion. Les modifications historiques substantielles doivent demander une seconde lecture lorsque possible ; la règle finale reste à décider.
-5. Vérifier la génération des exports et le déploiement après fusion. Le système actuel reste en prévisualisation canonique : ne pas annoncer une publication automatique de la PR.
+5. Vérifier la génération des exports et le déploiement après fusion. Le canon est désormais relié aux exports publics. La publication exige une revue documentée puis les validations du déploiement.
 
 Les brouillons et Issues non validées n'entrent pas dans les données publiques. Aucun script ne modifie le corpus depuis une Issue.
 
@@ -44,3 +44,14 @@ Le formulaire charge les fiches du corpus : il ne permet pas de saisir un nouvel
 Configurer `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` et `CONTACT_DEST` dans les variables serveur Vercel. `CONTRIBUTION_DEST` est facultatif et remplace le destinataire pour les propositions. Aucun secret ne doit être commité. Les variables ajoutées nécessitent un nouveau déploiement.
 
 `POST /api/contributions` valide les champs et les identifiants, n'accepte aucun destinataire fourni par le visiteur et n'écrit pas dans le corpus. Les limites anti-abus et la déduplication sont en mémoire par instance ; elles ne constituent pas une protection distribuée ni une garantie d'envoi exactement une fois. Une même tentative conserve sa référence et son Message-ID. La réception dans la boîte finale n'est pas vérifiée par le site.
+
+## Préparer et publier une contribution acceptée (mainteneur)
+
+1. Enregistrer la pièce jointe JSON reçue dans un emplacement de travail privé. Pour une nouvelle opération : `node scripts/prepare-contribution.js --input chemin/proposition.json --id IDENTIFIANT_ATTRIBUE_PAR_LE_MAINTENEUR`. L’outil produit un brouillon dans work/prepared ; aucun ID n’est choisi par le visiteur.
+2. Vérifier les sources et leurs passages, structurer la notice bibliographique, compléter le type dans le vocabulaire contrôlé, documenter dates et territoires sans supposer les valeurs manquantes. La citation brute reçue reste une note de travail tant qu’elle n’est pas structurée.
+3. Préparer une PR avec la fiche sous data/operations et ses sources sous data/sources. Pour une correction, garder l’objet legacy initial intact et modifier les champs canoniques du profil human_review.
+4. Documenter la décision de revue avec reviewer, decision, reference, reason et reviewed_at ; mettre à jour updated_at. Seule une fiche avec sources, dernière décision approved et human_review_recorded=true peut passer à published. Un enregistrement de revue ne remplace pas la revue humaine réelle.
+5. Exécuter `npm run validate:canonical`, `npm run build`, `npm test`, `npm run test:browser`, `npm run check:canonical` et `npm run check:documentation`. Inclure les exports générés dans la PR. Le build refuse les fixtures synthétiques dans le corpus réel.
+6. Après revue et fusion, les déploiements publient les sorties validées. Vérifier ensuite les données et l’API en ligne. Aucune fiche fictive ne doit être utilisée pour cette étape réelle.
+
+Le dictionnaire DATA_DICTIONARY.md précise les profils et limites. Le snapshot des 263 fiches initiales reste protégé ; les futurs ajouts ne doivent pas nécessiter de réécrire ce snapshot ni les contrats de référence.

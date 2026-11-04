@@ -104,5 +104,6 @@
         }
       ]
     }
-  ]
+  ],
+  "buildCommand": "npm run validate:canonical && npm run build && npm run test:api && npm run check:canonical && npm run check:documentation"
 }

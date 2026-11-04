@@ -1,6 +1,6 @@
 # ADR 001 — Import canonique conservateur, en prévisualisation
 
-Statut : proposition technique réversible, non basculée en production.
+Statut historique : cette proposition a été remplacée par ADR 002, qui relie désormais le canon aux exports publics.
 
 Le modèle d'import 2.0.0 stocke chaque fiche séparément et conserve son objet legacy complet. Les dates partielles deviennent des intervalles avec précision explicite et certitude inconnue. Les traductions absentes restent nulles. Aucun territoire canonique n'est attribué par expression régulière. Les points hérités sont représentatifs, à revoir ; aucune précision métrique n'est inventée.
 

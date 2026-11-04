@@ -11,6 +11,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   test-and-validate:
     name: Test API & Validate Dataset Integrity
@@ -29,7 +32,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Check canonical preview exports
+      - name: Validate canonical records and publication approvals
+        run: npm run validate:canonical
+
+      - name: Check canonical and public exports
         run: npm run check:canonical
 
       - name: Check local documentation
@@ -45,3 +51,11 @@ jobs:
 
       - name: Run dataset validation suite
         run: python validate_dataset.py
+
+      - name: Preserve quality diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-quality
+          path: work/canonical-quality.*
+          if-no-files-found: ignore
