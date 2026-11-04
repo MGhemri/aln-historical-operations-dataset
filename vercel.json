@@ -26,6 +26,9 @@
     },
     "api/v1/**/*.js": {
       "maxDuration": 10
+    },
+    "api/contributions.js": {
+      "maxDuration": 30
     }
   },
   "headers": [

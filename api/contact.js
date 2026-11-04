@@ -95,13 +95,15 @@ module.exports = async function handler(req, res) {
     const SMTP_HOST = process.env.SMTP_HOST || 'mail.connect-gm.com';
     const SMTP_PORT = parseInt(process.env.SMTP_PORT || '465', 10);
     const SMTP_USER = process.env.SMTP_USER || 'dataset@connect-gm.com';
-    const SMTP_PASS = process.env.SMTP_PASS || 'c{%eXSTKf1';
+    const SMTP_PASS = process.env.SMTP_PASS;
+    if (!SMTP_PASS) return res.status(503).json({ success: false, error: 'Messagerie temporairement indisponible.' });
     const RECIPIENT = process.env.CONTACT_DEST || 'dataset@connect-gm.com, contact@connect-gm.com';
 
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
       port: SMTP_PORT,
       secure: SMTP_PORT === 465,
+      connectionTimeout: 5000, greetingTimeout: 5000, socketTimeout: 10000,
       auth: {
         user: SMTP_USER,
         pass: SMTP_PASS
@@ -198,7 +200,7 @@ ${cleanMessage}
     });
 
   } catch (err) {
-    console.error('Contact handler error:', err);
+    console.error('Contact handler error:', err.code || 'DELIVERY_FAILED');
     return res.status(500).json({
       success: false,
       error: 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer ultérieurement.'

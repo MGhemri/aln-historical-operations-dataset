@@ -17,7 +17,7 @@
     "check:documentation": "node scripts/build-documentation.js --check"
   },
   "dependencies": {
-    "nodemailer": "^6.9.16"
+    "nodemailer": "^10.3.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1",

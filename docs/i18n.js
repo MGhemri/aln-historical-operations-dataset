@@ -325,9 +325,14 @@ const I18N_ACTIONS = {
 
 const I18N_CONTRIBUTE = {
   fr: {
+    replyEmail:'Adresse de réponse (facultative)',replyEmailHelp:'Uniquement si vous souhaitez être recontacté. Aucun nom ni compte requis.',sendProposal:'Envoyer la proposition au mainteneur',sendingProposal:'Envoi en cours…',
+    deliverySuccess:'Proposition transmise au mainteneur pour revue. Référence : {reference}. Elle n’est pas encore publiée.',
+    deliveryFailed:'L’envoi n’a pas été confirmé. Votre proposition est conservée ici : réessayez ou téléchargez-la.',
+    deliveryUncertain:'Le délai est dépassé ; la réception n’est pas confirmée. Conservez la proposition et réessayez sans la modifier.',
+    deliveryRateLimit:'Trop de tentatives. Patientez quelques minutes avant de réessayer ; vous pouvez télécharger la proposition.',
     searchOperations:'Rechercher une fiche par nom, identifiant, année ou lieu',pickerCount:'{shown} fiche(s) trouvée(s) sur {total} — faites défiler la liste pour les parcourir.',pickerSelected:'Fiche sélectionnée :',pickerCurrent:'Sélection conservée hors des résultats :',pickerNone:'Aucune fiche ne correspond à cette recherche. Effacez la recherche pour retrouver la liste complète.',pickerLoading:'Chargement de toutes les fiches…',
-    privacyLocal:'Votre proposition reste dans votre navigateur jusqu’au téléchargement. N’indiquez aucune donnée personnelle inutile et ne joignez pas de document protégé sans autorisation.',
-    notSubmittedLocal:'Rien n’a été envoyé. Téléchargez votre proposition, puis utilisez le formulaire Contact de l’atlas pour demander au mainteneur comment la transmettre. Le téléchargement seul ne constitue pas un envoi.',
+    privacyLocal:'Votre proposition sera transmise par courriel aux mainteneurs uniquement si vous confirmez son envoi après vérification. L’adresse de réponse est facultative. N’indiquez aucune donnée personnelle inutile et ne joignez pas de document protégé sans autorisation.',
+    notSubmittedLocal:'Vérifiez le récapitulatif, puis envoyez la proposition directement au mainteneur. Vous pouvez aussi la télécharger. La publication nécessite une revue humaine.',
     chooseOperation:'Choisir une fiche existante',relatedOperation:'Fiche existante concernée',optionalOperation:'Fiche concernée (facultatif)',secondOperation:'Deuxième fiche à comparer',eventDate:'Date ou période, si connue (conserver les incertitudes)',eventPlace:'Lieu(x), si connus',placeName:'Toponyme et variante proposés',
     newHelp:'Aucun identifiant à créer : le mainteneur attribuera un identifiant permanent après validation. Indiquez uniquement ce qui est documenté.',
     correctionHelp:'Sélectionnez la fiche existante. Décrivez le champ concerné, la valeur actuelle, la correction et sa justification.',
@@ -345,13 +350,18 @@ const I18N_CONTRIBUTE = {
     kind:'Type de contribution',newOperation:'Proposer une opération',correction:'Corriger une fiche',newSource:'Ajouter une source',duplicate:'Signaler un doublon possible',dispute:'Signaler une contradiction',place:'Proposer un toponyme',
     operation:'Identifiant(s) de fiche, si connus',title:'Titre de la proposition',description:'Description, incertitudes et valeurs divergentes',citation:'Référence : titre, auteur, date, page ou cote, URL éventuelle',missing:'Si aucune source : justifiez son absence (publication bloquée en attente de sources)',
     consent:'Je distingue les faits rapportés, les incertitudes et les interprétations ; je respecte les droits des sources et accepte la revue humaine.',guide:'Lire les règles de contribution',preview:'Vérifier ma proposition',review:'Récapitulatif à vérifier',
-    notSubmitted:'Rien n’a été envoyé. Sur GitHub, vérifiez le texte puis créez vous-même l’Issue. Sans compte, téléchargez le fichier pour le transmettre au mainteneur.',
+    notSubmitted:'Vérifiez le récapitulatif, puis envoyez la proposition au mainteneur par courriel. Vous pouvez aussi préparer une Issue publique sur GitHub ou télécharger le fichier. La publication nécessite une revue humaine.',
     long:'Cette proposition est trop longue pour un lien GitHub : téléchargez-la puis copiez son contenu dans une nouvelle Issue.',github:'Préparer l’Issue sur GitHub',download:'Télécharger la proposition',tracking:'Suivre les propositions sur GitHub',sourceRequired:'Ajoutez une référence ou justifiez son absence.'
   },
   ar: {
+    replyEmail:'عنوان للرد (اختياري)',replyEmailHelp:'فقط إن رغبت في التواصل معك. لا يلزم اسم أو حساب.',sendProposal:'إرسال المقترح إلى المشرف',sendingProposal:'جارٍ الإرسال…',
+    deliverySuccess:'أُرسل المقترح إلى المشرف للمراجعة. المرجع: {reference}. لم يُنشر بعد.',
+    deliveryFailed:'لم يتم تأكيد الإرسال. يبقى المقترح هنا؛ أعد المحاولة أو نزّله.',
+    deliveryUncertain:'انتهت مهلة الانتظار ولم يتأكد الاستلام. احتفظ بالمقترح وأعد المحاولة دون تعديله.',
+    deliveryRateLimit:'محاولات كثيرة. انتظر بضع دقائق قبل المحاولة مجدداً؛ يمكنك تنزيل المقترح.',
     searchOperations:'ابحث بالاسم أو المعرّف أو السنة أو المكان',pickerCount:'{shown} بطاقة مطابقة من أصل {total} — مرّر القائمة لتصفحها.',pickerSelected:'البطاقة المختارة:',pickerCurrent:'الاختيار المحفوظ خارج النتائج:',pickerNone:'لا توجد بطاقة مطابقة. امسح البحث لعرض القائمة الكاملة.',pickerLoading:'جارٍ تحميل جميع البطاقات…',
-    privacyLocal:'يبقى المقترح في متصفحك حتى تنزيله. لا تدرج بيانات شخصية غير ضرورية ولا ترفق وثائق محمية دون إذن.',
-    notSubmittedLocal:'لم يُرسل شيء. نزّل المقترح ثم استخدم نموذج الاتصال في الأطلس لسؤال المشرف عن طريقة إرساله. التنزيل وحده ليس إرسالاً.',
+    privacyLocal:'يُرسل المقترح بالبريد إلى المشرفين فقط بعد مراجعته وتأكيد إرساله. عنوان الرد اختياري. لا تدرج بيانات شخصية غير ضرورية ولا ترفق وثائق محمية دون إذن.',
+    notSubmittedLocal:'راجع الملخص ثم أرسل المقترح مباشرة إلى المشرف، أو نزّله. النشر يتطلب مراجعة بشرية.',
     chooseOperation:'اختر بطاقة موجودة',relatedOperation:'البطاقة الموجودة المعنية',optionalOperation:'البطاقة المعنية (اختياري)',secondOperation:'البطاقة الثانية للمقارنة',eventDate:'التاريخ أو الفترة إن عُرفا (مع الحفاظ على عدم اليقين)',eventPlace:'المكان أو الأماكن إن عُرفت',placeName:'اسم المكان والصيغة المقترحة',
     newHelp:'لا تُنشئ معرّفاً: يخصص المشرف معرّفاً دائماً بعد التحقق. اذكر المعلومات الموثقة فقط.',
     correctionHelp:'اختر بطاقة موجودة واذكر الحقل والقيمة الحالية والتصحيح ومبرراته.',
@@ -369,7 +379,7 @@ const I18N_CONTRIBUTE = {
     kind:'نوع المساهمة',newOperation:'اقتراح عملية',correction:'تصحيح بطاقة',newSource:'إضافة مصدر',duplicate:'الإبلاغ عن تكرار محتمل',dispute:'الإبلاغ عن تعارض',place:'اقتراح اسم مكان',
     operation:'معرّفات البطاقات إن عُرفت',title:'عنوان المقترح',description:'الوصف ومواضع عدم اليقين والقيم المتعارضة',citation:'المرجع: العنوان والمؤلف والتاريخ والصفحة أو رقم الأرشيف والرابط إن وُجد',missing:'عند غياب المصدر: وضّح السبب (يتوقف النشر إلى حين توفير مصادر)',
     consent:'أميّز بين الوقائع المنقولة وعدم اليقين والتفسير، وأحترم حقوق المصادر وأقبل المراجعة البشرية.',guide:'قراءة قواعد المساهمة',preview:'مراجعة المقترح',review:'ملخص للمراجعة',
-    notSubmitted:'لم يُرسل شيء. راجع النص على GitHub ثم أنشئ Issue بنفسك. دون حساب، نزّل الملف لإرساله إلى المشرف.',
+    notSubmitted:'راجع الملخص ثم أرسل المقترح إلى المشرف بالبريد. يمكنك أيضاً تحضير Issue علنية على GitHub أو تنزيل الملف. النشر يتطلب مراجعة بشرية.',
     long:'المقترح أطول من الحد المناسب لرابط GitHub. نزّله ثم انسخ محتواه في Issue جديدة.',github:'تحضير Issue على GitHub',download:'تنزيل المقترح',tracking:'متابعة المقترحات على GitHub',sourceRequired:'أضف مرجعاً أو وضّح سبب غيابه.'
   }
 };

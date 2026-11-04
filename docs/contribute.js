@@ -6,6 +6,7 @@
   const githubPages=window.ALNOP_SITE?.githubPages===true;
   const t=key=>I18N_CONTRIBUTE[lang][!githubPages && key==='privacy'?'privacyLocal':!githubPages && key==='notSubmitted'?'notSubmittedLocal':key];
   let markdown='';
+  let prepared=null,signature='',submissionId='',deliveredReference='',sending=false;
   let operations=new Map();
   let loadFailed=false;
   let loaded=false;
@@ -64,7 +65,7 @@
     document.querySelector('label[for="description"]').textContent=t(config.description);
     for(const id of ['operation','second-operation'])renderPicker(id);
     $('error').textContent=loadFailed && (config.operation||config.optional)?t('loadError'):'';
-    $('review').hidden=true;markdown='';
+    $('review').hidden=true;markdown='';prepared=null;
   }
   function translate(){
     document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';
@@ -74,7 +75,7 @@
     adapt();
   }
   $('language').addEventListener('click',()=>{lang=lang==='fr'?'ar':'fr';try{localStorage.setItem('aln_lang',lang);}catch{}translate();});
-  $('proposal').addEventListener('input',()=>{$('review').hidden=true;});
+  $('proposal').addEventListener('input',()=>{$('review').hidden=true;prepared=null;});
   $('kind').addEventListener('change',()=>{
     $('operation-search').value='';$('second-operation-search').value='';adapt();
   });
@@ -115,7 +116,21 @@
       `${labels.kind}: ${$('kind').selectedOptions[0].textContent}\n\n${fields.join('\n\n')}\n\n`+
       `${labels[config.description]}\n${value('description')}\n\n${labels.citation}\n${value('citation')}\n\n`+
       (config.source?'':`${labels.missing}\n${value('missing')}\n\n`)+
+      (value('reply-email')?`${labels.replyEmail}: ${value('reply-email')}\n\n`:'')+
       `${labels.proposedStatus}\n${value('citation')?labels.reviewRequired:labels.sourcesRequired}\n\n${labels.consent}\n`;
+    const payload={kind:value('kind'),title:value('title'),description:value('description'),citation:value('citation'),
+      missing:config.source?'':value('missing'),consent:$('consent').checked,replyTo:value('reply-email'),locale:lang,
+      website:value('proposal-website'),
+      ...((config.operation||config.optional)?{operation:value('operation')}:{}),
+      ...(config.second?{secondOperation:value('second-operation')}:{}),
+      ...(config.event?{eventDate:value('event-date'),eventPlace:value('event-place')}:{}),
+      ...(config.place?{placeName:value('place-name')}: {})};
+    const current=JSON.stringify(payload);
+    if(current!==signature){signature=current;submissionId=crypto.randomUUID();deliveredReference='';}
+    prepared={...payload,submissionId};
+    $('send-proposal').disabled=!!deliveredReference;
+    $('delivery-status').textContent=deliveredReference?t('deliverySuccess').replace('{reference}',deliveredReference):'';
+    $('delivery-error').textContent='';
     $('summary').textContent=markdown;
     const url=new URL('https://github.com/MGhemri/aln-historical-operations-dataset/issues/new');
     url.searchParams.set('title',value('title'));url.searchParams.set('body',markdown);
@@ -129,6 +144,27 @@
     const objectURL=URL.createObjectURL(new Blob([markdown],{type:'text/markdown;charset=utf-8'}));
     const link=document.createElement('a');link.href=objectURL;link.download='alnop-proposition.md';link.click();
     setTimeout(()=>URL.revokeObjectURL(objectURL),1000);
+  });
+  $('send-proposal').addEventListener('click',async()=>{
+    if(!prepared||sending||deliveredReference)return;
+    sending=true;$('send-proposal').disabled=true;$('send-proposal').textContent=t('sendingProposal');
+    $('delivery-error').textContent='';$('delivery-status').textContent=t('sendingProposal');
+    const controls=[...$('proposal').querySelectorAll('input,select,textarea,button'),$('language')]
+      .map(el=>({el,disabled:el.disabled}));controls.forEach(({el})=>el.disabled=true);
+    const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),25000);
+    try{
+      const response=await fetch(githubPages?'https://alnop.vercel.app/api/contributions':'/api/contributions',{
+        method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(prepared),signal:controller.signal});
+      const result=await response.json();
+      if(!response.ok||result.success!==true||!result.reference)throw new Error(response.status===429?'RATE_LIMITED':'DELIVERY_FAILED');
+      deliveredReference=result.reference;$('delivery-status').textContent=t('deliverySuccess').replace('{reference}',result.reference);
+    }catch(error){
+      $('delivery-status').textContent='';
+      $('delivery-error').textContent=t(error.message==='RATE_LIMITED'?'deliveryRateLimit':error.name==='AbortError'?'deliveryUncertain':'deliveryFailed');
+    }finally{
+      clearTimeout(timeout);sending=false;controls.forEach(({el,disabled})=>el.disabled=disabled);
+      $('send-proposal').disabled=!!deliveredReference;$('send-proposal').textContent=t('sendProposal');
+    }
   });
   const parameters=new URLSearchParams(location.search);
   const id=parameters.get('id');

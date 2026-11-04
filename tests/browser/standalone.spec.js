@@ -89,3 +89,35 @@ test('Vercel contribution stays local before and after preview and language chan
   const download=page.waitForEvent('download');await page.locator('#download').click();expect((await download).suggestedFilename()).toBe('alnop-proposition.md');
   await page.screenshot({path:'test-results/standalone-contribution-ar.png',fullPage:true});
 });
+test('Direct contribution waits for SMTP confirmation and prevents double send',async({page})=>{
+  let complete,requests=0,payload;
+  await page.route('https://alnop.vercel.app/api/contributions',async route=>{
+    requests++;payload=route.request().postDataJSON();await new Promise(resolve=>complete=resolve);
+    await route.fulfill({json:{success:true,reference:'ALNOP_TEST_REFERENCE',status:'sent_for_review'}});
+  });
+  await page.goto('/contribute.html');await page.locator('#title').fill('Proposition synthétique');
+  await page.locator('#description').fill('Test sans fait historique');await page.locator('#citation').fill('Référence synthétique');
+  await page.locator('#consent').check();await page.locator('button[type=submit]').click();
+  await page.locator('#send-proposal').click();await expect(page.locator('#send-proposal')).toBeDisabled();
+  await expect(page.locator('#delivery-status')).toContainText('Envoi en cours');
+  expect(payload.operation).toBeUndefined();expect(payload.replyTo).toBe('');
+  complete();await expect(page.locator('#delivery-status')).toContainText('ALNOP_TEST_REFERENCE');
+  await expect(page.locator('#delivery-status')).toContainText('pas encore publiée');expect(requests).toBe(1);
+  await expect(page.locator('#send-proposal')).toBeDisabled();await noRepositoryLinks(page);
+});
+test('SMTP error keeps proposal and enables a retry; Arabic response is translated',async({page})=>{
+  let failed=true;const sent=[];
+  await page.route('https://alnop.vercel.app/api/contributions',async route=>{
+    sent.push(route.request().postDataJSON());
+    await route.fulfill({status:failed?503:200,json:failed?{success:false,error:{code:'DELIVERY_UNAVAILABLE'}}:{success:true,reference:'ALNOP_RETRY'}});
+  });
+  await page.goto('/contribute.html');await page.locator('#language').click();
+  await page.locator('#title').fill('مقترح تجريبي');await page.locator('#description').fill('وصف تجريبي غير تاريخي');
+  await page.locator('#citation').fill('مرجع تجريبي');await page.locator('#consent').check();
+  await page.locator('button[type=submit]').click();await page.locator('#send-proposal').click();
+  await expect(page.locator('#delivery-error')).toContainText('لم يتم تأكيد');
+  await expect(page.locator('#summary')).toContainText('مقترح تجريبي');await expect(page.locator('#send-proposal')).toBeEnabled();
+  failed=false;await page.locator('#send-proposal').click();await expect(page.locator('#delivery-status')).toContainText('ALNOP_RETRY');
+  expect(sent[0].submissionId).toBe(sent[1].submissionId);
+  await page.screenshot({path:'test-results/smtp-contribution-ar.png',fullPage:true});
+});

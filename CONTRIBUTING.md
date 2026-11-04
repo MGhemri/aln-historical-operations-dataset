@@ -4,13 +4,15 @@ Le corpus est incomplet et en enrichissement. Ne jamais compléter un fait histo
 
 ## Proposer
 
-Utiliser `contribute.html` dans l'atlas ou choisir un formulaire dans les Issues GitHub. Une proposition est publique ; le pseudonyme et l'historique peuvent rester visibles. Aucun compte ALNOP, adresse électronique ou identité civile n'est demandé.
+Depuis `contribute.html`, remplir les champs adaptés au type de proposition, vérifier le récapitulatif, puis cliquer sur « Envoyer la proposition au mainteneur ». Le site transmet automatiquement le contenu par courriel, avec une copie Markdown jointe et une référence de suivi. Aucun compte ni nom n'est requis ; une adresse de réponse peut être fournie facultativement.
 
-Sans compte GitHub : télécharger la proposition Markdown puis la transmettre au mainteneur par un canal choisi par vous. Le téléchargement ne constitue pas un envoi. Aucune proposition n'est enregistrée sur le serveur par le formulaire.
+La confirmation signifie que le serveur SMTP a accepté le message pour le mainteneur. Elle ne constitue pas une validation historique ni une publication. En cas d'erreur, la proposition reste affichée et peut être réessayée ou téléchargée. Ne pas fermer la page avant de l'avoir envoyée ou sauvegardée.
+
+Sur GitHub Pages, les Issues restent une alternative publique : le pseudonyme et l'historique peuvent être visibles. Le téléchargement seul n'est pas un envoi. Le parcours Vercel reste sur le site, sans lien de dépôt.
 
 Donner les IDs concernés, les valeurs proposées et divergentes, les incertitudes et une référence précise (titre, auteur, date, page ou cote et URL éventuelle). Sans source, justifier son absence ; cela ne permet pas une publication directe. Ne pas téléverser un document protégé sans autorisation.
 
-## Passer d'une Issue à une publication
+## Passer d’une proposition à une publication
 
 1. Un mainteneur examine la proposition et demande les informations manquantes.
 2. Une PR distincte présente les changements canoniques et leurs preuves, sans écraser les assertions contradictoires.
@@ -22,7 +24,7 @@ Les brouillons et Issues non validées n'entrent pas dans les données publiques
 
 ## العربية
 
-المتن غير شامل وقيد الإثراء. لا تُكمل الوقائع بالافتراض. استخدم صفحة المساهمة أو نماذج GitHub، مع ذكر معرّفات البطاقات والمراجع الدقيقة ومواضع عدم اليقين. دون حساب، نزّل المقترح وأرسله بنفسك إلى المشرف؛ التنزيل ليس إرسالاً. غياب المصدر يوقف النشر. تخضع التغييرات لمراجعة بشرية موثقة قبل الدمج، ولا تُضاف المقترحات غير المعتمدة إلى البيانات المنشورة.
+المتن غير شامل وقيد الإثراء. لا تُكمل الوقائع بالافتراض. استخدم صفحة المساهمة أو نماذج GitHub، مع ذكر معرّفات البطاقات والمراجع الدقيقة ومواضع عدم اليقين. بعد مراجعة الملخص، اضغط إرسال المقترح ليرسل الموقع المحتوى بالبريد إلى المشرف. لا يلزم اسم أو حساب؛ عنوان الرد اختياري. يظهر التأكيد فقط بعد قبول خادم البريد للرسالة. عند الخطأ، أعد المحاولة أو نزّل الملف؛ التنزيل وحده ليس إرسالاً. غياب المصدر يوقف النشر. تخضع التغييرات لمراجعة بشرية موثقة قبل الدمج، ولا تُضاف المقترحات غير المعتمدة إلى البيانات المنشورة.
 
 ## Champs selon le type de proposition
 
@@ -36,3 +38,9 @@ Les brouillons et Issues non validées n'entrent pas dans les données publiques
 La liste défilante affiche un compteur et permet une recherche par nom FR/AR, identifiant, année ou lieu. Effacer la recherche réaffiche toutes les fiches ; l’intitulé complet de la sélection reste visible.
 
 Le formulaire charge les fiches du corpus : il ne permet pas de saisir un nouvel ID dans le sélecteur. Les modèles GitHub demandent de copier les IDs existants ; la revue vérifie leur existence. Aucune proposition ne crée automatiquement de fiche ou d'identifiant.
+
+## Exploitation de la messagerie (mainteneur)
+
+Configurer `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` et `CONTACT_DEST` dans les variables serveur Vercel. `CONTRIBUTION_DEST` est facultatif et remplace le destinataire pour les propositions. Aucun secret ne doit être commité. Les variables ajoutées nécessitent un nouveau déploiement.
+
+`POST /api/contributions` valide les champs et les identifiants, n'accepte aucun destinataire fourni par le visiteur et n'écrit pas dans le corpus. Les limites anti-abus et la déduplication sont en mémoire par instance ; elles ne constituent pas une protection distribuée ni une garantie d'envoi exactement une fois. Une même tentative conserve sa référence et son Message-ID. La réception dans la boîte finale n'est pas vérifiée par le site.
