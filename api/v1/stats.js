@@ -11,6 +11,7 @@ const {
   buildEnvelope,
   setStandardHeaders
 } = require('./data-service');
+const { validateOperationsQuery } = require('./validator');
 
 module.exports = (req, res) => {
   setStandardHeaders(res);
@@ -31,6 +32,18 @@ module.exports = (req, res) => {
     const dataset = getDataset();
     const query = req.query || {};
 
+    // Validate query parameters strictly if provided (ALNOP-005, ALNOP-006)
+    if (Object.keys(query).length > 0) {
+      const validation = validateOperationsQuery(query);
+      if (!validation.valid) {
+        return res.status(validation.status).json({
+          status: 'error',
+          error: validation.error,
+          message: validation.message
+        });
+      }
+    }
+
     // Filter if query params specified (e.g., stats only for a given wilaya or year)
     const operations = Object.keys(query).length > 0 ? filterOperations(dataset, query) : dataset;
     const stats = computeStats(operations);
@@ -43,10 +56,11 @@ module.exports = (req, res) => {
     }));
   } catch (err) {
     console.error('API Stats error:', err);
+    // ALNOP-009: Sanitize 500 error response
     return res.status(500).json({
       status: 'error',
       error: 'Internal Server Error',
-      message: err.message
+      message: 'Une erreur interne est survenue lors du traitement de la requête.'
     });
   }
 };

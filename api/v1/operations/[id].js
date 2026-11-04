@@ -70,10 +70,11 @@ module.exports = (req, res) => {
     }));
   } catch (err) {
     console.error('API Single Operation error:', err);
+    // ALNOP-009: Sanitize 500 error response
     return res.status(500).json({
       status: 'error',
       error: 'Internal Server Error',
-      message: err.message
+      message: 'Une erreur interne est survenue lors du traitement de la requête.'
     });
   }
 };

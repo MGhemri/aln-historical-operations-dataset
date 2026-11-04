@@ -112,12 +112,14 @@ function getOperationCategory(op) {
 
 /**
  * Text normalization helper (Unicode accents and Arabic diacritics stripping)
+ * Handles Tashkeel, Tatweel, Alef variants, Ta Marbuta, Ya/Alef Maksura and Latin accents
  */
 function normalizeString(str) {
   if (!str) return '';
   return String(str)
     .replace(/[\u064B-\u065F\u0670]/g, '')
-    .replace(/[إأآا]/g, 'ا')
+    .replace(/\u0640/g, '')
+    .replace(/[إأآا\u0671]/g, 'ا')
     .replace(/ة/g, 'ه')
     .replace(/[يى]/g, 'ي')
     .normalize('NFD')
@@ -185,19 +187,23 @@ function filterOperations(ops, query = {}) {
       const matchImpact = normalizeString(op.impact_strategique).includes(normSearch);
       const matchId = normalizeString(op.id).includes(normSearch);
       const matchCmd = Array.isArray(op.commandement_aln) && op.commandement_aln.some(c => normalizeString(c).includes(normSearch));
-      return matchName || matchDesc || matchLieu || matchImpact || matchId || matchCmd;
+      const matchWilaya = normalizeString(op.wilaya_concernee).includes(normSearch);
+      const matchSources = Array.isArray(op.sources) && op.sources.some(s => normalizeString(s.titre).includes(normSearch) || normalizeString(s.auteur).includes(normSearch));
+      return matchName || matchDesc || matchLieu || matchImpact || matchId || matchCmd || matchWilaya || matchSources;
     });
   }
 
-  // 7. Sort
+  // 7. Sort (ALNOP-014: deterministic sort with canonical ID tie-breaker)
   const sort = query.sort || 'date_asc';
   filtered.sort((a, b) => {
     const dateA = a.date_debut || '';
     const dateB = b.date_debut || '';
-    if (sort === 'date_desc') {
-      return dateB.localeCompare(dateA);
-    }
-    return dateA.localeCompare(dateB);
+    const dateCmp = sort === 'date_desc' ? dateB.localeCompare(dateA) : dateA.localeCompare(dateB);
+    if (dateCmp !== 0) return dateCmp;
+    // Tie-breaker: unique ID ensures stable pagination without shifts or duplicates
+    const idA = a.id || '';
+    const idB = b.id || '';
+    return idA.localeCompare(idB);
   });
 
   return filtered;
@@ -251,7 +257,11 @@ function toGeoJSON(operations) {
       total_features: features.length,
       license: 'https://creativecommons.org/licenses/by/4.0/',
       attribution: 'Ghemri M. (ALN Historical Operations Dataset)',
-      documentation: 'https://alnop.vercel.app/api/docs'
+      documentation: 'https://alnop.vercel.app/api/docs',
+      pagination: {
+        paginated: false,
+        note: 'GeoJSON format exports all matching features without pagination for GIS cartographic mapping.'
+      }
     },
     features
   };
