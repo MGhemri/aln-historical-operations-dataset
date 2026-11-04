@@ -325,6 +325,7 @@ const I18N_ACTIONS = {
 
 const I18N_CONTRIBUTE = {
   fr: {
+    searchOperations:'Rechercher une fiche par nom, identifiant, année ou lieu',pickerCount:'{shown} fiche(s) trouvée(s) sur {total} — faites défiler la liste pour les parcourir.',pickerSelected:'Fiche sélectionnée :',pickerCurrent:'Sélection conservée hors des résultats :',pickerNone:'Aucune fiche ne correspond à cette recherche. Effacez la recherche pour retrouver la liste complète.',pickerLoading:'Chargement de toutes les fiches…',
     privacyLocal:'Votre proposition reste dans votre navigateur jusqu’au téléchargement. N’indiquez aucune donnée personnelle inutile et ne joignez pas de document protégé sans autorisation.',
     notSubmittedLocal:'Rien n’a été envoyé. Téléchargez votre proposition, puis utilisez le formulaire Contact de l’atlas pour demander au mainteneur comment la transmettre. Le téléchargement seul ne constitue pas un envoi.',
     chooseOperation:'Choisir une fiche existante',relatedOperation:'Fiche existante concernée',optionalOperation:'Fiche concernée (facultatif)',secondOperation:'Deuxième fiche à comparer',eventDate:'Date ou période, si connue (conserver les incertitudes)',eventPlace:'Lieu(x), si connus',placeName:'Toponyme et variante proposés',
@@ -348,6 +349,7 @@ const I18N_CONTRIBUTE = {
     long:'Cette proposition est trop longue pour un lien GitHub : téléchargez-la puis copiez son contenu dans une nouvelle Issue.',github:'Préparer l’Issue sur GitHub',download:'Télécharger la proposition',tracking:'Suivre les propositions sur GitHub',sourceRequired:'Ajoutez une référence ou justifiez son absence.'
   },
   ar: {
+    searchOperations:'ابحث بالاسم أو المعرّف أو السنة أو المكان',pickerCount:'{shown} بطاقة مطابقة من أصل {total} — مرّر القائمة لتصفحها.',pickerSelected:'البطاقة المختارة:',pickerCurrent:'الاختيار المحفوظ خارج النتائج:',pickerNone:'لا توجد بطاقة مطابقة. امسح البحث لعرض القائمة الكاملة.',pickerLoading:'جارٍ تحميل جميع البطاقات…',
     privacyLocal:'يبقى المقترح في متصفحك حتى تنزيله. لا تدرج بيانات شخصية غير ضرورية ولا ترفق وثائق محمية دون إذن.',
     notSubmittedLocal:'لم يُرسل شيء. نزّل المقترح ثم استخدم نموذج الاتصال في الأطلس لسؤال المشرف عن طريقة إرساله. التنزيل وحده ليس إرسالاً.',
     chooseOperation:'اختر بطاقة موجودة',relatedOperation:'البطاقة الموجودة المعنية',optionalOperation:'البطاقة المعنية (اختياري)',secondOperation:'البطاقة الثانية للمقارنة',eventDate:'التاريخ أو الفترة إن عُرفا (مع الحفاظ على عدم اليقين)',eventPlace:'المكان أو الأماكن إن عُرفت',placeName:'اسم المكان والصيغة المقترحة',

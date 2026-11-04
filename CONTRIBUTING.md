@@ -33,4 +33,6 @@ Les brouillons et Issues non validées n'entrent pas dans les données publiques
 - Contradiction : sélectionner la fiche et détailler les affirmations divergentes et leurs références.
 - Toponyme : indiquer le nom et sa variante ; association à une fiche existante facultative.
 
+La liste défilante affiche un compteur et permet une recherche par nom FR/AR, identifiant, année ou lieu. Effacer la recherche réaffiche toutes les fiches ; l’intitulé complet de la sélection reste visible.
+
 Le formulaire charge les fiches du corpus : il ne permet pas de saisir un nouvel ID dans le sélecteur. Les modèles GitHub demandent de copier les IDs existants ; la revue vérifie leur existence. Aucune proposition ne crée automatiquement de fiche ou d'identifiant.

@@ -8,6 +8,34 @@
   let markdown='';
   let operations=new Map();
   let loadFailed=false;
+  let loaded=false;
+  const normalize=text=>String(text || '').normalize('NFD').replace(/[\u0300-\u036f\u064B-\u065F\u0670\u0640]/g,'')
+    .replace(/[إأآٱ]/g,'ا').replace(/ى/g,'ي').toLowerCase();
+  function operationName(op){
+    return lang==='ar' && typeof I18N_TITLES_AR!=='undefined' && I18N_TITLES_AR[op.id]
+      ? I18N_TITLES_AR[op.id] : op.nom_operation;
+  }
+  function renderPicker(id){
+    const select=$(id), selected=select.value, query=normalize($(id+'-search').value.trim());
+    const tokens=query.split(/\s+/).filter(Boolean);
+    const matches=[...operations.values()].sort((a,b)=>a.id.localeCompare(b.id)).filter(op=>{
+      const arabic=typeof I18N_TITLES_AR!=='undefined'?I18N_TITLES_AR[op.id]:'';
+      const text=normalize([op.id,op.nom_operation,arabic,op.date_debut,op.localisation?.region_ou_ville].join(' '));
+      return tokens.every(token=>text.includes(token));
+    });
+    select.replaceChildren(new Option(t('chooseOperation'),''));
+    if(selected && operations.has(selected) && !matches.some(op=>op.id===selected)){
+      const op=operations.get(selected);
+      select.add(new Option(`${t('pickerCurrent')} ${op.id} — ${operationName(op)}`,selected));
+    }
+    for(const op of matches)select.add(new Option(`${op.id} — ${operationName(op)}`,op.id));
+    select.value=selected;
+    $(id+'-count').textContent=loadFailed?t('loadError'):!loaded?t('pickerLoading'):
+      t('pickerCount').replace('{shown}',matches.length).replace('{total}',operations.size)+
+      (matches.length?'':' '+t('pickerNone'));
+    $(id+'-selected').textContent=selected && operations.has(selected)
+      ?`${t('pickerSelected')} ${selected} — ${operationName(operations.get(selected))}`:'';
+  }
   const types={
     'new-operation':{help:'newHelp',description:'description',event:true},
     correction:{help:'correctionHelp',description:'correctionDescription',operation:true},
@@ -24,6 +52,8 @@
     };
     show('operation-group',['operation'],!!(config.operation||config.optional),!!config.operation);
     show('second-operation-group',['second-operation'],!!config.second,!!config.second);
+    $('operation-search').disabled=!(config.operation||config.optional);
+    $('second-operation-search').disabled=!config.second;
     show('event-group',['event-date','event-place'],!!config.event);
     show('place-group',['place-name'],!!config.place,!!config.place);
     $('citation').required=!!config.source;
@@ -32,15 +62,7 @@
     $('operation-label').textContent=t(config.optional?'optionalOperation':'relatedOperation');
     $('kind-help').textContent=t(config.help);
     document.querySelector('label[for="description"]').textContent=t(config.description);
-    for(const id of ['operation','second-operation']) {
-      $(id).options[0].textContent=t('chooseOperation');
-      for(const option of Array.from($(id).options).slice(1)) {
-        const op=operations.get(option.value);
-        const name=lang==='ar' && typeof I18N_TITLES_AR!=='undefined' && I18N_TITLES_AR[op.id]
-          ? I18N_TITLES_AR[op.id] : op.nom_operation;
-        option.textContent=`${op.id} — ${name}`;
-      }
-    }
+    for(const id of ['operation','second-operation'])renderPicker(id);
     $('error').textContent=loadFailed && (config.operation||config.optional)?t('loadError'):'';
     $('review').hidden=true;markdown='';
   }
@@ -53,7 +75,17 @@
   }
   $('language').addEventListener('click',()=>{lang=lang==='fr'?'ar':'fr';try{localStorage.setItem('aln_lang',lang);}catch{}translate();});
   $('proposal').addEventListener('input',()=>{$('review').hidden=true;});
-  $('kind').addEventListener('change',adapt);
+  $('kind').addEventListener('change',()=>{
+    $('operation-search').value='';$('second-operation-search').value='';adapt();
+  });
+  for(const id of ['operation','second-operation']){
+    $(id+'-search').addEventListener('input',()=>renderPicker(id));
+    $(id).addEventListener('change',()=>{
+      const op=operations.get($(id).value);
+      $(id+'-selected').textContent=op?`${t('pickerSelected')} ${op.id} — ${operationName(op)}`:'';
+      $('review').hidden=true;
+    });
+  }
   const value=id=>$(id).value.trim();
   $('proposal').addEventListener('submit',event=>{
     event.preventDefault();
@@ -106,6 +138,7 @@
   }).then(dataset=>{
     if(!Array.isArray(dataset.operations))throw new Error('Invalid dataset');
     operations=new Map(dataset.operations.map(op=>[op.id,op]));
+    loaded=true;
     for(const op of dataset.operations)for(const select of [$('operation'),$('second-operation')]){
       const option=document.createElement('option');option.value=op.id;
       option.textContent=`${op.id} — ${op.nom_operation}`;select.append(option);
