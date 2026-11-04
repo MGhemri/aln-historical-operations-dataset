@@ -9,3 +9,7 @@ node_modules/
 
 test-results/
 playwright-report/
+
+# Ignore environment files; keep only the empty template.
+.env.*
+!.env.example
