@@ -15,7 +15,7 @@ let result = null;
 for (const cmd of pythonCommands) {
   try {
     const probe = spawnSync(cmd, ['--version'], { stdio: 'ignore' });
-    if (probe.status === 0 || !probe.error) {
+    if (probe.status === 0 && !probe.error) {
       result = spawnSync(cmd, [scriptPath], { stdio: 'inherit' });
       executed = true;
       break;
