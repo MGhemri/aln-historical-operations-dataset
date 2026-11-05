@@ -80,6 +80,8 @@ test('Adapter contract preserves caller functions and prohibits incomplete adapt
 test('The generic framework has no imports or constants from the historical profile',()=>{
  for(const name of fs.readdirSync(path.join(root,'src/framework'))){const text=fs.readFileSync(path.join(root,'src/framework',name),'utf8');assert.doesNotMatch(text,/alnop|wilaya|1954|1962/i,name);}
 });
-test('The legacy validator reads its year window from the declared profile and preserves boundaries',()=>{
- const {spawnSync}=require('node:child_process');const result=spawnSync('python',['-c',"import validate_dataset as v; assert v.check_calendar_date('1954', '', '')[0]; assert v.check_calendar_date('1962-12-31', '', '')[0]; assert not v.check_calendar_date('1963', '', '')[0]; assert not v.check_calendar_date('1953', '', '')[0]; assert not v.check_calendar_date('1956-02-30', '', '')[0]"],{cwd:root,encoding:'utf8'});assert.equal(result.status,0,result.stderr);
+test('The legacy validator reads its year window from the declared profile and preserves boundaries',t=>{
+ const {spawnSync}=require('node:child_process');const result=spawnSync('python',['-c',"import validate_dataset as v; assert v.check_calendar_date('1954', '', '')[0]; assert v.check_calendar_date('1962-12-31', '', '')[0]; assert not v.check_calendar_date('1963', '', '')[0]; assert not v.check_calendar_date('1953', '', '')[0]; assert not v.check_calendar_date('1956-02-30', '', '')[0]"],{cwd:root,encoding:'utf8'});
+ if(result.error?.code==='ENOENT'){t.skip('Independent Python check requires the Python-enabled CI job');return;}
+ assert.equal(result.status,0,result.stderr||result.error?.message);
 });
