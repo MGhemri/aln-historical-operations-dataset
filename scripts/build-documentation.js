@@ -6,7 +6,7 @@ const pages={methodology:['METHODOLOGIE.md','Méthodologie'],api:['API.md','API 
   contributing:['CONTRIBUTING.md','Contribuer'],editorial:['EDITORIAL_POLICY.md','Politique éditoriale'],
   conduct:['CODE_OF_CONDUCT.md','Code de conduite'],dictionary:['DATA_DICTIONARY.md','Dictionnaire des données'],publication:['docs/ADR/002-canonical-publication.md','Publication des données'],
   provenance:['PROVENANCE_POLICY.md','Assertions et contradictions'],progress:['docs/CDC_STATUS.md','Avancement du cahier des charges'],
-  entities:['ENTITY_REVIEW_GUIDE.md','Référentiels, revue et doublons candidats'],'api-v2':['API_V2.md','API REST v2 et provenance'],releases:['RELEASE_POLICY.md','Versions du corpus et citation']};
+  entities:['ENTITY_REVIEW_GUIDE.md','Référentiels, revue et doublons candidats'],'api-v2':['API_V2.md','API REST v2 et provenance'],releases:['RELEASE_POLICY.md','Versions du corpus et citation'],observatory:['OBSERVATORY.md','Observatoire documentaire']};
 const navigation='<nav><a href="../index.html">Atlas · الأطلس</a><a href="../contribute.html">Contribuer · ساهم</a><a href="index.html">Documentation · الوثائق</a></nav>';
 const shell=(title,body)=>`<!doctype html>\n<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} · ALNOP</title><script>const base=document.createElement('base');base.href=location.pathname.split('/documentation')[0].replace(/\\/api\\/docs$/,'')+'/documentation/';document.head.append(base);</script><link rel="stylesheet" href="documentation.css"><script src="../site-context.js?v=4.2"></script></head><body><main>${navigation}${body}</main></body></html>\n`;
 const generated={'index.html':shell('Documentation','<h1>Documentation · الوثائق</h1><p>Guides accessibles directement sur ce site. Documents de référence en français ; guide de contribution également en arabe.</p><ul>'+Object.entries(pages).map(([slug,[,title]])=>`<li><a href="${slug}.html">${title}</a></li>`).join('')+'</ul>')};
@@ -22,7 +22,7 @@ md.renderer.rules.link_open=(tokens,index,options,env,self)=>{
     const [file,fragment]=href.split('#');
     const page=Object.entries(pages).find(([,value])=>value[0].split('/').pop()===file.split('/').pop());
     if(page)token.attrSet('href',page[0]+'.html'+(fragment?'#'+fragment:''));
-    if(file==='docs/releases.html')token.attrSet('href','../releases.html');
+    if(['docs/releases.html','docs/observatory.html'].includes(file))token.attrSet('href','../'+file.split('/').pop());
   }
   return self.renderToken(tokens,index,options);
 };

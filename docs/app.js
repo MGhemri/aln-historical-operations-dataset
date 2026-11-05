@@ -1208,6 +1208,7 @@ function setLanguage(lang) {
   if(claimsExport)claimsExport.textContent=t('claimsExport');
   const releasesLink=document.getElementById('releases-link');
   if(releasesLink)releasesLink.textContent=state.lang==='ar'?'إصدارات البيانات':'Versions des données';
+  document.querySelectorAll('.observatory-link').forEach(link=>link.textContent=state.lang==='ar'?'مرصد التوثيق':'Observatoire documentaire');
   const brandTitleEl = document.querySelector('.brand-title');
   const brandSubtitleEl = document.querySelector('.brand-subtitle');
   if (brandTitleEl) {

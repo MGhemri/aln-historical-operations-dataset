@@ -48,7 +48,7 @@ for(const width of [360,390,1280])test(`Vercel ${width}px: atlas navigation and 
   await page.screenshot({path:`test-results/standalone-atlas-${width}.png`,fullPage:true});
   await page.locator('#documentation-link').click();await expect(page.locator('h1')).toContainText('Documentation');
   await noRepositoryLinks(page);
-  for(const slug of ['methodology','api','contributing','editorial','conduct','entities','api-v2','releases']){
+  for(const slug of ['methodology','api','contributing','editorial','conduct','entities','api-v2','releases','observatory']){
     const response=await page.goto(`/documentation/${slug}.html`);expect(response.ok()).toBeTruthy();
     await noRepositoryLinks(page);
     await expect(page.locator('main')).not.toContainText(/Ghemri/i);
@@ -241,4 +241,58 @@ test('A real HTTP download preserves the published archive byte for byte',async(
   await page.goto('http://127.0.0.1:8765/releases.html');await expect(page.locator('.release-card')).toHaveCount(1);
   const waiting=page.waitForEvent('download');await page.getByRole('link',{name:'Télécharger l’archive ZIP'}).click();const download=await waiting;
   const bytes=require('node:fs').readFileSync(await download.path());expect(require('../../src/canonical').hash(bytes)).toBe(metadata.archive_sha256);
+});
+
+for(const width of [390,1280])test(`Documentary observatory preserves uncertainty and FR/AR navigation at ${width}px`,async({page})=>{
+  await page.setViewportSize({width,height:844});await page.goto('/observatory.html');
+  await expect(page.locator('#metric-total_operations')).toHaveText('263');
+  await expect(page.locator('#metric-without_identified_primary_source')).toHaveText('263');
+  await expect(page.locator('#metric-pending')).toHaveText('Non mesuré');
+  await page.locator('#obs-group').selectOption('territory');await page.locator('#obs-apply').click();
+  await expect(page.locator('tr[data-key="territory:W1"] td').first()).toHaveText('0');
+  await expect(page.locator('tr[data-key="unassigned"] td').first()).toHaveText('263');
+  await expect(page.locator('#obs-group-notice')).toContainText('ne doivent pas être additionnées');
+  await page.locator('#obs-language').click();await expect(page.locator('html')).toHaveAttribute('dir','rtl');
+  await expect(page.locator('h1')).toHaveText('مرصد التوثيق');await expect(page.locator('#metric-pending')).toHaveText('غير مقاس');
+  await expect(page.locator('#obs-from')).toHaveAccessibleName('ابتداءً من');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();await noRepositoryLinks(page);
+  await page.locator('#obs-summary-title').scrollIntoViewIfNeeded();await page.screenshot({path:`test-results/observatory-${width}-ar.png`});
+});
+
+test('Empty selections export reproducible JSON/CSV and preserve history and validation states',async({page})=>{
+  await page.goto('/observatory.html?from=1900&to=1900');await expect(page.locator('#metric-total_operations')).toHaveText('0');
+  await expect(page.locator('#obs-status')).toContainText('Aucune fiche actuellement recensée');
+  const jsonWaiting=page.waitForEvent('download');await page.locator('#obs-export-json').click();const json=await jsonWaiting;
+  const report=JSON.parse(require('node:fs').readFileSync(await json.path(),'utf8'));
+  expect(report.meta.filters).toEqual({from:'1900',to:'1900'});expect(report.meta.dataset_release).toBe('data-2026.11.1');
+  expect(report.data.pending_contributions).toBeNull();expect(report.data.groups.year.find(r=>r.key==='year:1900').note).toBe('no_current_record');
+  const csvWaiting=page.waitForEvent('download');await page.locator('#obs-export-csv').click();const csv=await csvWaiting;
+  const bytes=require('node:fs').readFileSync(await csv.path(),'utf8');expect(bytes.charCodeAt(0)).toBe(0xfeff);expect(bytes).toContain('not_measured');expect(bytes).toContain('data-2026.11.1');
+  await page.locator('#obs-reset').click();await expect(page.locator('#metric-total_operations')).toHaveText('263');
+  await page.goBack();await expect(page.locator('#metric-total_operations')).toHaveText('0');
+  await page.locator('#obs-from').fill('1956-02-30');await page.locator('#obs-apply').click();
+  await expect(page.locator('#obs-error')).toContainText('Filtres invalides');await expect(page.locator('#obs-results')).toBeHidden();
+  await page.locator('#obs-language').click();await expect(page.locator('#obs-error')).toContainText('غير صالحة');
+});
+
+test('The observatory refuses mismatched source bytes and never displays unverified totals',async({page})=>{
+  const content=require('node:fs').readFileSync(require('node:path').join(__dirname,'../../docs/data/canonical/sources.json'),'utf8')+' ';
+  await page.route('https://alnop.vercel.app/data/canonical/sources.json',route=>route.fulfill({body:content,contentType:'application/json'}));
+  await page.goto('/observatory.html');await expect(page.locator('#obs-error')).toContainText('Impossible de vérifier');
+  await expect(page.locator('#obs-results')).toBeHidden();await expect(page.locator('#obs-apply')).toBeDisabled();
+  await page.locator('#obs-language').click();await expect(page.locator('#obs-error')).toContainText('تعذر التحقق');
+});
+
+test('Native additions update observatory metrics without HTML injection or a fake primary classification',async({page})=>{
+  const {withProposal,approve}=require('../helpers/corpus'),{corpus,operation}=withProposal();approve(operation);
+  const attack='<img src=x onerror="window.obsInjected=true">';operation.event_type=[attack];corpus.vocabularies.event_types.push(attack);
+  const files=require('../../scripts/build-canonical').artifacts(corpus,{allowSynthetic:true});
+  await page.route('https://alnop.vercel.app/data/canonical/**',route=>{
+    const name=new URL(route.request().url()).pathname.split('/').pop();return files[name]?route.fulfill({body:files[name],contentType:'application/json'}):route.fulfill({status:404});
+  });
+  await page.goto('/observatory.html');await expect(page.locator('#metric-total_operations')).toHaveText('264');
+  await expect(page.locator('#metric-without_identified_primary_source')).toHaveText('264');
+  await page.locator('#obs-group').selectOption('type');await page.locator('#obs-apply').click();
+  await expect(page.locator('#obs-table')).toContainText(attack);expect(await page.locator('main img').count()).toBe(0);
+  expect(await page.evaluate(()=>window.obsInjected)).toBeUndefined();await noRepositoryLinks(page);
 });

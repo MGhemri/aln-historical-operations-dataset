@@ -71,7 +71,7 @@ Une BBOX sélectionne une fiche si au moins un point connu intersecte la boîte.
 
 `/coverage` expose les dates inconnues, absences de géométrie, attributions territoriales non structurées, sources manquantes, imports restant à revoir et assertions contestées. `pending_contributions` vaut `null` : les messages reçus ne constituent pas une file éditoriale publique mesurable. Une sélection vide indique « aucune fiche actuellement recensée », jamais « aucune opération historique ».
 
-Ces indicateurs mesurent la documentation d’ALNOP. Ils ne calculent ni un taux de couverture de la guerre ni une intensité militaire réelle. L’observatoire visuel des lacunes reste à développer.
+Ces indicateurs mesurent la documentation d’ALNOP. Ils ne calculent ni un taux de couverture de la guerre ni une intensité militaire réelle. Le champ additionnel `documentary_report` fournit les tableaux par année, territoire structuré et type, ainsi que les métadonnées à compléter. Il utilise le même moteur que [l’observatoire documentaire](docs/observatory.html). Les empreintes du modèle et du filtrage sont indiquées dans `meta` pour identifier le calcul. Voir [la méthode de l’observatoire](OBSERVATORY.md).
 
 ## Exemples
 
