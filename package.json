@@ -19,6 +19,8 @@
     "release:prepare": "node scripts/create-data-release.js",
     "build:releases": "node scripts/build-releases.js",
     "check:releases": "node scripts/build-releases.js --check",
+    "build:entity-search": "node scripts/build-entity-search.js",
+    "check:entity-search": "node scripts/build-entity-search.js --check",
     "build:assistance": "node scripts/build-assistance.js",
     "check:assistance": "node scripts/build-assistance.js --check",
     "build:coverage": "node scripts/build-coverage.js",
@@ -29,7 +31,7 @@
     "quality:duplicates": "node scripts/report-duplicates.js",
     "quality:conflicts": "node scripts/report-conflicts.js",
     "quality:benchmark": "node scripts/evaluate-duplicates.js",
-    "build": "npm run build:canonical && npm run build:documentation && npm run build:openapi && npm run build:releases && npm run build:coverage && npm run build:assistance"
+    "build": "npm run build:canonical && npm run build:documentation && npm run build:openapi && npm run build:releases && npm run build:coverage && npm run build:assistance && npm run build:entity-search"
   },
   "dependencies": {
     "nodemailer": "^10.3.1"

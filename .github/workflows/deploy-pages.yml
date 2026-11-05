@@ -46,7 +46,7 @@ jobs:
       - run: npm run validate:canonical
       - run: npm run check:canonical
       - run: npm run check:releases
-      - run: npm run check:coverage && npm run check:assistance
+      - run: npm run check:coverage && npm run check:assistance && npm run check:entity-search
       - run: npm run check:documentation
       - run: npm test
       - run: npm run build

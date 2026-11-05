@@ -357,7 +357,7 @@ function entityReaderFiles(){
  c.operations.push(operation);c.sources.push(proposal.sources.find(s=>s.source_id===operation.source_ids[0]));
  return require('../../scripts/build-canonical').artifacts(c,{allowSynthetic:true});
 }
-async function routeEntities(page){const files=entityReaderFiles();await page.route('https://alnop.vercel.app/data/canonical/**',route=>{const file=new URL(route.request().url()).pathname.split('/').pop();return route.fulfill({body:files[file],contentType:'application/json'});});}
+async function routeEntities(page){const files=entityReaderFiles(),search=require('../../scripts/build-entity-search').artifacts(files);await page.route('https://alnop.vercel.app/data/entity-search/**',route=>{const file='docs'+new URL(route.request().url()).pathname;return route.fulfill({body:search[file],contentType:'application/json'});});await page.route('https://alnop.vercel.app/data/canonical/**',route=>{const file=new URL(route.request().url()).pathname.split('/').pop();return route.fulfill({body:files[file],contentType:'application/json'});});}
 
 for(const width of [390,1280])test(`Entity reader ${width}px: honest empty registries and FR/AR navigation`,async({page})=>{
  await page.setViewportSize({width,height:844});await page.goto('/entities.html');await expect(page.locator('#ent-apply')).toBeEnabled();await expect(page.locator('#ent-status')).toContainText('Aucune entrée publiée actuellement');await expect(page.locator('#ent-list li')).toHaveCount(0);await expect(page.locator('#ent-detail')).toBeHidden();
@@ -388,4 +388,19 @@ test('Entity reader refuses altered registry bytes and shows no partial results'
 
 test('Entity reader works under the GitHub Pages prefix with direct Arabic links',async({page})=>{
  await page.route('https://mghemri.github.io/aln-historical-operations-dataset/**',async route=>{const u=new URL(route.request().url());const response=await route.fetch({url:'http://127.0.0.1:8765'+u.pathname.replace('/aln-historical-operations-dataset','')+u.search});await route.fulfill({response});});await page.goto('https://mghemri.github.io/aln-historical-operations-dataset/entities.html?kind=place&lang=ar');await expect(page.locator('#ent-apply')).toBeEnabled();await expect(page.locator('html')).toHaveAttribute('dir','rtl');await expect(page.locator('#ent-status')).toContainText('لا توجد مدخلات منشورة');
+});
+
+test('Entity search starts without the full corpus and finds Oran and akid Lotfi as unreviewed mentions',async({page})=>{
+ const paths=[];page.on('request',r=>paths.push(new URL(r.url()).pathname));await page.setViewportSize({width:390,height:844});await page.goto('/entities.html');await expect(page.locator('#ent-apply')).toBeEnabled();expect(paths.some(p=>/\/(operations|sources)\.json$/.test(p))).toBe(false);expect(paths.some(p=>p.includes('/entity-search/'))).toBe(false);
+ await page.locator('#ent-kind').selectOption('place');await page.locator('#ent-q').fill('Oran');await page.locator('#ent-apply').click();await expect(page.locator('#ent-mention-count')).toContainText('28');await expect(page.locator('#ent-mention-list li')).toHaveCount(10);await expect(page.locator('#ent-mentions')).toContainText('ne constituent pas des identités revues');await page.locator('#ent-next').click();await expect(page.locator('#ent-page')).toHaveText('2 / 3');
+ await page.locator('#ent-kind').selectOption('person');await page.locator('#ent-q').fill('akid lotfi');await page.locator('#ent-apply').click();await expect(page.locator('#ent-mention-count')).toContainText('13');await expect(page.locator('#ent-mention-list')).toContainText('Lotfi');await expect(page.locator('#ent-mention-list')).toContainText('Champ commandement');expect(paths.some(p=>/\/(operations|sources)\.json$/.test(p))).toBe(false);
+ await page.locator('#ent-language').click();await expect(page.locator('html')).toHaveAttribute('dir','rtl');await expect(page.locator('#ent-mention-count')).toContainText('13');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await noRepositoryLinks(page);
+});
+
+test('Entity search rejects a stale or altered mention index',async({page})=>{
+ await page.route('https://alnop.vercel.app/data/entity-search/index.json',route=>route.fulfill({body:'{"version":"entity-mentions-v1","operations":[]}',contentType:'application/json'}));await page.goto('/entities.html?kind=place&q=Oran');await expect(page.locator('#ent-error')).toContainText('Impossible de vérifier');await expect(page.locator('#ent-mentions')).toBeHidden();
+});
+
+test('Entity search loads verified source and operation details only when a reviewed entry is opened',async({page})=>{
+ await routeEntities(page);const paths=[];page.on('request',r=>paths.push(new URL(r.url()).pathname));await page.goto('/entities.html');await expect(page.locator('#ent-apply')).toBeEnabled();expect(paths.some(p=>/\/(operations|sources)\.json$/.test(p))).toBe(false);await page.locator('#ent-list a[href*="id=PLC_TEST_A"]').click();await expect(page.locator('#ent-detail')).toBeVisible();expect(paths.some(p=>p.endsWith('/operations.json'))).toBe(true);expect(paths.some(p=>p.endsWith('/sources.json'))).toBe(true);
 });

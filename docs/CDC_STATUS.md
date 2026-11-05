@@ -25,6 +25,7 @@
 - Assistance interne enrichie : variantes de noms sourcées, réserves sur les dates, comparaison des assertions par contexte, unité et intervalle. Registre des annotations humaines lié aux empreintes des fiches et sources, avec exclusion des annotations périmées. Voir [le guide de revue](../ASSISTANCE.md).
 - Comparateur public FR/AR : une ou deux fiches, filtres sur toutes les fiches publiées, sources, précision des dates, rôles géométriques et assertions contextualisées. Export JSON avec snapshot et empreinte du moteur ; vérification des données avant affichage. Aucun diagnostic de brouillon exposé.
 - Pages publiques des personnes, organisations et lieux : recherche des variantes, détails sourcés, périodes, identités revues, géométrie sans point inventé et opérations explicitement reliées. Consultation FR/AR, export JSON et contrôle des empreintes ; référentiels actuellement vides en attente de revue documentaire.
+- Recherche complémentaire des mentions du corpus : commandements, localisations et récits, sans création automatique d’identités. Index compact lié au snapshot, pagination et chargement des données détaillées à la demande ; les recherches Oran et akid Lotfi sont vérifiées.
 
 ## Vérification
 
@@ -34,7 +35,7 @@ Les 789 réserves de migration concernent les mêmes trois points pour chaque fi
 
 Les assertions contradictoires utilisées pour le test T10 sont également synthétiques : elles ne sont pas ajoutées aux 263 fiches publiées. La livraison met en place leur modèle, les contrôles, l’affichage et les exports, sans analyser automatiquement les textes historiques existants.
 
-Validation locale : 112 tests Node et 58 tests navigateur, plus le validateur historique et les contrôles de génération. L’observatoire est testé pour les incertitudes, les regroupements non additifs, les sources primaires revues, les brouillons, les conflits publiés, les sélections vides, les exports, la vérification d’intégrité et l’affichage mobile/ordinateur FR/AR. Les archives et contrats v1/v2 restent vérifiés. Les exemples GET restent exécutables après déploiement via `npm run smoke:api:v2`.
+Validation locale : 115 tests Node et 61 tests navigateur, plus le validateur historique et les contrôles de génération. L’observatoire est testé pour les incertitudes, les regroupements non additifs, les sources primaires revues, les brouillons, les conflits publiés, les sélections vides, les exports, la vérification d’intégrité et l’affichage mobile/ordinateur FR/AR. Les archives et contrats v1/v2 restent vérifiés. Les exemples GET restent exécutables après déploiement via `npm run smoke:api:v2`.
 
 Le rapport de rapprochement produit 135 paires candidates pour le corpus initial, sans confirmer de doublon. Sur six paires synthétiques annotées, précision et rappel valent 0,75 ; une calibration historique reste à effectuer. Les rapports internes ne sont pas exposés sur le site public.
 

@@ -4,6 +4,12 @@
 
 La page [Personnes, organisations et lieux](docs/entities.html) permet de rechercher un identifiant ou une variante de nom, de filtrer par référentiel et de consulter une entrée publiée. Elle est accessible depuis le menu de l'atlas et les liens d'entités du comparateur. Les liens directs conservent l'identifiant et la langue.
 
+La recherche consulte également un index des mentions déjà présentes dans les fiches publiées : champs de commandement, localisations et descriptions. Ces résultats sont séparés des entrées revues, affichent le champ d'origine et renvoient à la fiche et à ses sources. Les récits ne sont pas automatiquement classés comme personnes, organisations ou lieux. Aucune entité ni relation d'identité n'est créée par cette recherche.
+
+La recherche ignore la casse et les accents, conserve les limites de mots et accepte les termes de grade « akid », « colonel » et « العقيد » comme facultatifs devant un nom recherché. Cette tolérance de saisie ne crée pas de variante historique dans les données. « Oran » dans les lieux et « akid lotfi » dans les personnes retrouvent ainsi les mentions existantes du corpus.
+
+La liste des mentions est paginée par dix fiches. Le corpus complet et la bibliographie ne sont plus téléchargés à l'ouverture : ils sont chargés uniquement pour le détail d'une entrée revue. L'index compact des mentions est chargé à la première recherche, vérifié contre son empreinte et lié au snapshot courant. Il peut être reproduit et contrôlé avec `npm run build:entity-search` et `npm run check:entity-search`.
+
 Chaque détail conserve les noms, leurs langues, leurs périodes et leurs sources. Les relations d'identité revues sont consultables sans fusion d'identifiants. Pour les lieux, une géométrie absente reste absente ; une position connue affiche ses coordonnées longitude/latitude, sa précision et ses références.
 
 Les opérations associées proviennent exclusivement de `participants[].entity_id` et de `locations[].place_id`. Aucune recherche de nom dans les récits ou les commandements hérités ne crée de lien. Chaque rôle et ses références sont conservés. L'export JSON contient l'entrée sélectionnée, les opérations explicitement reliées, leurs sources, l'empreinte du snapshot et la version archivée correspondante lorsqu'elle existe.
