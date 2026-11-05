@@ -26,7 +26,7 @@ Le noyau charge des profils JSON locaux, vérifie leur schéma et leur compatibi
 
 Le profil ALNOP utilise ces contrats tout en conservant ses validations canoniques, ses identifiants permanents, ses exports JSON/GeoJSON et ses API v1/v2. Un second profil synthétique, réservé aux tests, vérifie l’indépendance du noyau ; il ne constitue pas un corpus publié.
 
-TEMPORA est en construction. Le modèle de données générique complet, l’ingestion multi-format et un SDK public ne sont pas encore livrés. La version de compatibilité du contrat ne signifie pas que toute la plateforme est achevée. Voir les [capacités et limites](./FRAMEWORK.md#compatibilité-et-limites).
+TEMPORA est en construction. Le modèle canonique v3 et une migration locale vérifiée sont disponibles. L’ingestion multi-format, le pipeline générique de publication et un SDK public ne sont pas encore livrés. La version de compatibilité du contrat ne signifie pas que toute la plateforme est achevée. Voir les [capacités et limites](./FRAMEWORK.md#compatibilité-et-limites).
 
 ## Commencer
 
@@ -49,6 +49,7 @@ Ouvrir ensuite `http://localhost:8000`. Le serveur statique permet la consultati
 ## Documentation
 
 - [TEMPORA : architecture, profils et validation](./FRAMEWORK.md)
+- [Modèle canonique v3 et migration](./CANONICAL_MODEL.md)
 - [ALNOP : corpus, application et méthode](./ALNOP.md)
 - [Méthodologie historique ALNOP](./METHODOLOGIE.md)
 - [Dictionnaire des données ALNOP](./DATA_DICTIONARY.md)

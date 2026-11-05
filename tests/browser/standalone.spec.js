@@ -407,6 +407,8 @@ test('Entity search loads verified source and operation details only when a revi
 
 test('TEMPORA profile documentation is local and internal implementation reports are excluded',async({page})=>{
  await page.setViewportSize({width:390,height:844});await page.goto('/documentation/framework.html');await expect(page.getByRole('heading',{level:1,name:'TEMPORA — Framework pour les corpus historiques'})).toBeVisible();await noRepositoryLinks(page);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/documentation/model.html');await expect(page.getByRole('heading',{level:1,name:'TEMPORA — Modèle canonique v3 et migration'})).toBeVisible();await noRepositoryLinks(page);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ const schema=await page.evaluate(async()=>{const response=await fetch('../schemas/tempora/v3/corpus.schema.json');return {ok:response.ok,body:await response.json()};});expect(schema.ok).toBe(true);expect(schema.body.$id).toBe('urn:tempora:schema:3.0.0:corpus');
  await page.goto('/documentation/');await expect(page.locator('a[href="framework.html"]:visible')).toHaveCount(1);await expect(page.locator('a[href="progress.html"]')).toHaveCount(0);
  const statuses=await page.evaluate(async()=>Promise.all(['PHASE_0_AUDIT.md','PHASE_1_PROGRESS.md','PHASE_2_PROGRESS.md','CDC_STATUS.md','documentation/progress.html'].map(async file=>(await fetch('../'+file)).status)));expect(statuses).toEqual([404,404,404,404,404]);
 });

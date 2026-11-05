@@ -4,7 +4,7 @@
 <h2 id="architecture--noyau-profils-et-applications">Architecture : noyau, profils et applications</h2>
 <p>Le noyau <code>src/framework/</code> porte les contrats et les contrôles communs. Les manifestes sous <code>profiles/</code> déclarent le contexte de chaque corpus ; leurs adaptateurs relient les données métier au noyau. Les applications exposent ensuite les fonctions adaptées à leur profil. Le noyau ne dépend pas du corpus ALNOP.</p>
 <p>GitHub et GitHub Pages présentent TEMPORA et ses profils. Vercel met en avant l’application ALNOP, fondée sur TEMPORA.</p>
-<p>TEMPORA fournit des contrats réutilisables pour configurer la validation de corpus historiques. ALNOP conserve son application, ses données, ses identifiants et ses API publiques. Les commandes ci-dessous concernent les profils et les contrôles configurables actuellement implémentés ; elles ne constituent pas une migration vers un nouveau modèle de données.</p>
+<p>TEMPORA fournit des contrats réutilisables pour configurer la validation de corpus historiques. ALNOP conserve son application, ses données, ses identifiants et ses API publiques. Les commandes ci-dessous concernent les profils et les contrôles configurables actuellement implémentés ; la <a href="model.html">migration canonique v3</a> est disponible séparément sous forme de copie locale, sans remplacement des données de production.</p>
 <h2 id="valider-un-profil">Valider un profil</h2>
 <pre><code class="language-sh">npm run validate:profiles
 npm run validate:profiles -- --profile profiles/alnop/profile.json
@@ -78,4 +78,6 @@ const result = validator.validate({
 <p>Les erreurs de configuration utilisent <code>ProfileError</code> avec <code>code</code>, <code>message</code> et <code>details</code>. Les codes distinguent notamment schéma invalide, incompatibilité de version, calendrier non pris en charge, chemin interdit, héritage cyclique et taxonomie absente.</p>
 <p>Un chemin absent ou des options d'appel invalides sont également refusés par des erreurs typées (<code>PROFILE_ARGUMENT_INVALID</code>, <code>PROFILE_ROOT_INVALID</code>) avant tout accès au fichier.</p>
 <p>L'adaptateur <code>src/profiles/alnop.js</code> projette les champs utiles pour ces règles sans modifier les objets d'origine. Le validateur Python historique lit désormais sa fenêtre annuelle depuis le même profil. Les chemins d'exports et les routes API v1/v2 restent identiques. Aucun nouvel endpoint TEMPORA n'est annoncé par ce guide.</p>
+<h2 id="modèle-canonique-et-migration">Modèle canonique et migration</h2>
+<p>Le <a href="model.html">modèle canonique TEMPORA v3</a> fournit les schémas versionnés, les invariants temporels et spatiaux et une migration ALNOP réversible sur une copie intacte. La commande <code>npm run migrate:tempora</code> vérifie le parcours sans écrire dans les données de production.</p>
 </main></body></html>

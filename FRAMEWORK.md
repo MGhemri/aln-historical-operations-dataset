@@ -8,7 +8,7 @@ Le noyau `src/framework/` porte les contrats et les contrôles communs. Les mani
 
 GitHub et GitHub Pages présentent TEMPORA et ses profils. Vercel met en avant l’application ALNOP, fondée sur TEMPORA.
 
-TEMPORA fournit des contrats réutilisables pour configurer la validation de corpus historiques. ALNOP conserve son application, ses données, ses identifiants et ses API publiques. Les commandes ci-dessous concernent les profils et les contrôles configurables actuellement implémentés ; elles ne constituent pas une migration vers un nouveau modèle de données.
+TEMPORA fournit des contrats réutilisables pour configurer la validation de corpus historiques. ALNOP conserve son application, ses données, ses identifiants et ses API publiques. Les commandes ci-dessous concernent les profils et les contrôles configurables actuellement implémentés ; la [migration canonique v3](./CANONICAL_MODEL.md) est disponible séparément sous forme de copie locale, sans remplacement des données de production.
 
 ## Valider un profil
 
@@ -97,3 +97,7 @@ Les erreurs de configuration utilisent `ProfileError` avec `code`, `message` et 
 Un chemin absent ou des options d'appel invalides sont également refusés par des erreurs typées (`PROFILE_ARGUMENT_INVALID`, `PROFILE_ROOT_INVALID`) avant tout accès au fichier.
 
 L'adaptateur `src/profiles/alnop.js` projette les champs utiles pour ces règles sans modifier les objets d'origine. Le validateur Python historique lit désormais sa fenêtre annuelle depuis le même profil. Les chemins d'exports et les routes API v1/v2 restent identiques. Aucun nouvel endpoint TEMPORA n'est annoncé par ce guide.
+
+## Modèle canonique et migration
+
+Le [modèle canonique TEMPORA v3](./CANONICAL_MODEL.md) fournit les schémas versionnés, les invariants temporels et spatiaux et une migration ALNOP réversible sur une copie intacte. La commande `npm run migrate:tempora` vérifie le parcours sans écrire dans les données de production.
