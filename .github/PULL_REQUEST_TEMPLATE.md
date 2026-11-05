@@ -13,5 +13,7 @@
 - [ ] `npm test` et `npm run check:canonical` réussissent.
 - [ ] Interface modifiée : contrôles FR/AR, mobile et clavier joints.
 - [ ] Décision de revue historique documentée avant fusion.
+- [ ] Changements publics : nouvelle approbation et `content_sha256` vérifiés par `npm run review:changes -- --base SHA_DE_BASE`.
+- [ ] Noms, rôles et rapprochements d’identité sourcés ; candidats doublons examinés sans fusion automatique.
 
 Une PR n'est pas une publication. Les contributions non validées restent hors des exports publics.

@@ -1,0 +1,40 @@
+// Similarities are review hints. They never change records, IDs or editorial status.
+const defaults=Object.freeze({lexical_threshold:0.5,shared_place_threshold:0.25,nearby_km:10});
+function normalize(text){return String(text||'').normalize('NFKD').replace(/\p{M}/gu,'').replace(/ـ/g,'')
+  .replace(/[أإآ]/g,'ا').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim().replace(/\s+/g,' ');}
+function grams(text){const s='  '+normalize(text)+'  ';return new Set(Array.from({length:Math.max(0,s.length-2)},(_,i)=>s.slice(i,i+3)));}
+function lexical(a,b){if(!normalize(a)||!normalize(b))return 0;const x=grams(a),y=grams(b);return 2*[...x].filter(g=>y.has(g)).length/(x.size+y.size);}
+function overlap(a,b){return a?.earliest&&b?.earliest?!(a.latest<b.earliest||b.latest<a.earliest):null;}
+function distance(a,b){const rad=x=>x*Math.PI/180;const [x,y]=a,[u,v]=b;
+  const h=Math.sin(rad(v-y)/2)**2+Math.cos(rad(y))*Math.cos(rad(v))*Math.sin(rad(u-x)/2)**2;
+  return 6371*2*Math.asin(Math.min(1,Math.sqrt(h)));}
+function pair(a,b,options=defaults){
+  const names=o=>[o.title?.fr,o.title?.ar].filter(Boolean);
+  const scores=names(a).flatMap(x=>names(b).map(y=>lexical(x,y)));
+  const name=scores.length?Math.max(...scores):0;
+  const places=o=>o.locations.filter(l=>l.place_id).map(l=>l.place_id);
+  const commonPlace=places(a).filter(id=>places(b).includes(id));
+  const dates=overlap(a.start_date,b.start_date);
+  if(name<options.lexical_threshold && !(name>=options.shared_place_threshold&&commonPlace.length&&dates===true))return null;
+  const points=o=>o.locations.filter(l=>l.review_status==='reviewed'&&['exact_site','approximate_site'].includes(l.geometry_role)&&l.geometry?.type==='Point').map(l=>l.geometry.coordinates);
+  const distances=points(a).flatMap(x=>points(b).map(y=>distance(x,y)));
+  const km=distances.length?Math.min(...distances):null;
+  const types=o=>o.event_type||[o.legacy?.type_action].filter(Boolean);
+  const commonTypes=types(a).filter(t=>types(b).includes(t));
+  return {ids:[a.id,b.id].sort(),classification:'candidate_only',
+    factors:{title_trigram_similarity:Number(name.toFixed(4)),start_intervals_overlap:dates,
+      shared_place_ids:[...new Set(commonPlace)].sort(),shared_types:[...new Set(commonTypes)].sort(),
+      reviewed_site_distance_km:km===null?null:Number(km.toFixed(3)),nearby_reviewed_sites:km===null?null:km<=options.nearby_km},
+    requires_human_review:true};
+}
+function duplicateReport(operations,options={}){
+  const parameters={...defaults,...options};
+  for(const key of ['lexical_threshold','shared_place_threshold'])if(!Number.isFinite(parameters[key])||parameters[key]<0||parameters[key]>1)throw Error('Similarity thresholds must be in [0,1]');
+  if(!Number.isFinite(parameters.nearby_km)||parameters.nearby_km<0)throw Error('Invalid distance threshold');
+  const records=operations.filter(o=>['published','under_review','proposed'].includes(o.editorial_status)).sort((a,b)=>a.id.localeCompare(b.id));
+  const candidates=[];
+  for(let i=0;i<records.length;i++)for(let j=i+1;j<records.length;j++){const c=pair(records[i],records[j],parameters);if(c)candidates.push(c);}
+  return {algorithm:'title-trigrams-v1',parameters,record_count:records.length,
+    notice:'Suggestions de revue, pas des doublons établis. Aucune fusion automatique.',candidates};
+}
+module.exports={normalize,lexical,pair,duplicateReport};
