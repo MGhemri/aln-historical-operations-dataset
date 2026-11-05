@@ -1,3 +1,4 @@
+(function(factory){if(typeof module==='object'&&module.exports)module.exports=factory();else globalThis.ALNOPQuery=factory();})(function(){
 class HttpError extends Error{constructor(status,code,message){super(message);this.status=status;this.code=code;}}
 const invalid=message=>{throw new HttpError(400,'INVALID_QUERY',message);};
 const shared=['q','source_id','status','sort','page','limit'];
@@ -74,4 +75,5 @@ function select(records,q,resource){
   const offset=(q.page-1)*q.limit;
   return {total:filtered.length,data:filtered.slice(offset,offset+q.limit),has_next:offset+q.limit<filtered.length};
 }
-module.exports={HttpError,invalid,bounds,parseQuery,select};
+return {HttpError,invalid,bounds,parseQuery,select};
+});

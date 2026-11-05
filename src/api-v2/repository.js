@@ -19,6 +19,12 @@ class FileRepository {
     if(!Array.isArray(snapshot.releases)||snapshot.releases.some(r=>!/^data-\d{4}\.(0[1-9]|1[0-2])\.[1-9]\d*$/.test(r.id)||! /^(?:[a-f0-9]){64}$/.test(r.snapshot_manifest_sha256)))throw Error('Invalid releases index');
     const manifestHash=crypto.createHash('sha256').update(read('dataset-manifest.json')).digest('hex');
     snapshot.current_release=snapshot.releases.find(r=>r.snapshot_manifest_sha256===manifestHash&&r.canonical_sha256===manifest.canonical_sha256)||null;
+    const coverageFile=path.join(path.dirname(this.directory),'coverage/engine.json');snapshot.coverage_engine=null;
+    if(fs.existsSync(coverageFile)){
+      const engine=JSON.parse(fs.readFileSync(coverageFile,'utf8'));
+      if(engine.calculation_version!=='coverage-v1'||! /^(?:[a-f0-9]){64}$/.test(engine.model_sha256)||! /^(?:[a-f0-9]){64}$/.test(engine.query_sha256))throw Error('Invalid coverage engine metadata');
+      snapshot.coverage_engine={calculation_version:engine.calculation_version,model_sha256:engine.model_sha256,query_sha256:engine.query_sha256};
+    }
     this.snapshot=snapshot;return snapshot;
   }
 }

@@ -73,6 +73,7 @@ function validateCorpus(corpus) {
     if (!validateSource(s)) {errors.push(`Source ${s?.source_id}: ${ajv.errorsText(validateSource.errors)}`);continue;}
     if (!s.source_id || sourceIds.has(s.source_id)) errors.push(`Duplicate/missing source: ${s.source_id}`);
     sourceIds.add(s.source_id);
+    if(['primary','secondary'].includes(s.source_classification)&&(s.review_status!=='reviewed'||!approved(s)))errors.push(`${s.source_id}: source classification requires a content-bound approved review`);
     const url=s.url||s.legacy?.url;
     if(url){try{if(!['http:','https:'].includes(new URL(url).protocol))errors.push(`${s.source_id}: unsafe source URL`);}catch{errors.push(`${s.source_id}: invalid source URL`);}}
   }

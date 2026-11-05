@@ -1,6 +1,7 @@
 const crypto=require('node:crypto');
 const {FileRepository}=require('./repository');
 const {HttpError,invalid,parseQuery,select}=require('./query');
+const {report:coverageReport}=require('../shared/coverage');
 const collections=['operations','sources','places','persons','organizations','territorial-units','claims'];
 function geometry(op){const points=op.locations.filter(l=>l.geometry?.type==='Point').map(l=>l.geometry.coordinates);
   return points.length>1?{type:'MultiPoint',coordinates:points}:points.length?{type:'Point',coordinates:points[0]}:null;}
@@ -76,7 +77,8 @@ function createHandler(repository=new FileRepository()){
           without_structured_territory:count(o=>!o.territorial_assignments.length),without_sources:count(o=>!o.source_ids.length),
           legacy_imports_needing_review:count(o=>o.quality_flags.includes('legacy_import_needs_review')),
           contested_claims:claims.filter(c=>c.status==='contested').length,pending_contributions:null,
-          by_start_year:metrics(all,claims,s.sources).by_start_year,empty_selection_message:all.length?null:'No records currently catalogued for this selection.'},{total:all.length}));
+          by_start_year:metrics(all,claims,s.sources).by_start_year,empty_selection_message:all.length?null:'No records currently catalogued for this selection.',
+          documentary_report:coverageReport(all,s.sources,claims,s.territories,q)},{total:all.length,...(s.coverage_engine||{})}));
       }
       if(resource==='releases'&&parts.length===1){plain();return send(200,envelope(s.releases||[],{total:(s.releases||[]).length,release_workflow_enabled:true,notice:'Versioned technical publications preserve the documentary corpus and its historical review limitations.'}));}
       if(resource==='releases'&&id==='current'&&parts.length===2){plain();return send(200,envelope(s.manifest));}

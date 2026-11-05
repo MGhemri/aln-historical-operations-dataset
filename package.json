@@ -19,12 +19,14 @@
     "release:prepare": "node scripts/create-data-release.js",
     "build:releases": "node scripts/build-releases.js",
     "check:releases": "node scripts/build-releases.js --check",
+    "build:coverage": "node scripts/build-coverage.js",
+    "check:coverage": "node scripts/build-coverage.js --check",
     "smoke:api:v2": "node scripts/smoke-api-v2.js",
     "validate:canonical": "node scripts/validate-canonical.js",
     "review:changes": "node scripts/check-review-changes.js",
     "quality:duplicates": "node scripts/report-duplicates.js",
     "quality:benchmark": "node scripts/evaluate-duplicates.js",
-    "build": "npm run build:canonical && npm run build:documentation && npm run build:openapi && npm run build:releases"
+    "build": "npm run build:canonical && npm run build:documentation && npm run build:openapi && npm run build:releases && npm run build:coverage"
   },
   "dependencies": {
     "nodemailer": "^10.3.1"

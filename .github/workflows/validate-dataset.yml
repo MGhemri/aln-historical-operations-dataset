@@ -55,6 +55,9 @@ jobs:
       - name: Check immutable data releases and reproduce pinned sources
         run: npm run check:releases -- --sources
 
+      - name: Check documentary observatory artifacts
+        run: npm run check:coverage
+
       - name: Check local documentation
         run: npm run check:documentation
 

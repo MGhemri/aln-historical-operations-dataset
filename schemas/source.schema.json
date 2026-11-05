@@ -63,6 +63,7 @@
         "null"
       ]
     },
+    "source_classification": {"enum":["primary","secondary","unknown","not_recorded"]},
     "review_history": {"$ref":"https://alnop.vercel.app/schemas/operation.schema.json#/properties/review_history"},
     "notes": {
       "type": [

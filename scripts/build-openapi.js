@@ -1,8 +1,8 @@
 const fs=require('node:fs'),path=require('node:path');
 const {root,stable}=require('../src/canonical');
-function rewrite(value){
-  if(Array.isArray(value))return value.map(rewrite);
-  if(value&&typeof value==='object')return Object.fromEntries(Object.entries(value).filter(([k])=>!['$id','$schema'].includes(k)).map(([k,v])=>[k,k==='$ref'?v.replace('https://alnop.vercel.app/schemas/operation.schema.json#','#/components/schemas/Operation').replace('https://alnop.vercel.app/schemas/operation.schema.json','#/components/schemas/Operation').replace(/^#\/\$defs\//,'#/components/schemas/Operation/$defs/'):rewrite(v)]));
+function rewrite(value,owner='Operation'){
+  if(Array.isArray(value))return value.map(v=>rewrite(v,owner));
+  if(value&&typeof value==='object')return Object.fromEntries(Object.entries(value).filter(([k])=>!['$id','$schema'].includes(k)).map(([k,v])=>[k,k==='$ref'?v.replace('https://alnop.vercel.app/schemas/operation.schema.json#','#/components/schemas/Operation').replace('https://alnop.vercel.app/schemas/operation.schema.json','#/components/schemas/Operation').replace(/^#\/\$defs\//,'#/components/schemas/'+owner+'/$defs/'):rewrite(v,owner)]));
   return value;
 }
 function document(){
@@ -10,10 +10,10 @@ function document(){
   const meta={type:'object',additionalProperties:false,required:['api_version','dataset_release','snapshot_sha256','corpus_is_incomplete'],properties:{
     api_version:{const:'v2'},dataset_release:{type:['string','null'],pattern:'^data-[0-9]{4}\\.(0[1-9]|1[0-2])\\.[1-9][0-9]*$'},snapshot_sha256:{type:'string',pattern:'^[a-f0-9]{64}$'},corpus_is_incomplete:{const:true},
     total:integer,count:integer,page:{type:'integer',minimum:1},limit:{type:'integer',minimum:1,maximum:200},has_next:{type:'boolean'},sort:{type:'string'},
-    release_workflow_enabled:{type:'boolean'},notice:{type:'string'},manifest_url:{type:'string'}}};
+    release_workflow_enabled:{type:'boolean'},notice:{type:'string'},manifest_url:{type:'string'},calculation_version:{const:'coverage-v1'},model_sha256:{type:'string',pattern:'^[a-f0-9]{64}$'},query_sha256:{type:'string',pattern:'^[a-f0-9]{64}$'}}};
   const schemas={Meta:meta,CollectionMeta:{...meta,required:[...meta.required,'total','count','page','limit','has_next','sort']},
     Error:{type:'object',additionalProperties:false,required:['error'],properties:{error:{type:'object',additionalProperties:false,required:['code','message'],properties:{code:{type:'string'},message:{type:'string'}}}}}};
-  for(const [name,file]of Object.entries({Operation:'operation',Source:'source',Entity:'entity',Claim:'claim',Territory:'territorial-unit'}))schemas[name]=rewrite(require('../schemas/'+file+'.schema.json'));
+  for(const [name,file]of Object.entries({Operation:'operation',Source:'source',Entity:'entity',Claim:'claim',Territory:'territorial-unit',CoverageReport:'coverage-report'}))schemas[name]=rewrite(require('../schemas/'+file+'.schema.json'),name);
   const envelope=(data,collection=false)=>({type:'object',additionalProperties:false,required:['data','meta'],properties:{data,meta:ref(collection?'CollectionMeta':'Meta')}});
   for(const name of ['Operation','Source','Entity','Claim','Territory']){
     schemas[name+'Response']=envelope(ref(name));schemas[name+'Collection']=envelope({type:'array',items:ref(name)},true);
@@ -22,6 +22,7 @@ function document(){
   const counts={type:'object',additionalProperties:integer};
   schemas.Stats=envelope({type:'object',additionalProperties:false,required:['total_operations','total_sources','total_claims','by_start_year','by_start_precision','by_type'],properties:{total_operations:integer,total_sources:integer,total_claims:integer,by_start_year:counts,by_start_precision:counts,by_type:counts}});
   schemas.Coverage=envelope({type:'object',additionalProperties:false,required:['scope','total_operations','unknown_start_dates','without_geometry','without_structured_territory','without_sources','legacy_imports_needing_review','contested_claims','pending_contributions','by_start_year','empty_selection_message'],properties:{scope:{type:'string'},...Object.fromEntries(['total_operations','unknown_start_dates','without_geometry','without_structured_territory','without_sources','legacy_imports_needing_review','contested_claims'].map(k=>[k,integer])),pending_contributions:{type:'null'},by_start_year:counts,empty_selection_message:{type:['string','null']}}});
+  schemas.Coverage.properties.data.required.push('documentary_report');schemas.Coverage.properties.data.properties.documentary_report=ref('CoverageReport');
   schemas.Manifest={type:'object',required:['schema_version','publication_status','canonical_sha256','corpus_is_incomplete','total','checksums'],properties:{schema_version:{const:'2.0.0'},publication_status:{const:'validated_snapshot'},canonical_sha256:{type:'string'},total:integer,corpus_is_incomplete:{const:true},checksums:{type:'object',additionalProperties:{type:'string',pattern:'^[a-f0-9]{64}$'}}}};
   schemas.Current=envelope(ref('Manifest'));
   schemas.Release=rewrite(require('../schemas/release.schema.json'));
@@ -54,7 +55,7 @@ function document(){
   for(const [route,name]of [['releases','Releases'],['releases/current','Current'],['exports','Exports']])add('/'+route,name);
   add('/releases/{id}','ReleaseResponse',[{name:'id',in:'path',required:true,schema:{type:'string',pattern:'^data-[0-9]{4}\\.(0[1-9]|1[0-2])\\.[1-9][0-9]*$'}}]);
   paths['/api/v2/openapi.json']={get:{operationId:'openapi',summary:'OpenAPI 3.1 contract',responses:{200:{description:'OpenAPI document',content:{'application/json':{schema:{type:'object',required:['openapi','info','paths','components']}}}}}}};
-  return {openapi:'3.1.0',jsonSchemaDialect:'https://json-schema.org/draft/2020-12/schema',info:{title:'ALNOP public research API',version:'2.1.0',description:'Read-only published snapshot and immutable data releases. Incomplete documentary corpus; technical releases do not imply a new historical validation.'},servers:[{url:'https://alnop.vercel.app'}],paths,components:{schemas}};
+  return {openapi:'3.1.0',jsonSchemaDialect:'https://json-schema.org/draft/2020-12/schema',info:{title:'ALNOP public research API',version:'2.2.0',description:'Read-only published snapshot, immutable releases and documentary coverage. Incomplete corpus; technical metrics do not imply historical war coverage.'},servers:[{url:'https://alnop.vercel.app'}],paths,components:{schemas}};
 }
 function run(check=process.argv.includes('--check')){
   const content=stable(document());

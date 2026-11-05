@@ -3,8 +3,8 @@
   "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
   "info": {
     "title": "ALNOP public research API",
-    "version": "2.1.0",
-    "description": "Read-only published snapshot and immutable data releases. Incomplete documentary corpus; technical releases do not imply a new historical validation."
+    "version": "2.2.0",
+    "description": "Read-only published snapshot, immutable releases and documentary coverage. Incomplete corpus; technical metrics do not imply historical war coverage."
   },
   "servers": [
     {
@@ -2764,6 +2764,17 @@
           },
           "manifest_url": {
             "type": "string"
+          },
+          "calculation_version": {
+            "const": "coverage-v1"
+          },
+          "model_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "query_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
           }
         }
       },
@@ -2831,6 +2842,17 @@
           },
           "manifest_url": {
             "type": "string"
+          },
+          "calculation_version": {
+            "const": "coverage-v1"
+          },
+          "model_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "query_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
           }
         }
       },
@@ -3404,6 +3426,14 @@
               "null"
             ]
           },
+          "source_classification": {
+            "enum": [
+              "primary",
+              "secondary",
+              "unknown",
+              "not_recorded"
+            ]
+          },
           "review_history": {
             "$ref": "#/components/schemas/Operation/properties/review_history"
           },
@@ -3868,6 +3898,216 @@
           }
         }
       },
+      "CoverageReport": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "calculation_version",
+          "scope",
+          "corpus_is_incomplete",
+          "pending_contributions",
+          "summary",
+          "groups",
+          "methodology"
+        ],
+        "properties": {
+          "calculation_version": {
+            "const": "coverage-v1"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "corpus_is_incomplete": {
+            "const": true
+          },
+          "pending_contributions": {
+            "type": "null"
+          },
+          "summary": {
+            "type": "object",
+            "$ref": "#/components/schemas/CoverageReport/$defs/metrics",
+            "unevaluatedProperties": false
+          },
+          "groups": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "year",
+              "territory",
+              "type"
+            ],
+            "properties": {
+              "year": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CoverageReport/$defs/row"
+                }
+              },
+              "territory": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CoverageReport/$defs/row"
+                }
+              },
+              "type": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CoverageReport/$defs/row"
+                }
+              }
+            }
+          },
+          "methodology": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "year_domain",
+              "year_basis",
+              "group_totals_are_additive",
+              "primary_source_rule",
+              "pending_contributions_status"
+            ],
+            "properties": {
+              "year_domain": {
+                "enum": [
+                  "inclusive_calendar_years",
+                  "observed_years_only"
+                ]
+              },
+              "year_basis": {
+                "type": "string"
+              },
+              "group_totals_are_additive": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "year",
+                  "territory",
+                  "type"
+                ],
+                "properties": {
+                  "year": {
+                    "const": true
+                  },
+                  "territory": {
+                    "const": false
+                  },
+                  "type": {
+                    "const": false
+                  }
+                }
+              },
+              "primary_source_rule": {
+                "type": "string"
+              },
+              "pending_contributions_status": {
+                "const": "not_measured"
+              }
+            }
+          }
+        },
+        "$defs": {
+          "metrics": {
+            "type": "object",
+            "required": [
+              "total_operations",
+              "unique_sources",
+              "without_sources",
+              "without_identified_primary_source",
+              "uncertain_start_dates",
+              "uncertain_locations",
+              "without_structured_territory",
+              "operations_with_contested_claims",
+              "without_recorded_review"
+            ],
+            "properties": {
+              "total_operations": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "unique_sources": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "without_sources": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "without_identified_primary_source": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "uncertain_start_dates": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "uncertain_locations": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "without_structured_territory": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "operations_with_contested_claims": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "without_recorded_review": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "row": {
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CoverageReport/$defs/metrics"
+              }
+            ],
+            "required": [
+              "key",
+              "label",
+              "note"
+            ],
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "label": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "fr",
+                  "ar"
+                ],
+                "properties": {
+                  "fr": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "ar": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "note": {
+                "enum": [
+                  null,
+                  "no_current_record"
+                ]
+              }
+            },
+            "unevaluatedProperties": false
+          }
+        }
+      },
       "OperationResponse": {
         "type": "object",
         "additionalProperties": false,
@@ -4191,7 +4431,8 @@
               "contested_claims",
               "pending_contributions",
               "by_start_year",
-              "empty_selection_message"
+              "empty_selection_message",
+              "documentary_report"
             ],
             "properties": {
               "scope": {
@@ -4240,6 +4481,9 @@
                   "string",
                   "null"
                 ]
+              },
+              "documentary_report": {
+                "$ref": "#/components/schemas/CoverageReport"
               }
             }
           },

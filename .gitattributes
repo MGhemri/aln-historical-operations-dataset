@@ -13,3 +13,7 @@ docs/data/releases/** text eol=lf
 docs/data/releases/**/*.zip -text
 CITATION.cff text eol=lf
 CHANGELOG.md text eol=lf
+docs/coverage-model.js text eol=lf
+docs/coverage-query.js text eol=lf
+docs/data/coverage/** text eol=lf
+docs/data/coverage/*.csv -text
