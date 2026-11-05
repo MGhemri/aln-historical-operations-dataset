@@ -9,6 +9,7 @@ const root = path.join(__dirname, '..');
 const ajv = new Ajv({allErrors:true, strict:true});
 addFormats(ajv);
 const validateSchema = ajv.compile(require('../schemas/operation.schema.json'));
+const validateClaim = ajv.compile(require('../schemas/claim.schema.json'));
 const validateSource = ajv.compile(require('../schemas/source.schema.json'));
 const validateTerritory = ajv.compile(require('../schemas/territorial-unit.schema.json'));
 const validateDataset = ajv.compile(require('../schemas/dataset.schema.json'));
@@ -134,6 +135,43 @@ function validateCorpus(corpus) {
     }
     for (const flag of op.quality_flags || []) warnings.push({id:op.id,code:flag});
   }
+  const claims=new Map();
+  for(const claim of corpus.claims||[]){
+    if(!validateClaim(claim)){errors.push(`Claim ${claim?.id}: ${ajv.errorsText(validateClaim.errors)}`);continue;}
+    if(claims.has(claim.id))errors.push(`Duplicate claim: ${claim.id}`);
+    claims.set(claim.id,claim);
+    if(!ids.has(claim.subject))errors.push(`${claim.id}: missing subject ${claim.subject}`);
+    if(!claim.predicate.trim())errors.push(`${claim.id}: empty predicate`);
+    if(claim.value && typeof claim.value==='object' && ![claim.value.fr,claim.value.ar].some(v=>v?.trim()))errors.push(`${claim.id}: missing assertion text`);
+    if(Date.parse(claim.created_at)>Date.parse(claim.updated_at))errors.push(`${claim.id}: inverted editorial timestamps`);
+    for(const e of claim.evidence){
+      if(!sourceIds.has(e.source_id))errors.push(`${claim.id}: missing source ${e.source_id}`);
+      if(!e.locator.trim())errors.push(`${claim.id}: empty evidence locator`);
+    }
+    if(claim.editorial_status==='published'){
+      const op=corpus.operations.find(o=>o.id===claim.subject);
+      if(op?.editorial_status!=='published')errors.push(`${claim.id}: publication requires a published subject`);
+      if(claim.review_history.at(-1)?.decision!=='approved')errors.push(`${claim.id}: publication requires an explicit approved review`);
+      if(!claim.evidence.length)errors.push(`${claim.id}: publication requires precise evidence`);
+      for(const e of claim.evidence)if(!corpus.sources.find(s=>s.source_id===e.source_id)?.title?.trim())errors.push(`${claim.id}: evidence requires a bibliographic title`);
+      if(claim.status==='withdrawn')errors.push(`${claim.id}: withdrawn assertions cannot be published`);
+      for(const review of claim.review_history){
+        try{if(!['http:','https:'].includes(new URL(review.reference).protocol))throw Error();}
+        catch{errors.push(`${claim.id}: unsafe review reference`);}
+        if(!review.reviewer.trim()||!review.reason.trim())errors.push(`${claim.id}: incomplete review`);
+        if(Date.parse(review.reviewed_at)<Date.parse(claim.created_at)||Date.parse(review.reviewed_at)>Date.parse(claim.updated_at))errors.push(`${claim.id}: review outside editorial timestamps`);
+      }
+    }
+    if(claim.status==='unverified')warnings.push({id:claim.subject,claim_id:claim.id,code:'unverified_assertion'});
+  }
+  for(const claim of claims.values())for(const id of claim.contradicts){
+    const other=claims.get(id);
+    if(!other){errors.push(`${claim.id}: missing contradicted claim ${id}`);continue;}
+    if(id===claim.id)errors.push(`${claim.id}: self contradiction`);
+    if(other.subject!==claim.subject||other.predicate!==claim.predicate)errors.push(`${claim.id}: contradiction requires the same subject and predicate`);
+    if(claim.status!=='contested'||other.status!=='contested')errors.push(`${claim.id}: contradiction endpoints must be contested`);
+    if(claim.editorial_status==='published'&&other.editorial_status!=='published')errors.push(`${claim.id}: public contradiction points to an unpublished assertion`);
+  }
   return {errors,warnings};
 }
 function restoreLegacy(corpus) {
@@ -146,9 +184,9 @@ function restoreLegacy(corpus) {
 }
 function readCorpus(directory=path.join(root,'data')) {
   const read = name => JSON.parse(fs.readFileSync(path.join(directory,name),'utf8'));
-  const entries = (name,key='id') => fs.readdirSync(path.join(directory,name)).filter(n=>n.endsWith('.json')).sort()
+  const entries = (name,key='id') => (name==='claims'&&!fs.existsSync(path.join(directory,name))?[]:fs.readdirSync(path.join(directory,name))).filter(n=>n.endsWith('.json')).sort()
     .map(n=>{const value=read(path.join(name,n));if(value[key]!==n.slice(0,-5))throw new Error(`Filename must equal ${key}: ${name}/${n}`);return value;});
   return {metadata:read('dataset.json'),operations:entries('operations'),sources:entries('sources','source_id'),
-    territorial_units:entries('territorial-units'),vocabularies:read('vocabularies.json')};
+    territorial_units:entries('territorial-units'),vocabularies:read('vocabularies.json'),claims:entries('claims')};
 }
 module.exports = {migrate,dateBounds,validateCorpus,restoreLegacy,readCorpus,stable,hash,root};

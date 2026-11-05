@@ -2,20 +2,24 @@ const fs = require('node:fs');
 const path = require('node:path');
 const {readCorpus,validateCorpus,stable,hash,root} = require('../src/canonical');
 const {publishedLegacy,publicArtifacts,originalIntegrity,corpusFingerprint}=require('../src/publication');
+const {publishedClaims,publicSources}=require('../src/claims');
 function artifacts(corpus,{allowSynthetic=false}={}) {
   const report = validateCorpus(corpus);
   report.errors.push(...originalIntegrity(corpus));
   if(!allowSynthetic && corpus.operations.some(op=>/^(TEST_|SYNTHETIC_)/.test(op.id)))report.errors.push('Synthetic fixtures must never be present in the production corpus');
+  if(!allowSynthetic && (corpus.claims||[]).some(c=>/^(CLM_TEST_|CLM_SYNTHETIC_)/.test(c.id)))report.errors.push('Synthetic assertions must never be present in the production corpus');
   if (report.errors.length) throw new Error(report.errors.join('\n'));
   const published=corpus.operations.filter(o=>o.editorial_status==='published').sort((a,b)=>a.id.localeCompare(b.id));
-  const publicReport={errors:[],warnings:report.warnings.filter(w=>published.some(op=>op.id===w.id))};
+  const claims=publishedClaims(corpus),claimIds=new Set(claims.map(c=>c.id));
+  const publicReport={errors:[],warnings:report.warnings.filter(w=>published.some(op=>op.id===w.id)&&(!w.claim_id||claimIds.has(w.claim_id)))};
   const geo = {type:'FeatureCollection',features:published.map(o=>{
     const points=o.locations.filter(l=>l.geometry?.type==='Point').map(l=>l.geometry.coordinates);
     const geometry=points.length>1?{type:'MultiPoint',coordinates:points}:points.length?{type:'Point',coordinates:points[0]}:null;
     return {type:'Feature',id:o.id,geometry,properties:{id:o.id,title:o.title,
       geometry_role:o.locations.length>1?'multi_site':o.locations[0].geometry_role,
       locations:o.locations,territorial_assignments:o.territorial_assignments,
-      quality_flags:o.quality_flags,source_ids:o.source_ids}};
+      quality_flags:o.quality_flags,source_ids:o.source_ids,
+      ...(claims.some(c=>c.subject===o.id)?{claim_ids:claims.filter(c=>c.subject===o.id).map(c=>c.id)}:{})}};
   })};
   const csvCell = v => '"'+String(v ?? '').replace(/"/g,'""')+'"';
   const csv = [['id','title_fr','date_earliest','date_latest','date_precision','geometry_role','source_ids'],
@@ -23,7 +27,8 @@ function artifacts(corpus,{allowSynthetic=false}={}) {
       o.locations[0].geometry_role,o.source_ids.join(';')])].map(row=>row.map(csvCell).join(',')).join('\r\n')+'\r\n';
   const out={'operations.json':stable({schema_version:'2.0.0',corpus_is_incomplete:true,operations:published}),
     'legacy.json':stable(publishedLegacy(corpus)),'operations.geojson':stable(geo),'operations.csv':csv,
-    'sources.json':stable(corpus.sources.filter(s=>published.some(op=>op.source_ids.includes(s.source_id))).sort((a,b)=>a.source_id.localeCompare(b.source_id))),
+    'sources.json':stable(publicSources(corpus)),
+    'claims.json':stable({schema_version:'2.0.0',corpus_is_incomplete:true,claims}),
     'quality-report.json':stable(publicReport),
     'quality-report.md':`# Qualité du corpus ALNOP\n\n${publicReport.errors.length} erreurs bloquantes ; ${publicReport.warnings.length} avertissements.\n\n`+
       publicReport.warnings.map(w=>`- ${w.id}: ${w.code}`).join('\n')+'\n'};

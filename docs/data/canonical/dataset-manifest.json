@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "publication_status": "validated_snapshot",
   "import_source_commit": "97eef827834a7463e85eed8b5bd5c81e08069420",
-  "canonical_sha256": "22c6939db7342a08312815a97fcf5cac02e46bb0ed7e2a57859d83722831cd57",
+  "canonical_sha256": "8781ee6e79d1af4d98334aaa84a410c38f91115dce62bba5fd26b879c649a614",
   "corpus_is_incomplete": true,
   "total": 263,
   "checksums": {
@@ -11,6 +11,7 @@
     "operations.geojson": "987a25c0cfecdd6d3c09ede5144599eafc5bbfe0b608a7d9e38191cb9cbbc203",
     "operations.csv": "8eff3e06ef1971e24c8a9e32ae91223e8a3ce954b6b0973c814f14e0d4462fbb",
     "sources.json": "f7c05e4911a08c86bf62b2b7b8ba43cd9bcdf34130c4033f7396abb180251efb",
+    "claims.json": "489df06719f1b53da6a49a48a0645696cd00d4fe920f69203b4305b84c8f0057",
     "quality-report.json": "37ed5a53c43ccd350f715004401e7d1b809af7a153cd268b701cfeababe890ed",
     "quality-report.md": "a283930d1ebf3327627e60d588d612634cd69e385a76adc09fd868c9d3d09da6"
   }

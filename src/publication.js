@@ -1,6 +1,7 @@
 const {stable,hash}=require('./canonical');
 const initial=require('../migrations/legacy-initial.json');
 const {toGeoJSON}=require('../api/v1/data-service');
+const {publishedClaims,publicSources,claimsForOperation}=require('./claims');
 function dateForV1(date){
   if(!date?.earliest)return null;
   if(date.precision==='day')return date.earliest;
@@ -15,12 +16,14 @@ function sourceForV1(source){
     type_source:source.document_type||'Non renseigné',...(source.locator?{localisation_passage:source.locator}:{})};
 }
 function operationForV1(op,corpus){
-  if(op.provenance.publication_basis==='previously_public_legacy_corpus')return structuredClone(op.legacy);
+  const claims=claimsForOperation(op.id,corpus);
+  const supplement=claims.length?{scientific_claims:claims}:{};
+  if(op.provenance.publication_basis==='previously_public_legacy_corpus')return {...structuredClone(op.legacy),...supplement};
   const sources=new Map(corpus.sources.map(s=>[s.source_id,s]));
   const territories=new Map((corpus.territorial_units||[]).map(t=>[t.id,t]));
   const point=op.locations.length===1?op.locations[0].geometry:null;
   const coordinates=point?.type==='Point'?{latitude:point.coordinates[1],longitude:point.coordinates[0]}:{};
-  return {...(op.legacy||{}),id:op.id,nom_operation:op.title.fr,date_debut:dateForV1(op.start_date),
+  return {...(op.legacy||{}),...supplement,id:op.id,nom_operation:op.title.fr,date_debut:dateForV1(op.start_date),
     date_fin:dateForV1(op.end_date),wilaya_concernee:op.territorial_assignments.length
       ?op.territorial_assignments.map(t=>territories.get(t.territory_id).names.fr).join(' ; '):op.legacy_territorial_label,
     localisation:{region_ou_ville:op.locations.map(l=>l.label).filter(Boolean).join(' ; ')||null,
@@ -62,8 +65,9 @@ function originalIntegrity(corpus){
 }
 function corpusFingerprint(corpus){
   const operations=corpus.operations.filter(op=>op.editorial_status==='published');
-  const sources=corpus.sources.filter(s=>operations.some(op=>op.source_ids.includes(s.source_id)));
+  const sources=publicSources(corpus);
   return hash(stable({operations:[...operations].sort((a,b)=>a.id.localeCompare(b.id)),
   sources:[...sources].sort((a,b)=>a.source_id.localeCompare(b.source_id)),
-  territorial_units:corpus.territorial_units||[],vocabularies:corpus.vocabularies,metadata:corpus.metadata}));}
+  territorial_units:corpus.territorial_units||[],vocabularies:corpus.vocabularies,metadata:corpus.metadata,
+  claims:publishedClaims(corpus)}));}
 module.exports={dateForV1,operationForV1,publishedLegacy,publicArtifacts,originalIntegrity,corpusFingerprint};
