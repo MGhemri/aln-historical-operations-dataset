@@ -5,6 +5,8 @@ on:
     branches:
       - main
     paths:
+      - '*.md'
+      - 'profiles/**'
       - 'docs/**'
       - 'data/**'
       - 'src/**'
@@ -50,6 +52,9 @@ jobs:
       - run: npm run check:documentation
       - run: npm test
       - run: npm run build
+
+      - name: Prepare TEMPORA portal and ALNOP atlas
+        run: node scripts/prepare-pages.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

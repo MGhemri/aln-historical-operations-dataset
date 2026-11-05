@@ -1,4 +1,12 @@
-# Contribuer à ALNOP / المساهمة في ALNOP
+# Contribuer à TEMPORA et à ses profils
+
+## Contribuer au framework TEMPORA
+
+Pour modifier les contrats, le chargeur ou les validateurs communs, proposer une Issue ou une Pull Request décrivant le comportement attendu et les vérifications de compatibilité. Le noyau doit rester indépendant des périodes, territoires et vocabulaires d’un profil. Les exemples synthétiques restent séparés des corpus publiés.
+
+## Contribuer au profil ALNOP / المساهمة في ALNOP
+
+Le formulaire de l’application concerne le corpus ALNOP. Il ne sert pas à enregistrer un nouveau profil TEMPORA.
 
 Le corpus est incomplet et en enrichissement. Ne jamais compléter un fait historique par supposition.
 

@@ -1,4 +1,12 @@
-# TEMPORA — Profils et validation
+# TEMPORA — Framework pour les corpus historiques
+
+TEMPORA sépare un noyau réutilisable des configurations propres à chaque corpus. ALNOP est l’un de ses profils, et non le périmètre du framework. Le [guide ALNOP](./ALNOP.md) décrit son corpus et son application.
+
+## Architecture : noyau, profils et applications
+
+Le noyau `src/framework/` porte les contrats et les contrôles communs. Les manifestes sous `profiles/` déclarent le contexte de chaque corpus ; leurs adaptateurs relient les données métier au noyau. Les applications exposent ensuite les fonctions adaptées à leur profil. Le noyau ne dépend pas du corpus ALNOP.
+
+GitHub et GitHub Pages présentent TEMPORA et ses profils. Vercel met en avant l’application ALNOP, fondée sur TEMPORA.
 
 TEMPORA fournit des contrats réutilisables pour configurer la validation de corpus historiques. ALNOP conserve son application, ses données, ses identifiants et ses API publiques. Les commandes ci-dessous concernent les profils et les contrôles configurables actuellement implémentés ; elles ne constituent pas une migration vers un nouveau modèle de données.
 

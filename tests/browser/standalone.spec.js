@@ -46,7 +46,7 @@ for(const width of [360,390,1280])test(`Vercel ${width}px: atlas navigation and 
   await expect(page.locator('#detail-drawer')).toBeHidden();
   if(width<769)await expect(page.locator('#sidebar')).toBeHidden();
   await page.screenshot({path:`test-results/standalone-atlas-${width}.png`,fullPage:true});
-  await page.locator('#documentation-link').click();await expect(page.locator('h1')).toContainText('Documentation');
+  await page.locator('#documentation-link').click();await expect(page.locator('h1:visible')).toContainText('Documentation');
   await noRepositoryLinks(page);
   for(const slug of ['methodology','api','contributing','editorial','conduct','entities','api-v2','releases','observatory']){
     const response=await page.goto(`/documentation/${slug}.html`);expect(response.ok()).toBeTruthy();
@@ -406,7 +406,30 @@ test('Entity search loads verified source and operation details only when a revi
 });
 
 test('TEMPORA profile documentation is local and internal implementation reports are excluded',async({page})=>{
- await page.setViewportSize({width:390,height:844});await page.goto('/documentation/framework.html');await expect(page.getByRole('heading',{level:1,name:'TEMPORA — Profils et validation'})).toBeVisible();await noRepositoryLinks(page);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
- await page.goto('/documentation/');await expect(page.locator('a[href="framework.html"]')).toHaveCount(1);await expect(page.locator('a[href="progress.html"]')).toHaveCount(0);
+ await page.setViewportSize({width:390,height:844});await page.goto('/documentation/framework.html');await expect(page.getByRole('heading',{level:1,name:'TEMPORA — Framework pour les corpus historiques'})).toBeVisible();await noRepositoryLinks(page);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/documentation/');await expect(page.locator('a[href="framework.html"]:visible')).toHaveCount(1);await expect(page.locator('a[href="progress.html"]')).toHaveCount(0);
  const statuses=await page.evaluate(async()=>Promise.all(['PHASE_0_AUDIT.md','PHASE_1_PROGRESS.md','PHASE_2_PROGRESS.md','CDC_STATUS.md','documentation/progress.html'].map(async file=>(await fetch('../'+file)).status)));expect(statuses).toEqual([404,404,404,404,404]);
+});
+
+for(const width of [390,1280])test(`TEMPORA portal and host-specific documentation at ${width}px`,async({page})=>{
+ await page.setViewportSize({width,height:844});
+ await page.goto('/documentation/');
+ await expect(page.getByRole('heading',{name:'Documentation ALNOP',exact:true})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'Documentation TEMPORA',exact:true})).toBeHidden();
+ await noRepositoryLinks(page);
+ await page.goto('/index.html');await expect(page.locator('.brand-title')).toContainText('ALNOP');await expect(page.locator('.brand-subtitle')).toContainText('TEMPORA');
+ await page.route('https://mghemri.github.io/aln-historical-operations-dataset/**',async route=>{
+  const url=new URL(route.request().url());let relative=url.pathname.replace('/aln-historical-operations-dataset/','');
+  if(!relative||relative==='index.html')relative='tempora.html';
+  const response=await route.fetch({url:'http://127.0.0.1:8765/'+relative});await route.fulfill({response});
+ });
+ await page.goto('https://mghemri.github.io/aln-historical-operations-dataset/');
+ await expect(page.getByRole('heading',{level:1,name:'TEMPORA',exact:true})).toBeVisible();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.getByRole('link',{name:'Explorer son atlas sur GitHub Pages'}).click();await expect(page.locator('.op-card')).toHaveCount(corpusCount);
+ await page.goto('https://mghemri.github.io/aln-historical-operations-dataset/documentation/index.html');
+ await expect(page.getByRole('heading',{name:'Documentation TEMPORA',exact:true})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'Documentation ALNOP',exact:true})).toBeHidden();
+ await expect(page.locator('[data-atlas-link]')).toHaveAttribute('href','https://mghemri.github.io/aln-historical-operations-dataset/atlas.html');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
