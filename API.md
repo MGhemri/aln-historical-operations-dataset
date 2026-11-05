@@ -394,3 +394,6 @@ Vous êtes libre de :
 Une fiche peut inclure le champ additionnel `scientific_claims` lorsqu’elle possède des assertions publiées après revue. Chaque assertion conserve sa valeur, son statut documentaire, ses passages sources, ses liens de contradiction et son historique de revue. Les champs historiques de la fiche restent conservés ; aucune version divergente n’est choisie automatiquement.
 
 Sans assertion publiée, ce champ est absent. Les statistiques de fiches restent distinctes du nombre d’assertions. L’export complet des assertions publiées se trouve dans `data/canonical/claims.json`. Voir [la politique de provenance](PROVENANCE_POLICY.md) pour la sémantique et les limites.
+## API v2 et provenance
+
+L’API v1 reste disponible avec ses contrats de compatibilité. La nouvelle API v2 expose les fiches canoniques, les sources, les assertions, les référentiels et les indicateurs documentaires. Voir [le guide de l’API v2](API_V2.md) pour les filtres, la pagination et le contrat OpenAPI.

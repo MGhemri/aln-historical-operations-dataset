@@ -16,6 +16,8 @@
 - Référentiels personnes, organisations et lieux : noms, variantes, périodes, preuves, relations d’identité candidates et revues. Structure et exports livrés, alimentation historique à effectuer après revue.
 - Contrôle Git des modifications publiques : nouvelle décision liée à l’empreinte du contenu, historique préservé et suppressions de fichiers refusées.
 - Détection de doublons candidats avec facteurs explicatifs et rapport interne ; aucune fusion automatique. Évaluation synthétique avec faux positifs et limites documentés.
+- API v2 de lecture : fiches, preuves, sources, assertions, référentiels, statistiques, indicateurs documentaires, snapshot et exports ; filtres, pagination stable et GeoJSON paginé.
+- Contrat OpenAPI 3.1 généré et vérifié, erreurs structurées, ETag/GET conditionnel, limites de réponse, vérification des empreintes et exemples HTTP exécutables.
 
 ## Vérification
 
@@ -25,10 +27,12 @@ Les 789 réserves de migration concernent les mêmes trois points pour chaque fi
 
 Les assertions contradictoires utilisées pour le test T10 sont également synthétiques : elles ne sont pas ajoutées aux 263 fiches publiées. La livraison met en place leur modèle, les contrôles, l’affichage et les exports, sans analyser automatiquement les textes historiques existants.
 
-Validation locale : 73 tests Node et 34 tests navigateur, plus le validateur historique et les contrôles de génération. Les scénarios vérifient les contradictions, les références d’entités, les noms conservés, les brouillons, la revue liée au contenu, la comparaison Git réelle et la navigation mobile/ordinateur FR/AR.
+Validation locale : 88 tests Node et 34 tests navigateur, plus le validateur historique et les contrôles de génération. Les scénarios couvrent aussi le contrat v2, les dates partielles/inconnues, les filtres combinés, les appartenances multiples, la BBOX traversant l’antiméridien, le cache 304, les erreurs, le stockage par empreintes et les exemples HTTP locaux. Les exemples GET sont également exécutables après déploiement via `npm run smoke:api:v2`.
 
 Le rapport de rapprochement produit 135 paires candidates pour le corpus initial, sans confirmer de doublon. Sur six paires synthétiques annotées, précision et rappel valent 0,75 ; une calibration historique reste à effectuer. Les rapports internes ne sont pas exposés sur le site public.
 
 ## Suite du CDC
 
-La chaîne technique, les assertions et les référentiels sont opérationnels ; une contribution réelle doit encore être revue par le mainteneur avant d’être ajoutée. Priorité suivante : API v2 et contrat OpenAPI. Restent également la consultation détaillée des entités, l’amélioration et la calibration des rapprochements, l’assistance aux contradictions, les versions scientifiques, les protections administratives du dépôt et l’observatoire des lacunes. Les choix de licence, de retrait et de nombre de reviewers restent dans DECISIONS_PENDING.md. Aucune validation scientifique ou conformité globale au CDC n’est prétendue par ce bilan.
+La chaîne technique, les assertions, les référentiels et l’API v2 sont opérationnels ; une contribution réelle doit encore être revue par le mainteneur avant d’être ajoutée. Les endpoints de statistiques et couverture sont disponibles, mais l’observatoire visuel des lacunes reste à développer. Les releases scientifiques ne sont pas encore activées : `/releases` est vide et `/releases/current` identifie un snapshot par empreinte, sans version scientifique fictive.
+
+Priorités suivantes : versions scientifiques reproductibles, observatoire documentaire et calibration des rapprochements. Restent également les pages détaillées de consultation des entités, l’assistance aux contradictions, les protections administratives du dépôt, les analyses avancées et les mesures de performance à grande échelle. Les choix de licence, de retrait et de nombre de reviewers restent dans DECISIONS_PENDING.md. Aucune validation scientifique ou conformité globale au CDC n’est prétendue par ce bilan.
