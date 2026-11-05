@@ -752,6 +752,7 @@ function selectOperation(opId, zoomToMap = true, pushHistory = true, fromList = 
       <div class="sources-list">${sourcesList}</div>
       ${op.canonical_metadata?.last_review?`<p class="review-provenance">${escapeHtml(t('publicationReview'))} ${escapeHtml(op.canonical_metadata.last_review.reviewer)} · ${escapeHtml(op.canonical_metadata.last_review.reviewed_at)}</p>`:''}
       <p><a href="contribute.html?id=${encodeURIComponent(op.id)}">${isAr ? "اقتراح تصحيح" : "Proposer une correction"}</a></p>
+      <p><a href="compare.html?left=${encodeURIComponent(op.id)}">${isAr ? "مقارنة هذه البطاقة" : "Comparer cette fiche"}</a></p>
     </div>
     ${renderScientificClaims(op.scientific_claims)}
   `;
@@ -1208,6 +1209,7 @@ function setLanguage(lang) {
   if(claimsExport)claimsExport.textContent=t('claimsExport');
   const releasesLink=document.getElementById('releases-link');
   if(releasesLink)releasesLink.textContent=state.lang==='ar'?'إصدارات البيانات':'Versions des données';
+  document.querySelectorAll('.compare-link').forEach(link=>link.textContent=state.lang==='ar'?'مقارنة البطاقات':'Comparer les fiches');
   document.querySelectorAll('.observatory-link').forEach(link=>link.textContent=state.lang==='ar'?'مرصد التوثيق':'Observatoire documentaire');
   const brandTitleEl = document.querySelector('.brand-title');
   const brandSubtitleEl = document.querySelector('.brand-subtitle');

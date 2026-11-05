@@ -56,7 +56,7 @@ jobs:
         run: npm run check:releases -- --sources
 
       - name: Check documentary observatory artifacts
-        run: npm run check:coverage
+        run: npm run check:coverage && npm run check:assistance
 
       - name: Check local documentation
         run: npm run check:documentation

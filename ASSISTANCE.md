@@ -28,8 +28,20 @@ Les valeurs numériques peuvent être exactes ou des intervalles `{ "type": "int
 
 Les liens de contradiction déjà enregistrés sont distingués des suggestions. Les rapports JSON et Markdown expliquent la raison de chaque comparaison, sans attribuer automatiquement le statut « contesté ».
 
-## Limites et suite
+## Consulter et comparer sur le site
+
+La page [Comparer les fiches](docs/compare.html) est disponible dans le menu de l'atlas et depuis chaque fiche. Choisissez une fiche seule pour examiner ses sources ou ajoutez une deuxième fiche pour une lecture côte à côte. Les deux listes contiennent toutes les fiches publiées et peuvent être filtrées par identifiant, titre ou variante de nom.
+
+Les dates conservent leurs intervalles, leur précision et leur certitude. Les localisations indiquent leur rôle géométrique et leur état de revue. Les attributions territoriales structurées sont séparées des libellés hérités. Les références partagées sont identifiées par leur identifiant permanent ; elles ne prouvent pas l'identité des événements.
+
+Les assertions et leurs passages sources sont affichés par fiche. Les comparaisons d'assertions restent limitées à un même sujet et prédicat, au sein de cette fiche ; deux événements distincts ne sont pas assimilés pour produire une contradiction artificielle. Les textes originaux sont conservés et l'absence de traduction est signalée. L'interface fonctionne en français et en arabe, sur mobile et ordinateur.
+
+Le bouton d'export produit un JSON contenant les fiches sélectionnées, leurs références, les assertions publiées, les comparaisons, l'empreinte du snapshot, la version archivée lorsqu'elle correspond et l'empreinte du moteur de calcul. Le lien de la page conserve la sélection et la langue au moment de l'affichage. Les données et le moteur sont vérifiés avant affichage ; une incohérence empêche l'affichage des résultats.
+
+La page publique ne publie pas la liste interne des candidats, des brouillons ni des annotations de calibration. Un lien « Proposer une correction » ouvre le formulaire avec la fiche sélectionnée ; aucune modification directe du corpus n'est effectuée.
+
+## Limites documentaires
 
 Le corpus publié ne contient actuellement aucune assertion structurée. Un rapport vide signifie donc absence de comparaison structurée, pas absence de contradictions historiques. Les 263 fiches initiales et l'archive `data-2026.11.1` restent inchangées.
 
-L'interface publique de comparaison et l'alimentation des annotations par une revue documentaire restent à réaliser. La documentation est accessible directement sur Vercel et GitHub Pages ; les diagnostics internes sont conservés comme artefacts des contrôles du dépôt.
+L'alimentation des annotations par une revue documentaire reste à réaliser. La documentation est accessible directement sur Vercel et GitHub Pages ; les diagnostics internes sont conservés comme artefacts des contrôles du dépôt.

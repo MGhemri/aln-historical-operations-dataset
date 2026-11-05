@@ -296,3 +296,53 @@ test('Native additions update observatory metrics without HTML injection or a fa
   await expect(page.locator('#obs-table')).toContainText(attack);expect(await page.locator('main img').count()).toBe(0);
   expect(await page.evaluate(()=>window.obsInjected)).toBeUndefined();await noRepositoryLinks(page);
 });
+
+for(const width of [390,1280])test(`Manual comparison ${width}px: complete selectors, sources, precision and FR/AR`,async({page})=>{
+ await page.setViewportSize({width,height:844});await page.goto('/compare.html');await expect(page.locator('#cmp-apply')).toBeEnabled();
+ await expect(page.locator('#cmp-left option')).toHaveCount(corpusCount+1);await expect(page.locator('#cmp-results')).toBeHidden();
+ await page.locator('#cmp-left').selectOption('OP_1954_001');await page.locator('#cmp-right').selectOption('OP_1954_002');await page.locator('#cmp-apply').click();
+ await expect(page.locator('.cmp-record')).toHaveCount(2);await expect(page.locator('#cmp-records')).toContainText('Point représentatif');await expect(page.locator('#cmp-records')).toContainText('Aucune assertion structurée publiée');
+ await noRepositoryLinks(page);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.locator('#cmp-language').click();await expect(page.locator('html')).toHaveAttribute('dir','rtl');await expect(page.locator('#cmp-records')).toContainText('الترجمة غير متوفرة');
+ await expect(page.locator('#cmp-left option')).toHaveCount(corpusCount+1);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
+test('Manual comparison exports reproducible selected records, supports search, reset and browser history',async({page})=>{
+ await page.goto('/compare.html?left=OP_1954_001');await expect(page.locator('.cmp-record')).toHaveCount(1);
+ const waiting=page.waitForEvent('download');await page.locator('#cmp-export').click();const download=await waiting;
+ const output=JSON.parse(require('node:fs').readFileSync(await download.path(),'utf8'));
+ expect(output.data.operations.map(o=>o.id)).toEqual(['OP_1954_001']);expect(output.meta.dataset_release).toBe('data-2026.11.1');expect(output.meta.model_sha256).toMatch(/^[a-f0-9]{64}$/);expect(output.meta.requires_human_review).toBe(true);
+ expect(output.data.sources.map(s=>s.source_id).sort()).toEqual(output.data.operations[0].source_ids.slice().sort());
+ await page.locator('#cmp-search-right').fill('OP_1954_002');await expect(page.locator('#cmp-right option')).toHaveCount(2);
+ await page.locator('#cmp-right').selectOption('OP_1954_002');await page.locator('#cmp-apply').click();await expect(page.locator('.cmp-record')).toHaveCount(2);
+ await page.locator('#cmp-reset').click();await expect(page.locator('#cmp-results')).toBeHidden();await expect(page.locator('#cmp-left')).toHaveValue('');
+ await page.goBack();await expect(page.locator('.cmp-record')).toHaveCount(2);await expect(page.locator('#cmp-right')).toHaveValue('OP_1954_002');
+});
+
+test('Manual comparison rejects unknown, repeated, duplicate and unsafe selections without fetching their paths',async({page})=>{
+ for(const query of ['left=OP_ABSENT','left=OP_1954_001&right=OP_1954_001','left=OP_1954_001&left=OP_1954_002','left=../../secret','right=OP_1954_001']){
+  await page.goto('/compare.html?'+query);await expect(page.locator('#cmp-error')).toContainText('Sélection invalide');await expect(page.locator('#cmp-results')).toBeHidden();
+ }
+ await page.locator('#cmp-language').click();await expect(page.locator('#cmp-error')).toContainText('غير صالح');
+});
+
+for(const file of ['data/canonical/claims.json','assistance-model.js'])test(`Manual comparison refuses altered ${file}`,async({page})=>{
+ const body=require('node:fs').readFileSync(require('node:path').join(__dirname,'../../docs',file),'utf8')+' ';
+ await page.route('https://alnop.vercel.app/'+file+'*',route=>route.fulfill({body,contentType:file.endsWith('.js')?'application/javascript':'application/json'}));
+ await page.goto('/compare.html?left=OP_1954_001');await expect(page.locator('#cmp-error')).toContainText('Impossible de vérifier');await expect(page.locator('#cmp-results')).toBeHidden();await expect(page.locator('#cmp-apply')).toBeDisabled();
+});
+
+test('Manual comparison displays reviewed synthetic claim ranges, contexts and evidence without HTML injection',async({page})=>{
+ const corpus=require('../helpers/claims').withClaims({reviewed:true});const attack='<img src=x onerror="window.cmpInjected=true">';
+ corpus.claims[0].value={type:'interval',lower:10,upper:20};corpus.claims[0].context={scope:attack,population:'TEST participants',time_scope:'entire_event',valid_from:null,valid_to:null};
+ const files=require('../../scripts/build-canonical').artifacts(corpus,{allowSynthetic:true});
+ await page.route('https://alnop.vercel.app/data/canonical/**',route=>{const file=new URL(route.request().url()).pathname.split('/').pop();return route.fulfill({body:files[file],contentType:'application/json'});});
+ await page.goto('/compare.html?left=OP_1954_001');await expect(page.locator('#cmp-records')).toContainText('10 — 20');await expect(page.locator('#cmp-records')).toContainText(attack);await expect(page.locator('#cmp-records')).toContainText('p. 12 (exemple fictif)');await expect(page.locator('#cmp-records')).toContainText('Contradiction déjà enregistrée');
+ expect(await page.locator('main img').count()).toBe(0);expect(await page.evaluate(()=>window.cmpInjected)).toBeUndefined();await expect(page.locator('#cmp-release')).toContainText('Snapshot non associé');
+});
+
+test('Manual comparison resolves every artifact under the GitHub Pages project prefix',async({page})=>{
+ await page.route('https://mghemri.github.io/aln-historical-operations-dataset/**',async route=>{const u=new URL(route.request().url());const response=await route.fetch({url:'http://127.0.0.1:8765'+u.pathname.replace('/aln-historical-operations-dataset','')+u.search});await route.fulfill({response});});
+ await page.goto('https://mghemri.github.io/aln-historical-operations-dataset/compare.html?left=OP_1954_001&right=OP_1954_002&lang=ar');
+ await expect(page.locator('.cmp-record')).toHaveCount(2);await expect(page.locator('html')).toHaveAttribute('dir','rtl');await expect(page.locator('#cmp-records a').last()).toHaveAttribute('href',/contribute.html\?/);
+});
