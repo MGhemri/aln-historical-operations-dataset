@@ -60,6 +60,7 @@ test('Explicit loading supports bounded inheritance and replacement of arrays',(
  const child=loadProfile(path.join(dir,'child.json'),{rootDirectory:dir,parameters:{limits:{enabled:false}}});assert.deepEqual(child.parameters.limits,{count:9,enabled:false});assert.deepEqual(child.locales,['en']);assert.equal(p.parameters.limits.count,5);
 }));
 test('Profile loader rejects cycles, escaping paths, malformed JSON and oversized files',()=>temporary(dir=>{
+ assert.throws(()=>loadProfile(null),code('PROFILE_ARGUMENT_INVALID'));assert.throws(()=>loadProfile('profile.json',null),code('PROFILE_ARGUMENT_INVALID'));assert.throws(()=>loadProfile('profile.json',{rootDirectory:null}),code('PROFILE_ROOT_INVALID'));
  const file=path.join(dir,'profile.json');fs.writeFileSync(file,JSON.stringify({extends:'profile.json'}));assert.throws(()=>loadProfile(file),code('PROFILE_INHERITANCE_CYCLE'));
  fs.writeFileSync(file,JSON.stringify({extends:'../outside.json'}));fs.writeFileSync(path.join(dir,'outside-target.txt'),'x');
  assert.throws(()=>loadProfile(path.join(dir,'outside-target.txt')),code('PROFILE_FILE_INVALID'));

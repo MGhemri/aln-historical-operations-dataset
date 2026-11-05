@@ -72,5 +72,6 @@ const result = validator.validate({
 <p><code>defineAdapter</code> vérifie une interface composée de <code>id</code>, <code>formats</code>, <code>parse</code> et <code>serialize</code>. Il conserve les fonctions fournies et fige les métadonnées. Il n'implémente pas à lui seul une ingestion CSV/GeoJSON, une quarantaine ou une publication. Les adaptateurs doivent déclarer leurs limites et être testés séparément.</p>
 <h2 id="erreurs-et-compatibilité-alnop">Erreurs et compatibilité ALNOP</h2>
 <p>Les erreurs de configuration utilisent <code>ProfileError</code> avec <code>code</code>, <code>message</code> et <code>details</code>. Les codes distinguent notamment schéma invalide, incompatibilité de version, calendrier non pris en charge, chemin interdit, héritage cyclique et taxonomie absente.</p>
+<p>Un chemin absent ou des options d'appel invalides sont également refusés par des erreurs typées (<code>PROFILE_ARGUMENT_INVALID</code>, <code>PROFILE_ROOT_INVALID</code>) avant tout accès au fichier.</p>
 <p>L'adaptateur <code>src/profiles/alnop.js</code> projette les champs utiles pour ces règles sans modifier les objets d'origine. Le validateur Python historique lit désormais sa fenêtre annuelle depuis le même profil. Les chemins d'exports et les routes API v1/v2 restent identiques. Aucun nouvel endpoint TEMPORA n'est annoncé par ce guide.</p>
 </main></body></html>

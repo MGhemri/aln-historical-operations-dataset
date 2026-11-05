@@ -86,4 +86,6 @@ Ces contrôles complètent les schémas et règles canoniques existants. Un rés
 
 Les erreurs de configuration utilisent `ProfileError` avec `code`, `message` et `details`. Les codes distinguent notamment schéma invalide, incompatibilité de version, calendrier non pris en charge, chemin interdit, héritage cyclique et taxonomie absente.
 
+Un chemin absent ou des options d'appel invalides sont également refusés par des erreurs typées (`PROFILE_ARGUMENT_INVALID`, `PROFILE_ROOT_INVALID`) avant tout accès au fichier.
+
 L'adaptateur `src/profiles/alnop.js` projette les champs utiles pour ces règles sans modifier les objets d'origine. Le validateur Python historique lit désormais sa fenêtre annuelle depuis le même profil. Les chemins d'exports et les routes API v1/v2 restent identiques. Aucun nouvel endpoint TEMPORA n'est annoncé par ce guide.

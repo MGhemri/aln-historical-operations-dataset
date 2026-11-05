@@ -1,6 +1,9 @@
 const fs=require('node:fs'),path=require('node:path');
 const {resolveProfile,ProfileError}=require('./profile');
-function loadProfile(file,{rootDirectory=path.dirname(path.resolve(file)),parameters={},severities={}}={}){
+function loadProfile(file,options={}){
+ if(typeof file!=='string'||!file.trim()||!options||typeof options!=='object'||Array.isArray(options))throw new ProfileError('PROFILE_ARGUMENT_INVALID','Profile loading requires a file path and an options object');
+ const {rootDirectory=path.dirname(path.resolve(file)),parameters={},severities={}}=options;
+ if(typeof rootDirectory!=='string'||!rootDirectory.trim())throw new ProfileError('PROFILE_ROOT_INVALID','Profile root must be a directory path');
  let root;try{root=fs.realpathSync(rootDirectory);}catch{throw new ProfileError('PROFILE_ROOT_INVALID','Profile root is unavailable');}
  const active=new Set();
  function read(candidate,depth=0){
