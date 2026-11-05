@@ -346,3 +346,46 @@ test('Manual comparison resolves every artifact under the GitHub Pages project p
  await page.goto('https://mghemri.github.io/aln-historical-operations-dataset/compare.html?left=OP_1954_001&right=OP_1954_002&lang=ar');
  await expect(page.locator('.cmp-record')).toHaveCount(2);await expect(page.locator('html')).toHaveAttribute('dir','rtl');await expect(page.locator('#cmp-records a').last()).toHaveAttribute('href',/contribute.html\?/);
 });
+
+function entityReaderFiles(){
+ const {entity,approve,withEntities}=require('../helpers/entities'),c=withEntities(),place=approve(entity('place','A')),other=approve(entity('place','B')),person=approve(entity('person','P')),organization=approve(entity('organization','O'));
+ place.relations=[{type:'same_as',target_id:other.id,source_ids:place.source_ids,review_history:place.review_history}];
+ other.geometry={type:'Point',coordinates:[3,36]};other.geometry_role='approximate_site';other.geometry_source_ids=other.source_ids;
+ person.names.push({...person.names[0],value:'<img src=x onerror="window.entInjected=true">',role:'historical_name',valid_from:'1954-01-01',valid_to:'1962-12-31'});
+ c.places.push(place,other);c.persons.push(person,entity('person','DRAFT'));c.organizations.push(organization);
+ const {operation,corpus:proposal}=require('../helpers/corpus').withProposal();require('../helpers/corpus').approve(operation);operation.participants=[{entity_id:person.id,role:'TEST rôle',source_ids:operation.source_ids},{entity_id:organization.id,role:'TEST organisation',source_ids:operation.source_ids}];operation.locations[0].place_id=place.id;operation.locations[0].source_ids=operation.source_ids;
+ c.operations.push(operation);c.sources.push(proposal.sources.find(s=>s.source_id===operation.source_ids[0]));
+ return require('../../scripts/build-canonical').artifacts(c,{allowSynthetic:true});
+}
+async function routeEntities(page){const files=entityReaderFiles();await page.route('https://alnop.vercel.app/data/canonical/**',route=>{const file=new URL(route.request().url()).pathname.split('/').pop();return route.fulfill({body:files[file],contentType:'application/json'});});}
+
+for(const width of [390,1280])test(`Entity reader ${width}px: honest empty registries and FR/AR navigation`,async({page})=>{
+ await page.setViewportSize({width,height:844});await page.goto('/entities.html');await expect(page.locator('#ent-apply')).toBeEnabled();await expect(page.locator('#ent-status')).toContainText('Aucune entrée publiée actuellement');await expect(page.locator('#ent-list li')).toHaveCount(0);await expect(page.locator('#ent-detail')).toBeHidden();
+ for(const kind of ['person','organization','place']){await page.locator('#ent-kind').selectOption(kind);await page.locator('#ent-apply').click();await expect(page.locator('#ent-status')).toContainText('Aucune entrée publiée');}
+ await page.locator('#ent-language').click();await expect(page.locator('html')).toHaveAttribute('dir','rtl');await expect(page.locator('#ent-status')).toContainText('لا توجد مدخلات منشورة');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await noRepositoryLinks(page);
+});
+
+test('Entity reader retains sourced names, relations, geometry precision and explicit operation links in exports',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await routeEntities(page);await page.goto('/entities.html?id=PLC_TEST_A');await expect(page.locator('#ent-detail')).toBeVisible();await expect(page.locator('#ent-content')).toContainText('Aucune géométrie documentée');await expect(page.locator('#ent-content')).toContainText('TEST_SYNTHETIC_001');await expect(page.locator('#ent-content')).toContainText('Identité commune revue');
+ const waiting=page.waitForEvent('download');await page.locator('#ent-export').click();const d=await waiting,output=JSON.parse(require('node:fs').readFileSync(await d.path(),'utf8'));expect(output.data.entity.id).toBe('PLC_TEST_A');expect(output.data.linked_operations).toHaveLength(1);expect(output.data.sources).toHaveLength(2);expect(output.meta.dataset_release).toBeNull();
+ await page.locator('#ent-content a[href*="id=PLC_TEST_B"]').click();await expect(page.locator('#ent-content')).toContainText('Site approximatif');await expect(page.locator('#ent-content')).toContainText('Aucune fiche publiée explicitement reliée');
+ await page.goto('/entities.html?id=PER_TEST_P');await expect(page.locator('#ent-content')).toContainText('<img src=x');await expect(page.locator('#ent-content')).toContainText('1954-01-01');expect(await page.locator('main img').count()).toBe(0);expect(await page.evaluate(()=>window.entInjected)).toBeUndefined();await noRepositoryLinks(page);
+ await page.goto('/entities.html?id=ORG_TEST_O&lang=ar');await expect(page.locator('#ent-content')).toContainText('TEST_SYNTHETIC_001');await expect(page.locator('#ent-detail')).toContainText('الترجمة غير متوفرة');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
+test('Entity reader searches variants, filters by kind and restores browser history',async({page})=>{
+ await routeEntities(page);await page.goto('/entities.html');await expect(page.locator('#ent-list li')).toHaveCount(4);await page.locator('#ent-kind').selectOption('person');await page.locator('#ent-q').fill('img src');await page.locator('#ent-apply').click();await expect(page.locator('#ent-list li')).toHaveCount(1);await page.locator('#ent-list a').click();await expect(page.locator('#ent-detail')).toBeVisible();await page.locator('#ent-reset').click();await expect(page.locator('#ent-list li')).toHaveCount(4);await expect(page.locator('#ent-detail')).toBeHidden();await page.goBack();await expect(page.locator('#ent-detail')).toBeVisible();await page.locator('#ent-language').click();await expect(page.locator('html')).toHaveAttribute('dir','rtl');
+});
+
+test('Entity reader rejects malformed links and excludes drafts even when their ID is known',async({page})=>{
+ await routeEntities(page);for(const q of ['id=PER_TEST_DRAFT','id=PER_ABSENT']){await page.goto('/entities.html?'+q);await expect(page.locator('#ent-error')).toContainText('Entrée absente');await expect(page.locator('#ent-detail')).toBeHidden();}
+ for(const q of ['kind=other','id=../../secret','kind=person&id=PLC_TEST_A','kind=person&kind=place']){await page.goto('/entities.html?'+q);await expect(page.locator('#ent-error')).toContainText('Paramètres invalides');await expect(page.locator('#ent-detail')).toBeHidden();}
+});
+
+test('Entity reader refuses altered registry bytes and shows no partial results',async({page})=>{
+ await page.route('https://alnop.vercel.app/data/canonical/persons.json',route=>route.fulfill({body:'{"entities":[]} ',contentType:'application/json'}));await page.goto('/entities.html');await expect(page.locator('#ent-error')).toContainText('Impossible de vérifier');await expect(page.locator('#ent-list li')).toHaveCount(0);await expect(page.locator('#ent-apply')).toBeDisabled();await page.locator('#ent-language').click();await expect(page.locator('#ent-error')).toContainText('تعذر التحقق');
+});
+
+test('Entity reader works under the GitHub Pages prefix with direct Arabic links',async({page})=>{
+ await page.route('https://mghemri.github.io/aln-historical-operations-dataset/**',async route=>{const u=new URL(route.request().url());const response=await route.fetch({url:'http://127.0.0.1:8765'+u.pathname.replace('/aln-historical-operations-dataset','')+u.search});await route.fulfill({response});});await page.goto('https://mghemri.github.io/aln-historical-operations-dataset/entities.html?kind=place&lang=ar');await expect(page.locator('#ent-apply')).toBeEnabled();await expect(page.locator('html')).toHaveAttribute('dir','rtl');await expect(page.locator('#ent-status')).toContainText('لا توجد مدخلات منشورة');
+});

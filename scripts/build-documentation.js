@@ -22,7 +22,7 @@ md.renderer.rules.link_open=(tokens,index,options,env,self)=>{
     const [file,fragment]=href.split('#');
     const page=Object.entries(pages).find(([,value])=>value[0].split('/').pop()===file.split('/').pop());
     if(page)token.attrSet('href',page[0]+'.html'+(fragment?'#'+fragment:''));
-    if(['docs/releases.html','docs/observatory.html','docs/compare.html'].includes(file))token.attrSet('href','../'+file.split('/').pop());
+    if(['docs/releases.html','docs/observatory.html','docs/compare.html','docs/entities.html'].includes(file))token.attrSet('href','../'+file.split('/').pop());
   }
   return self.renderToken(tokens,index,options);
 };

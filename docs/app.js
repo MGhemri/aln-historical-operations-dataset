@@ -1209,6 +1209,7 @@ function setLanguage(lang) {
   if(claimsExport)claimsExport.textContent=t('claimsExport');
   const releasesLink=document.getElementById('releases-link');
   if(releasesLink)releasesLink.textContent=state.lang==='ar'?'إصدارات البيانات':'Versions des données';
+  document.querySelectorAll('.entities-link').forEach(link=>link.textContent=state.lang==='ar'?'الأشخاص والمنظمات والأماكن':'Personnes, organisations et lieux');
   document.querySelectorAll('.compare-link').forEach(link=>link.textContent=state.lang==='ar'?'مقارنة البطاقات':'Comparer les fiches');
   document.querySelectorAll('.observatory-link').forEach(link=>link.textContent=state.lang==='ar'?'مرصد التوثيق':'Observatoire documentaire');
   const brandTitleEl = document.querySelector('.brand-title');

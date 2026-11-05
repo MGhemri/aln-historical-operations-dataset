@@ -1,5 +1,15 @@
 # Référentiels, revue des changements et doublons candidats
 
+## Consultation sur le site
+
+La page [Personnes, organisations et lieux](docs/entities.html) permet de rechercher un identifiant ou une variante de nom, de filtrer par référentiel et de consulter une entrée publiée. Elle est accessible depuis le menu de l'atlas et les liens d'entités du comparateur. Les liens directs conservent l'identifiant et la langue.
+
+Chaque détail conserve les noms, leurs langues, leurs périodes et leurs sources. Les relations d'identité revues sont consultables sans fusion d'identifiants. Pour les lieux, une géométrie absente reste absente ; une position connue affiche ses coordonnées longitude/latitude, sa précision et ses références.
+
+Les opérations associées proviennent exclusivement de `participants[].entity_id` et de `locations[].place_id`. Aucune recherche de nom dans les récits ou les commandements hérités ne crée de lien. Chaque rôle et ses références sont conservés. L'export JSON contient l'entrée sélectionnée, les opérations explicitement reliées, leurs sources, l'empreinte du snapshot et la version archivée correspondante lorsqu'elle existe.
+
+Les fichiers sont vérifiés contre le manifeste avant affichage. Les brouillons et hypothèses d'identité internes ne sont pas accessibles, même avec leur identifiant. L'interface est disponible en français et en arabe, sur mobile et ordinateur. Une traduction absente est signalée sans remplacer le texte original. Les trois référentiels publiés sont actuellement vides : leur alimentation nécessite une revue documentaire réelle.
+
 ## Référentiels réutilisables
 
 Les répertoires `data/persons`, `data/organizations` et `data/places` accueillent les personnes, organisations et lieux, avec les préfixes permanents `PER_`, `ORG_` et `PLC_`. Ils sont initialement vides : aucun nom n’est extrait des 263 fiches sans vérification humaine.
@@ -44,8 +54,8 @@ Sur les 263 fiches initiales, cette première configuration produit **135 paires
 
 `npm run quality:benchmark` évalue six paires synthétiques annotées dans `tests/fixtures/duplicate-pairs.json`. Résultat : trois correspondances retrouvées, un faux positif et une correspondance manquée, soit précision et rappel de 0,75 sur ce seul petit jeu. Ces chiffres ne mesurent pas la qualité sur le corpus historique.
 
-Le faux positif illustre un même titre à des dates différentes ; le cas manqué illustre une correspondance FR/AR sans similarité lexicale. Les translittérations non documentées ne sont pas devinées. Une calibration sur des cas historiques annotés, l’exploitation élargie des alias et l’optimisation pour de grands corpus restent à faire. Cette première version parcourt les paires de fiches ; aucune performance à 10 000 fiches n’est revendiquée.
+Le faux positif illustre un même titre à des dates différentes ; le cas manqué illustre une correspondance FR/AR sans similarité lexicale. Les translittérations non documentées ne sont pas devinées. Une calibration sur des cas historiques annotés, l’optimisation pour de grands corpus restent à faire. Cette première version parcourt les paires de fiches ; aucune performance à 10 000 fiches n’est revendiquée.
 
 ## Prochaine étape
 
-L’API v2 pourra exposer ces ressources avec une pagination, des filtres et un contrat documentés. Les politiques de fusion/scission/retrait, les versions scientifiques et les protections administratives du dépôt restent distinctes de cette livraison.
+L’API v2 expose ces ressources avec une pagination, des filtres et un contrat documentés. Le moteur de rapprochement utilise désormais les variantes de noms sourcées ; voir le [guide de l’assistance](ASSISTANCE.md). Les politiques de fusion/scission/retrait, les versions scientifiques et les protections administratives du dépôt restent distinctes de cette livraison.
