@@ -10,6 +10,7 @@ function artifacts(corpus,{allowSynthetic=false}={}) {
   if(!allowSynthetic && corpus.operations.some(op=>/^(TEST_|SYNTHETIC_)/.test(op.id)))report.errors.push('Synthetic fixtures must never be present in the production corpus');
   if(!allowSynthetic && (corpus.claims||[]).some(c=>/^(CLM_TEST_|CLM_SYNTHETIC_)/.test(c.id)))report.errors.push('Synthetic assertions must never be present in the production corpus');
   if(!allowSynthetic && allEntities(corpus).some(e=>/^(PER|ORG|PLC)_(TEST|SYNTHETIC)_/.test(e.id)))report.errors.push('Synthetic entities must never be present in the production corpus');
+  if(!allowSynthetic&&(corpus.duplicate_assessments||[]).some(a=>/^QA_(TEST|SYNTHETIC)_/.test(a.id)))report.errors.push('Synthetic assessments must stay in test fixtures');
   if (report.errors.length) throw new Error(report.errors.join('\n'));
   const published=corpus.operations.filter(o=>o.editorial_status==='published').sort((a,b)=>a.id.localeCompare(b.id));
   const claims=publishedClaims(corpus),claimIds=new Set(claims.map(c=>c.id));

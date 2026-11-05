@@ -9,6 +9,7 @@ function run(){
     const corpus=readCorpus();report=validateCorpus(corpus);report.errors.push(...originalIntegrity(corpus));
     if(corpus.operations.some(op=>/^(TEST_|SYNTHETIC_)/.test(op.id)))report.errors.push('Synthetic fixture in production corpus');
     if((corpus.claims||[]).some(c=>/^(CLM_TEST_|CLM_SYNTHETIC_)/.test(c.id))||allEntities(corpus).some(e=>/^(PER|ORG|PLC)_(TEST|SYNTHETIC)_/.test(e.id)))report.errors.push('Synthetic assertion/entity in production corpus');
+    if((corpus.duplicate_assessments||[]).some(a=>/^QA_(TEST|SYNTHETIC)_/.test(a.id)))report.errors.push('Synthetic assessment in production corpus');
     report.summary={total:corpus.operations.length,published:corpus.operations.filter(op=>op.editorial_status==='published').length};
   }catch(error){report={errors:[error.message],warnings:[]};}
   const directory=path.join(root,'work');fs.mkdirSync(directory,{recursive:true});

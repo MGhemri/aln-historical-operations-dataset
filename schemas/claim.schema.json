@@ -10,10 +10,14 @@
     "predicate": {"type": "string", "minLength": 1, "maxLength": 200},
     "value": {"oneOf": [
       {"type": "number"}, {"type": "boolean"}, {"type": "null"},
+      {"type":"object","additionalProperties":false,"required":["type","lower","upper"],"properties":{"type":{"const":"interval"},"lower":{"type":"number"},"upper":{"type":"number"}}},
       {"type": "object", "additionalProperties": false, "required": ["fr", "ar"],
         "properties": {"fr": {"type": ["string", "null"], "minLength": 1, "maxLength": 10000}, "ar": {"type": ["string", "null"], "minLength": 1, "maxLength": 10000}}}
     ]},
     "unit": {"type": "string", "minLength": 1, "maxLength": 100},
+    "context":{"type":"object","additionalProperties":false,"required":["scope","population","time_scope","valid_from","valid_to"],"properties":{
+      "scope":{"type":"string","minLength":1,"maxLength":500},"population":{"type":"string","minLength":1,"maxLength":500},
+      "time_scope":{"enum":["entire_event","specific_period","unknown"]},"valid_from":{"type":["string","null"],"format":"date"},"valid_to":{"type":["string","null"],"format":"date"}}},
     "status": {"enum": ["supported", "contested", "unverified", "withdrawn"]},
     "editorial_status": {"enum": ["proposed", "under_review", "published", "withdrawn"]},
     "evidence": {"type": "array", "maxItems": 100, "uniqueItems": true, "items": {

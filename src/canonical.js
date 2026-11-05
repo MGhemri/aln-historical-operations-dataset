@@ -5,6 +5,7 @@ const Ajv = require('ajv/dist/2020');
 const addFormats = require('ajv-formats');
 const {groups,validateEntities}=require('./entities');
 const {approved}=require('./review');
+const {validateAssessments}=require('./duplicate-assessments');
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const stable = value => JSON.stringify(value, null, 2) + '\n';
 const root = path.join(__dirname, '..');
@@ -12,6 +13,7 @@ const ajv = new Ajv({allErrors:true, strict:true});
 addFormats(ajv);
 const validateSchema = ajv.compile(require('../schemas/operation.schema.json'));
 const validateClaim = ajv.compile(require('../schemas/claim.schema.json'));
+const validateAssessment=ajv.compile(require('../schemas/duplicate-assessment.schema.json'));
 const validateEntity = ajv.compile(require('../schemas/entity.schema.json'));
 const validateSource = ajv.compile(require('../schemas/source.schema.json'));
 const validateTerritory = ajv.compile(require('../schemas/territorial-unit.schema.json'));
@@ -93,13 +95,14 @@ function validateCorpus(corpus) {
     ids.add(op.id);
     if(op.legacy && op.legacy.id!==op.id)errors.push(`${op.id}: legacy identity mismatch`);
     for (const id of op.source_ids || []) if (!sourceIds.has(id)) errors.push(`${op.id}: missing source ${id}`);
+    for(const alias of op.aliases||[]){if(!alias.value.trim())errors.push(`${op.id}: empty alias`);for(const id of alias.source_ids)if(!op.source_ids.includes(id))errors.push(`${op.id}: alias evidence not among operation sources`);}
     for(const t of op.territorial_assignments){
       if(!territoryIds.has(t.territory_id))errors.push(`${op.id}: unknown territory ${t.territory_id}`);
       for(const id of t.source_ids)if(!op.source_ids.includes(id))errors.push(`${op.id}: territorial evidence not among operation sources`);
     }
     if(op.territorial_assignments.filter(t=>t.role==='primary').length>1)errors.push(`${op.id}: multiple primary territories`);
     if(op.provenance.publication_basis==='previously_public_legacy_corpus'){
-      if(op.participants?.length||op.locations.some(l=>l.place_id))errors.push(`${op.id}: entity links require a reviewed revision`);
+      if(op.participants?.length||op.aliases?.length||op.locations.some(l=>l.place_id))errors.push(`${op.id}: entity links and aliases require a reviewed revision`);
       try{
         const expected=migrate({dataset_metadata:{},operations:[op.legacy]},op.provenance.source_commit).operations[0];
         for(const key of ['title','start_date','end_date','locations','territorial_assignments','source_ids','legacy_territorial_label'])
@@ -155,7 +158,13 @@ function validateCorpus(corpus) {
     claims.set(claim.id,claim);
     if(!ids.has(claim.subject))errors.push(`${claim.id}: missing subject ${claim.subject}`);
     if(!claim.predicate.trim())errors.push(`${claim.id}: empty predicate`);
-    if(claim.value && typeof claim.value==='object' && ![claim.value.fr,claim.value.ar].some(v=>v?.trim()))errors.push(`${claim.id}: missing assertion text`);
+    if(claim.value?.type==='interval'&&claim.value.lower>claim.value.upper)errors.push(`${claim.id}: inverted value interval`);
+    if(claim.context){const c=claim.context;
+      if(!c.scope.trim()||!c.population.trim())errors.push(`${claim.id}: empty assertion context`);
+      if(c.time_scope==='specific_period'&&(!c.valid_from||!c.valid_to||c.valid_from>c.valid_to))errors.push(`${claim.id}: invalid context period`);
+      if(c.time_scope!=='specific_period'&&(c.valid_from!==null||c.valid_to!==null))errors.push(`${claim.id}: context dates disagree with time scope`);
+    }
+    if(claim.value && typeof claim.value==='object' && claim.value.type!=='interval'&&! [claim.value.fr,claim.value.ar].some(v=>v?.trim()))errors.push(`${claim.id}: missing assertion text`);
     if(Date.parse(claim.created_at)>Date.parse(claim.updated_at))errors.push(`${claim.id}: inverted editorial timestamps`);
     for(const e of claim.evidence){
       if(!sourceIds.has(e.source_id))errors.push(`${claim.id}: missing source ${e.source_id}`);
@@ -185,6 +194,7 @@ function validateCorpus(corpus) {
     if(claim.status!=='contested'||other.status!=='contested')errors.push(`${claim.id}: contradiction endpoints must be contested`);
     if(claim.editorial_status==='published'&&other.editorial_status!=='published')errors.push(`${claim.id}: public contradiction points to an unpublished assertion`);
   }
+  validateAssessments(corpus,validateAssessment,errors,warnings);
   // Historical imported records have no invented retrospective approval.
   // Once a content-bound review exists, every build verifies it as well as Git CI.
   for(const record of [...corpus.operations,...(corpus.claims||[]),...Object.keys(groups).flatMap(g=>corpus[g]||[]),...corpus.sources,...(corpus.territorial_units||[])]){
@@ -202,10 +212,10 @@ function restoreLegacy(corpus) {
 }
 function readCorpus(directory=path.join(root,'data')) {
   const read = name => JSON.parse(fs.readFileSync(path.join(directory,name),'utf8'));
-  const entries = (name,key='id') => (['claims',...Object.keys(groups)].includes(name)&&!fs.existsSync(path.join(directory,name))?[]:fs.readdirSync(path.join(directory,name))).filter(n=>n.endsWith('.json')).sort()
+  const entries = (name,key='id') => (['claims','duplicate-assessments',...Object.keys(groups)].includes(name)&&!fs.existsSync(path.join(directory,name))?[]:fs.readdirSync(path.join(directory,name))).filter(n=>n.endsWith('.json')).sort()
     .map(n=>{const value=read(path.join(name,n));if(value[key]!==n.slice(0,-5))throw new Error(`Filename must equal ${key}: ${name}/${n}`);return value;});
   return {metadata:read('dataset.json'),operations:entries('operations'),sources:entries('sources','source_id'),
-    territorial_units:entries('territorial-units'),vocabularies:read('vocabularies.json'),claims:entries('claims'),
+    territorial_units:entries('territorial-units'),vocabularies:read('vocabularies.json'),claims:entries('claims'),duplicate_assessments:entries('duplicate-assessments'),
     ...Object.fromEntries(Object.keys(groups).map(g=>[g,entries(g)]))};
 }
 module.exports = {migrate,dateBounds,validateCorpus,restoreLegacy,readCorpus,stable,hash,root};

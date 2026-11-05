@@ -25,6 +25,7 @@
     "validate:canonical": "node scripts/validate-canonical.js",
     "review:changes": "node scripts/check-review-changes.js",
     "quality:duplicates": "node scripts/report-duplicates.js",
+    "quality:conflicts": "node scripts/report-conflicts.js",
     "quality:benchmark": "node scripts/evaluate-duplicates.js",
     "build": "npm run build:canonical && npm run build:documentation && npm run build:openapi && npm run build:releases && npm run build:coverage"
   },

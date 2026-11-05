@@ -17,7 +17,7 @@
       const file=url.pathname.split('/').pop();
       const local={'METHODOLOGIE.md':'methodology.html','API.md':'api.html','CONTRIBUTING.md':'contributing.html',
         'EDITORIAL_POLICY.md':'editorial.html','CODE_OF_CONDUCT.md':'conduct.html',
-        'PROVENANCE_POLICY.md':'provenance.html','DATA_DICTIONARY.md':'dictionary.html','CDC_STATUS.md':'progress.html','ENTITY_REVIEW_GUIDE.md':'entities.html','API_V2.md':'api-v2.html','RELEASE_POLICY.md':'releases.html','OBSERVATORY.md':'observatory.html'}[file];
+        'PROVENANCE_POLICY.md':'provenance.html','DATA_DICTIONARY.md':'dictionary.html','CDC_STATUS.md':'progress.html','ENTITY_REVIEW_GUIDE.md':'entities.html','API_V2.md':'api-v2.html','RELEASE_POLICY.md':'releases.html','OBSERVATORY.md':'observatory.html','ASSISTANCE.md':'assistance.html'}[file];
       if(local)link.href=new URL(`documentation/${local}`,document.querySelector('script[src*="site-context.js"]').src).href;
       else {link.hidden=true;link.removeAttribute('href');}
     });

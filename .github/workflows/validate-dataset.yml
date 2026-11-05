@@ -47,7 +47,7 @@ jobs:
           npm run review:changes -- --base "$base"
 
       - name: Generate duplicate candidates without modifying the corpus
-        run: npm run quality:duplicates && npm run quality:benchmark
+        run: npm run quality:duplicates && npm run quality:benchmark && npm run quality:conflicts
 
       - name: Check canonical and public exports
         run: npm run check:canonical
@@ -81,4 +81,6 @@ jobs:
             work/canonical-quality.*
             work/duplicate-candidates.*
             work/duplicate-evaluation.json
+            work/duplicate-human-evaluation.json
+            work/conflict-candidates.*
           if-no-files-found: ignore

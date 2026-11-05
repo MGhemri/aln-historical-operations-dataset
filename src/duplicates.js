@@ -2,16 +2,18 @@
 const defaults=Object.freeze({lexical_threshold:0.5,shared_place_threshold:0.25,nearby_km:10});
 function normalize(text){return String(text||'').normalize('NFKD').replace(/\p{M}/gu,'').replace(/ـ/g,'')
   .replace(/[أإآ]/g,'ا').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim().replace(/\s+/g,' ');}
-function grams(text){const s='  '+normalize(text)+'  ';return new Set(Array.from({length:Math.max(0,s.length-2)},(_,i)=>s.slice(i,i+3)));}
+function grams(text){const s=Array.from('  '+normalize(text)+'  ');return new Set(Array.from({length:Math.max(0,s.length-2)},(_,i)=>s.slice(i,i+3).join('')));}
 function lexical(a,b){if(!normalize(a)||!normalize(b))return 0;const x=grams(a),y=grams(b);return 2*[...x].filter(g=>y.has(g)).length/(x.size+y.size);}
 function overlap(a,b){return a?.earliest&&b?.earliest?!(a.latest<b.earliest||b.latest<a.earliest):null;}
 function distance(a,b){const rad=x=>x*Math.PI/180;const [x,y]=a,[u,v]=b;
   const h=Math.sin(rad(v-y)/2)**2+Math.cos(rad(y))*Math.cos(rad(v))*Math.sin(rad(u-x)/2)**2;
   return 6371*2*Math.asin(Math.min(1,Math.sqrt(h)));}
 function pair(a,b,options=defaults){
-  const names=o=>[o.title?.fr,o.title?.ar].filter(Boolean);
-  const scores=names(a).flatMap(x=>names(b).map(y=>lexical(x,y)));
-  const name=scores.length?Math.max(...scores):0;
+  options={...defaults,...options};
+  const names=o=>[...['fr','ar'].filter(lang=>o.title?.[lang]).map(language=>({value:o.title[language],language,kind:'title',source_ids:o.source_ids||[]})),
+    ...(o.aliases||[]).map(alias=>({...alias,kind:'sourced_alias'}))];
+  const comparisons=names(a).flatMap(left=>names(b).map(right=>({left,right,score:lexical(left.value,right.value)}))).sort((x,y)=>y.score-x.score);
+  const best=comparisons[0],name=best?.score||0;
   const places=o=>o.locations.filter(l=>l.place_id).map(l=>l.place_id);
   const commonPlace=places(a).filter(id=>places(b).includes(id));
   const dates=overlap(a.start_date,b.start_date);
@@ -22,9 +24,12 @@ function pair(a,b,options=defaults){
   const types=o=>o.event_type||[o.legacy?.type_action].filter(Boolean);
   const commonTypes=types(a).filter(t=>types(b).includes(t));
   return {ids:[a.id,b.id].sort(),classification:'candidate_only',
-    factors:{title_trigram_similarity:Number(name.toFixed(4)),start_intervals_overlap:dates,
+    factors:{title_trigram_similarity:Number(name.toFixed(4)),matched_names:best?{left:best.left,right:best.right}:null,
+      alias_used:best?best.left.kind==='sourced_alias'||best.right.kind==='sourced_alias':false,start_intervals_overlap:dates,
+      date_disagreement:dates===false,shared_source_ids:[...new Set((a.source_ids||[]).filter(id=>(b.source_ids||[]).includes(id)))].sort(),
       shared_place_ids:[...new Set(commonPlace)].sort(),shared_types:[...new Set(commonTypes)].sort(),
       reviewed_site_distance_km:km===null?null:Number(km.toFixed(3)),nearby_reviewed_sites:km===null?null:km<=options.nearby_km},
+    review_cautions:[...(dates===false?['different_start_intervals']:dates===null?['unknown_start_dates']:[]),...(km===null?['no_comparable_reviewed_sites']:[]),...(best?.left.kind==='sourced_alias'||best?.right.kind==='sourced_alias'?['alias_sources_require_review']:[])],
     requires_human_review:true};
 }
 function duplicateReport(operations,options={}){
@@ -34,7 +39,7 @@ function duplicateReport(operations,options={}){
   const records=operations.filter(o=>['published','under_review','proposed'].includes(o.editorial_status)).sort((a,b)=>a.id.localeCompare(b.id));
   const candidates=[];
   for(let i=0;i<records.length;i++)for(let j=i+1;j<records.length;j++){const c=pair(records[i],records[j],parameters);if(c)candidates.push(c);}
-  return {algorithm:'title-trigrams-v1',parameters,record_count:records.length,
+  return {algorithm:'sourced-names-trigrams-v2',parameters,record_count:records.length,
     notice:'Suggestions de revue, pas des doublons établis. Aucune fusion automatique.',candidates};
 }
 module.exports={normalize,lexical,pair,duplicateReport};

@@ -14,10 +14,10 @@ function approved(record){
 function checkChanges(changes,{publicSourceIds=new Set()}={}){
   const errors=[];
   for(const {file,before,after}of changes){
-    if(!/^data\/(operations|claims|persons|organizations|places|sources|territorial-units)\/[A-Za-z0-9_-]+\.json$/.test(file))continue;
+    if(!/^data\/(operations|claims|persons|organizations|places|sources|territorial-units|duplicate-assessments)\/[A-Za-z0-9_-]+\.json$/.test(file))continue;
     if(before&&!after){errors.push(`${file}: retain the ID and record a withdrawal instead of deleting`);continue;}
     if(!after||JSON.stringify(before)===JSON.stringify(after))continue;
-    const isPublic=r=>r?.editorial_status==='published'||(file.includes('/sources/')&&publicSourceIds.has(r?.source_id))||file.includes('/territorial-units/');
+    const isPublic=r=>['published','reviewed'].includes(r?.editorial_status)||(file.includes('/sources/')&&publicSourceIds.has(r?.source_id))||file.includes('/territorial-units/');
     if(!isPublic(before)&&!isPublic(after))continue;
     if(before&&(before.id||before.source_id)!==(after.id||after.source_id))errors.push(`${file}: permanent identity changed`);
     const oldHistory=before?.review_history||[],history=after.review_history||[];

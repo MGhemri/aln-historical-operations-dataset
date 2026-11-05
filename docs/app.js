@@ -1325,7 +1325,7 @@ function setLanguage(lang) {
 function renderScientificClaims(claims) {
   if(!claims?.length)return '';
   const isAr=state.lang==='ar';
-  const localText=value=>value && typeof value==='object'?(value[isAr?'ar':'fr']||value.fr||value.ar):value===null?t('claimUnknown'):String(value);
+  const localText=value=>value?.type==='interval'?`${value.lower} — ${value.upper}`:value && typeof value==='object'?(value[isAr?'ar':'fr']||value.fr||value.ar):value===null?t('claimUnknown'):String(value);
   const safeLink=(raw,label)=>{
     let url;try{const parsed=new URL(raw);if(['http:','https:'].includes(parsed.protocol)&&
       (window.ALNOP_SITE?.githubPages||!['github.com','raw.githubusercontent.com'].includes(parsed.hostname)))url=parsed.href;}catch{}

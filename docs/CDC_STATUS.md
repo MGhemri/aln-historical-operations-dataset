@@ -22,6 +22,7 @@
 - Page de versions FR/AR sur Vercel et GitHub Pages, catalogue API et workflow de publication GitHub Releases après tests et reproduction des sources.
 - Observatoire documentaire FR/AR : filtres, tableaux par année/territoire/type, incertitudes, références, traces de revue, assertions contestées et exports JSON/CSV reproductibles.
 - Même calcul dans le navigateur et l’API ; empreintes des données et du moteur conservées. Les sélections vides signalent une lacune documentaire, les propositions en attente restent non mesurées et aucun classement primaire n’est inféré.
+- Assistance interne enrichie : variantes de noms sourcées, réserves sur les dates, comparaison des assertions par contexte, unité et intervalle. Registre des annotations humaines lié aux empreintes des fiches et sources, avec exclusion des annotations périmées. Voir [le guide de revue](../ASSISTANCE.md).
 
 ## Vérification
 
@@ -31,7 +32,7 @@ Les 789 réserves de migration concernent les mêmes trois points pour chaque fi
 
 Les assertions contradictoires utilisées pour le test T10 sont également synthétiques : elles ne sont pas ajoutées aux 263 fiches publiées. La livraison met en place leur modèle, les contrôles, l’affichage et les exports, sans analyser automatiquement les textes historiques existants.
 
-Validation locale : 105 tests Node et 43 tests navigateur, plus le validateur historique et les contrôles de génération. L’observatoire est testé pour les incertitudes, les regroupements non additifs, les sources primaires revues, les brouillons, les conflits publiés, les sélections vides, les exports, la vérification d’intégrité et l’affichage mobile/ordinateur FR/AR. Les archives et contrats v1/v2 restent vérifiés. Les exemples GET restent exécutables après déploiement via `npm run smoke:api:v2`.
+Validation locale : 112 tests Node et 43 tests navigateur, plus le validateur historique et les contrôles de génération. L’observatoire est testé pour les incertitudes, les regroupements non additifs, les sources primaires revues, les brouillons, les conflits publiés, les sélections vides, les exports, la vérification d’intégrité et l’affichage mobile/ordinateur FR/AR. Les archives et contrats v1/v2 restent vérifiés. Les exemples GET restent exécutables après déploiement via `npm run smoke:api:v2`.
 
 Le rapport de rapprochement produit 135 paires candidates pour le corpus initial, sans confirmer de doublon. Sur six paires synthétiques annotées, précision et rappel valent 0,75 ; une calibration historique reste à effectuer. Les rapports internes ne sont pas exposés sur le site public.
 
@@ -39,4 +40,4 @@ Le rapport de rapprochement produit 135 paires candidates pour le corpus initial
 
 La chaîne technique, les assertions, les référentiels, l’API v2, les archives versionnées et l’observatoire sont opérationnels ; une contribution réelle doit encore être revue par le mainteneur avant d’être ajoutée. L’observatoire expose les réserves du corpus, sans les résoudre automatiquement. La version `data-2026.11.1` et les 263 fiches restent inchangées ; les rapports sont des produits dérivés identifiés séparément. Les archives ne certifient pas historiquement les fiches et ne disposent pas de DOI automatique.
 
-Priorités suivantes : calibration des rapprochements et assistance aux contradictions. Restent également les pages détaillées de consultation des entités, les protections administratives du dépôt, les analyses avancées et les mesures de performance à grande échelle. Les choix de licence, de retrait et de nombre de reviewers restent dans DECISIONS_PENDING.md. Aucune validation scientifique ou conformité globale au CDC n’est prétendue par ce bilan.
+Priorités suivantes : interface publique de comparaison et alimentation documentaire du benchmark historique. Le moteur interne de rapprochement et d’assistance aux contradictions est livré ; les annotations historiques restent à constituer après revue. Restent également les pages détaillées de consultation des entités, les protections administratives du dépôt, les analyses avancées et les mesures de performance à grande échelle. Les choix de licence, de retrait et de nombre de reviewers restent dans DECISIONS_PENDING.md. Aucune validation scientifique ou conformité globale au CDC n’est prétendue par ce bilan.

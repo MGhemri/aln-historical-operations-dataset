@@ -15,7 +15,7 @@ function run(args=process.argv.slice(2),directory=root){
   git('cat-file','-e',base+'^{commit}');
   const changedReleases=git('diff','--name-only','--no-renames',base,'--','data/releases').split('\n').filter(f=>/^data\/releases\/data-[A-Za-z0-9_.-]+\.(json|zip)$/.test(f));
   for(const file of changedReleases)if(git('ls-tree','--name-only',base,'--',file))throw Error(`${file}: existing release bytes are immutable; publish a new version`);
-  const files=[...new Set([...git('diff','--name-only','--no-renames',base,'--','data').split('\n'),...git('ls-files','--others','--exclude-standard','--','data').split('\n')])].filter(f=>/^data\/(operations|claims|persons|organizations|places|sources|territorial-units)\/[A-Za-z0-9_-]+\.json$/.test(f));
+  const files=[...new Set([...git('diff','--name-only','--no-renames',base,'--','data').split('\n'),...git('ls-files','--others','--exclude-standard','--','data').split('\n')])].filter(f=>/^data\/(operations|claims|persons|organizations|places|sources|territorial-units|duplicate-assessments)\/[A-Za-z0-9_-]+\.json$/.test(f));
   const changes=files.map(file=>{
     let before=null;try{before=JSON.parse(git('show',base+':'+file));}catch(e){if(git('ls-tree','--name-only',base,'--',file))throw e;}
     return {file,before,after:fs.existsSync(path.join(directory,file))?JSON.parse(fs.readFileSync(path.join(directory,file),'utf8')):null};
