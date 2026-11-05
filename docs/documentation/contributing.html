@@ -41,4 +41,8 @@
 <li>Après revue et fusion, les déploiements publient les sorties validées. Vérifier ensuite les données et l’API en ligne. Aucune fiche fictive ne doit être utilisée pour cette étape réelle.</li>
 </ol>
 <p>Le dictionnaire DATA_DICTIONARY.md précise les profils et limites. Le snapshot des 263 fiches initiales reste protégé ; les futurs ajouts ne doivent pas nécessiter de réécrire ce snapshot ni les contrats de référence.</p>
+<h2 id="enregistrer-une-assertion-ou-une-contradiction-après-réception">Enregistrer une assertion ou une contradiction après réception</h2>
+<p>Le formulaire « Signaler une contradiction » transmet une proposition aux mainteneurs. Sa réception par courriel n’ajoute aucune assertion publique.</p>
+<p>Le mainteneur relève séparément chaque version dans <code>data/claims/&lt;id&gt;.json</code>, selon <code>schemas/claim.schema.json</code>. Il renseigne la fiche concernée, la propriété, la valeur, les sources et leurs passages précis. Pour une divergence, il conserve les deux assertions et renseigne <code>contradicts</code> après examen ; aucune fusion n’est automatique.</p>
+<p>La publication nécessite la revue documentée de chaque assertion et des liens cohérents entre les deux versions. Le guide complet figure dans <a href="provenance.html">Assertions, sources et contradictions</a>. Les exemples fictifs des tests ne doivent jamais être copiés dans les données de production.</p>
 </main></body></html>

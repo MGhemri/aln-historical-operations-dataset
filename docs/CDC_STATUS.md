@@ -1,4 +1,4 @@
-# CDC — Bilan de la chaîne de publication canonique
+# CDC — Bilan de la publication et de la provenance
 
 ## Livré
 
@@ -10,6 +10,9 @@
 - Préparation d’un brouillon depuis la pièce jointe JSON d’une contribution, sans publication automatique ni reprise de l’adresse de réponse dans les données.
 - Compteurs dynamiques de l’atlas, coordonnées distinctes du total, appartenances multiples et revue visibles pour les fiches révisées.
 - Contrôles avant déploiement sur Vercel et GitHub Pages.
+- Assertions sourcées distinctes des champs de fiche, avec passage documentaire et revue explicites.
+- Contradictions conservées dans les deux versions, affichées en FR/AR et exportées dans `claims.json` ; aucun arbitrage automatique.
+- Références orphelines, contradictions incohérentes et assertions publiées sans revue bloquées ; brouillons et leurs preuves exclus des exports.
 
 ## Vérification
 
@@ -17,8 +20,10 @@ La 264e fiche est une fixture synthétique, uniquement dans tests/fixtures et da
 
 Les 789 réserves de migration concernent les mêmes trois points pour chaque fiche initiale : import non revu, territoire à revoir et point représentatif à revoir. Le validateur historique conserve ses 43 notices. Ces avertissements ne sont pas des erreurs bloquantes ni des corrections historiques autorisées.
 
-Validation locale de cette livraison : 51 tests Node et 31 tests navigateur, plus le validateur historique et les contrôles de génération. Une vérification sur une copie propre précède la publication.
+Les assertions contradictoires utilisées pour le test T10 sont également synthétiques : elles ne sont pas ajoutées aux 263 fiches publiées. La livraison met en place leur modèle, les contrôles, l’affichage et les exports, sans analyser automatiquement les textes historiques existants.
+
+Validation locale : 57 tests Node et 34 tests navigateur, plus le validateur historique et les contrôles de génération. Les scénarios vérifient les deux versions contradictoires, leurs passages sources, leur restitution par le vrai handler v1, l’absence de fuite des brouillons et la navigation mobile/ordinateur FR/AR.
 
 ## Suite du CDC
 
-La chaîne technique de publication est opérationnelle ; une contribution réelle doit encore être revue par le mainteneur avant d’être ajoutée. Le modèle complet des assertions/contradictions, les lieux/personnes/organisations réutilisables, l’API v2, les versions scientifiques et l’observatoire des lacunes restent à développer. Les choix de licence, de retrait et de nombre de reviewers restent dans DECISIONS_PENDING.md. Aucune validation scientifique ou conformité globale au CDC n’est prétendue par ce bilan.
+La chaîne technique de publication et le modèle d’assertions sont opérationnels ; une contribution réelle doit encore être revue par le mainteneur avant d’être ajoutée. Les lieux/personnes/organisations réutilisables, les doublons candidats, l’API v2, les versions scientifiques et l’observatoire des lacunes restent à développer. Les choix de licence, de retrait et de nombre de reviewers restent dans DECISIONS_PENDING.md. Aucune validation scientifique ou conformité globale au CDC n’est prétendue par ce bilan.

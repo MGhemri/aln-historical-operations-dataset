@@ -753,8 +753,13 @@ function selectOperation(opId, zoomToMap = true, pushHistory = true, fromList = 
       ${op.canonical_metadata?.last_review?`<p class="review-provenance">${escapeHtml(t('publicationReview'))} ${escapeHtml(op.canonical_metadata.last_review.reviewer)} · ${escapeHtml(op.canonical_metadata.last_review.reviewed_at)}</p>`:''}
       <p><a href="contribute.html?id=${encodeURIComponent(op.id)}">${isAr ? "اقتراح تصحيح" : "Proposer une correction"}</a></p>
     </div>
+    ${renderScientificClaims(op.scientific_claims)}
   `;
 
+  drawerContent.querySelectorAll('[data-claim-target]').forEach(button=>button.addEventListener('click',()=>{
+    const target=document.getElementById('claim-'+button.dataset.claimTarget);
+    if(target){target.scrollIntoView({block:'nearest'});target.focus({preventScroll:true});}
+  }));
   drawer.classList.add('open');
   document.body.classList.add('drawer-open');
 
@@ -1199,6 +1204,8 @@ function setLanguage(lang) {
   }
 
   // Update Header
+  const claimsExport=document.getElementById('claims-export');
+  if(claimsExport)claimsExport.textContent=t('claimsExport');
   const brandTitleEl = document.querySelector('.brand-title');
   const brandSubtitleEl = document.querySelector('.brand-subtitle');
   if (brandTitleEl) {
@@ -1312,6 +1319,25 @@ function setLanguage(lang) {
 // --------------------------------------------------------------------------
 // Helper: HTML Escaping
 // --------------------------------------------------------------------------
+function renderScientificClaims(claims) {
+  if(!claims?.length)return '';
+  const isAr=state.lang==='ar';
+  const localText=value=>value && typeof value==='object'?(value[isAr?'ar':'fr']||value.fr||value.ar):value===null?t('claimUnknown'):String(value);
+  const safeLink=(raw,label)=>{
+    let url;try{const parsed=new URL(raw);if(['http:','https:'].includes(parsed.protocol)&&
+      (window.ALNOP_SITE?.githubPages||!['github.com','raw.githubusercontent.com'].includes(parsed.hostname)))url=parsed.href;}catch{}
+    return url?`<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`:escapeHtml(label);
+  };
+  return `<section class="scientific-claims" aria-labelledby="claims-heading"><h3 id="claims-heading">${escapeHtml(t('claimsHeading'))}</h3><p>${escapeHtml(t('claimsNotice'))}</p>`+
+    claims.map(c=>`<article class="scientific-claim" id="claim-${escapeHtml(c.id)}" tabindex="-1">
+      <h4>${escapeHtml(c.predicate)}</h4><p class="claim-status">${escapeHtml(t('claimStatus_'+c.status))}</p>
+      <p class="claim-value" dir="auto">${escapeHtml(localText(c.value))}${c.unit?' '+escapeHtml(c.unit):''}</p>
+      ${c.contradicts.length?`<p class="claim-conflict">${escapeHtml(t('claimConflict'))} ${c.contradicts.map(id=>`<button type="button" class="claim-jump" data-claim-target="${escapeHtml(id)}">${escapeHtml(id)}</button>`).join(', ')}</p>`:''}
+      <ul class="claim-evidence">${c.evidence.map(e=>`<li>${safeLink(e.source?.url,e.source?.title||e.source_id)}${e.source?.author?' · '+escapeHtml(e.source.author):''} — ${escapeHtml(e.locator)}${e.quotation?`<blockquote dir="auto">${escapeHtml(e.quotation)}</blockquote>`:''}</li>`).join('')}</ul>
+      <p class="claim-review">${escapeHtml(t('publicationReview'))} ${escapeHtml(c.review_history.at(-1).reviewer)} · ${escapeHtml(c.review_history.at(-1).reviewed_at)}<br>${safeLink(c.review_history.at(-1).reference,t('claimReviewReference'))} · ${escapeHtml(c.review_history.at(-1).reason)}</p>
+    </article>`).join('')+'</section>';
+}
+
 function escapeHtml(text) {
   if (text == null) return '';
   return String(text)

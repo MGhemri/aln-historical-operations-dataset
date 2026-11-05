@@ -155,3 +155,54 @@ test('A reviewed record with a documented point creates a new map marker',async(
   await page.goto('/index.html');await expect(page.locator('.op-card')).toHaveCount(corpusCount+1);
   expect(await page.evaluate(()=>markerMap.has('TEST_SYNTHETIC_001'))).toBe(true);
 });
+
+for(const width of [390,1280])test(`Reviewed contradictory assertions remain distinct, safe and navigable at ${width}px in FR/AR`,async({page})=>{
+  const {withClaims}=require('../helpers/claims');const {publishedLegacy}=require('../../src/publication');
+  const corpus=withClaims({reviewed:true});
+  const attack='<img src=x onerror="window.claimInjected=true">';
+  corpus.claims[0].value={fr:'Version A '+attack,ar:'الرواية أ'};
+  corpus.claims[1].value={fr:'Version B',ar:'الرواية ب'};
+  corpus.sources.at(-2).title='Référence A '+attack;
+  corpus.claims[0].evidence[0].quotation=attack;
+  corpus.claims[0].review_history[0].reference='https://github.com/example/test/pull/1';
+  await page.route('https://alnop.vercel.app/data/operations_fln_1954_1962.json',route=>route.fulfill({json:publishedLegacy(corpus)}));
+  await page.setViewportSize({width,height:844});await page.goto('/index.html');
+  await expect(page.locator('.op-card')).toHaveCount(corpusCount);
+  if(width<769)await page.locator('#tab-list-btn').click();
+  await page.locator('.op-card').first().click();
+  await expect(page.locator('.scientific-claim')).toHaveCount(2);
+  await expect(page.locator('#claim-CLM_TEST_A')).toContainText('Version A');
+  await expect(page.locator('#claim-CLM_TEST_B')).toContainText('Version B');
+  await expect(page.locator('#claim-CLM_TEST_A')).toContainText('p. 12');
+  await expect(page.locator('#claim-CLM_TEST_B')).toContainText('chap. 2');
+  await expect(page.locator('.claim-status').first()).toHaveText('Contestation documentaire enregistrée');
+  await page.locator('#claim-CLM_TEST_A .claim-jump').click();
+  await expect(page.locator('#claim-CLM_TEST_B')).toBeFocused();
+  await expect(page.locator('#detail-drawer')).toBeVisible();
+  expect(await page.locator('.scientific-claims img').count()).toBe(0);
+  expect(await page.evaluate(()=>window.claimInjected)).toBeUndefined();
+  await noRepositoryLinks(page);
+  await page.locator('#lang-toggle-btn').click();
+  await expect(page.locator('html')).toHaveAttribute('dir','rtl');
+  await expect(page.locator('#claim-CLM_TEST_A .claim-value')).toContainText('الرواية أ');
+  await expect(page.locator('#claim-CLM_TEST_B .claim-value')).toContainText('الرواية ب');
+  await expect(page.locator('#claims-heading')).toHaveText('الإفادات الموثقة والاختلافات');
+  await page.locator('#claim-CLM_TEST_A').scrollIntoViewIfNeeded();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+  expect(await page.locator('#drawer-content').evaluate(el=>el.scrollWidth<=el.clientWidth+1)).toBeTruthy();
+  await noRepositoryLinks(page);
+  await page.screenshot({path:`test-results/claims-reviewed-ar-${width}.png`,fullPage:true});
+});
+
+test('Proposed assertions stay invisible and provenance documentation is available locally',async({page})=>{
+  const {withClaims}=require('../helpers/claims');const {publishedLegacy}=require('../../src/publication');
+  await page.route('https://alnop.vercel.app/data/operations_fln_1954_1962.json',route=>route.fulfill({json:publishedLegacy(withClaims())}));
+  await page.goto('/index.html');await expect(page.locator('.op-card')).toHaveCount(corpusCount);
+  await page.locator('#tab-list-btn').click();await page.locator('.op-card').first().click();
+  await expect(page.locator('.scientific-claims')).toHaveCount(0);
+  await page.goto('/documentation/dictionary.html');
+  await page.getByRole('link',{name:'la politique de provenance'}).click();
+  await expect(page.locator('h1')).toHaveText('Assertions, sources et contradictions');
+  await expect(page.locator('main')).not.toContainText(/Ghemri/i);await noRepositoryLinks(page);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+});

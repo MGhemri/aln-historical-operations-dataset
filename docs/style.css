@@ -2506,3 +2506,15 @@ html[dir="rtl"] .drawer-header-meta {
   .sidebar { height: 100%; z-index: 1250; }
   .mobile-view-tabs { z-index: 1400; }
 }
+/* Reviewed assertions: evidence and conflicts remain readable in both directions. */
+.scientific-claims { margin-block:1.5rem; overflow-wrap:anywhere; }
+.scientific-claims h3 { font-size:1.1rem; }
+.scientific-claim { border:1px solid var(--border-color, #666); border-inline-start:3px solid var(--accent-blue, #6ba9ff); border-radius:6px; padding:1rem; margin-block:1rem; }
+.scientific-claim h4 { margin-block:0 .5rem; }
+.claim-status,.claim-review { font-size:.85rem; }
+.claim-conflict { font-weight:600; }
+.claim-jump { background:transparent; color:var(--accent-blue, #6ba9ff); border:1px solid currentColor; padding:.5rem; margin-block:.25rem; min-height:44px; cursor:pointer; font:inherit; }
+.claim-evidence { padding-inline-start:1.25rem; }
+.scientific-claim a { color:var(--accent-blue, #6ba9ff); text-decoration:underline; }
+.scientific-claim a:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
+.scientific-claim blockquote { margin-inline:.5rem; padding-inline-start:.75rem; border-inline-start:2px solid currentColor; white-space:pre-wrap; }

@@ -389,3 +389,8 @@ Vous êtes libre de :
 
 > **Citation recommandée :**
 > Ghemri M., *Jeu de données historiques et cartographie interactive des opérations de l'ALN (1954–1962)*, API REST v1.0, 2026. URL : https://alnop.vercel.app/
+## Assertions sourcées : complément facultatif
+
+Une fiche peut inclure le champ additionnel `scientific_claims` lorsqu’elle possède des assertions publiées après revue. Chaque assertion conserve sa valeur, son statut documentaire, ses passages sources, ses liens de contradiction et son historique de revue. Les champs historiques de la fiche restent conservés ; aucune version divergente n’est choisie automatiquement.
+
+Sans assertion publiée, ce champ est absent. Les statistiques de fiches restent distinctes du nombre d’assertions. L’export complet des assertions publiées se trouve dans `data/canonical/claims.json`. Voir [la politique de provenance](PROVENANCE_POLICY.md) pour la sémantique et les limites.

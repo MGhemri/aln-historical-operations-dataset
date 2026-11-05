@@ -2,6 +2,8 @@
 
 Une contribution est une proposition, pas une preuve de vérité. Distinguer source, fait rapporté, interprétation et décision éditoriale. Les contradictions doivent coexister avec leurs références ; aucune fusion ou correction historique automatique.
 
+Les assertions disposent maintenant d’un modèle et d’une validation dédiés. Voir [Assertions, sources et contradictions](PROVENANCE_POLICY.md) pour enregistrer deux versions divergentes sans remplacer le contenu de la fiche. Cette revue distincte ne vaut pas arbitrage sur la visibilité d’une fiche entière `disputed`.
+
 | État | Transitions possibles | Responsable |
 |---|---|---|
 | proposed | under_review, needs_information, rejected | Mainteneur |

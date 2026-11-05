@@ -55,3 +55,10 @@ Configurer `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` et `CONTACT_DEST` 
 6. Après revue et fusion, les déploiements publient les sorties validées. Vérifier ensuite les données et l’API en ligne. Aucune fiche fictive ne doit être utilisée pour cette étape réelle.
 
 Le dictionnaire DATA_DICTIONARY.md précise les profils et limites. Le snapshot des 263 fiches initiales reste protégé ; les futurs ajouts ne doivent pas nécessiter de réécrire ce snapshot ni les contrats de référence.
+## Enregistrer une assertion ou une contradiction après réception
+
+Le formulaire « Signaler une contradiction » transmet une proposition aux mainteneurs. Sa réception par courriel n’ajoute aucune assertion publique.
+
+Le mainteneur relève séparément chaque version dans `data/claims/<id>.json`, selon `schemas/claim.schema.json`. Il renseigne la fiche concernée, la propriété, la valeur, les sources et leurs passages précis. Pour une divergence, il conserve les deux assertions et renseigne `contradicts` après examen ; aucune fusion n’est automatique.
+
+La publication nécessite la revue documentée de chaque assertion et des liens cohérents entre les deux versions. Le guide complet figure dans [Assertions, sources et contradictions](PROVENANCE_POLICY.md). Les exemples fictifs des tests ne doivent jamais être copiés dans les données de production.

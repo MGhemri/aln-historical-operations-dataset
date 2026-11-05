@@ -45,3 +45,8 @@ Les quatre chemins JSON/GeoJSON historiques sont générés depuis le canon. `/d
 Le manifeste décrit un snapshot validé, pas une release scientifique numérotée ni un DOI. Les versions de corpus, les assertions détaillées, les référentiels de personnes/organisations/lieux et les géométries surfaciques complètes restent à développer dans les étapes suivantes. Les licences existantes ne sont pas modifiées.
 
 Un brouillon en arabe conserve son texte sous ar et laisse fr à null. La projection publique v1 nécessite un titre et une description français vérifiés ; aucune traduction n’est générée automatiquement.
+## Assertions et contradictions
+
+Les assertions sont des objets distincts, référencés par leur `subject` (identifiant d’opération). Elles possèdent une valeur, un statut documentaire, des passages sources, des liens de contradiction et un historique de revue. Leur état éditorial est distinct du statut de l’assertion. Le détail des champs et de la publication figure dans [la politique de provenance](PROVENANCE_POLICY.md).
+
+L’export `data/canonical/claims.json` contient uniquement les assertions publiées sur des fiches publiées. Les sources correspondantes sont incluses dans `sources.json`, et les `claim_ids` dans les propriétés GeoJSON. Les réponses v1 des fiches concernées ajoutent `scientific_claims` sans remplacer les champs historiques.

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Avancement du cahier des charges · ALNOP</title><script>const base=document.createElement('base');base.href=location.pathname.split('/documentation')[0].replace(/\/api\/docs$/,'')+'/documentation/';document.head.append(base);</script><link rel="stylesheet" href="documentation.css"><script src="../site-context.js?v=4.2"></script></head><body><main><nav><a href="../index.html">Atlas · الأطلس</a><a href="../contribute.html">Contribuer · ساهم</a><a href="index.html">Documentation · الوثائق</a></nav><h1 id="cdc--bilan-de-la-publication-et-de-la-provenance">CDC — Bilan de la publication et de la provenance</h1>
+<h2 id="livré">Livré</h2>
+<ul>
+<li>Canon relié à l’atlas, à l’API v1 et aux quatre chemins publics historiques.</li>
+<li>263 objets initiaux et identifiants protégés ; référence d’origine immuable et contrat v1 conservé.</li>
+<li>Nouvelles opérations/révisions structurées, sources, territoires et vocabulaire validés.</li>
+<li>Brouillons exclus ; publication conditionnée à une trace explicite de revue et à des sources.</li>
+<li>JSON, JSON compatible, GeoJSON, CSV, sources, rapports et manifeste SHA-256 reproductibles.</li>
+<li>Préparation d’un brouillon depuis la pièce jointe JSON d’une contribution, sans publication automatique ni reprise de l’adresse de réponse dans les données.</li>
+<li>Compteurs dynamiques de l’atlas, coordonnées distinctes du total, appartenances multiples et revue visibles pour les fiches révisées.</li>
+<li>Contrôles avant déploiement sur Vercel et GitHub Pages.</li>
+<li>Assertions sourcées distinctes des champs de fiche, avec passage documentaire et revue explicites.</li>
+<li>Contradictions conservées dans les deux versions, affichées en FR/AR et exportées dans <code>claims.json</code> ; aucun arbitrage automatique.</li>
+<li>Références orphelines, contradictions incohérentes et assertions publiées sans revue bloquées ; brouillons et leurs preuves exclus des exports.</li>
+</ul>
+<h2 id="vérification">Vérification</h2>
+<p>La 264e fiche est une fixture synthétique, uniquement dans tests/fixtures et dans les scénarios isolés. Elle vérifie le passage brouillon/revue/publication, les formats, les vrais handlers v1, la carte, les statistiques, FR/AR, l’absence de point fictif et l’échappement de textes malveillants. Le build de production refuse les IDs de fixtures. Aucune opération historique nouvelle n’est ajoutée par cette livraison.</p>
+<p>Les 789 réserves de migration concernent les mêmes trois points pour chaque fiche initiale : import non revu, territoire à revoir et point représentatif à revoir. Le validateur historique conserve ses 43 notices. Ces avertissements ne sont pas des erreurs bloquantes ni des corrections historiques autorisées.</p>
+<p>Les assertions contradictoires utilisées pour le test T10 sont également synthétiques : elles ne sont pas ajoutées aux 263 fiches publiées. La livraison met en place leur modèle, les contrôles, l’affichage et les exports, sans analyser automatiquement les textes historiques existants.</p>
+<p>Validation locale : 57 tests Node et 34 tests navigateur, plus le validateur historique et les contrôles de génération. Les scénarios vérifient les deux versions contradictoires, leurs passages sources, leur restitution par le vrai handler v1, l’absence de fuite des brouillons et la navigation mobile/ordinateur FR/AR.</p>
+<h2 id="suite-du-cdc">Suite du CDC</h2>
+<p>La chaîne technique de publication et le modèle d’assertions sont opérationnels ; une contribution réelle doit encore être revue par le mainteneur avant d’être ajoutée. Les lieux/personnes/organisations réutilisables, les doublons candidats, l’API v2, les versions scientifiques et l’observatoire des lacunes restent à développer. Les choix de licence, de retrait et de nombre de reviewers restent dans DECISIONS_PENDING.md. Aucune validation scientifique ou conformité globale au CDC n’est prétendue par ce bilan.</p>
+</main></body></html>

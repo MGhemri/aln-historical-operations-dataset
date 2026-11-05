@@ -396,6 +396,16 @@ const I18N_SOURCE_TYPES = {
 const I18N_UI = {
   fr: {
     publicationReview: "Publication après revue :",
+    claimsHeading: "Assertions sourcées et divergences",
+    claimsExport: "Assertions sourcées (JSON)",
+    claimsNotice: "Ces assertions complètent la fiche. Une divergence documentaire reste visible sans arbitrage automatique ; le statut ne mesure pas la fiabilité globale d’une source.",
+    claimStatus_supported: "Étayée par les références citées",
+    claimStatus_contested: "Contestation documentaire enregistrée",
+    claimStatus_unverified: "À vérifier",
+    claimStatus_withdrawn: "Retirée",
+    claimUnknown: "Valeur inconnue",
+    claimConflict: "Divergence avec :",
+    claimReviewReference: "Référence de la revue",
     territorialAssignments: "Territoires documentés",
     dateUnknown: "Date non déterminée",
     nonPrimaryTerritory: "Multiterritoriales ou non attribuées",
@@ -529,6 +539,16 @@ const I18N_UI = {
 
   ar: {
     publicationReview: "النشر بعد المراجعة:",
+    claimsHeading: "الإفادات الموثقة والاختلافات",
+    claimsExport: "الإفادات الموثقة (JSON)",
+    claimsNotice: "تكمل هذه الإفادات البطاقة. تبقى الاختلافات الوثائقية ظاهرة دون ترجيح آلي؛ ولا يقيس الوضع المصداقية العامة للمصدر.",
+    claimStatus_supported: "مسندة بالمراجع المذكورة",
+    claimStatus_contested: "اختلاف وثائقي مسجل",
+    claimStatus_unverified: "بحاجة إلى التحقق",
+    claimStatus_withdrawn: "مسحوبة",
+    claimUnknown: "قيمة غير معروفة",
+    claimConflict: "اختلاف مع:",
+    claimReviewReference: "مرجع المراجعة",
     territorialAssignments: "الأقاليم الموثقة",
     dateUnknown: "تاريخ غير محدد",
     nonPrimaryTerritory: "متعددة الأقاليم أو غير مسندة",
