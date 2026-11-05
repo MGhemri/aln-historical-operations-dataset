@@ -52,6 +52,9 @@ jobs:
       - name: Check canonical and public exports
         run: npm run check:canonical
 
+      - name: Check immutable data releases and reproduce pinned sources
+        run: npm run check:releases -- --sources
+
       - name: Check local documentation
         run: npm run check:documentation
 

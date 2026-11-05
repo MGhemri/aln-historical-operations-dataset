@@ -45,7 +45,7 @@ function createHandler(repository=new FileRepository()){
       if(req.query)for(const [key,value]of Object.entries(req.query))if(key!=='path'&&!Object.hasOwn(query,key))query[key]=value;
       if(parts[0]==='openapi.json'&&parts.length===1){if(Object.keys(query).length)invalid('This resource takes no parameters.');return send(200,require('../../openapi/v2.json'));}
       const s=repository.load();
-      const meta=extra=>({api_version:'v2',dataset_release:null,snapshot_sha256:s.manifest.canonical_sha256,
+      const meta=extra=>({api_version:'v2',dataset_release:s.current_release?.id||null,snapshot_sha256:s.manifest.canonical_sha256,
         corpus_is_incomplete:true,...extra});
       const envelope=(data,extra={})=>({data,meta:meta(extra)});
       const plain=()=>{if(Object.keys(query).length)invalid('This resource takes no parameters.');};
@@ -78,8 +78,9 @@ function createHandler(repository=new FileRepository()){
           contested_claims:claims.filter(c=>c.status==='contested').length,pending_contributions:null,
           by_start_year:metrics(all,claims,s.sources).by_start_year,empty_selection_message:all.length?null:'No records currently catalogued for this selection.'},{total:all.length}));
       }
-      if(resource==='releases'&&parts.length===1){plain();return send(200,envelope([],{total:0,release_workflow_enabled:false,notice:'No versioned scientific releases yet; use the current snapshot hash.'}));}
+      if(resource==='releases'&&parts.length===1){plain();return send(200,envelope(s.releases||[],{total:(s.releases||[]).length,release_workflow_enabled:true,notice:'Versioned technical publications preserve the documentary corpus and its historical review limitations.'}));}
       if(resource==='releases'&&id==='current'&&parts.length===2){plain();return send(200,envelope(s.manifest));}
+      if(resource==='releases'&&id&&parts.length===2){plain();const release=(s.releases||[]).find(r=>r.id===id);if(!release)throw new HttpError(404,'NOT_FOUND','Data release not found.');return send(200,envelope(release));}
       if(resource==='exports'&&parts.length===1){plain();return send(200,envelope(Object.entries(s.manifest.checksums).map(([name,sha256])=>({name,sha256,url:'/data/canonical/'+name})),{manifest_url:'/data/canonical/dataset-manifest.json'}));}
       throw new HttpError(404,'NOT_FOUND','Unknown resource.');
     }catch(error){res.setHeader('Cache-Control','no-store');const known=error instanceof HttpError;

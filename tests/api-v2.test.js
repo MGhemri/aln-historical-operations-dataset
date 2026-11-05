@@ -17,10 +17,10 @@ const prefix='/api/v2';
 test('v2 exposes every read resource, canonical identity and honest current snapshot/release metadata',()=>{
   for(const resource of ['','operations','sources','places','persons','organizations','territorial-units','claims','stats','coverage','releases','releases/current','exports','openapi.json']){
     const res=request(prefix+'/'+resource);assert.equal(res.statusCode,200,resource);
-    if(resource!=='openapi.json'){assert.equal(res.body.meta.corpus_is_incomplete,true);assert.equal(res.body.meta.dataset_release,null);}
+    if(resource!=='openapi.json'){assert.equal(res.body.meta.corpus_is_incomplete,true);assert.equal(res.body.meta.dataset_release,repository.load().current_release?.id||null);}
   }
   const op=request(prefix+'/operations/OP_1954_001').body.data;assert.equal(op.id,'OP_1954_001');assert.equal(op.schema_version,'2.0.0');
-  assert.equal(request(prefix+'/releases').body.data.length,0);assert.equal(request(prefix+'/releases').body.meta.release_workflow_enabled,false);
+  assert.equal(request(prefix+'/releases').body.data.length,repository.load().releases.length);assert.equal(request(prefix+'/releases').body.meta.release_workflow_enabled,true);
   assert.equal(request(prefix+'/territorial-units').body.data[0].type,'editorial_category');
   assert.equal(request(prefix+'/operations?territory=W1').body.meta.total,0,'No inference from the imported legacy label');
 });
@@ -145,7 +145,8 @@ test('OpenAPI 3.1 is valid and successful/error/GeoJSON responses conform to its
   for(const [name,schema]of Object.entries(spec.components.schemas))ajv.addSchema({...refs(schema),$id:'urn:alnop:'+name});
   for(const [path,item]of Object.entries(spec.paths)){
     if(path.endsWith('openapi.json'))continue;
-    const route=path.replace('{id}',path.includes('/sources/')?repository.load().sources[0].source_id:path.includes('/territorial-units/')?'W1':'OP_1954_001');
+    if(path==='/api/v2/releases/{id}'&&!repository.load().releases.length)continue;
+    const route=path.replace('{id}',path.includes('/sources/')?repository.load().sources[0].source_id:path.includes('/territorial-units/')?'W1':path.includes('/releases/')?repository.load().releases[0]?.id:'OP_1954_001');
     if(/\/(places|persons|organizations|claims)\//.test(path))continue;
     const response=request(route);assert.equal(response.statusCode,200,path);
     const schema=item.get.responses[200].content['application/json'].schema;

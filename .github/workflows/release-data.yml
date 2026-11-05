@@ -1,0 +1,48 @@
+name: Publish immutable data release
+on:
+  push:
+    tags: ['data-*']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: npm ci
+      - name: Validate tag identity
+        run: node -e 'const fs=require("fs");const id=process.env.GITHUB_REF_NAME;if(!/^data-[0-9]{4}\.(0[1-9]|1[0-2])\.[1-9][0-9]*$/.test(id)||!fs.existsSync("data/releases/"+id+".json"))process.exit(1);'
+      - run: npm run validate:canonical
+      - run: npm run check:canonical && npm run check:documentation
+      - run: npm test
+      - name: Verify archives and reproduce source commits
+        run: npm run check:releases -- --sources
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-data-release
+          path: docs/data/releases/${{ github.ref_name }}/*
+          if-no-files-found: error
+  publish:
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: verified-data-release
+          path: release-assets
+      - name: Publish checked release assets without replacing an existing release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" release-assets/* --repo "$GITHUB_REPOSITORY" --verify-tag --title "$GITHUB_REF_NAME" --notes-file release-assets/CHANGELOG.md

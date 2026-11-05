@@ -8,7 +8,7 @@ function rewrite(value){
 function document(){
   const ref=name=>({$ref:'#/components/schemas/'+name}),integer={type:'integer',minimum:0};
   const meta={type:'object',additionalProperties:false,required:['api_version','dataset_release','snapshot_sha256','corpus_is_incomplete'],properties:{
-    api_version:{const:'v2'},dataset_release:{type:'null'},snapshot_sha256:{type:'string',pattern:'^[a-f0-9]{64}$'},corpus_is_incomplete:{const:true},
+    api_version:{const:'v2'},dataset_release:{type:['string','null'],pattern:'^data-[0-9]{4}\\.(0[1-9]|1[0-2])\\.[1-9][0-9]*$'},snapshot_sha256:{type:'string',pattern:'^[a-f0-9]{64}$'},corpus_is_incomplete:{const:true},
     total:integer,count:integer,page:{type:'integer',minimum:1},limit:{type:'integer',minimum:1,maximum:200},has_next:{type:'boolean'},sort:{type:'string'},
     release_workflow_enabled:{type:'boolean'},notice:{type:'string'},manifest_url:{type:'string'}}};
   const schemas={Meta:meta,CollectionMeta:{...meta,required:[...meta.required,'total','count','page','limit','has_next','sort']},
@@ -24,7 +24,9 @@ function document(){
   schemas.Coverage=envelope({type:'object',additionalProperties:false,required:['scope','total_operations','unknown_start_dates','without_geometry','without_structured_territory','without_sources','legacy_imports_needing_review','contested_claims','pending_contributions','by_start_year','empty_selection_message'],properties:{scope:{type:'string'},...Object.fromEntries(['total_operations','unknown_start_dates','without_geometry','without_structured_territory','without_sources','legacy_imports_needing_review','contested_claims'].map(k=>[k,integer])),pending_contributions:{type:'null'},by_start_year:counts,empty_selection_message:{type:['string','null']}}});
   schemas.Manifest={type:'object',required:['schema_version','publication_status','canonical_sha256','corpus_is_incomplete','total','checksums'],properties:{schema_version:{const:'2.0.0'},publication_status:{const:'validated_snapshot'},canonical_sha256:{type:'string'},total:integer,corpus_is_incomplete:{const:true},checksums:{type:'object',additionalProperties:{type:'string',pattern:'^[a-f0-9]{64}$'}}}};
   schemas.Current=envelope(ref('Manifest'));
-  schemas.Releases=envelope({type:'array',maxItems:0});
+  schemas.Release=rewrite(require('../schemas/release.schema.json'));
+  for(const key of ['archive_url','manifest_url','citation_url','changelog_url','checksum_url'])schemas.Release.properties[key]={type:'string',pattern:'^/data/releases/'};
+  schemas.Releases=envelope({type:'array',items:ref('Release')});schemas.ReleaseResponse=envelope(ref('Release'));
   schemas.Exports=envelope({type:'array',items:{type:'object',additionalProperties:false,required:['name','url','sha256'],properties:{name:{type:'string'},url:{type:'string',pattern:'^/data/canonical/'},sha256:{type:'string',pattern:'^[a-f0-9]{64}$'}}}});
   schemas.Evidence=envelope({type:'object',additionalProperties:false,required:['operation_id','claims','sources','legacy_evidence','notice'],properties:{operation_id:{type:'string'},claims:{type:'array',items:ref('Claim')},sources:{type:'array',items:ref('Source')},legacy_evidence:{type:'boolean'},notice:{type:'string'}}});
   schemas.Index=envelope({type:'object',additionalProperties:false,required:['resources','documentation'],properties:{resources:{type:'array',items:{type:'string'}},documentation:{type:'string'}}});
@@ -50,8 +52,9 @@ function document(){
   add('/operations/{id}/evidence','Evidence',[{name:'id',in:'path',required:true,schema:{type:'string',pattern:'^[A-Za-z0-9_-]+$'}}]);
   for(const [route,name]of [['stats','Stats'],['coverage','Coverage']])add('/'+route,name,[...common.filter(p=>!['sort','page','limit'].includes(p.name)),...operations.filter(p=>p.name!=='format')]);
   for(const [route,name]of [['releases','Releases'],['releases/current','Current'],['exports','Exports']])add('/'+route,name);
+  add('/releases/{id}','ReleaseResponse',[{name:'id',in:'path',required:true,schema:{type:'string',pattern:'^data-[0-9]{4}\\.(0[1-9]|1[0-2])\\.[1-9][0-9]*$'}}]);
   paths['/api/v2/openapi.json']={get:{operationId:'openapi',summary:'OpenAPI 3.1 contract',responses:{200:{description:'OpenAPI document',content:{'application/json':{schema:{type:'object',required:['openapi','info','paths','components']}}}}}}};
-  return {openapi:'3.1.0',jsonSchemaDialect:'https://json-schema.org/draft/2020-12/schema',info:{title:'ALNOP public research API',version:'2.0.0',description:'Read-only published snapshot. Incomplete documentary corpus. Scientific release workflow not enabled.'},servers:[{url:'https://alnop.vercel.app'}],paths,components:{schemas}};
+  return {openapi:'3.1.0',jsonSchemaDialect:'https://json-schema.org/draft/2020-12/schema',info:{title:'ALNOP public research API',version:'2.1.0',description:'Read-only published snapshot and immutable data releases. Incomplete documentary corpus; technical releases do not imply a new historical validation.'},servers:[{url:'https://alnop.vercel.app'}],paths,components:{schemas}};
 }
 function run(check=process.argv.includes('--check')){
   const content=stable(document());

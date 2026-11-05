@@ -3,8 +3,8 @@
   "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
   "info": {
     "title": "ALNOP public research API",
-    "version": "2.0.0",
-    "description": "Read-only published snapshot. Incomplete documentary corpus. Scientific release workflow not enabled."
+    "version": "2.1.0",
+    "description": "Read-only published snapshot and immutable data releases. Incomplete documentary corpus; technical releases do not imply a new historical validation."
   },
   "servers": [
     {
@@ -2589,6 +2589,96 @@
         }
       }
     },
+    "/api/v2/releases/{id}": {
+      "get": {
+        "operationId": "_releases__id_",
+        "summary": "ReleaseResponse",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^data-[0-9]{4}\\.(0[1-9]|1[0-2])\\.[1-9][0-9]*$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Published snapshot response",
+            "headers": {
+              "ETag": {
+                "schema": {
+                  "type": "string"
+                },
+                "description": "SHA-256 of this response representation."
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReleaseResponse"
+                }
+              }
+            }
+          },
+          "304": {
+            "description": "Representation unchanged"
+          },
+          "400": {
+            "description": "Invalid query or path",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Resource absent",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Read-only resource",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "413": {
+            "description": "Response exceeds 4 MiB; reduce limit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Published snapshot unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v2/openapi.json": {
       "get": {
         "operationId": "openapi",
@@ -2630,7 +2720,11 @@
             "const": "v2"
           },
           "dataset_release": {
-            "type": "null"
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^data-[0-9]{4}\\.(0[1-9]|1[0-2])\\.[1-9][0-9]*$"
           },
           "snapshot_sha256": {
             "type": "string",
@@ -2693,7 +2787,11 @@
             "const": "v2"
           },
           "dataset_release": {
-            "type": "null"
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^data-[0-9]{4}\\.(0[1-9]|1[0-2])\\.[1-9][0-9]*$"
           },
           "snapshot_sha256": {
             "type": "string",
@@ -4202,6 +4300,115 @@
           }
         }
       },
+      "Release": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "published_at",
+          "source_commit",
+          "schema_version",
+          "total",
+          "canonical_sha256",
+          "snapshot_manifest_sha256",
+          "summary",
+          "changes",
+          "review_scope",
+          "corpus_is_incomplete",
+          "license_notice",
+          "archive_sha256",
+          "files"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^data-[0-9]{4}\\.(0[1-9]|1[0-2])\\.[1-9][0-9]*$"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "Z$"
+          },
+          "source_commit": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "schema_version": {
+            "const": "2.0.0"
+          },
+          "total": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "canonical_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "snapshot_manifest_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "changes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000
+            }
+          },
+          "review_scope": {
+            "const": "technical_publication_of_existing_corpus"
+          },
+          "corpus_is_incomplete": {
+            "const": true
+          },
+          "license_notice": {
+            "type": "string",
+            "minLength": 1
+          },
+          "archive_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "files": {
+            "type": "object",
+            "minProperties": 1,
+            "propertyNames": {
+              "pattern": "^[A-Za-z0-9_./-]+$"
+            },
+            "additionalProperties": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "archive_url": {
+            "type": "string",
+            "pattern": "^/data/releases/"
+          },
+          "manifest_url": {
+            "type": "string",
+            "pattern": "^/data/releases/"
+          },
+          "citation_url": {
+            "type": "string",
+            "pattern": "^/data/releases/"
+          },
+          "changelog_url": {
+            "type": "string",
+            "pattern": "^/data/releases/"
+          },
+          "checksum_url": {
+            "type": "string",
+            "pattern": "^/data/releases/"
+          }
+        }
+      },
       "Releases": {
         "type": "object",
         "additionalProperties": false,
@@ -4212,7 +4419,25 @@
         "properties": {
           "data": {
             "type": "array",
-            "maxItems": 0
+            "items": {
+              "$ref": "#/components/schemas/Release"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          }
+        }
+      },
+      "ReleaseResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "data",
+          "meta"
+        ],
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/Release"
           },
           "meta": {
             "$ref": "#/components/schemas/Meta"

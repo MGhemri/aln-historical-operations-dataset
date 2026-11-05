@@ -8,3 +8,8 @@ docs/data/canonical/** text eol=lf
 docs/data/canonical/*.csv -text
 openapi/** text eol=lf
 docs/data/api-v2/** text eol=lf
+data/releases/*.zip -text
+docs/data/releases/** text eol=lf
+docs/data/releases/**/*.zip -text
+CITATION.cff text eol=lf
+CHANGELOG.md text eol=lf

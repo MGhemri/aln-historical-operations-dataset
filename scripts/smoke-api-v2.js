@@ -9,7 +9,7 @@ function verify(example,status,body,headers){
   if(example.kind==='collection'&&(!Array.isArray(body.data)||!Number.isInteger(body.meta.total)))throw Error('Invalid collection');
   if(example.kind==='record'&&body.data.id!=='OP_1954_001')throw Error('Initial ID unavailable');
   if(example.kind==='empty'&&(body.data.length||body.meta.total!==0))throw Error('Empty selection contract failed');
-  if(example.kind==='releases'&&(body.data.length||body.meta.release_workflow_enabled!==false))throw Error('Unexpected scientific release claim');
+  if(example.kind==='releases'&&(!Array.isArray(body.data)||body.meta.release_workflow_enabled!==true))throw Error('Release catalogue unavailable');
   if(example.kind==='coverage'&&(body.data.total_operations!==0||!body.data.empty_selection_message))throw Error('Documentary gap message missing');
 }
 async function run(base='https://alnop.vercel.app'){
