@@ -13,6 +13,9 @@
 - Assertions sourcées distinctes des champs de fiche, avec passage documentaire et revue explicites.
 - Contradictions conservées dans les deux versions, affichées en FR/AR et exportées dans `claims.json` ; aucun arbitrage automatique.
 - Références orphelines, contradictions incohérentes et assertions publiées sans revue bloquées ; brouillons et leurs preuves exclus des exports.
+- Référentiels personnes, organisations et lieux : noms, variantes, périodes, preuves, relations d’identité candidates et revues. Structure et exports livrés, alimentation historique à effectuer après revue.
+- Contrôle Git des modifications publiques : nouvelle décision liée à l’empreinte du contenu, historique préservé et suppressions de fichiers refusées.
+- Détection de doublons candidats avec facteurs explicatifs et rapport interne ; aucune fusion automatique. Évaluation synthétique avec faux positifs et limites documentés.
 
 ## Vérification
 
@@ -22,8 +25,10 @@ Les 789 réserves de migration concernent les mêmes trois points pour chaque fi
 
 Les assertions contradictoires utilisées pour le test T10 sont également synthétiques : elles ne sont pas ajoutées aux 263 fiches publiées. La livraison met en place leur modèle, les contrôles, l’affichage et les exports, sans analyser automatiquement les textes historiques existants.
 
-Validation locale : 57 tests Node et 34 tests navigateur, plus le validateur historique et les contrôles de génération. Les scénarios vérifient les deux versions contradictoires, leurs passages sources, leur restitution par le vrai handler v1, l’absence de fuite des brouillons et la navigation mobile/ordinateur FR/AR.
+Validation locale : 73 tests Node et 34 tests navigateur, plus le validateur historique et les contrôles de génération. Les scénarios vérifient les contradictions, les références d’entités, les noms conservés, les brouillons, la revue liée au contenu, la comparaison Git réelle et la navigation mobile/ordinateur FR/AR.
+
+Le rapport de rapprochement produit 135 paires candidates pour le corpus initial, sans confirmer de doublon. Sur six paires synthétiques annotées, précision et rappel valent 0,75 ; une calibration historique reste à effectuer. Les rapports internes ne sont pas exposés sur le site public.
 
 ## Suite du CDC
 
-La chaîne technique de publication et le modèle d’assertions sont opérationnels ; une contribution réelle doit encore être revue par le mainteneur avant d’être ajoutée. Les lieux/personnes/organisations réutilisables, les doublons candidats, l’API v2, les versions scientifiques et l’observatoire des lacunes restent à développer. Les choix de licence, de retrait et de nombre de reviewers restent dans DECISIONS_PENDING.md. Aucune validation scientifique ou conformité globale au CDC n’est prétendue par ce bilan.
+La chaîne technique, les assertions et les référentiels sont opérationnels ; une contribution réelle doit encore être revue par le mainteneur avant d’être ajoutée. Priorité suivante : API v2 et contrat OpenAPI. Restent également la consultation détaillée des entités, l’amélioration et la calibration des rapprochements, l’assistance aux contradictions, les versions scientifiques, les protections administratives du dépôt et l’observatoire des lacunes. Les choix de licence, de retrait et de nombre de reviewers restent dans DECISIONS_PENDING.md. Aucune validation scientifique ou conformité globale au CDC n’est prétendue par ce bilan.

@@ -45,4 +45,6 @@
 <p>Le formulaire « Signaler une contradiction » transmet une proposition aux mainteneurs. Sa réception par courriel n’ajoute aucune assertion publique.</p>
 <p>Le mainteneur relève séparément chaque version dans <code>data/claims/&lt;id&gt;.json</code>, selon <code>schemas/claim.schema.json</code>. Il renseigne la fiche concernée, la propriété, la valeur, les sources et leurs passages précis. Pour une divergence, il conserve les deux assertions et renseigne <code>contradicts</code> après examen ; aucune fusion n’est automatique.</p>
 <p>La publication nécessite la revue documentée de chaque assertion et des liens cohérents entre les deux versions. Le guide complet figure dans <a href="provenance.html">Assertions, sources et contradictions</a>. Les exemples fictifs des tests ne doivent jamais être copiés dans les données de production.</p>
+<h2 id="vérifier-les-référentiels-et-les-doublons-candidats">Vérifier les référentiels et les doublons candidats</h2>
+<p>Le mainteneur peut lancer <code>npm run quality:duplicates</code> avant de publier une nouvelle fiche. Les correspondances proposées doivent être examinées ; aucune fusion n’est automatique. Toute modification publique requiert une nouvelle revue liée à l’empreinte du contenu. Les référentiels et les commandes sont décrits dans <a href="entities.html">le guide de revue</a>.</p>
 </main></body></html>

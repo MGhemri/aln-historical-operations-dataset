@@ -5,7 +5,8 @@ const root=path.join(__dirname,'..');
 const pages={methodology:['METHODOLOGIE.md','Méthodologie'],api:['API.md','API REST v1'],
   contributing:['CONTRIBUTING.md','Contribuer'],editorial:['EDITORIAL_POLICY.md','Politique éditoriale'],
   conduct:['CODE_OF_CONDUCT.md','Code de conduite'],dictionary:['DATA_DICTIONARY.md','Dictionnaire des données'],publication:['docs/ADR/002-canonical-publication.md','Publication des données'],
-  provenance:['PROVENANCE_POLICY.md','Assertions et contradictions'],progress:['docs/CDC_STATUS.md','Avancement du cahier des charges']};
+  provenance:['PROVENANCE_POLICY.md','Assertions et contradictions'],progress:['docs/CDC_STATUS.md','Avancement du cahier des charges'],
+  entities:['ENTITY_REVIEW_GUIDE.md','Référentiels, revue et doublons candidats']};
 const navigation='<nav><a href="../index.html">Atlas · الأطلس</a><a href="../contribute.html">Contribuer · ساهم</a><a href="index.html">Documentation · الوثائق</a></nav>';
 const shell=(title,body)=>`<!doctype html>\n<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} · ALNOP</title><script>const base=document.createElement('base');base.href=location.pathname.split('/documentation')[0].replace(/\\/api\\/docs$/,'')+'/documentation/';document.head.append(base);</script><link rel="stylesheet" href="documentation.css"><script src="../site-context.js?v=4.2"></script></head><body><main>${navigation}${body}</main></body></html>\n`;
 const generated={'index.html':shell('Documentation','<h1>Documentation · الوثائق</h1><p>Guides accessibles directement sur ce site. Documents de référence en français ; guide de contribution également en arabe.</p><ul>'+Object.entries(pages).map(([slug,[,title]])=>`<li><a href="${slug}.html">${title}</a></li>`).join('')+'</ul>')};

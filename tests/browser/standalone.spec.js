@@ -48,7 +48,7 @@ for(const width of [360,390,1280])test(`Vercel ${width}px: atlas navigation and 
   await page.screenshot({path:`test-results/standalone-atlas-${width}.png`,fullPage:true});
   await page.locator('#documentation-link').click();await expect(page.locator('h1')).toContainText('Documentation');
   await noRepositoryLinks(page);
-  for(const slug of ['methodology','api','contributing','editorial','conduct']){
+  for(const slug of ['methodology','api','contributing','editorial','conduct','entities']){
     const response=await page.goto(`/documentation/${slug}.html`);expect(response.ok()).toBeTruthy();
     await noRepositoryLinks(page);
     await expect(page.locator('main')).not.toContainText(/Ghemri/i);

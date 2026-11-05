@@ -62,3 +62,6 @@ Le formulaire « Signaler une contradiction » transmet une proposition aux main
 Le mainteneur relève séparément chaque version dans `data/claims/<id>.json`, selon `schemas/claim.schema.json`. Il renseigne la fiche concernée, la propriété, la valeur, les sources et leurs passages précis. Pour une divergence, il conserve les deux assertions et renseigne `contradicts` après examen ; aucune fusion n’est automatique.
 
 La publication nécessite la revue documentée de chaque assertion et des liens cohérents entre les deux versions. Le guide complet figure dans [Assertions, sources et contradictions](PROVENANCE_POLICY.md). Les exemples fictifs des tests ne doivent jamais être copiés dans les données de production.
+## Vérifier les référentiels et les doublons candidats
+
+Le mainteneur peut lancer `npm run quality:duplicates` avant de publier une nouvelle fiche. Les correspondances proposées doivent être examinées ; aucune fusion n’est automatique. Toute modification publique requiert une nouvelle revue liée à l’empreinte du contenu. Les référentiels et les commandes sont décrits dans [le guide de revue](ENTITY_REVIEW_GUIDE.md).

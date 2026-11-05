@@ -19,3 +19,5 @@ Ces états décrivent le suivi éditorial. `needs_information` et `rejected` con
 Toute décision doit citer l'Issue/PR et le commit, préciser la raison, les sources et les personnes intervenant selon leur rôle public. Une demande de réexamen peut être ouverte dans une nouvelle Issue référant la décision antérieure. Les suppressions doivent conserver une trace non sensible ; ne pas recycler les identifiants.
 
 Les décisions sur la visibilité des fiches contestées, les droits, le nombre de validateurs et les traductions restent dans docs/DECISIONS_PENDING.md. Aucune modification de licence n'est implicite dans une contribution.
+
+Les changements de données publiques sont désormais comparés à la base Git et doivent ajouter une approbation liée au contenu par `content_sha256`. Les imports initiaux ne reçoivent aucune approbation inventée. Voir [le guide des référentiels et de revue](ENTITY_REVIEW_GUIDE.md) pour les commandes et les limites administratives de ce contrôle.
