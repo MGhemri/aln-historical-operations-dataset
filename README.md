@@ -51,6 +51,7 @@ Ouvrir ensuite `http://localhost:8000`. Le serveur statique permet la consultati
 - [TEMPORA : architecture, profils et validation](./FRAMEWORK.md)
 - [Modèle canonique v3 et migration](./CANONICAL_MODEL.md)
 - [Import local JSON, CSV et GeoJSON](./INGESTION.md)
+- [Analyses documentaires et évaluation](./ANALYSIS.md)
 - [ALNOP : corpus, application et méthode](./ALNOP.md)
 - [Méthodologie historique ALNOP](./METHODOLOGIE.md)
 - [Dictionnaire des données ALNOP](./DATA_DICTIONARY.md)

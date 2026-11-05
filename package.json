@@ -37,7 +37,9 @@
     "build:vercel": "npm run validate:canonical && npm run build && npm run test:api && npm run check:canonical && npm run check:documentation && npm run check:releases && npm run check:coverage && npm run check:assistance && npm run check:entity-search",
     "pretest:browser": "npm run build:documentation",
     "migrate:tempora": "node scripts/migrate-tempora.js",
-    "ingest:tempora": "node scripts/ingest-tempora.js"
+    "ingest:tempora": "node scripts/ingest-tempora.js",
+    "quality:tempora": "node scripts/analyze-tempora.js",
+    "quality:tempora:reference": "node scripts/evaluate-tempora.js"
   },
   "dependencies": {
     "nodemailer": "^10.3.1"

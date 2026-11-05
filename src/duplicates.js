@@ -1,13 +1,7 @@
 // Similarities are review hints. They never change records, IDs or editorial status.
 const defaults=Object.freeze({lexical_threshold:0.5,shared_place_threshold:0.25,nearby_km:10});
-function normalize(text){return String(text||'').normalize('NFKD').replace(/\p{M}/gu,'').replace(/ـ/g,'')
-  .replace(/[أإآ]/g,'ا').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim().replace(/\s+/g,' ');}
-function grams(text){const s=Array.from('  '+normalize(text)+'  ');return new Set(Array.from({length:Math.max(0,s.length-2)},(_,i)=>s.slice(i,i+3).join('')));}
-function lexical(a,b){if(!normalize(a)||!normalize(b))return 0;const x=grams(a),y=grams(b);return 2*[...x].filter(g=>y.has(g)).length/(x.size+y.size);}
+const {normalize,lexical,distance}=require('./shared/similarity');
 function overlap(a,b){return a?.earliest&&b?.earliest?!(a.latest<b.earliest||b.latest<a.earliest):null;}
-function distance(a,b){const rad=x=>x*Math.PI/180;const [x,y]=a,[u,v]=b;
-  const h=Math.sin(rad(v-y)/2)**2+Math.cos(rad(y))*Math.cos(rad(v))*Math.sin(rad(u-x)/2)**2;
-  return 6371*2*Math.asin(Math.min(1,Math.sqrt(h)));}
 function pair(a,b,options=defaults){
   options={...defaults,...options};
   const names=o=>[...['fr','ar'].filter(lang=>o.title?.[lang]).map(language=>({value:o.title[language],language,kind:'title',source_ids:o.source_ids||[]})),

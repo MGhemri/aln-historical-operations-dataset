@@ -65,4 +65,4 @@ function run(args=process.argv.slice(2),{rootDirectory=root,clock=()=>new Date()
  writeLine(JSON.stringify({mode:options.write?'local_acceptance':'dry_run',journal:snapshot.journal,local_output},null,2));return {exitCode:0,snapshot,local_output};
 }
 if(require.main===module){try{process.exitCode=run().exitCode;}catch(e){console.error(`${e.code||'INGESTION_FAILED'}: ${e.message}`);if(e.details?.length)console.error(JSON.stringify(e.details,null,2));process.exitCode=1;}}
-module.exports={run};
+module.exports={run,getBase,json};

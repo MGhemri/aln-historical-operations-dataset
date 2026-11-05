@@ -4,7 +4,7 @@ function canonical(v){if(Array.isArray(v))return v.map(canonical);if(v&&typeof v
 const exact=v=>JSON.stringify(canonical(v));
 function overlap(a,b){return a?.earliest&&a.latest&&b?.earliest&&b.latest?!(a.latest<b.earliest||b.latest<a.earliest):null;}
 function contextKnown(c){return c&&c.scope?.trim()&&c.population?.trim()&&['entire_event','specific_period'].includes(c.time_scope);}
-function compareClaims(a,b){
+function compareClaims(a,b,{languages:locales=['fr','ar']}={}){
   const base={claim_ids:[a.id,b.id].sort(),subject:a.subject,predicate:a.predicate,requires_human_review:true,
     values:[{claim_id:a.id,value:a.value,unit:a.unit||null,evidence:a.evidence},{claim_id:b.id,value:b.value,unit:b.unit||null,evidence:b.evidence}]};
   let reason;
@@ -24,7 +24,7 @@ function compareClaims(a,b){
       else reason='potential_value_conflict';
     }else if(typeof a.value==='boolean'&&typeof b.value==='boolean')reason=a.value===b.value?'same_value':'potential_value_conflict';
     else if(a.value&&b.value&&typeof a.value==='object'&&typeof b.value==='object'&&!x&&!y){
-      const languages=['fr','ar'].filter(lang=>typeof a.value[lang]==='string'&&typeof b.value[lang]==='string');
+      const languages=locales.filter(lang=>typeof a.value[lang]==='string'&&typeof b.value[lang]==='string');
       reason=!languages.length?'no_shared_language':languages.every(lang=>a.value[lang]===b.value[lang])?'same_value':'text_difference_to_review';
     }else reason='different_value_types';
   }

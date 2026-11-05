@@ -105,3 +105,7 @@ Le [modèle canonique TEMPORA v3](./CANONICAL_MODEL.md) fournit les schémas ver
 ## Importer des propositions
 
 Le [pipeline d’import local](./INGESTION.md) utilise des mappings versionnés pour préparer et contrôler des propositions JSON, CSV et GeoJSON. Les notices acceptées restent proposées dans une copie de travail privée.
+
+## Analyses documentaires
+
+Le [guide des analyses](./ANALYSIS.md) décrit les rapprochements, la comparaison des assertions, la couverture et l’évaluation sur des cas fictifs annotés.
