@@ -20,7 +20,7 @@ GitHub Pages héberge la documentation et les téléchargements ; les requêtes 
 | `/claims` et `/claims/{id}` | Assertions publiées et passages sources |
 | `/stats` | Effectifs du corpus, années de début, précisions et types |
 | `/coverage` | Qualité et lacunes des métadonnées du corpus |
-| `/releases` | Liste des versions scientifiques, actuellement vide |
+| `/releases` et `/releases/{id}` | Versions archivées, dates UTC, provenance et téléchargements |
 | `/releases/current` | Manifeste du snapshot courant et empreintes |
 | `/exports` | Liens locaux des formats publics et leurs empreintes |
 | `/openapi.json` | Contrat OpenAPI 3.1 |
@@ -33,7 +33,7 @@ Les collections acceptent `page` (à partir de 1) et `limit` (20 par défaut, ma
 
 `total` compte les fiches correspondant au filtre, pas toutes les opérations ayant historiquement existé. `corpus_is_incomplete` vaut toujours `true`.
 
-`dataset_release` est actuellement `null` : il n’existe pas encore de cycle de releases scientifiques. Le snapshot est identifié par son empreinte SHA-256 ; `/releases/current` expose son manifeste sans lui attribuer une version scientifique fictive. Pour conserver une analyse, télécharger les exports et le manifeste utilisés.
+`dataset_release` indique la version archivée correspondant exactement au manifeste courant. Si les exports évoluent avant une nouvelle publication, cette valeur redevient `null`. Le snapshot reste identifié par son empreinte SHA-256 ; `/releases/current` expose son manifeste. Les archives et leurs citations sont disponibles sur [la page des versions](docs/releases.html), selon [la politique de publication](RELEASE_POLICY.md). Une version technique préserve les réserves historiques et ne vaut pas nouvelle validation scientifique.
 
 ## Filtres
 

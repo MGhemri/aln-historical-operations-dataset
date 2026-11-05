@@ -1,7 +1,7 @@
 const corpusCount=require('../../docs/data/operations_fln_1954_1962.json').operations.length;
 const {test,expect}=require('@playwright/test');
 const path=require('node:path');
-test.use({baseURL:'https://alnop.vercel.app'});
+test.use({baseURL:'https://alnop.vercel.app',acceptDownloads:true});
 test.beforeEach(async({page})=>{
   await page.route('https://alnop.vercel.app/**',async route=>{
     const url=new URL(route.request().url());
@@ -48,7 +48,7 @@ for(const width of [360,390,1280])test(`Vercel ${width}px: atlas navigation and 
   await page.screenshot({path:`test-results/standalone-atlas-${width}.png`,fullPage:true});
   await page.locator('#documentation-link').click();await expect(page.locator('h1')).toContainText('Documentation');
   await noRepositoryLinks(page);
-  for(const slug of ['methodology','api','contributing','editorial','conduct','entities','api-v2']){
+  for(const slug of ['methodology','api','contributing','editorial','conduct','entities','api-v2','releases']){
     const response=await page.goto(`/documentation/${slug}.html`);expect(response.ok()).toBeTruthy();
     await noRepositoryLinks(page);
     await expect(page.locator('main')).not.toContainText(/Ghemri/i);
@@ -205,4 +205,40 @@ test('Proposed assertions stay invisible and provenance documentation is availab
   await expect(page.locator('h1')).toHaveText('Assertions, sources et contradictions');
   await expect(page.locator('main')).not.toContainText(/Ghemri/i);await noRepositoryLinks(page);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();
+});
+
+for(const width of [390,1280])test(`Release archives are readable, downloadable and cited in FR/AR at ${width}px`,async({page})=>{
+  const {releaseFixture}=require('../helpers/releases'),{result,files}=releaseFixture();
+  await page.route('https://alnop.vercel.app/data/releases/**',route=>{
+    const pathname=new URL(route.request().url()).pathname,key='docs'+pathname;
+    if(!files[key])return route.fulfill({status:404,body:'Not found'});
+    return route.fulfill({body:files[key],contentType:key.endsWith('.zip')?'application/zip':key.endsWith('.json')?'application/json':'text/plain; charset=utf-8'});
+  });
+  await page.setViewportSize({width,height:844});await page.goto('/releases.html');
+  await expect(page.locator('.release-card')).toHaveCount(1);await expect(page.locator('#release-status')).toContainText(result.metadata.id);
+  await expect(page.locator('.release-card')).toContainText('263');await expect(page.locator('.release-card h3')).toHaveText('Citation académique recommandée');
+  await expect(page.locator('.release-card')).not.toContainText(/Ghemri/i);await noRepositoryLinks(page);
+  const waiting=page.waitForEvent('download');await page.getByRole('link',{name:'Télécharger l’archive ZIP'}).click();const download=await waiting;
+  expect(download.suggestedFilename()).toBe('alnop-'+result.metadata.id+'.zip');
+  // Verify mocked bytes through fetch; a separate unmocked HTTP test checks the saved download.
+  const digest=await page.evaluate(async href=>{const bytes=await(await fetch(href)).arrayBuffer();return [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(b=>b.toString(16).padStart(2,'0')).join('');},download.url());
+  expect(digest).toBe(result.metadata.archive_sha256);
+  await page.locator('#release-language').click();await expect(page.locator('html')).toHaveAttribute('dir','rtl');
+  await expect(page.locator('h1')).toHaveText('إصدارات البيانات');await expect(page.locator('.release-card h3')).toHaveText('الاستشهاد الأكاديمي المقترح');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();await noRepositoryLinks(page);
+  await page.screenshot({path:`test-results/releases-ar-${width}.png`,fullPage:true});
+});
+
+test('Release page reports failed loading honestly and translates the error',async({page})=>{
+  await page.route('https://alnop.vercel.app/data/releases/index.json',route=>route.fulfill({status:503,body:'Unavailable'}));
+  await page.goto('/releases.html');await expect(page.locator('#release-status')).toContainText('Impossible de charger');
+  await expect(page.locator('.release-card')).toHaveCount(0);await page.locator('#release-language').click();
+  await expect(page.locator('#release-status')).toContainText('تعذر تحميل');
+});
+
+test('A real HTTP download preserves the published archive byte for byte',async({page})=>{
+  const metadata=require('../../data/releases/data-2026.11.1.json');
+  await page.goto('http://127.0.0.1:8765/releases.html');await expect(page.locator('.release-card')).toHaveCount(1);
+  const waiting=page.waitForEvent('download');await page.getByRole('link',{name:'Télécharger l’archive ZIP'}).click();const download=await waiting;
+  const bytes=require('node:fs').readFileSync(await download.path());expect(require('../../src/canonical').hash(bytes)).toBe(metadata.archive_sha256);
 });

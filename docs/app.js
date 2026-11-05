@@ -1206,6 +1206,8 @@ function setLanguage(lang) {
   // Update Header
   const claimsExport=document.getElementById('claims-export');
   if(claimsExport)claimsExport.textContent=t('claimsExport');
+  const releasesLink=document.getElementById('releases-link');
+  if(releasesLink)releasesLink.textContent=state.lang==='ar'?'إصدارات البيانات':'Versions des données';
   const brandTitleEl = document.querySelector('.brand-title');
   const brandSubtitleEl = document.querySelector('.brand-subtitle');
   if (brandTitleEl) {

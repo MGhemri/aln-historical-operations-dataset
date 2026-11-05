@@ -46,8 +46,8 @@
 <td>Qualité et lacunes des métadonnées du corpus</td>
 </tr>
 <tr>
-<td><code>/releases</code></td>
-<td>Liste des versions scientifiques, actuellement vide</td>
+<td><code>/releases</code> et <code>/releases/{id}</code></td>
+<td>Versions archivées, dates UTC, provenance et téléchargements</td>
 </tr>
 <tr>
 <td><code>/releases/current</code></td>
@@ -67,7 +67,7 @@
 <h2 id="pagination-et-réponse">Pagination et réponse</h2>
 <p>Les collections acceptent <code>page</code> (à partir de 1) et <code>limit</code> (20 par défaut, maximum 200). La réponse contient <code>data</code> et <code>meta</code> : <code>total</code>, <code>count</code>, <code>page</code>, <code>limit</code>, <code>has_next</code>, <code>sort</code>, <code>snapshot_sha256</code>, <code>dataset_release</code> et <code>corpus_is_incomplete</code>.</p>
 <p><code>total</code> compte les fiches correspondant au filtre, pas toutes les opérations ayant historiquement existé. <code>corpus_is_incomplete</code> vaut toujours <code>true</code>.</p>
-<p><code>dataset_release</code> est actuellement <code>null</code> : il n’existe pas encore de cycle de releases scientifiques. Le snapshot est identifié par son empreinte SHA-256 ; <code>/releases/current</code> expose son manifeste sans lui attribuer une version scientifique fictive. Pour conserver une analyse, télécharger les exports et le manifeste utilisés.</p>
+<p><code>dataset_release</code> indique la version archivée correspondant exactement au manifeste courant. Si les exports évoluent avant une nouvelle publication, cette valeur redevient <code>null</code>. Le snapshot reste identifié par son empreinte SHA-256 ; <code>/releases/current</code> expose son manifeste. Les archives et leurs citations sont disponibles sur <a href="../releases.html">la page des versions</a>, selon <a href="releases.html">la politique de publication</a>. Une version technique préserve les réserves historiques et ne vaut pas nouvelle validation scientifique.</p>
 <h2 id="filtres">Filtres</h2>
 <table>
 <thead>
