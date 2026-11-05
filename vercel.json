@@ -121,5 +121,5 @@
       ]
     }
   ],
-  "buildCommand": "npm run validate:canonical && npm run build && npm run test:api && npm run check:canonical && npm run check:documentation && npm run check:releases && npm run check:coverage && npm run check:assistance && npm run check:entity-search"
+  "buildCommand": "npm run build:vercel"
 }
