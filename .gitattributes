@@ -23,3 +23,6 @@ docs/data/assistance/** text eol=lf
 
 docs/entity-search-model.js text eol=lf
 docs/data/entity-search/** text eol=lf
+
+profiles/** text eol=lf
+tests/fixtures/profiles/** text eol=lf

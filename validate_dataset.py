@@ -12,6 +12,21 @@ import os
 import re
 from datetime import datetime
 
+def read_profile_year_window():
+    profile_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'profiles', 'alnop', 'profile.json')
+    with open(profile_path, 'r', encoding='utf-8') as profile_file:
+        profile = json.load(profile_file)
+    if profile.get('profile_schema_version') != '1.0.0' or profile.get('id') != 'alnop' or profile['time']['calendar'] != 'gregorian':
+        raise ValueError('Unsupported legacy validation profile')
+    coverage = profile['time']['coverage']
+    earliest = datetime.strptime(coverage['earliest'], '%Y-%m-%d')
+    latest = datetime.strptime(coverage['latest'], '%Y-%m-%d')
+    if earliest > latest:
+        raise ValueError('Invalid profile time window')
+    return earliest.year, latest.year
+
+PROFILE_FIRST_YEAR, PROFILE_LAST_YEAR = read_profile_year_window()
+
 def check_calendar_date(date_str, op_id, field_name):
     """Verify that a date string represents a valid calendar date."""
     if not date_str:
@@ -20,8 +35,8 @@ def check_calendar_date(date_str, op_id, field_name):
     parts = date_str.split('-')
     year = int(parts[0])
 
-    if year < 1954 or year > 1962:
-        return False, f"{field_name} year {year} is outside the 1954-1962 conflict window."
+    if year < PROFILE_FIRST_YEAR or year > PROFILE_LAST_YEAR:
+        return False, f"{field_name} year {year} is outside the {PROFILE_FIRST_YEAR}-{PROFILE_LAST_YEAR} conflict window."
 
     if len(parts) == 1:
         return True, None  # Year only: valid partial date

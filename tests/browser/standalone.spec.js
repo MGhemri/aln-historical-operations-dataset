@@ -404,3 +404,9 @@ test('Entity search rejects a stale or altered mention index',async({page})=>{
 test('Entity search loads verified source and operation details only when a reviewed entry is opened',async({page})=>{
  await routeEntities(page);const paths=[];page.on('request',r=>paths.push(new URL(r.url()).pathname));await page.goto('/entities.html');await expect(page.locator('#ent-apply')).toBeEnabled();expect(paths.some(p=>/\/(operations|sources)\.json$/.test(p))).toBe(false);await page.locator('#ent-list a[href*="id=PLC_TEST_A"]').click();await expect(page.locator('#ent-detail')).toBeVisible();expect(paths.some(p=>p.endsWith('/operations.json'))).toBe(true);expect(paths.some(p=>p.endsWith('/sources.json'))).toBe(true);
 });
+
+test('TEMPORA profile documentation is local and internal implementation reports are excluded',async({page})=>{
+ await page.setViewportSize({width:390,height:844});await page.goto('/documentation/framework.html');await expect(page.getByRole('heading',{level:1,name:'TEMPORA — Profils et validation'})).toBeVisible();await noRepositoryLinks(page);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/documentation/');await expect(page.locator('a[href="framework.html"]')).toHaveCount(1);await expect(page.locator('a[href="progress.html"]')).toHaveCount(0);
+ const statuses=await page.evaluate(async()=>Promise.all(['PHASE_0_AUDIT.md','PHASE_1_PROGRESS.md','PHASE_2_PROGRESS.md','CDC_STATUS.md','documentation/progress.html'].map(async file=>(await fetch('../'+file)).status)));expect(statuses).toEqual([404,404,404,404,404]);
+});

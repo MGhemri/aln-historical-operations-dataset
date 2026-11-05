@@ -2,7 +2,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const md=require('markdown-it')({html:false,linkify:false});
 const root=path.join(__dirname,'..');
-const pages={methodology:['METHODOLOGIE.md','Méthodologie'],api:['API.md','API REST v1'],
+const pages={framework:['FRAMEWORK.md','TEMPORA — Profils et validation'],methodology:['METHODOLOGIE.md','Méthodologie'],api:['API.md','API REST v1'],
   contributing:['CONTRIBUTING.md','Contribuer'],editorial:['EDITORIAL_POLICY.md','Politique éditoriale'],
   conduct:['CODE_OF_CONDUCT.md','Code de conduite'],dictionary:['DATA_DICTIONARY.md','Dictionnaire des données'],publication:['docs/ADR/002-canonical-publication.md','Publication des données'],
   provenance:['PROVENANCE_POLICY.md','Assertions et contradictions'],

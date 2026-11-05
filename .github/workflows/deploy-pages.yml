@@ -43,7 +43,7 @@ jobs:
           python-version: '3.11'
 
       - run: npm ci
-      - run: npm run validate:canonical
+      - run: npm run validate:profiles && npm run validate:canonical
       - run: npm run check:canonical
       - run: npm run check:releases
       - run: npm run check:coverage && npm run check:assistance && npm run check:entity-search

@@ -35,7 +35,7 @@ jobs:
         run: npm ci
 
       - name: Validate canonical records and publication approvals
-        run: npm run validate:canonical
+        run: npm run validate:profiles && npm run validate:canonical
 
       - name: Require fresh reviews for canonical data changes
         if: github.event_name == 'push' || github.event_name == 'pull_request'

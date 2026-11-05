@@ -27,12 +27,13 @@
     "build:coverage": "node scripts/build-coverage.js",
     "check:coverage": "node scripts/build-coverage.js --check",
     "smoke:api:v2": "node scripts/smoke-api-v2.js",
+    "validate:profiles": "node scripts/validate-profiles.js",
     "validate:canonical": "node scripts/validate-canonical.js",
     "review:changes": "node scripts/check-review-changes.js",
     "quality:duplicates": "node scripts/report-duplicates.js",
     "quality:conflicts": "node scripts/report-conflicts.js",
     "quality:benchmark": "node scripts/evaluate-duplicates.js",
-    "build": "npm run check:publication-files && npm run build:canonical && npm run build:documentation && npm run build:openapi && npm run build:releases && npm run build:coverage && npm run build:assistance && npm run build:entity-search"
+    "build": "npm run check:publication-files && npm run validate:profiles && npm run build:canonical && npm run build:documentation && npm run build:openapi && npm run build:releases && npm run build:coverage && npm run build:assistance && npm run build:entity-search"
   },
   "dependencies": {
     "nodemailer": "^10.3.1"
