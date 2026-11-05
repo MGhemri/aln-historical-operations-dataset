@@ -122,6 +122,9 @@ test('Vercel rewrites retain original filters and resolve the API root',()=>{
   handler({method:'GET',url:'/api/v2/handler?path=operations',query:{path:'operations',limit:'1'}},res);
   assert.equal(res.statusCode,200);assert.equal(res.body.data.length,1);assert.equal(res.body.meta.limit,1);
   handler({method:'GET',url:'/api/v2/handler',query:{}},res);assert.equal(res.statusCode,200);assert.ok(res.body.data.resources.includes('operations'));
+  handler({method:'GET',url:'/api/v2/operations?limit=2&path=operations',query:{path:'operations',limit:'2'}},res);
+  assert.equal(res.statusCode,200);assert.equal(res.body.data.length,2);
+  assert.equal(request(prefix+'/operations?path=sources').statusCode,400);
 });
 test('Repository failures and oversized representations produce safe, bounded errors',()=>{
   const broken=createHandler({load(){throw Error('SECRET internal path');}}),r=request(prefix+'/operations',{handle:broken});

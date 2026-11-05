@@ -37,7 +37,11 @@ function createHandler(repository=new FileRepository()){
       if(parts.some(p=>!p||p==='.'||p==='..'||!/^[A-Za-z0-9_.-]+$/.test(p)))throw new HttpError(404,'NOT_FOUND','Unknown resource.');
       const query={};
       // Read query strings independently of routing parameters; repeated filters are rejected.
-      for(const [key,value]of url.searchParams){if(key==='path'&&url.pathname==='/api/v2/handler')continue;if(key in query)invalid(`Repeated parameter: ${key}`);query[key]=value;}
+      for(const [key,value]of url.searchParams){
+        // Vercel can retain the original pathname while appending rewrite params.
+        if(key==='path'){if(value===route)continue;invalid('Reserved routing parameter.');}
+        if(key in query)invalid(`Repeated parameter: ${key}`);query[key]=value;
+      }
       if(req.query)for(const [key,value]of Object.entries(req.query))if(key!=='path'&&!Object.hasOwn(query,key))query[key]=value;
       if(parts[0]==='openapi.json'&&parts.length===1){if(Object.keys(query).length)invalid('This resource takes no parameters.');return send(200,require('../../openapi/v2.json'));}
       const s=repository.load();
