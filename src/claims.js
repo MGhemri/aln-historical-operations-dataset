@@ -1,4 +1,5 @@
 // Assertions supplement the record; they never select a winning historical value.
+const {publicEntities}=require('./entities');
 function publishedClaims(corpus) {
   const published=new Set(corpus.operations.filter(o=>o.editorial_status==='published').map(o=>o.id));
   return (corpus.claims||[]).filter(c=>c.editorial_status==='published' && published.has(c.subject))
@@ -7,6 +8,7 @@ function publishedClaims(corpus) {
 function publicSources(corpus) {
   const used=new Set(corpus.operations.filter(o=>o.editorial_status==='published').flatMap(o=>o.source_ids));
   for(const claim of publishedClaims(corpus))for(const evidence of claim.evidence)used.add(evidence.source_id);
+  for(const entity of publicEntities(corpus))for(const id of entity.source_ids)used.add(id);
   return corpus.sources.filter(s=>used.has(s.source_id)).sort((a,b)=>a.source_id.localeCompare(b.source_id));
 }
 function claimsForOperation(id,corpus) {

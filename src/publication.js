@@ -2,6 +2,7 @@ const {stable,hash}=require('./canonical');
 const initial=require('../migrations/legacy-initial.json');
 const {toGeoJSON}=require('../api/v1/data-service');
 const {publishedClaims,publicSources,claimsForOperation}=require('./claims');
+const {publicEntities}=require('./entities');
 function dateForV1(date){
   if(!date?.earliest)return null;
   if(date.precision==='day')return date.earliest;
@@ -69,5 +70,5 @@ function corpusFingerprint(corpus){
   return hash(stable({operations:[...operations].sort((a,b)=>a.id.localeCompare(b.id)),
   sources:[...sources].sort((a,b)=>a.source_id.localeCompare(b.source_id)),
   territorial_units:corpus.territorial_units||[],vocabularies:corpus.vocabularies,metadata:corpus.metadata,
-  claims:publishedClaims(corpus)}));}
+  claims:publishedClaims(corpus),entities:publicEntities(corpus)}));}
 module.exports={dateForV1,operationForV1,publishedLegacy,publicArtifacts,originalIntegrity,corpusFingerprint};

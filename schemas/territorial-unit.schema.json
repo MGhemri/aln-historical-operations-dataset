@@ -9,6 +9,7 @@
     "valid_from":{"type":["string","null"],"format":"date"},
     "valid_to":{"type":["string","null"],"format":"date"},
     "source_ids":{"type":"array","uniqueItems":true,"items":{"type":"string"}},
-    "review_status":{"enum":["needs_review","reviewed"]}
+    "review_status":{"enum":["needs_review","reviewed"]},
+    "review_history":{"$ref":"https://alnop.vercel.app/schemas/operation.schema.json#/properties/review_history"}
   }
 }

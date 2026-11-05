@@ -2,11 +2,13 @@ const fs=require('node:fs');
 const path=require('node:path');
 const {readCorpus,validateCorpus,stable,root}=require('../src/canonical');
 const {originalIntegrity}=require('../src/publication');
+const {allEntities}=require('../src/entities');
 function run(){
   let report;
   try{
     const corpus=readCorpus();report=validateCorpus(corpus);report.errors.push(...originalIntegrity(corpus));
     if(corpus.operations.some(op=>/^(TEST_|SYNTHETIC_)/.test(op.id)))report.errors.push('Synthetic fixture in production corpus');
+    if((corpus.claims||[]).some(c=>/^(CLM_TEST_|CLM_SYNTHETIC_)/.test(c.id))||allEntities(corpus).some(e=>/^(PER|ORG|PLC)_(TEST|SYNTHETIC)_/.test(e.id)))report.errors.push('Synthetic assertion/entity in production corpus');
     report.summary={total:corpus.operations.length,published:corpus.operations.filter(op=>op.editorial_status==='published').length};
   }catch(error){report={errors:[error.message],warnings:[]};}
   const directory=path.join(root,'work');fs.mkdirSync(directory,{recursive:true});

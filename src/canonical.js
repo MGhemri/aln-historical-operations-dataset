@@ -3,6 +3,8 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const Ajv = require('ajv/dist/2020');
 const addFormats = require('ajv-formats');
+const {groups,validateEntities}=require('./entities');
+const {approved}=require('./review');
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const stable = value => JSON.stringify(value, null, 2) + '\n';
 const root = path.join(__dirname, '..');
@@ -10,6 +12,7 @@ const ajv = new Ajv({allErrors:true, strict:true});
 addFormats(ajv);
 const validateSchema = ajv.compile(require('../schemas/operation.schema.json'));
 const validateClaim = ajv.compile(require('../schemas/claim.schema.json'));
+const validateEntity = ajv.compile(require('../schemas/entity.schema.json'));
 const validateSource = ajv.compile(require('../schemas/source.schema.json'));
 const validateTerritory = ajv.compile(require('../schemas/territorial-unit.schema.json'));
 const validateDataset = ajv.compile(require('../schemas/dataset.schema.json'));
@@ -79,6 +82,7 @@ function validateCorpus(corpus) {
     for(const id of t.source_ids||[])if(!sourceIds.has(id))errors.push(`${t.id}: missing source ${id}`);
     if(t.valid_from && t.valid_to && t.valid_from>t.valid_to)errors.push(`${t.id}: inverted validity`);
   }
+  const entities=validateEntities(corpus,validateEntity,sourceIds,errors);
   for (const op of corpus.operations) {
     if (!validateSchema(op)) {
       errors.push(`${op?.id}: ${ajv.errorsText(validateSchema.errors)}`);
@@ -94,6 +98,7 @@ function validateCorpus(corpus) {
     }
     if(op.territorial_assignments.filter(t=>t.role==='primary').length>1)errors.push(`${op.id}: multiple primary territories`);
     if(op.provenance.publication_basis==='previously_public_legacy_corpus'){
+      if(op.participants?.length||op.locations.some(l=>l.place_id))errors.push(`${op.id}: entity links require a reviewed revision`);
       try{
         const expected=migrate({dataset_metadata:{},operations:[op.legacy]},op.provenance.source_commit).operations[0];
         for(const key of ['title','start_date','end_date','locations','territorial_assignments','source_ids','legacy_territorial_label'])
@@ -132,6 +137,13 @@ function validateCorpus(corpus) {
       if((!c && location.geometry_role!=='unknown')||(c && location.geometry_role==='unknown'))errors.push(`${op.id}: geometry and role disagree`);
       if (c && (c.length!==2 || !c.every(Number.isFinite) || Math.abs(c[0])>180 || Math.abs(c[1])>90))
         errors.push(`${op.id}: invalid WGS84 coordinates`);
+    }
+    for(const link of [...(op.participants||[]),...op.locations.filter(l=>l.place_id)]){
+      const id=link.entity_id||link.place_id,entity=entities.get(id);
+      if(!entity)errors.push(`${op.id}: missing entity ${id}`);
+      if(op.editorial_status==='published'&&entity?.editorial_status!=='published')errors.push(`${op.id}: published operation references a draft entity`);
+      if(!link.source_ids?.length)errors.push(`${op.id}: entity link requires evidence`);
+      for(const source of link.source_ids||[])if(!op.source_ids.includes(source))errors.push(`${op.id}: link evidence not among operation sources`);
     }
     for (const flag of op.quality_flags || []) warnings.push({id:op.id,code:flag});
   }
@@ -172,6 +184,11 @@ function validateCorpus(corpus) {
     if(claim.status!=='contested'||other.status!=='contested')errors.push(`${claim.id}: contradiction endpoints must be contested`);
     if(claim.editorial_status==='published'&&other.editorial_status!=='published')errors.push(`${claim.id}: public contradiction points to an unpublished assertion`);
   }
+  // Historical imported records have no invented retrospective approval.
+  // Once a content-bound review exists, every build verifies it as well as Git CI.
+  for(const record of [...corpus.operations,...(corpus.claims||[]),...Object.keys(groups).flatMap(g=>corpus[g]||[]),...corpus.sources,...(corpus.territorial_units||[])]){
+    if((record?.editorial_status==='published'||record?.review_status==='reviewed')&&record?.review_history?.at(-1)?.content_sha256 && !approved(record))errors.push(`${record.id||record.source_id}: content changed after the recorded review`);
+  }
   return {errors,warnings};
 }
 function restoreLegacy(corpus) {
@@ -184,9 +201,10 @@ function restoreLegacy(corpus) {
 }
 function readCorpus(directory=path.join(root,'data')) {
   const read = name => JSON.parse(fs.readFileSync(path.join(directory,name),'utf8'));
-  const entries = (name,key='id') => (name==='claims'&&!fs.existsSync(path.join(directory,name))?[]:fs.readdirSync(path.join(directory,name))).filter(n=>n.endsWith('.json')).sort()
+  const entries = (name,key='id') => (['claims',...Object.keys(groups)].includes(name)&&!fs.existsSync(path.join(directory,name))?[]:fs.readdirSync(path.join(directory,name))).filter(n=>n.endsWith('.json')).sort()
     .map(n=>{const value=read(path.join(name,n));if(value[key]!==n.slice(0,-5))throw new Error(`Filename must equal ${key}: ${name}/${n}`);return value;});
   return {metadata:read('dataset.json'),operations:entries('operations'),sources:entries('sources','source_id'),
-    territorial_units:entries('territorial-units'),vocabularies:read('vocabularies.json'),claims:entries('claims')};
+    territorial_units:entries('territorial-units'),vocabularies:read('vocabularies.json'),claims:entries('claims'),
+    ...Object.fromEntries(Object.keys(groups).map(g=>[g,entries(g)]))};
 }
 module.exports = {migrate,dateBounds,validateCorpus,restoreLegacy,readCorpus,stable,hash,root};

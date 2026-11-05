@@ -63,6 +63,7 @@
         "null"
       ]
     },
+    "review_history": {"$ref":"https://alnop.vercel.app/schemas/operation.schema.json#/properties/review_history"},
     "notes": {
       "type": [
         "string",

@@ -3,11 +3,13 @@ const path = require('node:path');
 const {readCorpus,validateCorpus,stable,hash,root} = require('../src/canonical');
 const {publishedLegacy,publicArtifacts,originalIntegrity,corpusFingerprint}=require('../src/publication');
 const {publishedClaims,publicSources}=require('../src/claims');
+const {publicEntities,allEntities,groups}=require('../src/entities');
 function artifacts(corpus,{allowSynthetic=false}={}) {
   const report = validateCorpus(corpus);
   report.errors.push(...originalIntegrity(corpus));
   if(!allowSynthetic && corpus.operations.some(op=>/^(TEST_|SYNTHETIC_)/.test(op.id)))report.errors.push('Synthetic fixtures must never be present in the production corpus');
   if(!allowSynthetic && (corpus.claims||[]).some(c=>/^(CLM_TEST_|CLM_SYNTHETIC_)/.test(c.id)))report.errors.push('Synthetic assertions must never be present in the production corpus');
+  if(!allowSynthetic && allEntities(corpus).some(e=>/^(PER|ORG|PLC)_(TEST|SYNTHETIC)_/.test(e.id)))report.errors.push('Synthetic entities must never be present in the production corpus');
   if (report.errors.length) throw new Error(report.errors.join('\n'));
   const published=corpus.operations.filter(o=>o.editorial_status==='published').sort((a,b)=>a.id.localeCompare(b.id));
   const claims=publishedClaims(corpus),claimIds=new Set(claims.map(c=>c.id));
@@ -32,6 +34,8 @@ function artifacts(corpus,{allowSynthetic=false}={}) {
     'quality-report.json':stable(publicReport),
     'quality-report.md':`# Qualité du corpus ALNOP\n\n${publicReport.errors.length} erreurs bloquantes ; ${publicReport.warnings.length} avertissements.\n\n`+
       publicReport.warnings.map(w=>`- ${w.id}: ${w.code}`).join('\n')+'\n'};
+  const entities=publicEntities(corpus);
+  for(const [group,kind]of Object.entries(groups))out[group+'.json']=stable({schema_version:'2.0.0',entities:entities.filter(e=>e.kind===kind)});
   out['dataset-manifest.json']=stable({schema_version:'2.0.0',publication_status:'validated_snapshot',
     import_source_commit:corpus.metadata.source_commit,canonical_sha256:corpusFingerprint(corpus),
     corpus_is_incomplete:true,total:published.length,
