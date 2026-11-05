@@ -1,14 +1,17 @@
 # TEMPORA — Framework pour les corpus historiques
 
-TEMPORA sépare un noyau réutilisable des configurations propres à chaque corpus. ALNOP est l’un de ses profils, et non le périmètre du framework. Le [guide ALNOP](./ALNOP.md) décrit son corpus et son application.
+Le noyau TEMPORA fournit les contrats communs aux corpus historiques. Les profils déclarent les choix propres à chaque corpus. Les adaptateurs transforment les données d’origine en objets que le noyau sait valider et analyser.
 
 ## Architecture : noyau, profils et applications
 
-Le noyau `src/framework/` porte les contrats et les contrôles communs. Les manifestes sous `profiles/` déclarent le contexte de chaque corpus ; leurs adaptateurs relient les données métier au noyau. Les applications exposent ensuite les fonctions adaptées à leur profil. Le noyau ne dépend pas du corpus ALNOP.
+| Niveau | Responsabilité |
+|---|---|
+| Noyau | Chargement des profils, validation, modèle canonique, ingestion et analyses |
+| Profil | Période, langues, vocabulaires, règles de validation et mappings d’import |
+| Adaptateur | Conversion des données d’origine et conservation de leur provenance |
+| Application | Consultation du corpus et parcours de contribution du profil |
 
-GitHub et GitHub Pages présentent TEMPORA et ses profils. Vercel met en avant l’application ALNOP, fondée sur TEMPORA.
-
-TEMPORA fournit des contrats réutilisables pour configurer la validation de corpus historiques. ALNOP conserve son application, ses données, ses identifiants et ses API publiques. Les commandes ci-dessous concernent les profils et les contrôles configurables actuellement implémentés ; la [migration canonique v3](./CANONICAL_MODEL.md) est disponible séparément sous forme de copie locale, sans remplacement des données de production.
+ALNOP fournit un exemple complet de profil et d’application de consultation. Les analyses v3 et les imports utilisent une copie de travail locale. [Profil ALNOP](./ALNOP.md) · [Modèle et migration](./CANONICAL_MODEL.md) · [Import local](./INGESTION.md) · [Analyses](./ANALYSIS.md)
 
 ## Valider un profil
 

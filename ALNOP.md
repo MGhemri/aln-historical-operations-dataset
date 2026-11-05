@@ -6,7 +6,7 @@ ALNOP documente les opérations du FLN/ALN durant la guerre d’indépendance al
 
 L’[application ALNOP sur Vercel](https://alnop.vercel.app/) donne accès à la carte, aux recherches, aux fiches, aux personnes, organisations et lieux, aux comparaisons et à l’observatoire documentaire. L’affichage s’adapte aux mobiles et à l’arabe de droite à gauche. Les propositions passent par le formulaire de contribution et une revue avant toute publication.
 
-Sur GitHub Pages, l’[atlas ALNOP](./docs/atlas.html) reste accessible depuis le portail TEMPORA.
+Le portail GitHub Pages présente le framework TEMPORA et donne accès à l’atlas ALNOP depuis sa navigation.
 
 ## Ce qui appartient au profil
 

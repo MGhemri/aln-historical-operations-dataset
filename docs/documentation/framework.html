@@ -1,10 +1,34 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TEMPORA — Framework et profils · TEMPORA</title><script>const base=document.createElement('base');base.href=location.pathname.split('/documentation')[0].replace(/\/api\/docs$/,'')+'/documentation/';document.head.append(base);</script><link rel="stylesheet" href="documentation.css"><script src="../site-context.js?v=4.3"></script></head><body><main><nav><a data-atlas-link href="../index.html">Atlas ALNOP · الأطلس</a><a href="../contribute.html">Contribuer · ساهم</a><a href="index.html">Documentation · الوثائق</a></nav><p class="documentation-context"><span data-framework-presentation>TEMPORA — Framework pour les corpus historiques</span><span data-profile-presentation hidden>ALNOP — Profil du framework TEMPORA</span></p><h1 id="tempora--framework-pour-les-corpus-historiques">TEMPORA — Framework pour les corpus historiques</h1>
-<p>TEMPORA sépare un noyau réutilisable des configurations propres à chaque corpus. ALNOP est l’un de ses profils, et non le périmètre du framework. Le <a href="alnop.html">guide ALNOP</a> décrit son corpus et son application.</p>
+<p>Le noyau TEMPORA fournit les contrats communs aux corpus historiques. Les profils déclarent les choix propres à chaque corpus. Les adaptateurs transforment les données d’origine en objets que le noyau sait valider et analyser.</p>
 <h2 id="architecture--noyau-profils-et-applications">Architecture : noyau, profils et applications</h2>
-<p>Le noyau <code>src/framework/</code> porte les contrats et les contrôles communs. Les manifestes sous <code>profiles/</code> déclarent le contexte de chaque corpus ; leurs adaptateurs relient les données métier au noyau. Les applications exposent ensuite les fonctions adaptées à leur profil. Le noyau ne dépend pas du corpus ALNOP.</p>
-<p>GitHub et GitHub Pages présentent TEMPORA et ses profils. Vercel met en avant l’application ALNOP, fondée sur TEMPORA.</p>
-<p>TEMPORA fournit des contrats réutilisables pour configurer la validation de corpus historiques. ALNOP conserve son application, ses données, ses identifiants et ses API publiques. Les commandes ci-dessous concernent les profils et les contrôles configurables actuellement implémentés ; la <a href="model.html">migration canonique v3</a> est disponible séparément sous forme de copie locale, sans remplacement des données de production.</p>
+<table>
+<thead>
+<tr>
+<th>Niveau</th>
+<th>Responsabilité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Noyau</td>
+<td>Chargement des profils, validation, modèle canonique, ingestion et analyses</td>
+</tr>
+<tr>
+<td>Profil</td>
+<td>Période, langues, vocabulaires, règles de validation et mappings d’import</td>
+</tr>
+<tr>
+<td>Adaptateur</td>
+<td>Conversion des données d’origine et conservation de leur provenance</td>
+</tr>
+<tr>
+<td>Application</td>
+<td>Consultation du corpus et parcours de contribution du profil</td>
+</tr>
+</tbody>
+</table>
+<p>ALNOP fournit un exemple complet de profil et d’application de consultation. Les analyses v3 et les imports utilisent une copie de travail locale. <a href="alnop.html">Profil ALNOP</a> · <a href="model.html">Modèle et migration</a> · <a href="ingestion.html">Import local</a> · <a href="analysis.html">Analyses</a></p>
 <h2 id="valider-un-profil">Valider un profil</h2>
 <pre><code class="language-sh">npm run validate:profiles
 npm run validate:profiles -- --profile profiles/alnop/profile.json
