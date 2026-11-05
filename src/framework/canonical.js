@@ -9,6 +9,7 @@ ajv.addSchema(require('../../schemas/tempora.profile.schema.json'));
 ajv.addSchema(require('../../schemas/tempora/v3/model.schema.json'));
 const schemaNames=['event','source','claim','entity','temporal-expression','spatial-assertion','relation','review','assessment','corpus-release','corpus'];
 const validators=Object.fromEntries(schemaNames.map(name=>[name,ajv.compile(require(`../../schemas/tempora/v3/${name}.schema.json`))]));
+validators.geometry=ajv.getSchema('urn:tempora:schema:3.0.0:model#/$defs/Geometry');
 const collections={events:'event',sources:'source',claims:'claim',entities:'entity',spatial_assertions:'spatial',relations:'relation',reviews:'review',assessments:'assessment',releases:'release'};
 class CanonicalError extends Error{constructor(code,message,details=[]){super(message);this.name='CanonicalError';this.code=code;this.details=details;}}
 function jsonValue(value,seen=new Set(),depth=0){
@@ -27,9 +28,9 @@ function validateObject(type,value){
  try{jsonValue(value);}catch(e){return {valid:false,errors:[{code:e.code,message:e.message}]};}
  const check=validators[type];if(!check)throw new CanonicalError('CANONICAL_SCHEMA_UNKNOWN','Unknown schema');
  const errors=[];if(!check(value))errors.push(...structuredClone(check.errors).map(e=>({code:'CANONICAL_SCHEMA_INVALID',path:e.instancePath,message:e.message})));
- if(!errors.length&&type!=='corpus'&&type!=='temporal-expression'){for(const key of ['start_date','end_date','valid_from','valid_to'])if(value[key])for(const message of temporalErrors(value[key]))errors.push({code:'CANONICAL_TIME_INVALID',path:key,message});}
+ if(!errors.length&&type!=='corpus'&&type!=='temporal-expression'){for(const key of ['start_date','end_date','valid_from','valid_to'])if(value?.[key])for(const message of temporalErrors(value[key]))errors.push({code:'CANONICAL_TIME_INVALID',path:key,message});}
  if(!errors.length&&type==='temporal-expression')for(const message of temporalErrors(value))errors.push({code:'CANONICAL_TIME_INVALID',message});
- if(!errors.length&&type==='spatial-assertion')for(const message of geometryErrors(value.geometry))errors.push({code:'CANONICAL_GEOMETRY_INVALID',message});
+ if(!errors.length&&(type==='spatial-assertion'||type==='geometry'))for(const message of geometryErrors(type==='geometry'?value:value.geometry))errors.push({code:'CANONICAL_GEOMETRY_INVALID',message});
  return {valid:errors.length===0,errors};
 }
 function validateCorpus(corpus){

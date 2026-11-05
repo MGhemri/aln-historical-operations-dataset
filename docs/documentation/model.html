@@ -96,5 +96,5 @@ npm run migrate:tempora -- --reverse work/tempora-v3/corpus-v3.json --write
 <p>Le retour est garanti pour une copie de migration intacte. Si la représentation TEMPORA a été modifiée, le retour refuse de perdre silencieusement les changements. Une migration inverse de données éditées exigera un mapping explicite et une revue. Les décisions de revue conservées portent sur leur contenu ALNOP original ; elles ne valent pas nouvelle approbation de la représentation v3.</p>
 <p>Les manifestes d’archives conservent leur version de corpus historique et leurs empreintes. Aucune archive v3 n’est créée et aucune archive existante n’est réécrite. Un CSV aplati ne permet pas cette garantie de restitution ; utiliser le JSON canonique pour les données riches.</p>
 <h2 id="périmètre-suivant">Périmètre suivant</h2>
-<p>L’ingestion JSON/CSV/GeoJSON avec préparation et quarantaine, le pipeline générique de publication, l’API multi-profils, le SDK et les benchmarks de charge restent des étapes distinctes. Cette migration ne les annonce pas comme disponibles.</p>
+<p>Le <a href="ingestion.html">pipeline local d’ingestion</a> peut préparer des propositions JSON, CSV et GeoJSON dans une copie de travail v3. La publication générique, l’API multi-profils, le SDK et les benchmarks de charge restent des étapes distinctes.</p>
 </main></body></html>

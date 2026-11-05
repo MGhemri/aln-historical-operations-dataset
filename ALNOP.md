@@ -23,6 +23,7 @@ Une notice peut couvrir plusieurs épisodes. Les coordonnées sont des repères 
 - [Assertions, sources et contradictions](./PROVENANCE_POLICY.md)
 - [Référentiels et revue](./ENTITY_REVIEW_GUIDE.md)
 - [Contributions et revue éditoriale](./CONTRIBUTING.md)
+- [Préparer un lot de propositions en local](./INGESTION.md)
 
 Les exports historiques JSON et GeoJSON, les identifiants permanents et les routes existantes restent disponibles. Les [API v1](./API.md) et [v2](./API_V2.md) interrogent le corpus ALNOP ; elles ne sont pas des API génériques multi-profils TEMPORA.
 

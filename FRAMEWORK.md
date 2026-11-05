@@ -101,3 +101,7 @@ L'adaptateur `src/profiles/alnop.js` projette les champs utiles pour ces règles
 ## Modèle canonique et migration
 
 Le [modèle canonique TEMPORA v3](./CANONICAL_MODEL.md) fournit les schémas versionnés, les invariants temporels et spatiaux et une migration ALNOP réversible sur une copie intacte. La commande `npm run migrate:tempora` vérifie le parcours sans écrire dans les données de production.
+
+## Importer des propositions
+
+Le [pipeline d’import local](./INGESTION.md) utilise des mappings versionnés pour préparer et contrôler des propositions JSON, CSV et GeoJSON. Les notices acceptées restent proposées dans une copie de travail privée.

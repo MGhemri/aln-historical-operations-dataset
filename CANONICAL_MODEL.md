@@ -92,4 +92,4 @@ Les manifestes d’archives conservent leur version de corpus historique et leur
 
 ## Périmètre suivant
 
-L’ingestion JSON/CSV/GeoJSON avec préparation et quarantaine, le pipeline générique de publication, l’API multi-profils, le SDK et les benchmarks de charge restent des étapes distinctes. Cette migration ne les annonce pas comme disponibles.
+Le [pipeline local d’ingestion](./INGESTION.md) peut préparer des propositions JSON, CSV et GeoJSON dans une copie de travail v3. La publication générique, l’API multi-profils, le SDK et les benchmarks de charge restent des étapes distinctes.

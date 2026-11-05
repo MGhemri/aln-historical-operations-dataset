@@ -5,6 +5,7 @@ function forbidden(name){
  /(?:^|\/)(?:PHASE_\d+_(?:AUDIT|PROGRESS)|v3-(?:baseline|audit))\.(?:md|html)$/i.test(normalized)||
  /(?:^|\/)(?:audit|correction)[-_](?:report|rapport|bilan)[^/]*\.(?:md|html|json|pdf)$/i.test(normalized)||
  /(?:^|\/)(?:v\d+-)?(?:baseline|audit)(?:[-_][^/]*)?\.(?:md|html|pdf)$/i.test(normalized)||
+ /(?:^|\/)(?:corpus-v3|restored-alnop|batch-[a-f0-9]{64}-[a-f0-9]{16}|working-[a-f0-9]{64})\.json$/i.test(normalized)||
  /(?:^|\/)private-reports\//i.test(normalized)||/^docs\/documentation\/progress\.html$/i.test(normalized);
 }
 function inspect(root){
