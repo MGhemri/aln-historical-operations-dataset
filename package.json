@@ -14,12 +14,14 @@
     "check:canonical": "node scripts/build-canonical.js --check",
     "test:browser": "playwright test",
     "build:documentation": "node scripts/build-documentation.js",
-    "check:documentation": "node scripts/build-documentation.js --check",
+    "check:documentation": "node scripts/build-documentation.js --check && node scripts/build-openapi.js --check",
+    "build:openapi": "node scripts/build-openapi.js",
+    "smoke:api:v2": "node scripts/smoke-api-v2.js",
     "validate:canonical": "node scripts/validate-canonical.js",
     "review:changes": "node scripts/check-review-changes.js",
     "quality:duplicates": "node scripts/report-duplicates.js",
     "quality:benchmark": "node scripts/evaluate-duplicates.js",
-    "build": "npm run build:canonical && npm run build:documentation"
+    "build": "npm run build:canonical && npm run build:documentation && npm run build:openapi"
   },
   "dependencies": {
     "nodemailer": "^10.3.1"

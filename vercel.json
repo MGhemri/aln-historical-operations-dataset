@@ -16,11 +16,27 @@
       "destination": "/api/v1/index"
     },
     {
+      "source": "/api/v2",
+      "destination": "/api/v2/handler"
+    },
+    {
+      "source": "/api/v2/",
+      "destination": "/api/v2/handler"
+    },
+    {
+      "source": "/api/v2/:path*",
+      "destination": "/api/v2/handler?path=:path*"
+    },
+    {
       "source": "/api/v1/operations/:id",
       "destination": "/api/v1/operations/[id]?id=:id"
     }
   ],
   "functions": {
+    "api/v2/**/*.js": {
+      "maxDuration": 10,
+      "includeFiles": "docs/data/canonical/**"
+    },
     "api/contact.js": {
       "maxDuration": 15
     },

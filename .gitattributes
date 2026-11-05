@@ -6,3 +6,5 @@ migrations/legacy-initial.json -text
 docs/documentation/** text eol=lf
 docs/data/canonical/** text eol=lf
 docs/data/canonical/*.csv -text
+openapi/** text eol=lf
+docs/data/api-v2/** text eol=lf

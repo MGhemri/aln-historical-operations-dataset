@@ -36,6 +36,7 @@ function artifacts(corpus,{allowSynthetic=false}={}) {
       publicReport.warnings.map(w=>`- ${w.id}: ${w.code}`).join('\n')+'\n'};
   const entities=publicEntities(corpus);
   for(const [group,kind]of Object.entries(groups))out[group+'.json']=stable({schema_version:'2.0.0',entities:entities.filter(e=>e.kind===kind)});
+  out['territorial-units.json']=stable({schema_version:'2.0.0',territorial_units:[...corpus.territorial_units].sort((a,b)=>a.id.localeCompare(b.id))});
   out['dataset-manifest.json']=stable({schema_version:'2.0.0',publication_status:'validated_snapshot',
     import_source_commit:corpus.metadata.source_commit,canonical_sha256:corpusFingerprint(corpus),
     corpus_is_incomplete:true,total:published.length,
