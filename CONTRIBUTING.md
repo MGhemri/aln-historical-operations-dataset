@@ -62,6 +62,14 @@ Le formulaire « Signaler une contradiction » transmet une proposition aux main
 Le mainteneur relève séparément chaque version dans `data/claims/<id>.json`, selon `schemas/claim.schema.json`. Il renseigne la fiche concernée, la propriété, la valeur, les sources et leurs passages précis. Pour une divergence, il conserve les deux assertions et renseigne `contradicts` après examen ; aucune fusion n’est automatique.
 
 La publication nécessite la revue documentée de chaque assertion et des liens cohérents entre les deux versions. Le guide complet figure dans [Assertions, sources et contradictions](PROVENANCE_POLICY.md). Les exemples fictifs des tests ne doivent jamais être copiés dans les données de production.
+## Livrables et autorisation de publication
+
+Les spécifications de travail, audits et bilans de corrections sont conservés hors du dépôt et des répertoires déployés. Seules les documentations d'utilisation, de méthode et de contrats effectivement implémentés sont destinées à la publication. Les schémas, fixtures de référence et indicateurs documentaires du corpus restent des éléments techniques du projet.
+
+Préparer les modifications et leurs vérifications dans l'arbre de travail. Un commit, push, tag, déploiement ou release nécessite une instruction explicite du mainteneur. Utiliser uniquement l'identité Git déjà configurée, sans la modifier et sans ajouter de signature d'outil ou d'attribution automatique. Conserver les attributions et notices de tiers exigées par leurs licences. Ne pas réécrire l'historique sans autorisation explicite.
+
+Exécuter `npm run check:publication-files` pour vérifier l'absence de spécifications et de rapports internes dans les fichiers destinés à la publication.
+
 ## Vérifier les référentiels et les doublons candidats
 
 Le mainteneur peut lancer `npm run quality:duplicates` avant de publier une nouvelle fiche. Les correspondances proposées doivent être examinées ; aucune fusion n’est automatique. Toute modification publique requiert une nouvelle revue liée à l’empreinte du contenu. Les référentiels et les commandes sont décrits dans [le guide de revue](ENTITY_REVIEW_GUIDE.md).

@@ -14,7 +14,8 @@
     "check:canonical": "node scripts/build-canonical.js --check",
     "test:browser": "playwright test",
     "build:documentation": "node scripts/build-documentation.js",
-    "check:documentation": "node scripts/build-documentation.js --check && node scripts/build-openapi.js --check",
+    "check:publication-files": "node scripts/check-publication-files.js",
+    "check:documentation": "npm run check:publication-files && node scripts/build-documentation.js --check && node scripts/build-openapi.js --check",
     "build:openapi": "node scripts/build-openapi.js",
     "release:prepare": "node scripts/create-data-release.js",
     "build:releases": "node scripts/build-releases.js",
@@ -31,7 +32,7 @@
     "quality:duplicates": "node scripts/report-duplicates.js",
     "quality:conflicts": "node scripts/report-conflicts.js",
     "quality:benchmark": "node scripts/evaluate-duplicates.js",
-    "build": "npm run build:canonical && npm run build:documentation && npm run build:openapi && npm run build:releases && npm run build:coverage && npm run build:assistance && npm run build:entity-search"
+    "build": "npm run check:publication-files && npm run build:canonical && npm run build:documentation && npm run build:openapi && npm run build:releases && npm run build:coverage && npm run build:assistance && npm run build:entity-search"
   },
   "dependencies": {
     "nodemailer": "^10.3.1"

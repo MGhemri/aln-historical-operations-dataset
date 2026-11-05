@@ -15,3 +15,13 @@ playwright-report/
 !.env.example
 
 work/
+
+# Private specifications and implementation reports are kept outside publication.
+**/CDC_*.md
+**/CDC_*.pdf
+docs/PHASE_*_AUDIT.md
+docs/PHASE_*_PROGRESS.md
+docs/CDC_STATUS.md
+docs/documentation/progress.html
+docs/architecture/*baseline*.md
+private-reports/
